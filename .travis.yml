@@ -1,0 +1,20 @@
+language: python
+python:
+- '3.6'
+before_script:
+- yes | python setup.py install
+- git clone https://github.com/uc-cdis/dictionaryutils; cd dictionaryutils
+script:
+- "./run_tests.sh"
+deploy:
+  provider: s3
+  access_key_id: AKIAZRNPHKJIPRRTEJUI
+  secret_access_key:
+    secure: gUl+Di8ep9tmxfS8r3rjrTs8vzeDEFtdkzHafUSVr+Hfd/oyW0crxrJqxIB9NJU+Q28jjeI7Wfo58Fa+LjPgYS7F7QyQDMn4n/VXh6K/Yx7mSdjX+NjMJsYKVvk+9rPMZcVNrGBY9CI3lM003CPeYk8wLvkeMku/xOwk4yylEYZ/0UZw7UU1yirE7NjwVC0yH9Kqyhj3kpx8fmwOlmw5tyvjLrI3roYnX/B/xZ4Qkoiu9NEk00oKLbcFv+bSEwSxQyW/umJMyu2P/pkExciPwDX3U2v2Q/xLCrrpiwMkDcWo0L0likKs8+kH3WG2C45zUotmwgNdSZEfzZY/DRhxJzoelnDVhmE0RQnh4cw5sNscURiZLnOyCDI3a89miKludmN3qjI5GVxs74AmGhhp4E88uL5ZUypVpJCRVBgazBp4rqBzCn0dm0m7WyTW2/ScCALrzyNMhi3mTdsvyU884xXJr2619t6GeuCQzjHNe64F6vNFgYXNXx5Q2DUFzD1dC4yoiOrZKAqy5bsWJzLvDGt0xa8J54VaLY2Eq8WqivGIMBWs02satmiaqhYnoo+lmqppGDMyc5V65eZHUuIXzRKzdMcm4ccTtf7j8slzy/MQY51zPrPpP/N1P3cda97NnQMqLrmkhs3jjSOo43bb+yeRqmXFh3PZwGyDetLPt1Q=
+  bucket: dictionary-artifacts
+  local-dir: artifacts
+  upload-dir: flu-datadictionary/$TRAVIS_BRANCH
+  skip_cleanup: true
+  on:
+    repo: uc-cdis/Flu_datadictionary
+    all_branches: true
