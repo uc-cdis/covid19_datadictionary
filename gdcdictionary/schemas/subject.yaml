@@ -22,18 +22,21 @@ systemProperties:
   - state
 
 links:
-  - name: studies
-    backref: subjects
-    label: member_of
-    target_type: study
-    multiplicity: many_to_many
+  - exclusive: false
     required: true
-  - name: locations
-    backref: subjects
-    label: data_from
-    target_type: location
-    multiplicity: many_to_one
-    required: false
+    subgroup:
+    - name: studies
+      backref: subjects
+      label: member_of
+      target_type: study
+      multiplicity: many_to_many
+      required: false
+    - name: locations
+      backref: subjects
+      label: data_from
+      target_type: location
+      multiplicity: many_to_one
+      required: false
 
 required:
   - submitter_id
