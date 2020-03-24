@@ -49,26 +49,6 @@ properties:
       Country or region
     type: string
 
-  last_update:
-    description: >
-      Last update
-    type: string
-
-  confirmed:
-    description: >
-      Confirmed cases
-    type: string
-
-  deaths:
-    description: >
-      Total number of deaths
-    type: string
-
-  recovered:
-    description: >
-      Total number of recovered cases
-    type: string
-
   latitude:
     description: >
       Latitude
