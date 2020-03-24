@@ -1,0 +1,70 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "time_series"
+title: Time Series
+type: object
+namespace: http://gdc.nci.nih.gov
+category: administrative
+program: '*'
+project: '*'
+description: >
+  A coordinated set of actions and observations designed to generate data, with the ultimate goal
+  of discovery or hypothesis testing.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: locations
+    backref: time_seriess
+    label: performed_at
+    target_type: location
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - locations
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  last_update:
+    description: >
+      Last update
+    type: string
+
+  confirmed:
+    description: >
+      Confirmed cases
+    type: string
+
+  deaths:
+    description: >
+      Total number of deaths
+    type: string
+    
+  recovered:
+    description: >
+      Total number of recovered cases
+    type: string
+
+  date:
+    description: >
+      Date
+    type: string
+
+  locations:
+    $ref: "_definitions.yaml#/to_many"  
