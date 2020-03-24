@@ -1,13 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "location"
-title: Location
+id: "time_series"
+title: Time Series
 type: object
 namespace: http://gdc.nci.nih.gov
 category: administrative
 program: '*'
 project: '*'
-description: "Location of a project."
+description: >
+  A coordinated set of actions and observations designed to generate data, with the ultimate goal
+  of discovery or hypothesis testing.
 additionalProperties: false
 submittable: true
 validators: null
@@ -15,22 +17,22 @@ validators: null
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
+  - state
 
 links:
-  - name: projects
-    backref: locations
-    label: refers_to
-    target_type: project
+  - name: locations
+    backref: time_seriess
+    label: performed_at
+    target_type: location
     multiplicity: many_to_one
     required: true
 
 required:
   - submitter_id
   - type
-  - projects
+  - locations
 
 uniqueKeys:
   - [ id ]
@@ -39,25 +41,30 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  province_state:
+  last_update:
     description: >
-      Province or state
+      Last update
     type: string
 
-  country_region:
+  confirmed:
     description: >
-      Country or region
+      Confirmed cases
     type: string
 
-  latitude:
+  deaths:
     description: >
-      Latitude
+      Total number of deaths
+    type: string
+    
+  recovered:
+    description: >
+      Total number of recovered cases
     type: string
 
-  longitude:
+  date:
     description: >
-      Longitude
+      Date
     type: string
 
-  projects:
-    $ref: "_definitions.yaml#/to_one_project"
+  locations:
+    $ref: "_definitions.yaml#/to_many"  
