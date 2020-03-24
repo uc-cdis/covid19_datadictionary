@@ -41,11 +41,6 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  last_update:
-    description: >
-      Last update
-    type: string
-
   confirmed:
     description: >
       Confirmed cases
