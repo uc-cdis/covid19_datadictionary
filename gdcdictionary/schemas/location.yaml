@@ -1,0 +1,85 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "location"
+title: Location
+type: object
+namespace: http://gdc.nci.nih.gov
+category: administrative
+program: '*'
+project: '*'
+description: "Location of a project."
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: projects
+    backref: locations
+    label: refers_to
+    target_type: project
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - study_description
+  - projects
+  - study_objective
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  province_state:
+    description: >
+      Province or state
+    type: string
+
+  country_region:
+    description: >
+      Country or region
+    type: string
+
+  last_update:
+    description: >
+      Last update
+    type: string
+
+  confirmed:
+    description: >
+      Confirmed cases
+    type: string
+
+  deaths:
+    description: >
+      Total number of deaths
+    type: string
+
+  recovered:
+    description: >
+      Total number of recovered cases
+    type: string
+
+  latitude:
+    description: >
+      Latitude
+    type: string
+
+  longitude:
+    description: >
+      Longitude
+    type: string
+
+  projects:
+    $ref: "_definitions.yaml#/to_one_project"

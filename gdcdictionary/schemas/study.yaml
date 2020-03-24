@@ -22,10 +22,10 @@ systemProperties:
   - state
 
 links:
-  - name: projects
+  - name: locations
     backref: studies
     label: performed_for
-    target_type: project
+    target_type: location
     multiplicity: many_to_one
     required: true
 
@@ -33,7 +33,7 @@ required:
   - submitter_id
   - type
   - study_description
-  - projects
+  - locations
   - study_objective
 
 uniqueKeys:
@@ -112,5 +112,5 @@ properties:
       Category
     type: string
 
-  projects:
-    $ref: "_definitions.yaml#/to_one_project"
+  locations:
+    $ref: "_definitions.yaml#/to_one_location"
