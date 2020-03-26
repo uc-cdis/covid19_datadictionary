@@ -44,17 +44,22 @@ properties:
   confirmed:
     description: >
       Confirmed cases
-    type: string
+    type: integer
 
   deaths:
     description: >
       Total number of deaths
-    type: string
+    type: integer
     
   recovered:
     description: >
       Total number of recovered cases
-    type: string
+    type: integer
+  
+  testing:
+    description: >
+      Number of tests conducted
+    type: integer
 
   date:
     description: >
