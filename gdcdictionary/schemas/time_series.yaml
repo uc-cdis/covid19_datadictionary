@@ -44,7 +44,7 @@ properties:
   confirmed:
     description: >
       Confirmed cases
-    type: string
+    type: integer
 
   deaths:
     description: >
