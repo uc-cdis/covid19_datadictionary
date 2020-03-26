@@ -58,7 +58,7 @@ properties:
   
   testing:
     description: >
-      Testing
+      Number of tests conducted
     type: integer
 
   date:
