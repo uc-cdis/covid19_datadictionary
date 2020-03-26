@@ -49,12 +49,17 @@ properties:
   deaths:
     description: >
       Total number of deaths
-    type: string
+    type: integer
     
   recovered:
     description: >
       Total number of recovered cases
-    type: string
+    type: integer
+  
+  testing:
+    description: >
+      Testing
+    type: integer
 
   date:
     description: >
