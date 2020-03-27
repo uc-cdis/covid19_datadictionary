@@ -30,7 +30,7 @@ links:
     required: true
 
 required:
-  - submitter_id
+  - code
   - type
   - study_description
   - locations
