@@ -22,7 +22,7 @@ systemProperties:
   - state
 
 links:
-  - name: locations
+  - name: projects
     backref: studies
     label: performed_for
     target_type: location
