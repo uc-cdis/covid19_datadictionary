@@ -114,3 +114,5 @@ properties:
 
   locations:
     $ref: "_definitions.yaml#/to_many"
+  projects:
+    $ref: "_definitions.yaml#/to_one_project"
