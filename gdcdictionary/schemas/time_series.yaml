@@ -8,8 +8,7 @@ category: administrative
 program: '*'
 project: '*'
 description: >
-  A coordinated set of actions and observations designed to generate data, with the ultimate goal
-  of discovery or hypothesis testing.
+  A summary of total COVID-19 cases that are confirmed, recovered, or deceased for a location at a particular datetime.
 additionalProperties: false
 submittable: true
 validators: null
