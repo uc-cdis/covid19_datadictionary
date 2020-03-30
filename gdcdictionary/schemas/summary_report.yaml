@@ -59,6 +59,11 @@ properties:
     description: >
       Number of tests conducted
     type: integer
+    
+  negative:
+    description: >
+      Number of negative tests
+    type: integer
 
   date:
     description: >
