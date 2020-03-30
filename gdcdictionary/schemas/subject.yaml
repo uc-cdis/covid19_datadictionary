@@ -326,17 +326,13 @@ properties:
     description: >
       Latitude
     type: 
-      - number
-      - "N/A"
-      - "null"
+      - string
 
   longitude:
     description: >
       Longitude
     type: 
-      - number
-      - "N/A"
-      - "null"
+      - sting
 
   geo_resolution:
     description: >
