@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "location"
-title: Location
+id: "sumary_location"
+title: Summary Location
 type: object
 namespace: http://gdc.nci.nih.gov
 category: administrative
@@ -21,7 +21,7 @@ systemProperties:
 
 links:
   - name: projects
-    backref: locations
+    backref: sumary_locations
     label: refers_to
     target_type: project
     multiplicity: many_to_one
