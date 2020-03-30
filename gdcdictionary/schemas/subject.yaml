@@ -514,7 +514,7 @@ properties:
       - "0"
       - "1"
 
-  from Wuhan:
+  from_Wuhan:
     description: >
       From Wuhan
     enum:
