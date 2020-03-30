@@ -295,6 +295,248 @@ properties:
       - Not Specified
       - Other
 
+  age: 
+    description: >
+      Age
+    type: string
+
+  city:
+    description: >
+      City
+    type: string
+
+  province:
+    description: >
+      Province
+    type: string
+
+  country:
+    description: >
+      Country
+    type: string
+
+  wuhan_not_wuhan:
+    description: >
+      Wuhan not Wuhan
+    enum:
+      - "0"
+      - "1"
+
+  latitude:
+    description: >
+      Latitude
+    type: 
+      - string
+
+  longitude:
+    description: >
+      Longitude
+    type: 
+      - string
+
+  geo_resolution:
+    description: >
+      Geo resolution
+    type: string
+
+  date_onset_symptoms:
+    description: >
+      Date onset symptoms
+    type: string
+
+  date_admission_hospital:
+    description: >
+      Date admission hospital
+    type: string
+  
+  date_confirmation:
+    description: >
+      Date confirmation
+    type: string
+
+  symptoms:
+    description: >
+      Symptoms
+    type: string
+
+  lives_in_Wuhan:
+    description: >
+      Lives in Wuhan
+    type: string
+
+  travel_history_dates:
+    description: >
+      Travel history dates
+    type: string
+
+  travel_history_location:
+    description: >
+      Travel history location
+    type: string
+
+  reported_market_exposure:
+    description: >
+      Reported market exposure
+    type: string
+
+  additional_information:
+    description: >
+      Additional information
+    type: string
+
+  chronic_disease_binary:
+    description: >
+      Chronic Disease Binary
+    enum:
+      - "0"
+      - "1"
+      - "NA"
+      - "null"
+
+  chronic_disease:
+    description: >
+      Chronic disease
+    type: string
+  
+  source:
+    description: >
+      Source
+    type: string
+
+  sequence_available:
+    description: >
+      Sequence available
+    type: string
+
+  outcome:
+    description: >
+      Outcome
+    type: string
+
+  date_death_or_discharge:
+    description: >
+      Date death or discharge
+    type: string
+
+  notes_for_discussion:
+    description: >
+      Notes for discussion
+    type: string
+
+  location:
+    description: >
+      Location
+    type: string
+
+  admin3:
+    description: >
+      Admin3
+    type: string
+
+  admin2:
+    description: >
+      Admin2
+    type: string
+
+  admin1:
+    description: >
+      Admin1
+    type: string
+
+  country_new:
+    description: >
+      Country new
+    type: string
+
+  admin_id:
+    description: >
+      Admin id
+    type: string
+
+  data_moderator_initials:
+    description: >
+      Data moderator initials
+    type: string
+    
+  case_in_country:
+    description: >
+      Case in country
+    type:
+      - integer
+      - "null"
+
+  reporting_date:
+    description: >
+      Reporting date
+    type:
+      - string
+      - "null"
+
+  summary:
+    description: >
+      Summary
+    type: string
+
+  symptom_onset:
+    description: >
+      Symptom onset
+    type: string
+
+  if_onset_approximated:
+    description: >
+      If onset approximated
+    enum:
+      - "0"
+      - "1"
+      - "NA"
+
+  hosp_visit_date:
+    description: >
+      Hospital visit date
+    type: string
+
+  exposure_start:
+    description: >
+      Exposure start
+    type: 
+      - string
+
+  exposure_end:
+    description: >
+      Exposure end
+    type: 
+      - string
+
+  visiting_wuhan:
+    description: >
+      Visiting Wuhan
+    enum:
+      - "0"
+      - "1"
+
+  from_Wuhan:
+    description: >
+      From Wuhan
+    enum:
+      - "0"
+      - "1"
+      - "NA"
+
+  death:
+    description: >
+      Death
+    type: integer
+
+  recovered:
+    description: >
+      Recovered
+    type: string
+
+  link:
+    description: >
+      Link
+    type: string
+
   studies:
     $ref: "_definitions.yaml#/to_many"
   locations:
