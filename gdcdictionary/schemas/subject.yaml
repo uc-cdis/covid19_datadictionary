@@ -418,7 +418,7 @@ properties:
     type: string
 
   date_death_or_discharge:
-     description: >
+    description: >
       Date death or discharge
     type: string
 
