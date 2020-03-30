@@ -315,7 +315,7 @@ properties:
       Country
     type: string
 
-  wuhan(0)_not_wuhan(1):
+  wuhan_not_wuhan:
     description: >
       Wuhan not Wuhan
     enum:
