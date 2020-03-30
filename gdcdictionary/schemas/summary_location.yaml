@@ -51,7 +51,7 @@ properties:
     
   county:
     description: >
-      Country or region
+      County
     type: string
 
   latitude:
