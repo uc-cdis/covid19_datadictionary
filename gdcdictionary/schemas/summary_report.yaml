@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "time_series"
-title: Time Series
+id: "summary_report"
+title: Summary Report
 type: object
 namespace: http://gdc.nci.nih.gov
 category: administrative
@@ -21,10 +21,10 @@ systemProperties:
   - state
 
 links:
-  - name: locations
-    backref: time_seriess
+  - name: summary_locations
+    backref: summary_reports
     label: performed_at
-    target_type: location
+    target_type: summary_location
     multiplicity: many_to_one
     required: true
 
