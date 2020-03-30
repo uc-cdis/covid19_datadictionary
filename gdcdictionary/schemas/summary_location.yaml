@@ -48,6 +48,11 @@ properties:
     description: >
       Country or region
     type: string
+    
+  county:
+    description: >
+      County
+    type: string
 
   latitude:
     description: >
