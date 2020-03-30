@@ -359,7 +359,7 @@ properties:
       Symptoms
     type: string
 
-  lives_in_Wuhan:
+  lives_in_wuhan:
     description: >
       Lives in Wuhan
     type: string
@@ -514,7 +514,7 @@ properties:
       - "0"
       - "1"
 
-  from_Wuhan:
+  from_wuhan:
     description: >
       From Wuhan
     enum:
