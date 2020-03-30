@@ -65,5 +65,5 @@ properties:
       Date
     type: string
 
-  locations:
+  summary_locations:
     $ref: "_definitions.yaml#/to_many"  
