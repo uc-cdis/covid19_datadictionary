@@ -413,7 +413,7 @@ properties:
     type: string
 
   outcome:
-     description: >
+    description: >
       Outcome
     type: string
 
