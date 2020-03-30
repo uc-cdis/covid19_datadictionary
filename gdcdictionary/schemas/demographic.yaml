@@ -84,6 +84,7 @@ properties:
       - unknown
       - unspecified
       - not reported
+      - NA
     termDef:
       - term: Gender
         source: NCI Thesaurus
@@ -341,6 +342,15 @@ properties:
         source: NCI Thesaurus
         term_id: C25390
         term_version: 18.11d (Release date:2018-11-26)
+
+  sex:
+    description: >
+      Sex
+    enum:
+      - "female"
+      - "male"
+      - "N/A"
+      - "null"
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
