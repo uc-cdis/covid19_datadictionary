@@ -27,7 +27,7 @@ links:
     label: performed_for
     target_type: project
     multiplicity: many_to_one
-    required: true
+    required: false
 
 required:
   - submitter_id
