@@ -499,15 +499,13 @@ properties:
     description: >
       Exposure start
     type: 
-      - number
-      - "NA"
+      - string
 
   exposure_end:
     description: >
       Exposure end
     type: 
-      - number
-      - "NA"
+      - string
 
   visiting_wuhan:
     description: >
