@@ -31,7 +31,7 @@ links:
 required:
   - submitter_id
   - type
-  - locations
+  - summary_locations
 
 uniqueKeys:
   - [ id ]
