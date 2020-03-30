@@ -332,7 +332,7 @@ properties:
     description: >
       Longitude
     type: 
-      - sting
+      - string
 
   geo_resolution:
     description: >
