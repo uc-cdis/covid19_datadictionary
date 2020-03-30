@@ -31,10 +31,10 @@ links:
       target_type: study
       multiplicity: many_to_many
       required: false
-    - name: locations
+    - name: projects
       backref: subjects
       label: data_from
-      target_type: location
+      target_type: project
       multiplicity: many_to_one
       required: false
 
@@ -539,5 +539,5 @@ properties:
 
   studies:
     $ref: "_definitions.yaml#/to_many"
-  locations:
-    $ref: "_definitions.yaml#/to_many"
+  projects:
+    $ref: "_definitions.yaml#/to_one_project"

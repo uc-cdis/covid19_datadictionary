@@ -1,15 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "time_series"
-title: Time Series
+id: "summary_report"
+title: Summary Report
 type: object
 namespace: http://gdc.nci.nih.gov
 category: administrative
 program: '*'
 project: '*'
 description: >
-  A coordinated set of actions and observations designed to generate data, with the ultimate goal
-  of discovery or hypothesis testing.
+  A summary of total COVID-19 cases that are confirmed, recovered, or deceased for a location at a particular datetime.
 additionalProperties: false
 submittable: true
 validators: null
@@ -22,17 +21,17 @@ systemProperties:
   - state
 
 links:
-  - name: locations
-    backref: time_seriess
+  - name: summary_locations
+    backref: summary_reports
     label: performed_at
-    target_type: location
+    target_type: summary_location
     multiplicity: many_to_one
     required: true
 
 required:
   - submitter_id
   - type
-  - locations
+  - summary_locations
 
 uniqueKeys:
   - [ id ]
@@ -66,5 +65,5 @@ properties:
       Date
     type: string
 
-  locations:
+  summary_locations:
     $ref: "_definitions.yaml#/to_many"  
