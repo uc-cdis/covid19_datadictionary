@@ -83,11 +83,6 @@ properties:
     description: >
       code3
     type: integer 
-    
-  admin2:
-    description: >
-      Admin2
-    type: string
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"
