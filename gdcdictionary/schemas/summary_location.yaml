@@ -64,5 +64,25 @@ properties:
       Longitude
     type: string
 
+  FIPS:
+    description: >
+      FIPS
+    type: integer
+
+  iso2: 
+    description: >
+      iso2
+    type: string
+
+  iso3: 
+    description: >
+      iso3
+    type: string
+  
+  code3:
+    description: >
+      code3
+    type: integer 
+
   projects:
     $ref: "_definitions.yaml#/to_one_project"
