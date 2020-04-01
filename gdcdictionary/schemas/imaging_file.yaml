@@ -30,10 +30,10 @@ links:
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: imaging_exams
+      - name: subjects
         backref: imaging_files
         label: data_for
-        target_type: imaging_exam
+        target_type: subject
         multiplicity: many_to_one
         required: false
 
@@ -96,8 +96,27 @@ properties:
     description: >
       order number for this image or other content.
     type: integer
+    
+  uid:
+    description: >
+      Formal DICOM identifier for the study.
+    type: string
 
-  imaging_exams:
+  series_uid:
+    description: >
+      Formal identifier for this series.
+    type: string
+
+  image_body_site:
+    description: >
+      Location of image in both lungs, left lung or right lung.
+    enum:
+      - "Both lungs"
+      - "Left lung"
+      - "Right lung"
+
+
+  subjects:
     $ref: "_definitions.yaml#/to_one"
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
