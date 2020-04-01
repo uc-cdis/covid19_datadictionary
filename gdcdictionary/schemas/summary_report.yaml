@@ -69,6 +69,47 @@ properties:
     description: >
       Date
     type: string
+    
+  positiveIncrease:
+    description: >
+      Increase of positive tests from the day before.
+    type: integer
+    
+  negativeIncrease:
+    description: >
+      Increase of negative tests from the day before.
+    type: integer
+
+  pending:
+    description: >
+      Tests that have been submitted to a lab but no results have been reported yet.
+    type: integer
+
+  totalTestResults:
+    description: >
+      Calculated value (positive + negative) of total test results.
+    type: integer
+
+  totalTestResultsIncrease:
+    description: >
+      Increase in the total test results from the day before.
+    type: integer
+
+  hospitalized:
+    description: >
+      Total cumulative number of people hospitalized.
+    type: integer
+
+  hospitalizedIncrease:
+    description: >
+      Increase in the number of people hospitalized from the day before.
+    type: integer
+
+  deathIncrease:
+    description: >
+      Increase in the number of deaths from the day before.
+    type: integer
+
 
   summary_locations:
     $ref: "_definitions.yaml#/to_many"  
