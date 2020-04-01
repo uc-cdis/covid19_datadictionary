@@ -36,14 +36,6 @@ links:
     target_type: subject
     multiplicity: many_to_one
     required: true
-
-  - name: follow_ups
-    backref: samples
-    label: related_to
-    target_type: follow_up
-    multiplicity: many_to_one
-    required: false
-
   - name: diagnoses
     backref: samples
     label: related_to
