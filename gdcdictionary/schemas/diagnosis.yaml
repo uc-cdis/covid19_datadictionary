@@ -286,7 +286,7 @@ properties:
     description: >
       Did the patient have acute respiratory distress syndrome?
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -294,7 +294,7 @@ properties:
     description: >
       Did the patient have another diagnosis/etiology for their illness?
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
     
@@ -302,7 +302,7 @@ properties:
     description: >
       Did the patient have an abnormal chest X-ray?
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -341,7 +341,7 @@ properties:
     description: >
       Was the patient hospitalized?
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -359,7 +359,7 @@ properties:
     description: >
       Was the patient admitted to an intensive care unit (ICU)?
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -367,7 +367,7 @@ properties:
     description: >
       Did the patient receive mechanical ventilation (MV)/intubation? 
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -380,7 +380,7 @@ properties:
     description: >
       Did the patient receive extracorporeal membrane oxygenation (ECMO)? 
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
     
@@ -388,7 +388,7 @@ properties:
     description: >
       Did the patient die as a result of this illness? 
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -406,7 +406,7 @@ properties:
     description: >
       Is the patient a health care worker in the United States?
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -414,7 +414,7 @@ properties:
     description: >
       Does the patient have a history of being in a healthcare facility (as a patient, worker or visitor) in China?
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
     
@@ -461,7 +461,7 @@ properties:
     description: >
       If the patient had contact with another COVID-19 case, was this person a U.S. case? 
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
       - NA
@@ -508,7 +508,7 @@ properties:
       During this illness, did the patient experience any of the following symptoms?
       Fever >100.4F (38C)
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -517,7 +517,7 @@ properties:
       During this illness, did the patient experience any of the following symptoms?
       Subjective fever (felt feverish)
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -526,7 +526,7 @@ properties:
       During this illness, did the patient experience any of the following symptoms?
       Chills
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -535,7 +535,7 @@ properties:
       During this illness, did the patient experience any of the following symptoms?
       Muscle aches (myalgia)
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -544,7 +544,7 @@ properties:
       During this illness, did the patient experience any of the following symptoms?
       Runny nose (rhinorrhea)
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
     
@@ -553,7 +553,7 @@ properties:
       During this illness, did the patient experience any of the following symptoms?
       Sore throat
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -562,7 +562,7 @@ properties:
       During this illness, did the patient experience any of the following symptoms?
       Cough (new onset or worsening of chronic cough)
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -571,7 +571,7 @@ properties:
       During this illness, did the patient experience any of the following symptoms?
       Shortness of breath (dyspnea)
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -580,7 +580,7 @@ properties:
       During this illness, did the patient experience any of the following symptoms?
       Nausea or Vomiting
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -589,7 +589,7 @@ properties:
       During this illness, did the patient experience any of the following symptoms?
       Headache
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -598,7 +598,7 @@ properties:
       During this illness, did the patient experience any of the following symptoms?
       Abdominal pain
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -607,7 +607,7 @@ properties:
       During this illness, did the patient experience any of the following symptoms?
       Diarrhea (≥3 loose/looser than normal stools/24hr period)
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
   
@@ -645,7 +645,7 @@ properties:
     description: >
       Pre-existing medical conditions?
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -653,7 +653,7 @@ properties:
     description: >
       Chronic lung disease (asthma/emphysema/COPD)
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -661,7 +661,7 @@ properties:
     description: >
       Diabetes Mellitus
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -669,7 +669,7 @@ properties:
     description: >
       Cardiovascular disease
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
   
@@ -677,7 +677,7 @@ properties:
     description: >
       Chronic renal disease
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -685,7 +685,7 @@ properties:
     description: >
       Liver disease
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -693,7 +693,7 @@ properties:
     description: >
       Immunocompromised condition
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -701,7 +701,7 @@ properties:
     description: >
       Neurologic/neurodevelopmental/intellectual disability
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -714,7 +714,7 @@ properties:
     description: >
       Other chronic diseases
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
@@ -735,7 +735,7 @@ properties:
     description: >
       Current smoker
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
     
@@ -743,7 +743,7 @@ properties:
     description: >
       Former smoker
     enum: 
-      - Yes
+      - "Yes"
       - No
       - Unknown
 
