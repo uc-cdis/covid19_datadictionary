@@ -278,9 +278,9 @@ properties:
     description: >
       Did the patient develop pneumonia?
     enum: 
-      - Yes
-      - No
-      - Unknown
+      - "Yes"
+      - "No"
+      - "Unknown"
 
   acuterespdistress_yn:
     description: >
