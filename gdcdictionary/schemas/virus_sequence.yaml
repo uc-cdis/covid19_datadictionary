@@ -35,19 +35,19 @@ links:
       - name: samples
         backref: virus_sequences
         label: data_from
-        target_type: samples
+        target_type: sample
         multiplicity: one_to_many
         required: false
       - name: virus_genomes
         backref: virus_sequences
         label: data_from
-        target_type: virus_genomes
+        target_type: virus_genome
         multiplicity: one_to_many
         required: false
       - name: studies
         backref: virus_sequences
         label: data_from
-        target_type: studies
+        target_type: study
         multiplicity: one_to_many
         required: false
 
