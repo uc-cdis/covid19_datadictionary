@@ -36,19 +36,19 @@ links:
         backref: virus_sequences
         label: data_from
         target_type: sample
-        multiplicity: one_to_many
+        multiplicity: many_to_one
         required: false
       - name: virus_genomes
         backref: virus_sequences
         label: data_from
         target_type: virus_genome
-        multiplicity: one_to_many
+        multiplicity: many_to_one
         required: false
       - name: studies
         backref: virus_sequences
         label: data_from
         target_type: study
-        multiplicity: one_to_many
+        multiplicity: many_to_one
         required: false
 
 required:
@@ -88,10 +88,10 @@ properties:
       - fasta
 
   virus_genomes:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"
   samples:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"
   studies:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
