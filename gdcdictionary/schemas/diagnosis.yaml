@@ -727,7 +727,7 @@ properties:
     description: >
       If female, currently pregnant
     enum: 
-      - Yes
+      - "Yes"
       - "No"
       - "Unknown"
     
