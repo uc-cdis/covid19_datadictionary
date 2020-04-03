@@ -36,7 +36,7 @@ links:
         backref: virus_sequence_alignments
         label: data_from
         target_type: virus_sequence
-        multiplicity: many_to_one
+        multiplicity: many_to_many
         required: false
 
 
@@ -83,7 +83,7 @@ properties:
       - ClustalW
 
   virus_sequences:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"
 
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
