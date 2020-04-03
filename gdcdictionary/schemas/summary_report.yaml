@@ -110,7 +110,7 @@ properties:
       The number of people currently hospitalized.
     type: integer
 
-  hospitalized:
+  hospitalizedCumulative:
     description: >
       Total cumulative number of people hospitalized.
     type: integer
