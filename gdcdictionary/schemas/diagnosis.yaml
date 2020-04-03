@@ -287,24 +287,24 @@ properties:
       Did the patient have acute respiratory distress syndrome?
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   diagother:
     description: >
       Did the patient have another diagnosis/etiology for their illness?
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
     
   abxchest_yn:
     description: >
       Did the patient have an abnormal chest X-ray?
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   sympstatus:
     description: >
@@ -342,8 +342,8 @@ properties:
       Was the patient hospitalized?
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   adm1_dt:
     description: >
@@ -360,16 +360,16 @@ properties:
       Was the patient admitted to an intensive care unit (ICU)?
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   mechvent_yn:
     description: >
       Did the patient receive mechanical ventilation (MV)/intubation? 
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   mechvent_dur:
     description: >
@@ -381,16 +381,16 @@ properties:
       Did the patient receive extracorporeal membrane oxygenation (ECMO)? 
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
     
   death_yn:
     description: >
       Did the patient die as a result of this illness? 
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   death_dt:
     description: >
@@ -407,16 +407,16 @@ properties:
       Is the patient a health care worker in the United States?
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   hc_work_china_yn:
     description: >
       Does the patient have a history of being in a healthcare facility (as a patient, worker or visitor) in China?
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
     
   past_14_days:
     description: >
@@ -462,9 +462,9 @@ properties:
       If the patient had contact with another COVID-19 case, was this person a U.S. case? 
     enum: 
       - "Yes"
-      - No
-      - Unknown
-      - NA
+      - "No"
+      - "Unknown"
+      - "NA"
 
   cdc_ncov2019_sourceid_2:
     description: >
@@ -509,8 +509,8 @@ properties:
       Fever >100.4F (38C)
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   sfever_yn:
     description: >
@@ -518,8 +518,8 @@ properties:
       Subjective fever (felt feverish)
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   chills_yn:
     description: >
@@ -527,8 +527,8 @@ properties:
       Chills
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   myalgia_yn:
     description: >
@@ -536,8 +536,8 @@ properties:
       Muscle aches (myalgia)
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   runnose_yn:
     description: >
@@ -545,8 +545,8 @@ properties:
       Runny nose (rhinorrhea)
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
     
   sthroat_yn:
     description: >
@@ -554,8 +554,8 @@ properties:
       Sore throat
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   cough_yn:
     description: >
@@ -563,8 +563,8 @@ properties:
       Cough (new onset or worsening of chronic cough)
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   sob_yn:
     description: >
@@ -572,8 +572,8 @@ properties:
       Shortness of breath (dyspnea)
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   nauseavomit_yn:
     description: >
@@ -581,8 +581,8 @@ properties:
       Nausea or Vomiting
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   headache_yn:
     description: >
@@ -590,8 +590,8 @@ properties:
       Headache
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   abdom_yn:
     description: >
@@ -599,8 +599,8 @@ properties:
       Abdominal pain
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   diarrhea_yn:
     description: >
@@ -608,8 +608,8 @@ properties:
       Diarrhea (≥3 loose/looser than normal stools/24hr period)
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
   
   othsym1_yn:
     description: >
@@ -646,64 +646,64 @@ properties:
       Pre-existing medical conditions?
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   cld_yn:
     description: >
       Chronic lung disease (asthma/emphysema/COPD)
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   diabetes_yn:
     description: >
       Diabetes Mellitus
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   cvd_yn:
     description: >
       Cardiovascular disease
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
   
   renaldis_yn:
     description: >
       Chronic renal disease
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   liverdis_yn:
     description: >
       Liver disease
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   immsupp_yn:
     description: >
       Immunocompromised condition
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   neuro_yn:
     description: >
       Neurologic/neurodevelopmental/intellectual disability
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   neuro_spec:
     description: >
@@ -715,8 +715,8 @@ properties:
       Other chronic diseases
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   otherdis_spec:
     description: >
@@ -728,24 +728,24 @@ properties:
       If female, currently pregnant
     enum: 
       - Yes
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
     
   smoke_curr_yn:
     description: >
       Current smoker
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
     
   smoke_former_yn:
     description: >
       Former smoker
     enum: 
       - "Yes"
-      - No
-      - Unknown
+      - "No"
+      - "Unknown"
 
   resp_flua_ag:
     description: >
