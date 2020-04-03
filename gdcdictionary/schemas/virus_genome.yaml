@@ -36,13 +36,13 @@ links:
         backref: virus_genomes
         label: data_from
         target_type: sample
-        multiplicity: one_to_many
+        multiplicity: many_to_one
         required: false
       - name: studies
         backref: virus_genomes
         label: data_from
         target_type: study
-        multiplicity: one_to_many
+        multiplicity: many_to_one
         required: false
 
 required:
@@ -83,8 +83,8 @@ properties:
 
 
   samples:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"
   studies:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
