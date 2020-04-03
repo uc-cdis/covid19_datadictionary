@@ -116,15 +116,15 @@ properties:
     term:
       $ref: "_terms.yaml#/race"
     enum:
-      - Asian
-      - White
-      - Black
-      - Multi-racial
-      - Asian/Pacific Islander
-      - American Indian or Alaskan Native
-      - Unspecified
-      - Unknown
-      - Other
+      - "Asian"
+      - "White"
+      - "Black"
+      - "Multi-racial"
+      - "Native Hawaiian/ Other Pacific Islander"
+      - "American Indian or Alaskan Native"
+      - "Unspecified"
+      - "Unknown"
+      - "Other"
     termDef:
       - term: Race
         source: NCI Thesaurus
@@ -176,9 +176,9 @@ properties:
     term:
       $ref: "_terms.yaml#/ethnicity"
     enum:
-      - Hispanic or Latino
-      - Not Hispanic or Latino
-      - Unknown
+      - Hispanic/Latino
+      - Non-Hispanic/Latino
+      - Not specified
       - Other
     termDef:
       - term: Ethnicity
@@ -193,14 +193,6 @@ properties:
       - enumeration: Not Hispanic or Latino
         source: NCI Thesaurus
         term_id: C41222
-        term_version: 18.09d (Release date:2018-09-24)
-      - enumeration: Unknown
-        source: NCI Thesaurus
-        term_id: C17998
-        term_version: 18.09d (Release date:2018-09-24)
-      - enumeration: Other
-        source: NCI Thesaurus
-        term_id: C17649
         term_version: 18.09d (Release date:2018-09-24)
 
   caribbean_islander:
@@ -350,6 +342,8 @@ properties:
       - "female"
       - "male"
       - "N/A"
+      - "unknown"
+      - "Other"
       - "null"
 
   subjects:

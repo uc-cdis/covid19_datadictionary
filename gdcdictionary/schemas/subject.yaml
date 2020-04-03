@@ -90,6 +90,14 @@ properties:
       Age
     type: string
 
+  ageunit:
+    description: >
+      Age units (yr/mo/days):
+    enum:
+      - Years
+      - Months
+      - Days
+
   city:
     description: >
       City
@@ -326,6 +334,12 @@ properties:
     description: >
       Link
     type: string
+
+  dob:
+    description: >
+      Date of birth (MM/DD/YYYY)
+    type: string
+    
 
   studies:
     $ref: "_definitions.yaml#/to_many"
