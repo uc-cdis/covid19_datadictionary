@@ -35,7 +35,7 @@ links:
       - name: virus_sequence_alignments
         backref: virus_sequence_hmms
         label: data_from
-        target_type: virus_sequence_alignments
+        target_type: virus_sequence_alignment
         multiplicity: many_to_one
         required: false
 
