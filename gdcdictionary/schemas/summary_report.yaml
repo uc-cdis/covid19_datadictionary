@@ -95,11 +95,6 @@ properties:
       Increase in the total test results from the day before.
     type: integer
 
-  hospitalized:
-    description: >
-      Total cumulative number of people hospitalized.
-    type: integer
-
   hospitalizedIncrease:
     description: >
       Increase in the number of people hospitalized from the day before.
@@ -110,6 +105,35 @@ properties:
       Increase in the number of deaths from the day before.
     type: integer
 
+  hospitalizedCurrently:
+    description: >
+      The number of people currently hospitalized.
+    type: integer
+
+  hospitalizedCumulative:
+    description: >
+      Total cumulative number of people hospitalized.
+    type: integer
+    
+  inIcuCurrently:
+    description: >
+      The number of people currently in ICU.
+    type: integer
+
+  inIcuCumulative:
+    description: >
+      Total cumulative number of people in ICU.
+    type: integer
+    
+  onVentilatorCurrently:
+    description: >
+      The number of people currently on ventilators.
+    type: integer
+
+  onVentilatorCumulative:
+    description: >
+      Total cumulative number of people on ventilators.
+    type: integer
 
   summary_locations:
     $ref: "_definitions.yaml#/to_many"  
