@@ -155,7 +155,9 @@ properties:
   symptoms:
     description: >
       Symptoms
-    type: string
+    type: array
+    items:
+      type: string
 
   lives_in_wuhan:
     description: >
