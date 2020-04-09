@@ -86,6 +86,11 @@ properties:
       $ref: "_terms.yaml#/data_format"
     enum:
       - fasta
+  data_source:
+    term: >
+      The source of the virus sequence.
+    enum:
+      - GenBank      
 
   virus_genomes:
     $ref: "_definitions.yaml#/to_one"
