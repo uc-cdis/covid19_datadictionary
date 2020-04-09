@@ -63,7 +63,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "submitted_aligned_reads" ]
+    enum: [ "virus_genome" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -80,7 +80,11 @@ properties:
       $ref: "_terms.yaml#/data_format"
     enum:
       - gb
-
+  data_source:
+    term: >
+      The source of the virus genome.
+    enum:
+      - GenBank
 
   samples:
     $ref: "_definitions.yaml#/to_one"
