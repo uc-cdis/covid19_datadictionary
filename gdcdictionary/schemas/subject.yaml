@@ -88,7 +88,7 @@ properties:
   age: 
     description: >
       Age
-    type: string
+    type: integer
 
   ageunit:
     description: >
@@ -286,8 +286,8 @@ properties:
     description: >
       If onset approximated
     enum:
-      - "0"
-      - "1"
+      - "True"
+      - "False"
       - "NA"
 
   hosp_visit_date:
@@ -311,21 +311,23 @@ properties:
     description: >
       Visiting Wuhan
     enum:
-      - "0"
-      - "1"
+      - "True"
+      - "False"
 
   from_wuhan:
     description: >
       From Wuhan
     enum:
-      - "0"
-      - "1"
+      - "True"
+      - "False"
       - "NA"
 
   death:
     description: >
       Death
-    type: integer
+    enum:
+      - "True"
+      - "False"
 
   recovered:
     description: >
