@@ -87,8 +87,8 @@ properties:
 
   age: 
     description: >
-      Age
-    type: integer
+      Age of the subject (in years)
+    type: number
 
   ageunit:
     description: >
