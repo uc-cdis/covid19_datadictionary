@@ -83,6 +83,11 @@ properties:
     description: >
       code3
     type: integer 
+    
+  zipcode:
+    description: >
+      The zip code number for the location.
+    type: integer     
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"
