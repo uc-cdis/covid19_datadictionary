@@ -45,37 +45,37 @@ properties:
       Number of confirmed cases under the age of 20 years old.
     type: integer
   
-   age_group_20-29:
+  age_group_20-29:
     description >
       Number of confirmed cases between the ages of 20 to 29 years old.
     type: integer 
   
-   age_group_30-39:
+  age_group_30-39:
     description >
       Number of confirmed cases between the ages of 30 to 39 years old.
     type: integer 
   
-   age_group_40-49:
+  age_group_40-49:
     description >
       Number of confirmed cases between the ages of 40 to 49 years old.
     type: integer 
   
-   age_group_50-59:
+  age_group_50-59:
     description >
       Number of confirmed cases between the ages of 50 to 59 years old.
     type: integer 
   
-   age_group_60-69:
+  age_group_60-69:
     description >
       Number of confirmed cases between the ages of 60 to 69 years old.
     type: integer 
   
-   age_group_70-79:
+  age_group_70-79:
     description >
       Number of confirmed cases between the ages of 70 to 79 years old.
     type: integer 
   
-   age_group_80+:
+  age_group_80+:
     description >
       Number of confirmed cases over the age of 80 years old.
     type: integer 
