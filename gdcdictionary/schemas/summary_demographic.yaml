@@ -105,12 +105,12 @@ properties:
       Number of hispanic confirmed cases.
     type: integer
   
-  race_nh/pi:
+  race_nh_pi:
     description: >
       Number of NH/PI (Native Hawaiian or Other Pacific Islander) confirmed cases.
     type: integer
   
-  race_ai/an:
+  race_ai_an:
     description: >
       Number of AI/AN (American Indian or Alaska Native) confirmed cases.
     type: integer
