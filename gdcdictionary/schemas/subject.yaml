@@ -343,7 +343,50 @@ properties:
     description: >
       Date of birth (MM/DD/YYYY)
     type: string
-    
+
+  age_decade:
+    description: >
+      the age of the patient in decades
+    type: string
+
+  isolated: 
+    description: >
+      state of isolated
+    enum:
+      - "True"
+      - "False"
+
+  global_num:
+    description: >
+      the number given by KCDC
+    type: integer
+
+  disease:
+    description: >
+      TRUE: underlying disease / FALSE: no disease
+    enum:
+      - "True"
+      - "False"
+
+  infection_case:
+    description: >
+      the case of infection
+    type: string
+
+  infection_order:
+    description: >
+      the order of infection
+    type: integer
+
+  infected_by:
+    description: >
+      the ID of who infected the patient
+    type: integer
+
+  contact_number:
+    description: >
+      the number of contacts with people
+    type: integer
 
   studies:
     $ref: "_definitions.yaml#/to_many"
