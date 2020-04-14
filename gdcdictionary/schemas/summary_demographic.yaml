@@ -40,7 +40,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  age_group_<20:
+  age_group_less_20:
     description: >
       Number of confirmed cases under the age of 20 years old.
     type: integer
@@ -75,7 +75,7 @@ properties:
       Number of confirmed cases between the ages of 70 to 79 years old.
     type: integer 
   
-  age_group_80+:
+  age_group_greater_80:
     description: >
       Number of confirmed cases over the age of 80 years old.
     type: integer 
