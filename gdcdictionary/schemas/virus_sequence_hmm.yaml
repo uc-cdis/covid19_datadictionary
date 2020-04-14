@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "virus_sequence_hmm"
 title: Virus Sequence HMM
 type: object
-namespace: https://covid19.datacommons.io/
+namespace: https://chicagoland.pandemicresponsecommons.org
 category: data_file
 program: '*'
 project: '*'

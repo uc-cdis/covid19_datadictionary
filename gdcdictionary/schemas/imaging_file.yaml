@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "imaging_file"
 title: Imaging File
 type: object
-namespace: https://niaid.bionimbus.org
+namespace: https://chicagoland.pandemicresponsecommons.org
 category: data_file
 program: '*'
 project: '*'
