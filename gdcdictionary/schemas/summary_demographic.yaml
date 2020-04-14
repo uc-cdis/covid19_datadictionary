@@ -125,7 +125,7 @@ properties:
       Number of female confirmed cases.
     type: integer
   
-  gender_unknown/left_blank:
+  gender_unknown_left_blank:
     description: >
       Number of confirmed cases that are unknown or were left blank.
     type: integer
