@@ -1,0 +1,134 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "summary_demographic"
+title: Summary Demographic
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: clinical
+program: '*'
+project: '*'
+description: >
+  A summary of demographics for a selected location's confirmed cases.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: summary_locations
+    backref: summary_demographics
+    label: performed_at
+    target_type: summary_location
+    multiplicity: one_to_many
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - summary_locations
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  age_group_<20:
+    description >
+      Number of confirmed cases under the age of 20 years old.
+    type: integer
+  
+   age_group_20-29:
+    description >
+      Number of confirmed cases between the ages of 20 to 29 years old.
+    type: integer 
+  
+   age_group_30-39:
+    description >
+      Number of confirmed cases between the ages of 30 to 39 years old.
+    type: integer 
+  
+   age_group_40-49:
+    description >
+      Number of confirmed cases between the ages of 40 to 49 years old.
+    type: integer 
+  
+   age_group_50-59:
+    description >
+      Number of confirmed cases between the ages of 50 to 59 years old.
+    type: integer 
+  
+   age_group_60-69:
+    description >
+      Number of confirmed cases between the ages of 60 to 69 years old.
+    type: integer 
+  
+   age_group_70-79:
+    description >
+      Number of confirmed cases between the ages of 70 to 79 years old.
+    type: integer 
+  
+   age_group_80+:
+    description >
+      Number of confirmed cases over the age of 80 years old.
+    type: integer 
+  
+  race_white:
+    description >
+      Number of white confirmed cases.
+    type: integer
+  
+  race_black:
+    description >
+      Number of black confirmed cases.
+    type: integer
+  
+  race_left_blank:
+    description >
+      Number of confirmed cases that were left blank for the race field.
+    type: integer
+  
+  race_other:
+    description >
+      Number of other (race) confirmed cases.
+    type: integer
+  
+  race_hispanic:
+    description >
+      Number of hispanic confirmed cases.
+    type: integer
+  
+  race_nh/pi:
+    description >
+      Number of NH/PI (Native Hawaiian or Other Pacific Islander) confirmed cases.
+    type: integer
+  
+  race_ai/an:
+    description >
+      Number of AI/AN (American Indian or Alaska Native) confirmed cases.
+    type: integer
+  
+  gender_male:
+    description >
+      Number of male confirmed cases.
+    type: integer
+  
+  gender_female:
+    description >
+      Number of female confirmed cases.
+    type: integer
+  
+  gender_unknown/left_blank:
+    description >
+      Number of confirmed cases that are unknown or were left blank.
+    type: integer
+  
+  summary_locations:
+    $ref: "_definitions.yaml#/to_many"  
