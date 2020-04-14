@@ -25,7 +25,7 @@ links:
     backref: summary_demographics
     label: performed_at
     target_type: summary_location
-    multiplicity: one_to_many
+    multiplicity: many_to_one
     required: true
 
 required:
