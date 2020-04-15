@@ -114,6 +114,11 @@ properties:
     description: >
       Number of AI/AN (American Indian or Alaska Native) confirmed cases.
     type: integer
+    
+  race_asian:
+    description: >
+      Number of Asian confirmed cases.
+    type: integer
   
   gender_male:
     description: >
