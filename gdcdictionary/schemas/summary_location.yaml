@@ -89,7 +89,7 @@ properties:
       The zip code number for the location.
     type: string     
 
-  reportingOrg:
+  reporting_org:
     description: >
       Reporting organization
     type: string   
