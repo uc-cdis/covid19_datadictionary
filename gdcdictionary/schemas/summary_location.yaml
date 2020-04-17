@@ -89,5 +89,10 @@ properties:
       The zip code number for the location.
     type: string     
 
+  reporting_org:
+    description: >
+      Reporting organization
+    type: string   
+
   projects:
     $ref: "_definitions.yaml#/to_one_project"
