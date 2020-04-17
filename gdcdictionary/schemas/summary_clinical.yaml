@@ -1,0 +1,115 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "summary_clinical"
+title: Summary Clinical
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: administrative
+program: '*'
+project: '*'
+description: >
+  A summary of clinically related data associated with care providers
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: summary_clinicals
+    backref: summary_reports
+    label: performed_at
+    target_type: summary_clinical
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - summary_clinicals
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  reportDate:
+    description: >
+      Date of report
+    type: string
+
+  num_COVID:
+    description: >
+      Number of patients treated in past 24 hours with confirmed COVID-19 
+    type: integer
+
+  num_COVID_deaths:
+    description: >
+      Number of deaths of COVID-19 patients in past 24 hours 
+    type: integer
+
+  num_outpatient:
+    description: >
+      Number of patients treated outpatient in previous 24 hours 
+    type: integer
+
+  num_admitted:
+    description: >
+      Number of patients admitted in previous 24 hours 
+    type: integer
+
+  num_icu:
+    description: >
+      Maximum number of patients in ICU in previous 24 hours 
+    type: integer
+
+  num_vent:
+    description: >
+      Maximum number of patients on ventilators in previous 24 hours 
+    type: integer
+
+  num_resp:
+    description: >
+      Number of patients (inpatient) with respiratory conditions (J00-J99)
+    type: integer
+
+  num_pneu:
+    description: >
+      Number of patients (inpatient) with pneumonia (J09-J18)
+    type: integer
+
+  num_diab:
+    description: >
+      Number of patients (inpatient) with diabetes (E10-E11)
+    type: integer
+
+  num_asth:
+    description: >
+      Number of (inpatient) patients with asthma  (J45)
+    type: integer
+
+  num_obes:
+    description: >
+      Number of (inpatient) patients with obesity (E66)
+    type: integer
+
+  num_card:
+    description: >
+      Number of (inpatient) patients with cardiovascular disease (I20-I25)
+    type: integer
+
+  num_chf:
+    description: >
+      Number of (inpatient) patients with congestive heart failure (I50)
+    type: integer
+
+
+  summary_clinicals:
+    $ref: "_definitions.yaml#/to_many"  
