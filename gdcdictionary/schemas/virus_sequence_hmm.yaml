@@ -75,7 +75,12 @@ properties:
       $ref: "_terms.yaml#/data_format"
     enum:
       - txt
-
+      - HMMER 3.3
+  hmm_build_tool:
+    description : >
+        The tool that was used to create the HMM file.
+    enum:
+      - hmmbuild
 
   virus_sequence_alignments:
     $ref: "_definitions.yaml#/to_one"
