@@ -22,7 +22,7 @@ systemProperties:
 
 links:
   - name: summary_clinicals
-    backref: summary_reports
+    backref: summary_locations
     label: performed_at
     target_type: summary_clinical
     multiplicity: many_to_one
