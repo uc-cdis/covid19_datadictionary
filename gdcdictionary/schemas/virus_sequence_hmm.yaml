@@ -75,6 +75,7 @@ properties:
       $ref: "_terms.yaml#/data_format"
     enum:
       - txt
+      - hmmer
 
 
   virus_sequence_alignments:
