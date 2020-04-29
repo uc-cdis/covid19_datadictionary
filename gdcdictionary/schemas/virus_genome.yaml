@@ -85,6 +85,7 @@ properties:
       The source of the virus genome.
     enum:
       - GenBank
+      - NCBI
 
   samples:
     $ref: "_definitions.yaml#/to_one"
