@@ -317,5 +317,17 @@ properties:
       - "Yes"
       - "No"
 
+  nationality:
+    description: >
+      the nationality of patient
+    enum:
+      - "indonesia"
+      - "foreigner"
+    termDef:
+      - term: nationality
+        source: NCI Thesaurus
+        term_id: C28407 
+        term_version: 18.11d (Release date:2020-03-31)
+
   subjects:
     $ref: "_definitions.yaml#/to_one"

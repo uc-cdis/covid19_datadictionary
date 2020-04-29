@@ -59,21 +59,41 @@ properties:
      - Mustela putorius furo
      - Rattus rattus
      - Sus scrofa
+    termDef:
+      - term: species
+        source: NCI Thesaurus
+        term_id: C45293
+        term_version: 20.03e (Release date:2020-03-31)   
 
   strain:
     description: >
       A lower-level taxonomic rank used in microbiology or virology, plants and rodents, usually at the intraspecific level (within a species)
     type: string
+    termDef:
+      - term: strain
+        source: NCI Thesaurus
+        term_id: C14419 
+        term_version: 20.03e (Release date:2020-03-31) 
 
   taxon_id:
     description: >
       NCBI identifier for classification of organisms.
     type: integer
+    termDef:
+      - term: taxon_id
+        source: NCI Thesaurus
+        term_id: C54539
+        term_version: 20.03e (Release date:2020-03-31)
 
   genus:
     description: >
       Genus of organism collected.
     type: string
+    termDef:
+      - term: taxon_id
+        source: NCI Thesaurus
+        term_id: C45292
+        term_version: 20.03e (Release date:2020-03-31)
 
   genome_length:
     description: >
@@ -89,6 +109,11 @@ properties:
     description: >
       Age of the subject (in years)
     type: number
+    termDef:
+      - term: taxon_id
+        source: NCI Thesaurus
+        term_id: C25150
+        term_version: 20.03e (Release date:2020-03-31)
 
   ageunit:
     description: >
@@ -97,21 +122,41 @@ properties:
       - Years
       - Months
       - Days
+    termDef:
+      - term: ageunit
+        source: NCI Thesaurus
+        term_id: C50400
+        term_version: 20.03e (Release date:2020-03-31)
 
   city:
     description: >
       City
     type: string
+    termDef:
+      - term: city
+        source: NCI Thesaurus
+        term_id: C25160
+        term_version: 20.03e (Release date:2020-03-31)
 
   province:
     description: >
-      Province
+      the region/province of the patient
     type: string
+    termDef:
+      - term: province
+        source: NCI Thesaurus
+        term_id: C25632
+        term_version: 20.03e (Release date:2020-03-31)
 
   country:
     description: >
       Country
     type: string
+    termDef:
+      - term: country
+        source: NCI Thesaurus
+        term_id: C25464
+        term_version: 20.03e (Release date:2020-03-31)
 
   wuhan_not_wuhan:
     description: >
@@ -125,12 +170,22 @@ properties:
       Latitude
     type: 
       - string
+    termDef:
+      - term: latitude
+        source: NCI Thesaurus
+        term_id: C68642
+        term_version: 20.03e (Release date:2020-03-31)
 
   longitude:
     description: >
       Longitude
     type: 
       - string
+    termDef:
+      - term: longitude
+        source: NCI Thesaurus
+        term_id: C68643
+        term_version: 20.03e (Release date:2020-03-31)
 
   geo_resolution:
     description: >
@@ -158,6 +213,11 @@ properties:
     type: array
     items:
       type: string
+    termDef:
+      - term: symptoms
+        source: NCI Thesaurus
+        term_id: C4876
+        term_version: 20.03e (Release date:2020-03-31)
 
   lives_in_wuhan:
     description: >
@@ -197,11 +257,21 @@ properties:
     description: >
       Chronic disease
     type: string
+    termDef:
+      - term: chronic_disease
+        source: NCI Thesaurus
+        term_id: C165593
+        term_version: 20.03e (Release date:2020-03-31)
   
   source:
     description: >
       Source
     type: string
+    termDef:
+      - term: source
+        source: NCI Thesaurus
+        term_id: C25683
+        term_version: 20.03e (Release date:2020-03-31)
 
   sequence_available:
     description: >
@@ -212,6 +282,11 @@ properties:
     description: >
       Outcome
     type: string
+    termDef:
+      - term: source
+        source: NCI Thesaurus
+        term_id: C25683
+        term_version: 20.03e (Release date:2020-03-31)
 
   date_death_or_discharge:
     description: >
@@ -227,6 +302,11 @@ properties:
     description: >
       Location
     type: string
+    termDef:
+      - term: location
+        source: NCI Thesaurus
+        term_id: C25341
+        term_version: 20.03e (Release date:2020-03-31)
 
   admin3:
     description: >
@@ -271,16 +351,31 @@ properties:
     type:
       - string
       - "null"
+    termDef:
+      - term: reporting_date
+        source: NCI Thesaurus
+        term_id: C70857
+        term_version: 20.03e (Release date:2020-03-31)
 
   summary:
     description: >
       Summary
     type: string
+    termDef:
+      - term: summary
+        source: NCI Thesaurus
+        term_id: C79170
+        term_version: 20.03e (Release date:2020-03-31)
 
   symptom_onset:
     description: >
       Symptom onset
     type: string
+    termDef:
+      - term: symptom_onset
+        source: NCI Thesaurus
+        term_id: C124353
+        term_version: 20.03e (Release date:2020-03-31)
 
   if_onset_approximated:
     description: >
@@ -300,12 +395,22 @@ properties:
       Exposure start
     type: 
       - string
+    termDef:
+      - term: exposure_start
+        source: NCI Thesaurus
+        term_id: C83127 
+        term_version: 20.03e (Release date:2020-03-31)
 
   exposure_end:
     description: >
       Exposure end
     type: 
       - string
+    termDef:
+      - term: exposure_end
+        source: NCI Thesaurus
+        term_id: C83138 
+        term_version: 20.03e (Release date:2020-03-31)
 
   visiting_wuhan:
     description: >
@@ -328,21 +433,41 @@ properties:
     enum:
       - "True"
       - "False"
+    termDef:
+      - term: death
+        source: NCI Thesaurus
+        term_id: C28554 
+        term_version: 20.03e (Release date:2020-03-31)
 
   recovered:
     description: >
       Recovered
     type: string
+    termDef:
+      - term: recovered
+        source: NCI Thesaurus
+        term_id: C49498 
+        term_version: 20.03e (Release date:2020-03-31)
 
   link:
     description: >
       Link
     type: string
+    termDef:
+      - term: link
+        source: NCI Thesaurus
+        term_id: C47919
+        term_version: 20.03e (Release date:2020-03-31)
 
   dob:
     description: >
       Date of birth (MM/DD/YYYY)
     type: string
+    termDef:
+      - term: dob
+        source: NCI Thesaurus
+        term_id: C68615 
+        term_version: 20.03e (Release date:2020-03-31)
 
   age_decade:
     description: >
@@ -387,6 +512,24 @@ properties:
     description: >
       the number of contacts with people
     type: integer
+
+  current_state:
+    description: >
+      current state
+    enum:
+      - "released"
+      - "isolated"
+      - "deceased"
+
+  released_date:
+    description: >
+      the date of discharge
+    type: string
+
+  hospital:
+    description: >
+      hospitalized location
+    type: string
 
   studies:
     $ref: "_definitions.yaml#/to_many"
