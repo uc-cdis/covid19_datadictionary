@@ -81,6 +81,7 @@ properties:
     enum:
       - MAFFT
       - ClustalW
+      - muscle
 
   virus_sequences:
     $ref: "_definitions.yaml#/to_many"
