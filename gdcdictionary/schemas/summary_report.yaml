@@ -69,6 +69,11 @@ properties:
     description: >
       Date
     type: string
+    termDef:
+      - term: date
+        source: NCI Thesaurus
+        term_id: C25164 
+        term_version: 20.03e (Release date:2020-03-31)
     
   positiveIncrease:
     description: >
@@ -84,6 +89,11 @@ properties:
     description: >
       Tests that have been submitted to a lab but no results have been reported yet.
     type: integer
+    termDef:
+      - term: pending
+        source: NCI Thesaurus
+        term_id: C53470 
+        term_version: 20.03e (Release date:2020-03-31)
 
   totalTestResultsIncrease:
     description: >
