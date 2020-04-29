@@ -53,21 +53,41 @@ properties:
     description: >
       County
     type: string
+    termDef:
+      - term: county
+        source: NCI Thesaurus
+        term_id: C49292
+        term_version: 20.03e (Release date:2020-03-31) 
 
   latitude:
     description: >
       Latitude
     type: string
+    termDef:
+      - term: latitude
+        source: NCI Thesaurus
+        term_id: C68642
+        term_version: 20.03e (Release date:2020-03-31) 
 
   longitude:
     description: >
       Longitude
     type: string
+    termDef:
+      - term: longitude
+        source: NCI Thesaurus
+        term_id: C68643
+        term_version: 20.03e (Release date:2020-03-31) 
 
   FIPS:
     description: >
       FIPS
     type: integer
+    termDef:
+      - term: FIPS
+        source: NCI Thesaurus
+        term_id: C71327
+        term_version: 20.03e (Release date:2020-03-31) 
 
   iso2: 
     description: >
@@ -87,7 +107,12 @@ properties:
   zipcode:
     description: >
       The zip code number for the location.
-    type: string     
+    type: string
+    termDef:
+      - term: FIPS
+        source: NCI Thesaurus
+        term_id: C25720
+        term_version: 20.03e (Release date:2020-03-31)   
 
   reporting_org:
     description: >
