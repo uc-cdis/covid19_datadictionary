@@ -108,7 +108,7 @@ properties:
   age: 
     description: >
       Age of the subject (in years)
-    type: age
+    type: number
     termDef:
       - term: taxon_id
         source: NCI Thesaurus
