@@ -111,5 +111,5 @@ properties:
     type: integer
 
 
-  summary_clinicals:
+  summary_locations:
     $ref: "_definitions.yaml#/to_many"  
