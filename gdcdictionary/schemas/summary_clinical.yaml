@@ -21,10 +21,10 @@ systemProperties:
   - state
 
 links:
-  - name: summary_clinicals
-    backref: summary_locations
+  - name: summary_locations
+    backref: summary_clinicals
     label: performed_at
-    target_type: summary_clinical
+    target_type: summary_location
     multiplicity: many_to_one
     required: true
 
