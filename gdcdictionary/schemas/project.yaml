@@ -137,6 +137,16 @@ properties:
       A project can only be released by the user when `releasable` is true.
     default: false
     type: boolean
+    
+  url:
+    description: |
+      The url for the data set's source.
+    type: string
+    
+  data_description:
+    description: |
+      The description of the type of data found in the data set.
+    type: string
 
   intended_release_date:
     description: Tracks a Project's intended release date.
