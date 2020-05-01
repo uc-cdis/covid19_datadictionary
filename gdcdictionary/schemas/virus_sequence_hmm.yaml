@@ -65,18 +65,25 @@ properties:
     enum:
       - Nucleotide
       - Protein
+      
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Sequence HMM
+      
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - txt
       - hmmer
-
+      
+  hmm_build_tool:
+    description : >
+        The tool that was used to create the HMM file.
+    enum:
+      - hmmbuild
 
   virus_sequence_alignments:
     $ref: "_definitions.yaml#/to_one"
