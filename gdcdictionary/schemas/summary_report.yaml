@@ -135,10 +135,15 @@ properties:
       The number of people currently on ventilators.
     type: integer
 
-  onVentilatorCumulative:
+  dataQualityGrade:
     description: >
-      Total cumulative number of people on ventilators.
-    type: integer
+      The data quality grade.
+    type: string
+
+  lastUpdateEt:
+    description: >
+      The last time the data were updated.
+    type: string
 
   summary_locations:
     $ref: "_definitions.yaml#/to_many"  
