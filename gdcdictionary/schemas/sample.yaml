@@ -676,7 +676,7 @@ properties:
     
   location:
     description: >
-      The species of the host.
+      The geographic location of the host.
     type: string
 
   organism:
