@@ -188,47 +188,47 @@ properties:
   staffed_all_beds_per_1000:
     description: >
       The number of staffed beds per 1000 people.
-    type: integer
+    type: number
 
   staffed_all_beds_per_1000_gtr_20:
     description: >
       The number of staffed beds per 1000 people greater than 20 years old.
-    type: integer
+    type: number
 
   staffed_all_beds_per_1000_gtr_65:
     description: >
       The number of staffed beds per 1000 people greater than 65 years old.
-    type: integer
+    type: number
   
   staffed_icu_beds_per_1000:
     description: >
       The number of staffed ICU beds per 1000 people.
-    type: integer
+    type: number
 
   staffed_icu_beds_per_1000_gtr_20:
     description: >
       The number of staffed ICU beds per 1000 people greater than 20 years old.
-    type: integer
+    type: number
 
   staffed_icu_beds_per_1000_gtr_65:
     description: >
       The number of staffed ICU beds per 1000 people greater than 65 years old.
-    type: integer
+    type: number
     
   licensed_all_beds_per_1000:
     description: >
       The number of licensed beds per 1000 people.
-    type: integer
+    type: number
 
   licensed_all_beds_per_1000_gtr_20:
     description: >
       The number of licensed beds per 1000 people greater than 20 years old.
-    type: integer
+    type: number
 
   licensed_all_beds_per_1000_gtr_65:
     description: >
       The number of staffed beds per 1000 people greater than 65 years old.
-    type: integer
+    type: number
 
   estimated_full_mech_ventilators:
     description: >
@@ -238,7 +238,7 @@ properties:
   estimated_full_mech_ventilators_per_100000:
     description: >
       Estimated No. Full-Featured Mechanical Ventilators per 100,000 Population (Rubinson, L., Vaughn, F., Nelson, S., Giordano, S., Kallstrom, T., Buckley, T., . . . Branson, R. (2010). Mechanical Ventilators in US Acute Care Hospitals. Disaster Medicine and Public Health Preparedness, 4(3), 199-206. doi:10.1001/dmp.2010.18).
-    type: integer
+    type: number
 
   estimated_full_mech_pediatric_ventilators:
     description: >
@@ -248,7 +248,7 @@ properties:
   estimated_full_mech_pediatric_ventilators_per_100000:
     description: >
       Estimated No. Full-Feature Mechanical Ventilators, Pediatrics Capable per 100,000 Population under the age of 14 years old (Rubinson, L., Vaughn, F., Nelson, S., Giordano, S., Kallstrom, T., Buckley, T., . . . Branson, R. (2010). Mechanical Ventilators in US Acute Care Hospitals. Disaster Medicine and Public Health Preparedness, 4(3), 199-206. doi:10.1001/dmp.2010.18).
-    type: integer
+    type: number
 
   summary_locations:
     $ref: "_definitions.yaml#/to_many"  
