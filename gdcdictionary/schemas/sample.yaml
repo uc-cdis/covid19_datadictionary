@@ -51,6 +51,12 @@ links:
       target_type: study
       multiplicity: many_to_one
       required: false
+    - name: projects
+      backref: samples
+      label: related_to
+      target_type: project
+      multiplicity: many_to_one
+      required: false   
 
 # Sample properties: keep TCGA-specific fields
 properties:
@@ -695,6 +701,8 @@ properties:
     $ref: "_definitions.yaml#/to_one"
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
+  projects:
+    $ref: "_definitions.yaml#/to_one_project"  
   project_id:
     type: string
   created_datetime:
