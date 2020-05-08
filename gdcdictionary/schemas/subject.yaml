@@ -227,12 +227,16 @@ properties:
   travel_history_dates:
     description: >
       Travel history dates
-    type: string
+    type: array
+    items:
+      type: string
 
   travel_history_location:
     description: >
       Travel history location
-    type: string
+    type: array
+    items:
+      type: string
 
   reported_market_exposure:
     description: >
@@ -520,6 +524,14 @@ properties:
       - "released"
       - "isolated"
       - "deceased"
+      - "alive"
+      - "critical"
+      - "in recovery"
+      - "in treatment"
+      - "positive"
+      - "recovered"
+      - "stable"
+      - "unstable"
 
   released_date:
     description: >
@@ -530,6 +542,13 @@ properties:
     description: >
       hospitalized location
     type: string
+
+  underlying_conditions:
+    description: >
+      underlying conditions
+    type: array
+    items:
+      type: string
 
   studies:
     $ref: "_definitions.yaml#/to_many"
