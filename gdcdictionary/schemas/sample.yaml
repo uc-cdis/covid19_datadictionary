@@ -690,10 +690,7 @@ properties:
       The scientific taxonomy of the organism.
     type: string 
     
-  accession_date:
-    description: >
-      The accession date for the GenBank record.
-    type: string     
+ 
 
   subjects:
     $ref: "_definitions.yaml#/to_one"

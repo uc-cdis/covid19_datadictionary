@@ -108,6 +108,36 @@ properties:
     description: >
       Category
     type: string
+    
+  authors:
+    description: >
+      list of authors of the article
+    type: string
+    
+  doi:
+    description: >
+      Digital object identifier (DOI) is a type of persistent identifier used to uniquely identify objects
+    type: integer
+    
+  issue:
+    description: >
+      Journal issue in which the article was published
+    type: string
+    
+  journal:
+    description: >
+      Publication in which the article appears
+    type: string
+    
+  pmid:
+    description: >
+      Pubmed identifier for the article
+    type: integer
+    
+  title:
+    description: >
+      Title of the article as it appears in Pubmed
+    type: string    
 
   locations:
     $ref: "_definitions.yaml#/to_many"
