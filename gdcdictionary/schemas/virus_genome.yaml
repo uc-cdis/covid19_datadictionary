@@ -87,6 +87,11 @@ properties:
     enum:
       - GenBank
       - NCBI
+  accession:
+    term: >
+      The accession id of the virus genome.
+    type:
+      string
 
   samples:
     $ref: "_definitions.yaml#/to_one"
