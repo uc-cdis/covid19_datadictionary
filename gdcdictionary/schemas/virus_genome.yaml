@@ -82,13 +82,13 @@ properties:
     enum:
       - gb
   data_source:
-    term: >
+    description: >
       The source of the virus genome.
     enum:
       - GenBank
       - NCBI
   accession:
-    term: >
+    description: >
       The accession id of the virus genome.
     type: string
       
