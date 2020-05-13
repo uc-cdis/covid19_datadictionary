@@ -88,7 +88,7 @@ properties:
     enum:
       - fasta
   data_source:
-    term: >
+    description: >
       The source of the virus sequence.
     enum:
       - GenBank
