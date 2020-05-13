@@ -250,5 +250,10 @@ properties:
       Estimated No. Full-Feature Mechanical Ventilators, Pediatrics Capable per 100,000 Population under the age of 14 years old (Rubinson, L., Vaughn, F., Nelson, S., Giordano, S., Kallstrom, T., Buckley, T., . . . Branson, R. (2010). Mechanical Ventilators in US Acute Care Hospitals. Disaster Medicine and Public Health Preparedness, 4(3), 199-206. doi:10.1001/dmp.2010.18).
     type: number
 
+  test_type:
+    description: >
+      test type
+    type: string
+
   summary_locations:
     $ref: "_definitions.yaml#/to_many"  
