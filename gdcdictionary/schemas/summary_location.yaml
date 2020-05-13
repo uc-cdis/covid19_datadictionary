@@ -89,6 +89,11 @@ properties:
         term_id: C71327
         term_version: 20.03e (Release date:2020-03-31) 
 
+  iso: 
+    description: >
+      iso
+    type: string
+
   iso2: 
     description: >
       iso2
