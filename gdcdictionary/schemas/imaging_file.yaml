@@ -115,6 +115,31 @@ properties:
       - "Left lung"
       - "Right lung"
 
+  folder:
+    description: >
+      Name of folder containing the scan
+    type: string
+
+  image_url:
+    description: >
+      URL of the paper or website where the image came from
+    type: string
+
+  license:
+    description: >
+      License of the image such as CC BY-NC-SA. Blank if unknown
+    type: string
+
+  clinical_notes:
+    description: >
+      Clinical notes about the image and/or the patient
+    type: string
+
+  other_notes:
+    description: >
+      e.g. credit
+    type: string
+
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
