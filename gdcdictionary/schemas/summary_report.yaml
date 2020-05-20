@@ -255,5 +255,10 @@ properties:
       test type
     type: string
 
+  deaths_per_10000:
+    description: >
+      Deaths per 10,000 residents
+    type: number
+
   summary_locations:
     $ref: "_definitions.yaml#/to_many"  
