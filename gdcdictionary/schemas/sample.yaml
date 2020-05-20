@@ -23,7 +23,7 @@ systemProperties:
 required:
   - submitter_id
   - type
-  - subjects
+
 
 uniqueKeys:
   - [id]
