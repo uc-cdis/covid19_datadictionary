@@ -117,7 +117,12 @@ properties:
   reporting_org:
     description: >
       Reporting organization
-    type: string   
+    type: string  
+
+  community_area:
+    description: >
+      Community Area or Neighborhood
+    type: string     
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"
