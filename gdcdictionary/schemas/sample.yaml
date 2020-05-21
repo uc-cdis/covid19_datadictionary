@@ -574,6 +574,7 @@ properties:
       - RNA
       - Slides
       - Solid Tissue Normal
+      - ssRNA
       - Total RNA
       - Xenograft Tissue
       - Unknown
