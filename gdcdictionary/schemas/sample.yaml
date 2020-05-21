@@ -574,6 +574,7 @@ properties:
       - RNA
       - Slides
       - Solid Tissue Normal
+      - ssRNA
       - Total RNA
       - Xenograft Tissue
       - Unknown
@@ -690,7 +691,20 @@ properties:
       The scientific taxonomy of the organism.
     type: string 
     
- 
+  isolation_source:
+    description: >
+      The isolation source for the sample.
+    type: string 
+    
+  isolate:
+    description: >
+      The isolate for the sample.
+    type: string     
+
+  collection_date:
+    description: >
+      The collection date for the sample.
+    type: string     
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
