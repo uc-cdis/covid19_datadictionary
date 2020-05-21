@@ -691,17 +691,17 @@ properties:
       The scientific taxonomy of the organism.
     type: string 
     
-   isolation_source:
+  isolation_source:
     description: >
       The isolation source for the sample.
     type: string 
     
-   isolate:
+  isolate:
     description: >
       The isolate for the sample.
     type: string     
 
-   collection_date:
+  collection_date:
     description: >
       The collection date for the sample.
     type: string     
