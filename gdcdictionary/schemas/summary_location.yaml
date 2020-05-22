@@ -124,5 +124,16 @@ properties:
       Community Area or Neighborhood
     type: string     
 
+  state_hospital_region:
+    description: >
+      Illinois state hospital region
+    type: string 
+
+  state_region_description:
+    description: >
+      Illinois state hospital region desciption 
+    type: string 
+
+
   projects:
     $ref: "_definitions.yaml#/to_one_project"
