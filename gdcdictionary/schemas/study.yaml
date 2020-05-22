@@ -32,8 +32,6 @@ links:
 required:
   - submitter_id
   - type
-  - locations
-
 
 uniqueKeys:
   - [ id ]
@@ -139,7 +137,5 @@ properties:
       Title of the article as it appears in Pubmed
     type: string    
 
-  locations:
-    $ref: "_definitions.yaml#/to_many"
   projects:
     $ref: "_definitions.yaml#/to_one_project"
