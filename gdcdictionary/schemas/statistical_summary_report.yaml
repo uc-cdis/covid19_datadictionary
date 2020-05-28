@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "summary_clinical"
-title: Summary Clinical
+id: "statistical_summary_report"
+title: Statistical Summary Report
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
-category: administrative
+category: clinical
 program: '*'
 project: '*'
 description: >
-  A summary of clinically related data associated with care providers
+  Statistical Summary Reports (SSR) from partnering healthcare providers.
 additionalProperties: false
 submittable: true
 validators: null
@@ -22,7 +22,7 @@ systemProperties:
 
 links:
   - name: summary_locations
-    backref: summary_clinicals
+    backref: statistical_summary_reports
     label: performed_at
     target_type: summary_location
     multiplicity: many_to_one
