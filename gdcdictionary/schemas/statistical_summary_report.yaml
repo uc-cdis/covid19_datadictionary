@@ -8,7 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  A summary of clinically related data associated with care providers.
+  Statistical Summary Reports (SSR) from partnering healthcare providers.
 additionalProperties: false
 submittable: true
 validators: null
