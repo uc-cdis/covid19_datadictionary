@@ -1,0 +1,509 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "summary_clinical"
+title: Summary Clinical
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: clinical
+program: '*'
+project: '*'
+description: >
+  A summary of total COVID-19 cases that are confirmed, recovered, or deceased for a location at a particular datetime.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: summary_locations
+    backref: summary_clinicals
+    label: performed_at
+    target_type: summary_location
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - summary_locations
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  confirmed:
+    description: >
+      Confirmed cases
+    type: integer
+
+  deaths:
+    description: >
+      Total number of deaths
+    type: integer
+    
+  recovered:
+    description: >
+      Total number of recovered cases
+    type: integer
+  
+  testing:
+    description: >
+      Number of tests conducted
+    type: integer
+    
+  negative:
+    description: >
+      Number of negative tests
+    type: integer
+
+  date:
+    description: >
+      Date
+    type: string
+    termDef:
+      - term: date
+        source: NCI Thesaurus
+        term_id: C25164 
+        term_version: 20.03e (Release date:2020-03-31)
+    
+  positiveIncrease:
+    description: >
+      Increase of positive tests from the day before.
+    type: integer
+    
+  negativeIncrease:
+    description: >
+      Increase of negative tests from the day before.
+    type: integer
+
+  pending:
+    description: >
+      Tests that have been submitted to a lab but no results have been reported yet.
+    type: integer
+    termDef:
+      - term: pending
+        source: NCI Thesaurus
+        term_id: C53470 
+        term_version: 20.03e (Release date:2020-03-31)
+
+  totalTestResultsIncrease:
+    description: >
+      Increase in the total test results from the day before.
+    type: integer
+
+  hospitalizedIncrease:
+    description: >
+      Increase in the number of people hospitalized from the day before.
+    type: integer
+
+  deathIncrease:
+    description: >
+      Increase in the number of deaths from the day before.
+    type: integer
+
+  hospitalizedCurrently:
+    description: >
+      The number of people currently hospitalized.
+    type: integer
+
+  hospitalizedCumulative:
+    description: >
+      Total cumulative number of people hospitalized.
+    type: integer
+    
+  inIcuCurrently:
+    description: >
+      The number of people currently in ICU.
+    type: integer
+
+  inIcuCumulative:
+    description: >
+      Total cumulative number of people in ICU.
+    type: integer
+    
+  onVentilatorCurrently:
+    description: >
+      The number of people currently on ventilators.
+    type: integer
+
+  dataQualityGrade:
+    description: >
+      The data quality grade.
+    type: string
+
+  lastUpdateEt:
+    description: >
+      The last time the data were updated.
+    type: string
+    
+  staffed_all_beds:
+    description: >
+      The number of all hospital beds typically set up and staffed for inpatient care.
+    type: integer
+
+  staffed_icu_beds:
+    description: >
+      The number of all ICU beds typically set up and staffed for intensive inpatient care.
+    type: integer
+
+  licensed_all_beds:
+    description: >
+      The number of all hospital beds licensed for use.
+    type: integer
+
+  all_bed_occupancy_rate:
+    description: >
+      The percent of all hospital beds typically occupied by patients.
+    type: number
+
+  icu_bed_occupancy_rate:
+    description: >
+      The percent of ICU beds typically occupied by patients.
+    type: number
+
+  population:
+    description: >
+      The population of the designated geographic location.
+    type: integer
+
+  population_gtr_20:
+    description: >
+      The population of the designated geographic location greater than 20 years old.
+    type: integer
+
+  population_gtr_65:
+    description: >
+      The population of the designated geographic location greater than 65 years old.
+    type: integer
+
+  staffed_all_beds_per_1000:
+    description: >
+      The number of staffed beds per 1000 people.
+    type: number
+
+  staffed_all_beds_per_1000_gtr_20:
+    description: >
+      The number of staffed beds per 1000 people greater than 20 years old.
+    type: number
+
+  staffed_all_beds_per_1000_gtr_65:
+    description: >
+      The number of staffed beds per 1000 people greater than 65 years old.
+    type: number
+  
+  staffed_icu_beds_per_1000:
+    description: >
+      The number of staffed ICU beds per 1000 people.
+    type: number
+
+  staffed_icu_beds_per_1000_gtr_20:
+    description: >
+      The number of staffed ICU beds per 1000 people greater than 20 years old.
+    type: number
+
+  staffed_icu_beds_per_1000_gtr_65:
+    description: >
+      The number of staffed ICU beds per 1000 people greater than 65 years old.
+    type: number
+    
+  licensed_all_beds_per_1000:
+    description: >
+      The number of licensed beds per 1000 people.
+    type: number
+
+  licensed_all_beds_per_1000_gtr_20:
+    description: >
+      The number of licensed beds per 1000 people greater than 20 years old.
+    type: number
+
+  licensed_all_beds_per_1000_gtr_65:
+    description: >
+      The number of staffed beds per 1000 people greater than 65 years old.
+    type: number
+
+  estimated_full_mech_ventilators:
+    description: >
+      Estimated No. Full-Featured Mechanical Ventilators (Rubinson, L., Vaughn, F., Nelson, S., Giordano, S., Kallstrom, T., Buckley, T., . . . Branson, R. (2010). Mechanical Ventilators in US Acute Care Hospitals. Disaster Medicine and Public Health Preparedness, 4(3), 199-206. doi:10.1001/dmp.2010.18).
+    type: integer
+
+  estimated_full_mech_ventilators_per_100000:
+    description: >
+      Estimated No. Full-Featured Mechanical Ventilators per 100,000 Population (Rubinson, L., Vaughn, F., Nelson, S., Giordano, S., Kallstrom, T., Buckley, T., . . . Branson, R. (2010). Mechanical Ventilators in US Acute Care Hospitals. Disaster Medicine and Public Health Preparedness, 4(3), 199-206. doi:10.1001/dmp.2010.18).
+    type: number
+
+  estimated_full_mech_pediatric_ventilators:
+    description: >
+      Estimated No. Pediatrics-Capable Full-Feature Mechanical Ventilators (Rubinson, L., Vaughn, F., Nelson, S., Giordano, S., Kallstrom, T., Buckley, T., . . . Branson, R. (2010). Mechanical Ventilators in US Acute Care Hospitals. Disaster Medicine and Public Health Preparedness, 4(3), 199-206. doi:10.1001/dmp.2010.18).
+    type: integer
+
+  estimated_full_mech_pediatric_ventilators_per_100000:
+    description: >
+      Estimated No. Full-Feature Mechanical Ventilators, Pediatrics Capable per 100,000 Population under the age of 14 years old (Rubinson, L., Vaughn, F., Nelson, S., Giordano, S., Kallstrom, T., Buckley, T., . . . Branson, R. (2010). Mechanical Ventilators in US Acute Care Hospitals. Disaster Medicine and Public Health Preparedness, 4(3), 199-206. doi:10.1001/dmp.2010.18).
+    type: number
+
+  test_type:
+    description: >
+      test type
+    type: string
+
+  deaths_per_10000:
+    description: >
+      Deaths per 10,000 residents
+    type: number
+
+  region_icu_avail:
+    description: >
+      Illinois region ICU beds available
+    type: integer
+      
+  region_icu_capacity:
+    description: >
+      Illinois region ICU beds capacity
+    type: integer
+    
+  region_vents_available:
+    description: >
+      Illinois region ventilators available
+    type: integer
+
+  region_vents_capacity:
+    description: >
+      Illinois region ventilator capacity
+    type: integer
+    
+  state_icu_capacity:
+    description: >
+      Illinois state ICU beds capacity
+    type: integer
+    
+  state_icu_covid_patients:
+    description: >
+      Illinois state ICU COVID patients
+    type: integer
+    
+  state_vent_capacity:
+    description: >
+      Illinois state ventilator capacity
+    type: integer
+    
+  state_vent_covid_patients:
+    description: >
+      Illinois state COVID patients on ventilators
+    type: integer
+    
+  state_icu_available:
+    description: >
+      Illinois state ICU bed available
+    type: integer
+
+  state_vents_available:
+    description: >
+      Illinois state ventilators available
+    type: integer
+    
+  state_total_beds:
+    description: >
+      Illinois state total beds
+    type: integer
+    
+  states_total_beds_available:
+    description: >
+      Illinois state total beds available
+    type: integer
+    
+  state_total_beds_used:
+    description: >
+      Illinois state total beds used
+    type: integer
+    
+  state_pct_hospital_beds_available:
+    description: >
+      Illinois state percentage of bed available
+    type: string
+    
+  state_adult_icu_capacity:
+    description: >
+      Illinois state adult ICU beds capacity
+    type: integer
+    
+  state_icu_open_beds:
+    description: >
+      Illinois state ICU open beds
+    type: integer
+
+  state_icu_beds_used:
+    description: >
+      Illinois state ICU beds used
+    type: integer
+    
+  state_icu_open_beds_pct:
+    description: >
+      Illinois state percentage open beds
+    type: string
+    
+  state_covid_pui_patients:
+    description: >
+      Illinois state COVID PUI patients
+    type: integer
+    
+  state_covid_pui_patients_pct:
+    description: >
+      Illinois state percentage COVID PUI patients
+    type: string
+    
+  state_covid_pui_patients_beds_in_use_pct:
+    description: >
+      Illinois state percentage patient beds in use
+    type: string
+    
+  state_ventilator_capacity:
+    description: >
+      Illinois state ventilator capacity
+    type: integer
+    
+  state_ventilators_open:
+    description: >
+      Illinois state ventilators open
+    type: integer
+
+  state_Ventilators_open_pct:
+    description: >
+      Illinois state percentage ventilators open
+    type: string
+    
+  state_ventilators_in_use:
+    description: >
+      Illinois state ventilators in use
+    type: integer
+    
+  state_ventilators_in_use_covid:
+    description: >
+      Illinois state COVID ventilators in use
+    type: integer
+    
+  state_ventilators_covid_patients_pct:
+    description: >
+      Illinois state percentage COVID patients
+    type: string
+    
+  state_ventilators_covid_patients_in_use_pct:
+    description: >
+      Illinois state percentage COVID patients ventilators in use
+    type: string
+
+  state_covid_patients_non_icu:
+    description: >
+      Illinois state COVID patients non ICU
+    type: integer
+    
+  state_total_covid_pui_in_icu:
+    description: >
+      Illinois state COVID patients PUI in ICU
+    type: integer
+    
+  state_total_covid_pui_in_hospital:
+    description: >
+      Illinois state COVID patients PUI in ICU
+    type: integer
+    
+  state_pct_beds_covid_pui:
+    description: >
+      Illinois state percentage beds COVID PUI
+    type: string
+    
+  state_med_surg_beds:
+    description: >
+      Illinois state medical surge beds
+    type: integer
+    
+  state_med_surg_beds_open:
+    description: >
+      Illinois state medical surge beds open
+    type: integer
+    
+  state_med_surg_beds_open_pct:
+    description: >
+      Illinois state percentage medical surge beds open
+    type: string
+
+  state_med_surg_beds_in_use:
+    description: >
+      Illinois state medical surge beds in use
+    type: integer
+    
+  state_total_beds:
+    description: >
+      Illinois state total beds
+    type: integer
+    
+  total_open_beds:
+    description: >
+      Illinois state open beds
+    type: integer
+    
+  total_in_use_beds_non_covid:
+    description: >
+      Illinois state Non COVID in use beds
+    type: integer
+    
+  total_in_use_beds_covid:
+    description: >
+      Illinois state COVID in use beds
+    type: integer
+    
+  icu_beds:
+    description: >
+      Illinois state ICU beds
+    type: integer
+    
+  icu_open_beds:
+    description: >
+      Illinois state ICU beds
+    type: integer
+    
+  icu_in_use_beds_non_covid:
+    description: >
+      Illinois state non COVID ICU beds in use
+    type: integer
+    
+  icu_in_use_beds_covid:
+    description: >
+      Illinois state COVID ICU beds in use
+    type: integer
+    
+  ventilator_capacity:
+    description: >
+      Illinois state COVID ICU beds in use
+    type: integer
+    
+  ventilator_available:
+    description: >
+      Illinois state ventilators available
+    type: integer
+    
+  ventilator_in_use_non_covid:
+    description: >
+      Illinois state non COVID ventilators available
+    type: integer
+
+  ventilator_in_use_covid:
+    description: >
+      Illinois state COVID ventilators in use
+    type: integer
+      
+  source_url:
+    description: >
+      URL of the source data.
+    type: string
+
+  summary_locations:
+    $ref: "_definitions.yaml#/to_many" 
