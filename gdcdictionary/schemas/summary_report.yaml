@@ -499,6 +499,11 @@ properties:
     description: >
       Illinois state COVID ventilators in use
     type: integer
+      
+  source_url:
+    description: >
+      URL of the source data.
+    type: string
 
   summary_locations:
     $ref: "_definitions.yaml#/to_many"  
