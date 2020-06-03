@@ -8,7 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  A summary of total COVID-19 cases that are confirmed, recovered, or deceased for a location at a particular datetime.
+  A summary of clinically related data from various sources.
 additionalProperties: false
 submittable: true
 validators: null
@@ -502,7 +502,72 @@ properties:
       
   source_url:
     description: >
-      URL of the source data.
+      URL of the source data
+    type: string
+
+  source_label:
+    description: >
+      Source label
+    type: string
+
+  notes:
+    description: >
+      Notes
+    type: string
+
+  num_observations:
+    description: >
+      Number of observations
+    type: integer
+
+  cumulative_total:
+    description: >
+      Cumulative total
+    type: integer
+
+  cumulative_total_per_thousand:
+    description: >
+      Cumulative total per thousand
+    type: integer
+
+  daily_change_in_cumulative_total:
+    description: >
+      Daily change in cumulative total
+    type: integer
+
+  daily_change_in_cumulative_total_per_thousand:
+    description: >
+      Daily change in cumulative total per thousand
+    type: number
+
+  7_day_smoothed_daily_change:
+    description: >
+      7-day smoothed daily change
+    type: integer
+
+  7_day_smoothed_daily_change_per_thousand:
+    description: >
+      7-day smoothed daily change per thousand
+    type: number
+
+  general_source_label:
+    description: >
+      General source label
+    type: string
+    
+  general_source_url:
+    description: >
+      General source URL
+    type: string
+
+  short_description:
+    description: >
+      Short description
+    type: string
+
+  detailed_description:
+    description: >
+      Detailed description
     type: string
 
   summary_locations:
