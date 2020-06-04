@@ -540,12 +540,12 @@ properties:
       Daily change in cumulative total per thousand
     type: number
 
-  7_day_smoothed_daily_change:
+  seven_day_smoothed_daily_change:
     description: >
       7-day smoothed daily change
     type: integer
 
-  7_day_smoothed_daily_change_per_thousand:
+  seven_day_smoothed_daily_change_per_thousand:
     description: >
       7-day smoothed daily change per thousand
     type: number
