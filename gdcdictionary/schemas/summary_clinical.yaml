@@ -570,5 +570,50 @@ properties:
       Detailed description
     type: string
 
+  age_group:
+    description: >
+      Age group
+    type: string
+
+  age_count:
+    description: >
+      Number of cases in a particular age group
+    type: integer
+
+  age_tested:
+    description: >
+      Total test performed for a particular age group
+    type: integer
+
+  race_description:
+    description: >
+      Race description
+    type: string
+
+  race_count:
+    description: >
+      Number of cases in a particular race
+    type: integer
+
+  race_tested:
+    description: >
+      Total test performed for a particular race
+    type: integer
+    
+  gender_description:
+    description: >
+      Gender description
+    type: string
+
+  gender_count:
+    description: >
+      Number of cases for a particular gender
+    type: integer
+
+  gender_tested:
+    description: >
+      Total test performed for a particular gender
+    type: integer
+
   summary_locations:
     $ref: "_definitions.yaml#/to_many" 
