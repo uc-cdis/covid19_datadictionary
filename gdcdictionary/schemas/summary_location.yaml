@@ -160,4 +160,4 @@ properties:
     type: string
 
   projects:
-    $ref: "_definitions.yaml#/to_one_project"s
+    $ref: "_definitions.yaml#/to_one_project"
