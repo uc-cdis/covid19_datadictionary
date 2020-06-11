@@ -760,6 +760,25 @@ properties:
       Number of tested cases that are unknown or were left blank.
     type: integer
 
+  taxonomy_code:
+    description: >
+      Taxonomy Code
+    type: string
+
+  provider_type:
+    description: >
+      Provider Type
+    type: string
+
+  provider_subtype:
+    description: >
+      Provider Subtype
+    type: string
+
+  detailed_specialty:
+    description: >
+      Detailed Specialty
+    type: string
 
   summary_locations:
     $ref: "_definitions.yaml#/to_many" 
