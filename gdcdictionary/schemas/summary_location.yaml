@@ -134,6 +134,30 @@ properties:
       Illinois state hospital region desciption 
     type: string 
 
+  npi:
+    description: >
+      National Provider Identifier 
+    type: string 
+
+  provider_first_line_business_pr:
+    description: >
+      Provider First Line Business Practice Address
+    type: string
+  
+  provider_first_line_business_pr:
+    description: >
+      Provider Second Line Business Practice Address
+    type: string
+  
+  provider_business_practice_city:
+    description: >
+      Provider Business Practice City
+    type: string
+  
+  provider_business_practice_st:
+    description: >
+      Provider Business Practice State
+    type: string
 
   projects:
-    $ref: "_definitions.yaml#/to_one_project"
+    $ref: "_definitions.yaml#/to_one_project"s
