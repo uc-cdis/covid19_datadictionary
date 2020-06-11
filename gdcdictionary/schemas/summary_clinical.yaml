@@ -570,50 +570,196 @@ properties:
       Detailed description
     type: string
 
-  age_group:
+  age_group_less_20_count:
     description: >
-      Age group
-    type: string
-
-  age_count:
-    description: >
-      Number of cases in a particular age group
+      Number of confirmed cases under the age of 20 years old.
     type: integer
 
-  age_tested:
+  age_group_20_29_count:
     description: >
-      Total test performed for a particular age group
+      Number of confirmed cases between the ages of 20 to 29 years old.
+    type: integer 
+
+  age_group_30_39_count:
+    description: >
+      Number of confirmed cases between the ages of 30 to 39 years old.
+    type: integer 
+
+  age_group_40_49_count:
+    description: >
+      Number of confirmed cases between the ages of 40 to 49 years old.
+    type: integer 
+
+  age_group_50_59_count:
+    description: >
+      Number of confirmed cases between the ages of 50 to 59 years old.
+    type: integer 
+
+  age_group_60_69_count:
+    description: >
+      Number of confirmed cases between the ages of 60 to 69 years old.
+    type: integer 
+
+  age_group_70_79_count:
+    description: >
+      Number of confirmed cases between the ages of 70 to 79 years old.
+    type: integer 
+
+  age_group_greater_80_count:
+    description: >
+      Number of confirmed cases over the age of 80 years old.
+    type: integer 
+
+  race_white_count:
+    description: >
+      Number of white confirmed cases.
     type: integer
 
-  race_description:
+  race_black_count:
     description: >
-      Race description
-    type: string
-
-  race_count:
-    description: >
-      Number of cases in a particular race
+      Number of black confirmed cases.
     type: integer
 
-  race_tested:
+  race_left_blank_count:
     description: >
-      Total test performed for a particular race
-    type: integer
-    
-  gender_description:
-    description: >
-      Gender description
-    type: string
-
-  gender_count:
-    description: >
-      Number of cases for a particular gender
+      Number of confirmed cases that were left blank for the race field.
     type: integer
 
-  gender_tested:
+  race_other_count:
     description: >
-      Total test performed for a particular gender
+      Number of other (race) confirmed cases.
     type: integer
+
+  race_hispanic_count:
+    description: >
+      Number of hispanic confirmed cases.
+    type: integer
+
+  race_nh_pi_count:
+    description: >
+      Number of NH/PI (Native Hawaiian or Other Pacific Islander) confirmed cases.
+    type: integer
+
+  race_ai_an_count:
+    description: >
+      Number of AI/AN (American Indian or Alaska Native) confirmed cases.
+    type: integer
+
+  race_asian_count:
+    description: >
+      Number of Asian confirmed cases.
+    type: integer
+
+  gender_male_count:
+    description: >
+      Number of male confirmed cases.
+    type: integer
+
+  gender_female_count:
+    description: >
+      Number of female confirmed cases.
+    type: integer
+
+  gender_unknown_left_blank_count:
+    description: >
+      Number of confirmed cases that are unknown or were left blank.
+    type: integer
+
+  age_group_less_20_tested:
+    description: >
+      Number of tested cases under the age of 20 years old.
+    type: integer
+
+  age_group_20_29_tested:
+    description: >
+      Number of tested cases between the ages of 20 to 29 years old.
+    type: integer 
+
+  age_group_30_39_tested:
+    description: >
+      Number of tested cases between the ages of 30 to 39 years old.
+    type: integer 
+
+  age_group_40_49_tested:
+    description: >
+      Number of tested cases between the ages of 40 to 49 years old.
+    type: integer 
+
+  age_group_50_59_tested:
+    description: >
+      Number of tested cases between the ages of 50 to 59 years old.
+    type: integer 
+
+  age_group_60_69_tested:
+    description: >
+      Number of tested cases between the ages of 60 to 69 years old.
+    type: integer 
+
+  age_group_70_79_tested:
+    description: >
+      Number of tested cases between the ages of 70 to 79 years old.
+    type: integer 
+
+  age_group_greater_80_tested:
+    description: >
+      Number of tested cases over the age of 80 years old.
+    type: integer 
+
+  race_white_tested:
+    description: >
+      Number of white tested cases.
+    type: integer
+
+  race_black_tested:
+    description: >
+      Number of black tested cases.
+    type: integer
+
+  race_left_blank_tested:
+    description: >
+      Number of tested cases that were left blank for the race field.
+    type: integer
+
+  race_other_tested:
+    description: >
+      Number of other (race) tested cases.
+    type: integer
+
+  race_hispanic_tested:
+    description: >
+      Number of hispanic tested cases.
+    type: integer
+
+  race_nh_pi_tested:
+    description: >
+      Number of NH/PI (Native Hawaiian or Other Pacific Islander) tested cases.
+    type: integer
+
+  race_ai_an_tested:
+    description: >
+      Number of AI/AN (American Indian or Alaska Native) tested cases.
+    type: integer
+
+  race_asian_tested:
+    description: >
+      Number of Asian tested cases.
+    type: integer
+
+  gender_male_tested:
+    description: >
+      Number of male tested cases.
+    type: integer
+
+  gender_female_tested:
+    description: >
+      Number of female tested cases.
+    type: integer
+
+  gender_unknown_left_blank_tested:
+    description: >
+      Number of tested cases that are unknown or were left blank.
+    type: integer
+
 
   summary_locations:
     $ref: "_definitions.yaml#/to_many" 
