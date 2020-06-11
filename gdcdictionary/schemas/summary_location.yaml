@@ -144,7 +144,7 @@ properties:
       Provider First Line Business Practice Address
     type: string
   
-  provider_first_line_business_pr:
+  provider_second_line_business_pr:
     description: >
       Provider Second Line Business Practice Address
     type: string
