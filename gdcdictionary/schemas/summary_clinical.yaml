@@ -85,6 +85,26 @@ properties:
       Increase of negative tests from the day before.
     type: integer
 
+  totalTestsViral:
+    description: >
+      Total number of PCR tests performed.
+    type: integer
+    
+  negativeTestsViral:
+    description: >
+      Total number of negative PCR tests.
+    type: integer
+    
+  positiveTestsViral:
+    description: >
+      Total number of positive PCR tests.
+    type: integer
+    
+  positiveCasesViral:
+    description: >
+      Total number of positive cases measured with PCR tests.
+    type: integer
+
   pending:
     description: >
       Tests that have been submitted to a lab but no results have been reported yet.
