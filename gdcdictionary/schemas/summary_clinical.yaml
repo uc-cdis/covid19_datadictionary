@@ -335,7 +335,7 @@ properties:
       Illinois state total beds
     type: integer
     
-  states_total_beds_available:
+  state_total_beds_available:
     description: >
       Illinois state total beds available
     type: integer
