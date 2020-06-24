@@ -50,16 +50,6 @@ properties:
       number of days since the start of symptoms or hospitalization for each image, this is very important to have when there are multiple images for the same patient to track progression while being imaged. If a report says "after a few days" let's assume 5 days.
     type: integer 
 
-  age: 
-    description: >
-      Age of the subject (in years)
-    type: number
-    termDef:
-      - term: taxon_id
-        source: NCI Thesaurus
-        term_id: C25150
-        term_version: 20.03e (Release date:2020-03-31)
-
   finding:
     description: >
       Type of pneumonia
