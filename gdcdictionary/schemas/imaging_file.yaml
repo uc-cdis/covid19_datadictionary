@@ -140,7 +140,7 @@ properties:
       e.g. credit
     type: string
 
-  offset:
+  offset_imaging:
     description: >
       number of days since the start of symptoms or hospitalization for each image, this is very important to have when there are multiple images for the same patient to track progression while being imaged. If a report says "after a few days" let's assume 5 days.
     type: integer
