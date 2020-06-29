@@ -119,6 +119,14 @@ properties:
       Reporting organization
     type: string  
 
+  reporting_org_status:
+    description: >
+      Reporting organization operational status
+    enum: 
+      - "Open"
+      - "Closed"
+      - Null
+
   community_area:
     description: >
       Community Area or Neighborhood
