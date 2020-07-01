@@ -127,7 +127,6 @@ properties:
       - "Closed"
       - "Not Reported"
       - "Unknown"
-      - Null
 
   community_area:
     description: >
