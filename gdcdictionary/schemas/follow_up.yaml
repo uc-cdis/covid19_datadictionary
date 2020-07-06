@@ -102,9 +102,7 @@ properties:
   temperature:
     description: >
       Temperature of the patient in Celsius at the time of the image
-    enum:
-      - "Y"
-      - "N"
+    type: number
 
   pO2_saturation:
     description: >
