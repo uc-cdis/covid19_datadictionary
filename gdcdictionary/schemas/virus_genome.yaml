@@ -4,7 +4,7 @@ id: "virus_genome"
 title: Virus Genome
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
-category: data_file
+category: genomic_data_file
 program: '*'
 project: '*'
 description: >
