@@ -477,12 +477,12 @@ properties:
 
   global_num:
     description: >
-      the number given by KCDC
+      the number given by KCDC (This is a deprecated value for the DS4C data set)
     type: integer
 
   disease:
     description: >
-      TRUE: underlying disease / FALSE: no disease
+      TRUE: underlying disease / FALSE: no disease (This is a deprecated value for the DS4C data set)
     enum:
       - "True"
       - "False"
@@ -494,13 +494,15 @@ properties:
 
   infection_order:
     description: >
-      the order of infection
+      the order of infection (This is a deprecated value for the DS4C data set)
     type: integer
 
   infected_by:
     description: >
       the ID of who infected the patient
-    type: integer
+    type: array
+    items:
+      type: string
 
   contact_number:
     description: >
