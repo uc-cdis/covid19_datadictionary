@@ -1,0 +1,454 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "clinical_trials"
+title: Clinical Trials
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: administrative
+program: '*'
+project: '*'
+description: >
+  The collection of data related to clinical trials.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - exclusive: false
+    required: true
+    subgroup:
+    - name: subjects
+      backref: clinical_trials
+      label: member_of
+      target_type: study
+      multiplicity: many_to_many
+      required: false
+    - name: projects
+      backref: clinical_trialss
+      label: data_from
+      target_type: project
+      multiplicity: many_to_one
+      required: false
+
+required:
+  - submitter_id
+  - type
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+# Case properties
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  species:
+    description: "Taxonomic species of the subject."
+    enum:
+     - Drosophila melanogaster
+     - Homo sapiens
+     - Mus musculus
+     - Mustela putorius furo
+     - Rattus rattus
+     - Sus scrofa
+    termDef:
+      - term: species
+        source: NCI Thesaurus
+        term_id: C45293
+        term_version: 20.03e (Release date:2020-03-31)   
+
+  name:
+    description: >
+      Vaccine or drug candidates name
+    type: string
+
+  type:
+    description: >
+      Vaccine or drug candidates name
+    type: string
+
+  technology:
+    description: >
+      Technology
+    enum:
+      - "Antibodies"
+      - "Antivirals"
+      - "Cell-based therapies"
+      - "Device"
+      - "DNA-based" 
+      - "Inactivated virus" 
+      - "Modified APC" 
+      - "Non-replicating viral vector"       
+      - "Protein subunit" 
+      - "RNA-based treatments"
+      - "RNA-based vaccine" 
+      - "Repurposed" 
+      - "Virus Like Particle"
+      - "Other" 
+
+  technology_details:
+    description: >
+      Technology details
+    type: string
+
+  organizations:
+    description: >
+      Organization(s)
+    type: array
+    items:
+      type: string
+
+  name_id:
+    description: >
+      Name id
+    type: string
+
+  development_stage:
+    description: >
+      Technology
+    enum: 
+      - "Preclinical Phase"
+      - "Phase I" 
+      - "Phase I/II"
+      - "Phase II" 
+      - "Phase I/II/III"
+      - "Phase III" 
+      - "Phase III/IV" 
+      - "Phase IV" 
+      - "Phase I/III/IV" 
+      - "Phase I/IV" 
+      - "Phase II/IV"
+      - "Phase II/III/IV"
+      - "Phase I/II/III/IV"
+      - "Phase II/III" 
+      - "Phase N/A"
+
+  description:
+    description: >
+      Description
+    type: string
+
+  custom_clinical_phase:
+    description: >
+      Custom clinical phase
+    enum: 
+      - "Preclinical Phase"
+      - "Phase I" 
+      - "Phase I/II"
+      - "Phase II" 
+      - "Phase I/II/III"
+      - "Phase III" 
+      - "Phase III/IV" 
+      - "Phase IV" 
+      - "Phase I/III/IV" 
+      - "Phase I/IV" 
+      - "Phase II/IV"
+      - "Phase II/III/IV"
+      - "Phase I/II/III/IV"
+      - "Phase II/III" 
+      - "Phase N/A"
+
+  clinical_trials:
+    description: >
+      Clinical Trials
+    type: array
+    items:
+      type: string
+
+  participants:
+    description: >
+      Participants
+    type: array
+    items:
+      type: string
+
+  template_link:
+    description: >
+      Template link
+    type: string
+    
+  fda_approved:
+    description: >
+      FDA approved
+    type: string
+    
+  completed_clinical_trials:
+    description: >
+      Completed clinical trials
+    type: array
+    items:
+      type: string
+
+  inprogress_clinical_trials:
+    description: >
+      Inprogress Clinical Trials
+    type: array
+    items:
+      type: string
+
+  url_ldx:
+    description: >
+      URL ldx
+    type: string
+
+  phase_sort_key:
+    description: >
+      Phase sort key
+    type: string
+    
+  countries:
+    type: array
+    items:
+      enum:
+        - Afghanistan
+        - Albania
+        - Algeria
+        - Andorra
+        - Angola
+        - Anguilla
+        - Antigua and Barbuda
+        - Argentina
+        - Armenia
+        - Aruba
+        - Australia
+        - Austria
+        - Azerbaijan
+        - Bahamas
+        - Bahrain
+        - Bangladesh
+        - Barbados
+        - Belarus
+        - Belgium
+        - Belize
+        - Benin
+        - Bermuda
+        - Bhutan
+        - Bolivia
+        - Bosnia and Herzegovina
+        - Botswana
+        - Brazil
+        - Brunei
+        - Bulgaria
+        - Burkina Faso
+        - Burundi
+        - Cambodia
+        - Cameroon
+        - Canada
+        - Cape Verde
+        - Cayman Islands
+        - Central African Republic
+        - Chad
+        - Chile
+        - China
+        - Colombia
+        - Comoros
+        - Congo
+        - Cook Islands
+        - Costa Rica
+        - Cote d'Ivoire
+        - Croatia
+        - Cuba
+        - Curacao
+        - Cyprus
+        - Czech Republic (Czechia)
+        - Democratic Republic of the Congo
+        - Denmark
+        - Djibouti
+        - Dominica
+        - Dominican Republic
+        - Ecuador
+        - Egypt
+        - El Salvador
+        - Equatorial Guinea
+        - Eritrea
+        - Estonia
+        - Eswatini
+        - Ethiopia
+        - Falkland Islands (Malvinas)
+        - Faroe Islands
+        - Federated States of Micronesia
+        - Fiji
+        - Finland
+        - France
+        - French Guiana
+        - French Polynesia
+        - Gabon
+        - Gambia
+        - Georgia
+        - Germany
+        - Ghana
+        - Gibraltar
+        - Greece
+        - Greenland
+        - Grenada
+        - Guadeloupe
+        - Guam
+        - Guatemala
+        - Guernsey
+        - Guinea
+        - Guinea-Bissau
+        - Guyana
+        - Haiti
+        - Holy See
+        - Honduras
+        - Hong Kong
+        - Hungary
+        - Iceland
+        - India
+        - Indonesia
+        - Iran
+        - Iraq
+        - Ireland
+        - Isle of Man
+        - Israel
+        - Italy
+        - Jamaica
+        - Japan
+        - Jersey
+        - Jordan
+        - Kazakhstan
+        - Kenya
+        - Kiribati
+        - Kosovo
+        - Kuwait
+        - Kyrgyzstan
+        - Laos
+        - Latvia
+        - Lebanon
+        - Lesotho
+        - Liberia
+        - Libya
+        - Liechtenstein
+        - Lithuania
+        - Luxembourg
+        - Macau
+        - Madagascar
+        - Malawi
+        - Malaysia
+        - Maldives
+        - Mali
+        - Malta
+        - Marshall Islands
+        - Martinique
+        - Mauritania
+        - Mauritius
+        - Mayotte
+        - Mexico
+        - Moldova
+        - Monaco
+        - Mongolia
+        - Montenegro
+        - Montserrat
+        - Morocco
+        - Mozambique
+        - Myanmar
+        - Namibia
+        - Nauru
+        - Nepal
+        - Netherlands
+        - New Caledonia
+        - New Zealand
+        - Nicaragua
+        - Niger
+        - Nigeria
+        - Niue
+        - North Korea
+        - North Macedonia
+        - Northern Mariana Islands
+        - Norway
+        - Oman
+        - Pakistan
+        - Palau
+        - Panama
+        - Papua New Guinea
+        - Paraguay
+        - Peru
+        - Philippines
+        - Poland
+        - Portugal
+        - Puerto Rico
+        - Qatar
+        - Reunion
+        - Romania
+        - Russia
+        - Rwanda
+        - Saint Helena, Ascension and Tristan da Cunha
+        - Saint Kitts and Nevis
+        - Saint Lucia
+        - Saint Pierre and Miquelon
+        - Saint Vincent and the Grenadines
+        - Samoa
+        - San Marino
+        - Sao Tome and Principe
+        - Saudi Arabia
+        - Senegal
+        - Serbia
+        - Seychelles
+        - Sierra Leone
+        - Singapore
+        - Slovakia
+        - Slovenia
+        - Solomon Islands
+        - Somalia
+        - South Africa
+        - South Korea
+        - South Sudan
+        - Spain
+        - Sri Lanka
+        - State of Palestine
+        - Sudan
+        - Suriname
+        - Svalbard & Jan Mayen Islands
+        - Sweden
+        - Switzerland
+        - Syria
+        - Taiwan
+        - Tajikistan
+        - Tanzania
+        - Thailand
+        - Timor-Leste
+        - Togo
+        - Tokelau
+        - Tonga
+        - Trinidad and Tobago
+        - Tunisia
+        - Turkey
+        - Turkmenistan
+        - Tuvalu
+        - Uganda
+        - Ukraine
+        - United Arab Emirates
+        - United Kingdom
+        - United States
+        - Uruguay
+        - Uzbekistan
+        - Vanuatu
+        - Venezuela
+        - Vietnam
+        - Virgin Islands, British
+        - Virgin Islands, U.S.
+        - Wallis and Futuna
+        - Western Sahara
+        - Yemen
+        - Zambia
+        - Zimbabwe
+
+  updated_or_new:
+    description: >
+      Updated or new
+    enum: 
+      - "Updated" 
+      - "New"
+      - "None"
+
+  subjects:
+    $ref: "_definitions.yaml#/to_many"
+  projects:
+    $ref: "_definitions.yaml#/to_one_project"
