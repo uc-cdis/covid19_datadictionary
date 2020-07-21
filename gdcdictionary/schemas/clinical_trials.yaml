@@ -31,7 +31,7 @@ links:
       multiplicity: many_to_many
       required: false
     - name: projects
-      backref: clinical_trialss
+      backref: clinical_trials
       label: data_from
       target_type: project
       multiplicity: many_to_one
