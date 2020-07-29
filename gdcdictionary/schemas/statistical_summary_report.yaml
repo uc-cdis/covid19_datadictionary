@@ -47,32 +47,32 @@ properties:
 
   num_COVID:
     description: >
-      Number of patients treated in past 24 hours with confirmed COVID-19 
+      Number of patients treated in past 24 hours with confirmed COVID-19
     type: integer
 
   num_COVID_deaths:
     description: >
-      Number of deaths of COVID-19 patients in past 24 hours 
+      Number of deaths of COVID-19 patients in past 24 hours
     type: integer
 
   num_outpatient:
     description: >
-      Number of patients treated outpatient in previous 24 hours 
+      Number of patients treated outpatient in previous 24 hours
     type: integer
 
   num_admitted:
     description: >
-      Number of patients admitted in previous 24 hours 
+      Number of patients admitted in previous 24 hours
     type: integer
 
   num_icu:
     description: >
-      Maximum number of patients in ICU in previous 24 hours 
+      Maximum number of patients in ICU in previous 24 hours
     type: integer
 
   num_vent:
     description: >
-      Maximum number of patients on ventilators in previous 24 hours 
+      Maximum number of patients on ventilators in previous 24 hours
     type: integer
 
   num_resp:
@@ -112,4 +112,4 @@ properties:
 
 
   summary_locations:
-    $ref: "_definitions.yaml#/to_many"  
+    $ref: "_definitions.yaml#/to_many"

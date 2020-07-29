@@ -12,7 +12,7 @@ parent_uuids:
     items:
         $ref: "#/UUID"
     uniqueItems: true
-    
+
 foreign_key_project:
     type: object
     # Allow true here because we can have other unique keys defined on
@@ -34,7 +34,7 @@ to_one_project:
         minItems: 1
         maxItems: 1
     - $ref: "#/foreign_key_project"
-    
+
 to_many_project:
   anyOf:
     - type: array

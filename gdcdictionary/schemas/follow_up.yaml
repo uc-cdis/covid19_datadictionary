@@ -48,7 +48,7 @@ properties:
   offset:
     description: >
       number of days since the start of symptoms or hospitalization for each image, this is very important to have when there are multiple images for the same patient to track progression while being imaged. If a report says "after a few days" let's assume 5 days.
-    type: integer 
+    type: integer
 
   finding:
     description: >
@@ -90,10 +90,10 @@ properties:
       Yes (Y) if the patient required supplemental oxygen at any point during this illness or No (N) or blank if unknown
     enum:
       - "Y"
-      - "N" 
+      - "N"
 
   extubated:
-    description: >  
+    description: >
       Yes (Y) if the patient was successfully extubated or No (N) or blank if unknown
     enum:
       - "Y"
@@ -133,6 +133,6 @@ properties:
     description: >
       CT, X-ray, or something else
     type: string
-      
+
   subjects:
     $ref: "_definitions.yaml#/to_one"

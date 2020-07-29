@@ -91,11 +91,11 @@ properties:
     description: >
       The accession id of the virus genome.
     type: string
-      
+
   accession_date:
     description: >
       The accession date for the record.
-    type: string    
+    type: string
 
   samples:
     $ref: "_definitions.yaml#/to_one"

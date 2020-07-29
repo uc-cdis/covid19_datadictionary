@@ -56,7 +56,7 @@ links:
       label: related_to
       target_type: project
       multiplicity: many_to_one
-      required: false   
+      required: false
 
 # Sample properties: keep TCGA-specific fields
 properties:
@@ -424,7 +424,7 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_collection"
     type: integer
-    
+
   collection_date:
     description: >
       Date range in which samples were collected.
@@ -675,12 +675,12 @@ properties:
     description: >
       Record identifier assigned by NCBI for entry in the BioSample database.
     type: string
-    
+
   host:
     description: >
       The species of the host.
     type: string
-    
+
   location:
     description: >
       The geographic location of the host.
@@ -689,22 +689,22 @@ properties:
   organism:
     description: >
       The scientific taxonomy of the organism.
-    type: string 
-    
+    type: string
+
   isolation_source:
     description: >
       The isolation source for the sample.
-    type: string 
-    
+    type: string
+
   isolate:
     description: >
       The isolate for the sample.
-    type: string     
+    type: string
 
   collection_date:
     description: >
       The collection date for the sample.
-    type: string     
+    type: string
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
@@ -713,7 +713,7 @@ properties:
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
   projects:
-    $ref: "_definitions.yaml#/to_one_project"  
+    $ref: "_definitions.yaml#/to_one_project"
   project_id:
     type: string
   created_datetime:
