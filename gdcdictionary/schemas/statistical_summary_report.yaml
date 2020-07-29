@@ -40,7 +40,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  reportDate:
+  report_date:
     description: >
       Date of report
     type: string
