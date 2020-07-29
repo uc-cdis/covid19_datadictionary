@@ -232,7 +232,7 @@ properties:
   current_status:
     description: >
       What is the current status of this person?
-    enum: 
+    enum:
       - PUI testing pendingMDR non XDR
       - PUI tested negative
       - Presumptive case (positive local test), confirmatory testing pending
@@ -277,7 +277,7 @@ properties:
   pna_yn:
     description: >
       Did the patient develop pneumonia?
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -285,7 +285,7 @@ properties:
   acuterespdistress_yn:
     description: >
       Did the patient have acute respiratory distress syndrome?
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -293,15 +293,15 @@ properties:
   diagother:
     description: >
       Did the patient have another diagnosis/etiology for their illness?
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
-    
+
   abxchest_yn:
     description: >
       Did the patient have an abnormal chest X-ray?
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -309,30 +309,30 @@ properties:
   sympstatus:
     description: >
       Symptoms present during course of illness:
-    enum: 
+    enum:
       - Symptomatic
       - Asymptomatic
       - Unknown
 
   onset_dt:
     description: >
-      If symptomatic, onset date (MM/DD/YYYY) 
+      If symptomatic, onset date (MM/DD/YYYY)
     type: string
 
   onset_unk:
     description: >
-      If symptomatic, onset date - unknown 
+      If symptomatic, onset date - unknown
     type: boolean
 
   symp_res_dt:
     description: >
-      If symptomatic, date of symptom resolution (MM/DD/YYYY) 
+      If symptomatic, date of symptom resolution (MM/DD/YYYY)
     type: string
 
   symp_res_yn:
     description: >
       If symptomatic, state of resolution
-    enum: 
+    enum:
       - Still symptomatic
       - Symptoms resolved, unknown date
       - Unknown symptom status
@@ -340,7 +340,7 @@ properties:
   hosp_yn:
     description: >
       Was the patient hospitalized?
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -354,58 +354,58 @@ properties:
     description: >
       Was the patient hospitalized? If yes, discharge date 1 (MM/DD/YYYY)
     type: string
-    
+
   icu_yn:
     description: >
       Was the patient admitted to an intensive care unit (ICU)?
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
 
   mechvent_yn:
     description: >
-      Did the patient receive mechanical ventilation (MV)/intubation? 
-    enum: 
+      Did the patient receive mechanical ventilation (MV)/intubation?
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
 
   mechvent_dur:
     description: >
-      Did the patient receive mechanical ventilation (MV)/intubation? If yes, total days with MV (days) 
+      Did the patient receive mechanical ventilation (MV)/intubation? If yes, total days with MV (days)
     type: string
 
   ecmo_yn:
     description: >
-      Did the patient receive extracorporeal membrane oxygenation (ECMO)? 
-    enum: 
+      Did the patient receive extracorporeal membrane oxygenation (ECMO)?
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
-    
+
   death_yn:
     description: >
-      Did the patient die as a result of this illness? 
-    enum: 
+      Did the patient die as a result of this illness?
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
 
   death_dt:
     description: >
-      Date of Death (MM/DD/YYYY) 
+      Date of Death (MM/DD/YYYY)
     type: string
 
   death_unk:
     description: >
-      Date of Death (MM/DD/YYYY) 
+      Date of Death (MM/DD/YYYY)
     type: boolean
 
   hc_work_yn:
     description: >
       Is the patient a health care worker in the United States?
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -413,18 +413,18 @@ properties:
   hc_work_china_yn:
     description: >
       Does the patient have a history of being in a healthcare facility (as a patient, worker or visitor) in China?
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
-    
+
   past_14_days:
     description: >
       In the 14 days prior to illness onset, did the patient have any of the following exposures (check all that apply):
       [Travel to Wuhan]
       [Travel to Hubei]
       [Travel to mainland China]
-      [Travel to other non-US country] 
+      [Travel to other non-US country]
       [Household contact with another lab-confirmed COVID-19 case-patient]
       [Community contact with another lab-confirmed COVID-19 case-patient]
       [Any healthcare contact with another lab-confirmed COVID-19 case-patient]
@@ -434,14 +434,14 @@ properties:
       [Animal exposure]
       [Exposure to a cluster of patients with severe acute lower respiratory distress of unknown etiology]
       [Other]
-      [Unknown] 
+      [Unknown]
     type: array
     items:
       type: string
 
   past_14_days_exp_othcountry_spec:
     description: >
-      Travel to other non-US country.  If yes, specify 
+      Travel to other non-US country.  If yes, specify
     type: string
 
   past_14_days_exp_other_spec:
@@ -451,16 +451,16 @@ properties:
 
   past_14_days_exp_health:
     description: >
-      Any healthcare contact with another lab-confirmed COVID-19 case-patient 
-    enum: 
+      Any healthcare contact with another lab-confirmed COVID-19 case-patient
+    enum:
       - Patient
       - Visitor
       - HCW
 
   cont_lab_us:
     description: >
-      If the patient had contact with another COVID-19 case, was this person a U.S. case? 
-    enum: 
+      If the patient had contact with another COVID-19 case, was this person a U.S. case?
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -470,16 +470,16 @@ properties:
     description: >
       If the patient had contact with another COVID-19 case, was this person a U.S. case? If yes, specify nCoV ID of source case
     type: string
-    
+
   process:
     description: >
-      Under what process was the PUI or case first identified? (check all that apply): 
+      Under what process was the PUI or case first identified? (check all that apply):
       [Clinical evaluation leading to PUI determination]
       [Contact tracing of case patient]
       [Routine surveillance]
       [EpiX notification of travelers]
       [Unknown]
-      [Other]     
+      [Other]
     type: array
     items:
       type: string
@@ -496,9 +496,9 @@ properties:
 
   collected_from:
     description: >
-      Collected from (check all that apply): 
+      Collected from (check all that apply):
       [Patient interview]
-      [Medical record review]    
+      [Medical record review]
     type: array
     items:
       type: string
@@ -507,7 +507,7 @@ properties:
     description: >
       During this illness, did the patient experience any of the following symptoms?
       Fever >100.4F (38C)
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -516,7 +516,7 @@ properties:
     description: >
       During this illness, did the patient experience any of the following symptoms?
       Subjective fever (felt feverish)
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -525,7 +525,7 @@ properties:
     description: >
       During this illness, did the patient experience any of the following symptoms?
       Chills
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -534,7 +534,7 @@ properties:
     description: >
       During this illness, did the patient experience any of the following symptoms?
       Muscle aches (myalgia)
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -543,16 +543,16 @@ properties:
     description: >
       During this illness, did the patient experience any of the following symptoms?
       Runny nose (rhinorrhea)
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
-    
+
   sthroat_yn:
     description: >
       During this illness, did the patient experience any of the following symptoms?
       Sore throat
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -561,7 +561,7 @@ properties:
     description: >
       During this illness, did the patient experience any of the following symptoms?
       Cough (new onset or worsening of chronic cough)
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -570,7 +570,7 @@ properties:
     description: >
       During this illness, did the patient experience any of the following symptoms?
       Shortness of breath (dyspnea)
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -579,7 +579,7 @@ properties:
     description: >
       During this illness, did the patient experience any of the following symptoms?
       Nausea or Vomiting
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -588,7 +588,7 @@ properties:
     description: >
       During this illness, did the patient experience any of the following symptoms?
       Headache
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -597,7 +597,7 @@ properties:
     description: >
       During this illness, did the patient experience any of the following symptoms?
       Abdominal pain
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -606,19 +606,19 @@ properties:
     description: >
       During this illness, did the patient experience any of the following symptoms?
       Diarrhea (≥3 loose/looser than normal stools/24hr period)
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
-  
+
   othsym1_yn:
     description: >
       Other symptoms - 1
-    type: boolean 
+    type: boolean
 
   othsym1_spec:
     description: >
-     Other symptoms - 1, specify: 
+     Other symptoms - 1, specify:
     type: string
 
   othsym2_yn:
@@ -640,11 +640,11 @@ properties:
     description: >
      Other symptoms - 3, specify:
     type: string
-  
+
   medcond_yn:
     description: >
       Pre-existing medical conditions?
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -652,7 +652,7 @@ properties:
   cld_yn:
     description: >
       Chronic lung disease (asthma/emphysema/COPD)
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -660,7 +660,7 @@ properties:
   diabetes_yn:
     description: >
       Diabetes Mellitus
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -668,15 +668,15 @@ properties:
   cvd_yn:
     description: >
       Cardiovascular disease
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
-  
+
   renaldis_yn:
     description: >
       Chronic renal disease
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -684,7 +684,7 @@ properties:
   liverdis_yn:
     description: >
       Liver disease
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -692,7 +692,7 @@ properties:
   immsupp_yn:
     description: >
       Immunocompromised condition
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -700,7 +700,7 @@ properties:
   neuro_yn:
     description: >
       Neurologic/neurodevelopmental/intellectual disability
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -713,7 +713,7 @@ properties:
   otherdis_yn:
     description: >
       Other chronic diseases
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -726,23 +726,23 @@ properties:
   pregnant_yn:
     description: >
       If female, currently pregnant
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
-    
+
   smoke_curr_yn:
     description: >
       Current smoker
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
-    
+
   smoke_former_yn:
     description: >
       Former smoker
-    enum: 
+    enum:
       - "Yes"
       - "No"
       - "Unknown"
@@ -750,7 +750,7 @@ properties:
   resp_flua_ag:
     description: >
       Influenza A Rapid AgFormer smoker
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -759,7 +759,7 @@ properties:
   resp_flub_ag:
     description: >
       Influenza B Rapid Ag
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -768,7 +768,7 @@ properties:
   resp_flua_pcr:
     description: >
       Influenza A PCR
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -777,7 +777,7 @@ properties:
   resp_flub_pcr:
     description: >
       Influenza B PCR
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -786,7 +786,7 @@ properties:
   resp_rsv:
     description: >
       RSV
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -795,7 +795,7 @@ properties:
   resp_hm:
     description: >
       H. metapneumovirus
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -804,7 +804,7 @@ properties:
   resp_pi:
     description: >
       Parainfluenza (1-4)
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -813,7 +813,7 @@ properties:
   resp_adv:
     description: >
       Adenovirus
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -822,7 +822,7 @@ properties:
   resp_rhino:
     description: >
       Rhinovirus/enterovirus
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -831,7 +831,7 @@ properties:
   resp_cov:
     description: >
       Coronavirus (OC43, 229E, HKU1, NL63)
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -840,16 +840,16 @@ properties:
   resp_mp:
     description: >
       M. pneumoniae
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
-      - Not Done 
+      - Not Done
 
   resp_rcp:
     description: >
       C. pneumoniae
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -858,12 +858,12 @@ properties:
   othrp:
     description: >
       Other positive pathogens
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
       - Not Done
-  
+
   othrp_spec:
     description: >
       Other positive pathogens, If yes, specify
@@ -873,7 +873,7 @@ properties:
     description: >
       NP Swab: Local Specimen ID - 1
     type: string
-    
+
   spec_npswab1_dt:
     description: >
       NP Swab: Collection date - 1
@@ -887,7 +887,7 @@ properties:
   spec_npswab1Stateresult:
     description: >
       NP Swab: State Result - 1
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -902,7 +902,7 @@ properties:
   spec_npswab1CDCresult:
     description: >
       NP Swab: CDC Result - 1
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -927,7 +927,7 @@ properties:
   spec_npswab2Stateresult:
     description: >
       NP Swab: State Result - 2
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -942,7 +942,7 @@ properties:
   spec_npswab2CDCresult:
     description: >
       NP Swab: CDC Result - 2
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -967,7 +967,7 @@ properties:
   spec_npswab3Stateresult:
     description: >
       NP Swab: State Result - 3
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -982,7 +982,7 @@ properties:
   spec_npswab3CDCresult:
     description: >
       NP Swab: CDC Result - 3
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -998,16 +998,16 @@ properties:
     description: >
       OP Swab: Collection date - 1
     type: string
-    
+
   spec_opswab1state:
     description: >
-      OP Swab: State Lab Tested - 1 
+      OP Swab: State Lab Tested - 1
     type: boolean
 
   spec_opswab1CDCresult:
     description: >
       OP Swab: CDC Result - 1
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -1018,27 +1018,27 @@ properties:
     description: >
       OP Swab: Local Specimen ID - 2
     type: string
-    
+
   spec_opswab2_dt:
     description: >
       OP Swab: Collection date - 2
     type: string
-    
+
   spec_opswab2state:
     description: >
       OP Swab: State Lab Tested - 2
-    type: boolean 
-    
+    type: boolean
+
   spec_opswab2Stateresult:
     description: >
       OP Swab: State Result - 2
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
       - Not Done
       - Indeterminate
-    
+
   spec_opswab2cdc:
     description: >
       OP Swab: State Result - 2
@@ -1047,7 +1047,7 @@ properties:
   spec_opswab2CDCresult:
     description: >
       OP Swab: CDC Result - 2
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -1063,22 +1063,22 @@ properties:
     description: >
       OP Swab: Collection date - 3
     type: string
-    
+
   spec_opswab3state:
     description: >
       OP Swab: State Lab Tested - 3
-    type: boolean 
+    type: boolean
 
   spec_opswab3Stateresult:
     description: >
       OP Swab: State Result - 3
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
       - Not Done
-      - Indeterminate   
-    
+      - Indeterminate
+
   spec_opswab3cdc:
     description: >
       OP Swab: Sent to CDC - 3
@@ -1087,12 +1087,12 @@ properties:
   spec_opswab3CDCresult:
     description: >
       OP Swab: CDC Result - 3
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
       - Not Done
-      - Indeterminate   
+      - Indeterminate
 
   spec_sputum1id:
     description: >
@@ -1103,7 +1103,7 @@ properties:
     description: >
       Sputum: Collection date - 1
     type: string
-    
+
   spec_sputum1state:
     description: >
       Sputum: State Lab Tested - 1
@@ -1112,13 +1112,13 @@ properties:
   spec_sputum1Stateresult:
     description: >
       Sputum: State Result - 1
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
       - Not Done
-      - Indeterminate  
-    
+      - Indeterminate
+
   spec_sputum1cdc:
     description: >
       Sputum: Sent to CDC - 1
@@ -1127,12 +1127,12 @@ properties:
   spec_sputum1CDCresult:
     description: >
       Sputum: CDC Result - 1
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
       - Not Done
-      - Indeterminate   
+      - Indeterminate
 
   spec_sputum2id:
     description: >
@@ -1143,7 +1143,7 @@ properties:
     description: >
       Sputum: Collection date - 2
     type: string
-    
+
   spec_sputum2state:
     description: >
       Sputum: State Lab Tested - 2
@@ -1152,62 +1152,62 @@ properties:
   spec_sputum2Stateresult:
     description: >
       Sputum: State Result - 2
-    enum: 
-      - Positive
-      - Negative
-      - Pending
-      - Not Done
-      - Indeterminate 
-
-  spec_sputum2cdc:
-    description: >
-      Sputum: Sent to CDC - 2
-    type: boolean
-    
-  spec_sputum2CDCresult:
-    description: >
-      Sputum: CDC Result - 2
-    enum: 
-      - Positive
-      - Negative
-      - Pending
-      - Not Done
-      - Indeterminate 
-
-  spec_sputum3id:
-    description: >
-      Sputum: Local Specimen ID - 3
-    type: string
-    
-  spec_sputum3_dt:
-    description: >
-      Sputum: Collection date - 3
-    type: string
-    
-  spec_sputum3state:
-    description: >
-      Sputum: State Lab Tested - 3
-    type: boolean
-    
-  spec_sputum3Stateresult:
-    description: >
-      Sputum: State Result - 3
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
       - Not Done
       - Indeterminate
-    
+
+  spec_sputum2cdc:
+    description: >
+      Sputum: Sent to CDC - 2
+    type: boolean
+
+  spec_sputum2CDCresult:
+    description: >
+      Sputum: CDC Result - 2
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_sputum3id:
+    description: >
+      Sputum: Local Specimen ID - 3
+    type: string
+
+  spec_sputum3_dt:
+    description: >
+      Sputum: Collection date - 3
+    type: string
+
+  spec_sputum3state:
+    description: >
+      Sputum: State Lab Tested - 3
+    type: boolean
+
+  spec_sputum3Stateresult:
+    description: >
+      Sputum: State Result - 3
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
   spec_sputum3cdc:
     description: >
       Sputum: Sent to CDC - 3
     type: boolean
-    
+
   spec_sputum3CDCresult:
     description: >
       Sputum: CDC Result - 3
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -1218,12 +1218,12 @@ properties:
     description: >
       Other specimen type - 1
     type: boolean
-    
+
   spec_otherspecimen1_spe:
     description: >
       If yes, specify type - 1
     type: string
-    
+
   spec_otherspecimen1id:
     description: >
       Other: Local Specimen ID - 1
@@ -1238,11 +1238,11 @@ properties:
     description: >
       Other: State Lab Tested - 1
     type: boolean
-    
+
   spec_otherspecimen1Stateresult:
     description: >
       Other: State Result - 1
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -1253,11 +1253,11 @@ properties:
     description: >
       Other: Sent to CDC - 1
     type: boolean
-    
+
   spec_otherspecimen1CDCresult:
     description: >
       Other: CDC Result - 1
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -1266,33 +1266,33 @@ properties:
 
   spec_otherspecimen2_yn:
     description: >
-      Other specimen type - 2 
+      Other specimen type - 2
     type: boolean
-    
+
   spec_otherspecimen2_spec:
     description: >
-      Other specimen type - 2 , If yes, specify type - 2 
+      Other specimen type - 2 , If yes, specify type - 2
     type: string
-    
+
   spec_otherspecimen2id:
     description: >
-      Other: Local Specimen ID - 2 
+      Other: Local Specimen ID - 2
     type: string
 
   spec_otherspecimen2_dt:
     description: >
-      Other: Collection date - 2 
+      Other: Collection date - 2
     type: string
 
   spec_otherspecimen2state:
     description: >
-      OOther: State Lab Tested - 2 
+      OOther: State Lab Tested - 2
     type: boolean
-    
+
   spec_otherspecimen2Stateresult:
     description: >
       Other: State Result - 2
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -1304,10 +1304,10 @@ properties:
       Other: Sent to CDC - 2
     type: boolean
 
-  spec_otherspecimen2CDCresult: 
+  spec_otherspecimen2CDCresult:
     description: >
       Other: CDC Result - 2
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -1318,7 +1318,7 @@ properties:
     description: >
       Other specimen type - 3
     type: boolean
-    
+
   spec_otherspecimen3_spec:
     description: >
       Other specimen type - 3, If yes, specify type - 3
@@ -1342,7 +1342,7 @@ properties:
   spec_otherspecimen3Stateresult:
     description: >
       Other: State Result - 3
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -1357,7 +1357,7 @@ properties:
   spec_otherspecimen3CDCresult:
     description: >
       Other: CDC Result - 3
-    enum: 
+    enum:
       - Positive
       - Negative
       - Pending
@@ -1373,6 +1373,6 @@ properties:
     description: >
       Any additional comments/notes?
     type: string
-    
+
   subjects:
     $ref: "_definitions.yaml#/to_one"

@@ -62,7 +62,7 @@ properties:
       - term: species
         source: NCI Thesaurus
         term_id: C45293
-        term_version: 20.03e (Release date:2020-03-31)   
+        term_version: 20.03e (Release date:2020-03-31)
 
   name:
     description: >
@@ -82,16 +82,16 @@ properties:
       - "Antivirals"
       - "Cell-based therapies"
       - "Device"
-      - "DNA-based" 
-      - "Inactivated virus" 
-      - "Modified APC" 
-      - "Non-replicating viral vector"       
-      - "Protein subunit" 
+      - "DNA-based"
+      - "Inactivated virus"
+      - "Modified APC"
+      - "Non-replicating viral vector"
+      - "Protein subunit"
       - "RNA-based treatments"
-      - "RNA-based vaccine" 
-      - "Repurposed" 
+      - "RNA-based vaccine"
+      - "Repurposed"
       - "Virus Like Particle"
-      - "Other" 
+      - "Other"
 
   technology_details:
     description: >
@@ -113,21 +113,21 @@ properties:
   development_stage:
     description: >
       Technology
-    enum: 
+    enum:
       - "Preclinical Phase"
-      - "Phase I" 
+      - "Phase I"
       - "Phase I/II"
-      - "Phase II" 
+      - "Phase II"
       - "Phase I/II/III"
-      - "Phase III" 
-      - "Phase III/IV" 
-      - "Phase IV" 
-      - "Phase I/III/IV" 
-      - "Phase I/IV" 
+      - "Phase III"
+      - "Phase III/IV"
+      - "Phase IV"
+      - "Phase I/III/IV"
+      - "Phase I/IV"
       - "Phase II/IV"
       - "Phase II/III/IV"
       - "Phase I/II/III/IV"
-      - "Phase II/III" 
+      - "Phase II/III"
       - "Phase N/A"
 
   description:
@@ -138,21 +138,21 @@ properties:
   custom_clinical_phase:
     description: >
       Custom clinical phase
-    enum: 
+    enum:
       - "Preclinical Phase"
-      - "Phase I" 
+      - "Phase I"
       - "Phase I/II"
-      - "Phase II" 
+      - "Phase II"
       - "Phase I/II/III"
-      - "Phase III" 
-      - "Phase III/IV" 
-      - "Phase IV" 
-      - "Phase I/III/IV" 
-      - "Phase I/IV" 
+      - "Phase III"
+      - "Phase III/IV"
+      - "Phase IV"
+      - "Phase I/III/IV"
+      - "Phase I/IV"
       - "Phase II/IV"
       - "Phase II/III/IV"
       - "Phase I/II/III/IV"
-      - "Phase II/III" 
+      - "Phase II/III"
       - "Phase N/A"
 
   clinical_trials:
@@ -173,12 +173,12 @@ properties:
     description: >
       Template link
     type: string
-    
+
   fda_approved:
     description: >
       FDA approved
     type: string
-    
+
   completed_clinical_trials:
     description: >
       Completed clinical trials
@@ -202,7 +202,7 @@ properties:
     description: >
       Phase sort key
     type: string
-    
+
   countries:
     type: array
     items:
@@ -211,8 +211,8 @@ properties:
   updated_or_new:
     description: >
       Updated or new
-    enum: 
-      - "Updated" 
+    enum:
+      - "Updated"
       - "New"
       - "None"
 

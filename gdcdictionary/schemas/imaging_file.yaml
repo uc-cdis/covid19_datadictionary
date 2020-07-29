@@ -96,7 +96,7 @@ properties:
     description: >
       order number for this image or other content.
     type: integer
-    
+
   uid:
     description: >
       Formal DICOM identifier for the study.

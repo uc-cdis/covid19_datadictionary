@@ -48,7 +48,7 @@ properties:
     description: >
       Country or region
     type: string
-    
+
   county:
     description: >
       County
@@ -57,7 +57,7 @@ properties:
       - term: county
         source: NCI Thesaurus
         term_id: C49292
-        term_version: 20.03e (Release date:2020-03-31) 
+        term_version: 20.03e (Release date:2020-03-31)
 
   latitude:
     description: >
@@ -67,7 +67,7 @@ properties:
       - term: latitude
         source: NCI Thesaurus
         term_id: C68642
-        term_version: 20.03e (Release date:2020-03-31) 
+        term_version: 20.03e (Release date:2020-03-31)
 
   longitude:
     description: >
@@ -77,7 +77,7 @@ properties:
       - term: longitude
         source: NCI Thesaurus
         term_id: C68643
-        term_version: 20.03e (Release date:2020-03-31) 
+        term_version: 20.03e (Release date:2020-03-31)
 
   FIPS:
     description: >
@@ -87,23 +87,23 @@ properties:
       - term: FIPS
         source: NCI Thesaurus
         term_id: C71327
-        term_version: 20.03e (Release date:2020-03-31) 
+        term_version: 20.03e (Release date:2020-03-31)
 
-  iso2: 
+  iso2:
     description: >
       iso2
     type: string
 
-  iso3: 
+  iso3:
     description: >
       iso3
     type: string
-  
+
   code3:
     description: >
       code3
-    type: integer 
-    
+    type: integer
+
   zipcode:
     description: >
       The zip code number for the location.
@@ -112,17 +112,17 @@ properties:
       - term: FIPS
         source: NCI Thesaurus
         term_id: C25720
-        term_version: 20.03e (Release date:2020-03-31)   
+        term_version: 20.03e (Release date:2020-03-31)
 
   reporting_org:
     description: >
       Reporting organization
-    type: string  
+    type: string
 
   reporting_org_status:
     description: >
       Reporting organization operational status
-    enum: 
+    enum:
       - "Open"
       - "Closed"
       - "Not Reported"
@@ -131,38 +131,38 @@ properties:
   community_area:
     description: >
       Community Area or Neighborhood
-    type: string     
+    type: string
 
   state_hospital_region:
     description: >
       Illinois state hospital region
-    type: string 
+    type: string
 
   state_region_description:
     description: >
-      Illinois state hospital region desciption 
-    type: string 
+      Illinois state hospital region desciption
+    type: string
 
   npi:
     description: >
-      National Provider Identifier 
-    type: string 
+      National Provider Identifier
+    type: string
 
   provider_first_line_business_pr:
     description: >
       Provider First Line Business Practice Address
     type: string
-  
+
   provider_second_line_business_pr:
     description: >
       Provider Second Line Business Practice Address
     type: string
-  
+
   provider_business_practice_city:
     description: >
       Provider Business Practice City
     type: string
-  
+
   provider_business_practice_st:
     description: >
       Provider Business Practice State

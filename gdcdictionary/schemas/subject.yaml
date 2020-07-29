@@ -63,7 +63,7 @@ properties:
       - term: species
         source: NCI Thesaurus
         term_id: C45293
-        term_version: 20.03e (Release date:2020-03-31)   
+        term_version: 20.03e (Release date:2020-03-31)
 
   strain:
     description: >
@@ -72,8 +72,8 @@ properties:
     termDef:
       - term: strain
         source: NCI Thesaurus
-        term_id: C14419 
-        term_version: 20.03e (Release date:2020-03-31) 
+        term_id: C14419
+        term_version: 20.03e (Release date:2020-03-31)
 
   taxon_id:
     description: >
@@ -158,7 +158,7 @@ properties:
   latitude:
     description: >
       Latitude
-    type: 
+    type:
       - string
     termDef:
       - term: latitude
@@ -169,7 +169,7 @@ properties:
   longitude:
     description: >
       Longitude
-    type: 
+    type:
       - string
     termDef:
       - term: longitude
@@ -191,7 +191,7 @@ properties:
     description: >
       Date admission hospital
     type: string
-  
+
   date_confirmation:
     description: >
       Date confirmation
@@ -256,7 +256,7 @@ properties:
         source: NCI Thesaurus
         term_id: C165593
         term_version: 20.03e (Release date:2020-03-31)
-  
+
   source:
     description: >
       Source
@@ -331,7 +331,7 @@ properties:
     description: >
       Data moderator initials
     type: string
-    
+
   case_in_country:
     description: >
       Case in country
@@ -387,23 +387,23 @@ properties:
   exposure_start:
     description: >
       Exposure start
-    type: 
+    type:
       - string
     termDef:
       - term: exposure_start
         source: NCI Thesaurus
-        term_id: C83127 
+        term_id: C83127
         term_version: 20.03e (Release date:2020-03-31)
 
   exposure_end:
     description: >
       Exposure end
-    type: 
+    type:
       - string
     termDef:
       - term: exposure_end
         source: NCI Thesaurus
-        term_id: C83138 
+        term_id: C83138
         term_version: 20.03e (Release date:2020-03-31)
 
   visiting_wuhan:
@@ -430,7 +430,7 @@ properties:
     termDef:
       - term: death
         source: NCI Thesaurus
-        term_id: C28554 
+        term_id: C28554
         term_version: 20.03e (Release date:2020-03-31)
 
   recovered:
@@ -440,7 +440,7 @@ properties:
     termDef:
       - term: recovered
         source: NCI Thesaurus
-        term_id: C49498 
+        term_id: C49498
         term_version: 20.03e (Release date:2020-03-31)
 
   link:
@@ -460,7 +460,7 @@ properties:
     termDef:
       - term: dob
         source: NCI Thesaurus
-        term_id: C68615 
+        term_id: C68615
         term_version: 20.03e (Release date:2020-03-31)
 
   age_decade:
@@ -468,7 +468,7 @@ properties:
       the age of the patient in decades
     type: string
 
-  isolated: 
+  isolated:
     description: >
       state of isolated
     enum:
@@ -541,8 +541,8 @@ properties:
     type: array
     items:
       type: string
-      
-  age: 
+
+  age:
     description: >
       Age of the subject (in years)
     type: number
