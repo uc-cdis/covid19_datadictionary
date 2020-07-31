@@ -157,7 +157,7 @@ properties:
 
   dataQualityGrade:
     description: >
-      The data quality grade.
+      The COVID Tracking Project grade of the completeness of the data reporting by a state.
     type: string
 
   lastUpdateEt:
@@ -270,6 +270,7 @@ properties:
       Estimated No. Full-Feature Mechanical Ventilators, Pediatrics Capable per 100,000 Population under the age of 14 years old (Rubinson, L., Vaughn, F., Nelson, S., Giordano, S., Kallstrom, T., Buckley, T., . . . Branson, R. (2010). Mechanical Ventilators in US Acute Care Hospitals. Disaster Medicine and Public Health Preparedness, 4(3), 199-206. doi:10.1001/dmp.2010.18).
     type: number
 
+  #The following property is marked for removal (29July2020).
   test_type:
     description: >
       test type
@@ -282,242 +283,242 @@ properties:
 
   region_icu_avail:
     description: >
-      Illinois region ICU beds available
+      State region ICU beds available
     type: integer
 
   region_icu_capacity:
     description: >
-      Illinois region ICU beds capacity
+      State region ICU beds capacity
     type: integer
 
   region_vents_available:
     description: >
-      Illinois region ventilators available
+      State region ventilators available
     type: integer
 
   region_vents_capacity:
     description: >
-      Illinois region ventilator capacity
+      State region ventilator capacity
     type: integer
 
   state_icu_capacity:
     description: >
-      Illinois state ICU beds capacity
+      State ICU beds capacity
     type: integer
 
   state_icu_covid_patients:
     description: >
-      Illinois state ICU COVID patients
+      State ICU COVID patients
     type: integer
 
   state_vent_capacity:
     description: >
-      Illinois state ventilator capacity
+      State ventilator capacity
     type: integer
 
   state_vent_covid_patients:
     description: >
-      Illinois state COVID patients on ventilators
+      State COVID patients on ventilators
     type: integer
 
   state_icu_available:
     description: >
-      Illinois state ICU bed available
+      State ICU bed available
     type: integer
 
   state_vents_available:
     description: >
-      Illinois state ventilators available
+      State ventilators available
     type: integer
 
   state_total_beds:
     description: >
-      Illinois state total beds
+      State total beds
     type: integer
 
   state_total_beds_available:
     description: >
-      Illinois state total beds available
+      State total beds available
     type: integer
 
   state_total_beds_used:
     description: >
-      Illinois state total beds used
+      State total beds used
     type: integer
 
   state_pct_hospital_beds_available:
     description: >
-      Illinois state percentage of bed available
+      State percentage of bed available
     type: string
 
   state_adult_icu_capacity:
     description: >
-      Illinois state adult ICU beds capacity
+      State adult ICU beds capacity
     type: integer
 
   state_icu_open_beds:
     description: >
-      Illinois state ICU open beds
+      State ICU open beds
     type: integer
 
   state_icu_beds_used:
     description: >
-      Illinois state ICU beds used
+      State ICU beds used
     type: integer
 
   state_icu_open_beds_pct:
     description: >
-      Illinois state percentage open beds
+      State percentage open beds
     type: string
 
   state_covid_pui_patients:
     description: >
-      Illinois state COVID PUI patients
+      State COVID PUI patients
     type: integer
 
   state_covid_pui_patients_pct:
     description: >
-      Illinois state percentage COVID PUI patients
+      State percentage COVID PUI patients
     type: string
 
   state_covid_pui_patients_beds_in_use_pct:
     description: >
-      Illinois state percentage patient beds in use
+      State percentage patient beds in use
     type: string
 
   state_ventilator_capacity:
     description: >
-      Illinois state ventilator capacity
+      State ventilator capacity
     type: integer
 
   state_ventilators_open:
     description: >
-      Illinois state ventilators open
+      State ventilators open
     type: integer
 
   state_Ventilators_open_pct:
     description: >
-      Illinois state percentage ventilators open
+      State percentage ventilators open
     type: string
 
   state_ventilators_in_use:
     description: >
-      Illinois state ventilators in use
+      State ventilators in use
     type: integer
 
   state_ventilators_in_use_covid:
     description: >
-      Illinois state COVID ventilators in use
+      State COVID ventilators in use
     type: integer
 
   state_ventilators_covid_patients_pct:
     description: >
-      Illinois state percentage COVID patients
+      State percentage COVID patients
     type: string
 
   state_ventilators_covid_patients_in_use_pct:
     description: >
-      Illinois state percentage COVID patients ventilators in use
+      State percentage COVID patients ventilators in use
     type: string
 
   state_covid_patients_non_icu:
     description: >
-      Illinois state COVID patients non ICU
+      State COVID patients non ICU
     type: integer
 
   state_total_covid_pui_in_icu:
     description: >
-      Illinois state COVID patients PUI in ICU
+      State COVID patients PUI in ICU
     type: integer
 
   state_total_covid_pui_in_hospital:
     description: >
-      Illinois state COVID patients PUI in ICU
+      State COVID patients PUI in ICU
     type: integer
 
   state_pct_beds_covid_pui:
     description: >
-      Illinois state percentage beds COVID PUI
+      State percentage beds COVID PUI
     type: string
 
   state_med_surg_beds:
     description: >
-      Illinois state medical surge beds
+      State medical surge beds
     type: integer
 
   state_med_surg_beds_open:
     description: >
-      Illinois state medical surge beds open
+      State medical surge beds open
     type: integer
 
   state_med_surg_beds_open_pct:
     description: >
-      Illinois state percentage medical surge beds open
+      State percentage medical surge beds open
     type: string
 
   state_med_surg_beds_in_use:
     description: >
-      Illinois state medical surge beds in use
+      State medical surge beds in use
     type: integer
 
   state_total_beds:
     description: >
-      Illinois state total beds
+      State total beds
     type: integer
 
   total_open_beds:
     description: >
-      Illinois state open beds
+      State open beds
     type: integer
 
   total_in_use_beds_non_covid:
     description: >
-      Illinois state Non COVID in use beds
+      State Non COVID in use beds
     type: integer
 
   total_in_use_beds_covid:
     description: >
-      Illinois state COVID in use beds
+      State COVID in use beds
     type: integer
 
   icu_beds:
     description: >
-      Illinois state ICU beds
+      State ICU beds
     type: integer
 
   icu_open_beds:
     description: >
-      Illinois state ICU beds
+      State ICU beds
     type: integer
 
   icu_in_use_beds_non_covid:
     description: >
-      Illinois state non COVID ICU beds in use
+      State non COVID ICU beds in use
     type: integer
 
   icu_in_use_beds_covid:
     description: >
-      Illinois state COVID ICU beds in use
+      State COVID ICU beds in use
     type: integer
 
   ventilator_capacity:
     description: >
-      Illinois state COVID ICU beds in use
+      State COVID ICU beds in use
     type: integer
 
   ventilator_available:
     description: >
-      Illinois state ventilators available
+      State ventilators available
     type: integer
 
   ventilator_in_use_non_covid:
     description: >
-      Illinois state non COVID ventilators available
+      State non COVID ventilators available
     type: integer
 
   ventilator_in_use_covid:
     description: >
-      Illinois state COVID ventilators in use
+      State COVID ventilators in use
     type: integer
 
   source_url:
@@ -525,36 +526,43 @@ properties:
       URL of the source data
     type: string
 
+  #The following property is marked for removal (29July2020).
   source_label:
     description: >
       Source label
     type: string
 
+  #The following property is marked for removal (29July2020).
   notes:
     description: >
       Notes
     type: string
 
+  #The following property is marked for removal (29July2020).
   num_observations:
     description: >
       Number of observations
     type: integer
 
+  #The following property is marked for removal (29July2020).
   cumulative_total:
     description: >
       Cumulative total
     type: integer
 
+  #The following property is marked for removal (29July2020).
   cumulative_total_per_thousand:
     description: >
       Cumulative total per thousand
     type: integer
 
+  #The following property is marked for removal (29July2020).
   daily_change_in_cumulative_total:
     description: >
       Daily change in cumulative total
     type: integer
 
+  #The following property is marked for removal (29July2020).
   daily_change_in_cumulative_total_per_thousand:
     description: >
       Daily change in cumulative total per thousand
@@ -580,11 +588,13 @@ properties:
       General source URL
     type: string
 
+  #The following property is marked for removal (29July2020).
   short_description:
     description: >
       Short description
     type: string
 
+  #The following property is marked for removal (29July2020).
   detailed_description:
     description: >
       Detailed description
@@ -592,19 +602,20 @@ properties:
 
   taxonomy_code:
     description: >
-      Taxonomy Code
+      The NPI Health Care Provider Taxonomy Code Set.
     type: string
 
   provider_type:
     description: >
-      Provider Type
+      The type of health provider.
     type: string
 
   provider_subtype:
     description: >
-      Provider Subtype
+      The subtype of health provider.
     type: string
 
+  #The following property is marked for removal, to be replaced by property 'provider_specialty' (29July2020).
   detailed_specialty:
     description: >
       Detailed Specialty

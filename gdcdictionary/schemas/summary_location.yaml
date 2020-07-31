@@ -81,7 +81,7 @@ properties:
 
   FIPS:
     description: >
-      FIPS
+      The Federal Information Processing Standards codes for specific geographic areas.
     type: integer
     termDef:
       - term: FIPS
@@ -91,17 +91,17 @@ properties:
 
   iso2:
     description: >
-      iso2
+      The two-letter code (alpha-2) from the International Organization for Standardization.
     type: string
 
   iso3:
     description: >
-      iso3
+      The three-letter code (alpha-3) from the International Organization for Standardization.
     type: string
 
   code3:
     description: >
-      code3
+      The UID code for the location as determined by the following criteria found here: https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data#uid-lookup-table-logic
     type: integer
 
   zipcode:
@@ -121,7 +121,7 @@ properties:
 
   reporting_org_status:
     description: >
-      Reporting organization operational status
+      Reporting organization operational status.
     enum:
       - "Open"
       - "Closed"
@@ -130,42 +130,46 @@ properties:
 
   community_area:
     description: >
-      Community Area or Neighborhood
+      Community Area or Neighborhood.
     type: string
 
   state_hospital_region:
     description: >
-      Illinois state hospital region
+      State hospital region.
     type: string
 
   state_region_description:
     description: >
-      Illinois state hospital region desciption
+      State hospital region desciption.
     type: string
 
   npi:
     description: >
-      National Provider Identifier
+      National Provider Identifier.
     type: string
 
+  #The following property is marked for removal (29July2020).
   provider_first_line_business_pr:
     description: >
-      Provider First Line Business Practice Address
+      Provider First Line Business Practice Address.
     type: string
 
+  #The following property is marked for removal (29July2020).
   provider_second_line_business_pr:
     description: >
-      Provider Second Line Business Practice Address
+      Provider Second Line Business Practice Address.
     type: string
 
+  #The following property is marked for removal (29July2020).
   provider_business_practice_city:
     description: >
-      Provider Business Practice City
+      Provider Business Practice City.
     type: string
 
+  #The following property is marked for removal (29July2020).
   provider_business_practice_st:
     description: >
-      Provider Business Practice State
+      Provider Business Practice State.
     type: string
 
   projects:
