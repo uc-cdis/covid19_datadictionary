@@ -1,0 +1,559 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "subject"
+title: Subject
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: administrative
+program: '*'
+project: '*'
+description: >
+  The collection of all data related to a specific subject in the
+  context of a specific experiment.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - exclusive: false
+    required: true
+    subgroup:
+    - name: studies
+      backref: subjects
+      label: member_of
+      target_type: study
+      multiplicity: many_to_many
+      required: false
+    - name: projects
+      backref: subjects
+      label: data_from
+      target_type: project
+      multiplicity: many_to_one
+      required: false
+
+required:
+  - submitter_id
+  - type
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+# Case properties
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  species:
+    description: "Taxonomic species of the subject."
+    enum:
+     - Drosophila melanogaster
+     - Homo sapiens
+     - Mus musculus
+     - Mustela putorius furo
+     - Rattus rattus
+     - Sus scrofa
+    termDef:
+      - term: species
+        source: NCI Thesaurus
+        term_id: C45293
+        term_version: 20.03e (Release date:2020-03-31)
+
+  strain:
+    description: >
+      A lower-level taxonomic rank used in microbiology or virology, plants and rodents, usually at the intraspecific level (within a species)
+    type: string
+    termDef:
+      - term: strain
+        source: NCI Thesaurus
+        term_id: C14419
+        term_version: 20.03e (Release date:2020-03-31)
+
+  taxon_id:
+    description: >
+      NCBI identifier for classification of organisms.
+    type: integer
+    termDef:
+      - term: taxon_id
+        source: NCI Thesaurus
+        term_id: C54539
+        term_version: 20.03e (Release date:2020-03-31)
+
+  genus:
+    description: >
+      Genus of organism collected.
+    type: string
+    termDef:
+      - term: taxon_id
+        source: NCI Thesaurus
+        term_id: C45292
+        term_version: 20.03e (Release date:2020-03-31)
+
+  genome_length:
+    description: >
+      Number of basepairs of genome sequenced.
+    type: integer
+
+  genome_id:
+    description: >
+      PATRIC unique identifier for genome sequenced.
+    type: string
+
+  city:
+    description: >
+      City
+    type: string
+    termDef:
+      - term: city
+        source: NCI Thesaurus
+        term_id: C25160
+        term_version: 20.03e (Release date:2020-03-31)
+
+  province:
+    description: >
+      the region/province of the patient
+    type: string
+    termDef:
+      - term: province
+        source: NCI Thesaurus
+        term_id: C25632
+        term_version: 20.03e (Release date:2020-03-31)
+
+  country:
+    description: >
+      Country
+    type: string
+    termDef:
+      - term: country
+        source: NCI Thesaurus
+        term_id: C25464
+        term_version: 20.03e (Release date:2020-03-31)
+
+  wuhan_not_wuhan:
+    description: >
+      Wuhan not Wuhan
+    enum:
+      - "0"
+      - "1"
+
+  latitude:
+    description: >
+      Latitude
+    type:
+      - string
+    termDef:
+      - term: latitude
+        source: NCI Thesaurus
+        term_id: C68642
+        term_version: 20.03e (Release date:2020-03-31)
+
+  longitude:
+    description: >
+      Longitude
+    type:
+      - string
+    termDef:
+      - term: longitude
+        source: NCI Thesaurus
+        term_id: C68643
+        term_version: 20.03e (Release date:2020-03-31)
+
+  geo_resolution:
+    description: >
+      Geo resolution
+    type: string
+
+  date_onset_symptoms:
+    description: >
+      Date onset symptoms
+    type: string
+
+  date_admission_hospital:
+    description: >
+      Date admission hospital
+    type: string
+
+  date_confirmation:
+    description: >
+      Date confirmation
+    type: string
+
+  symptoms:
+    description: >
+      Symptoms
+    type: array
+    items:
+      type: string
+    termDef:
+      - term: symptoms
+        source: NCI Thesaurus
+        term_id: C4876
+        term_version: 20.03e (Release date:2020-03-31)
+
+  lives_in_wuhan:
+    description: >
+      Lives in Wuhan
+    type: string
+
+  travel_history_dates:
+    description: >
+      Travel history dates
+    type: array
+    items:
+      type: string
+
+  travel_history_location:
+    description: >
+      Travel history location
+    type: array
+    items:
+      type: string
+
+  reported_market_exposure:
+    description: >
+      Reported market exposure
+    type: string
+
+  additional_information:
+    description: >
+      Additional information
+    type: string
+
+  chronic_disease_binary:
+    description: >
+      Chronic Disease Binary
+    enum:
+      - "0"
+      - "1"
+      - "NA"
+      - "null"
+
+  chronic_disease:
+    description: >
+      Chronic disease
+    type: string
+    termDef:
+      - term: chronic_disease
+        source: NCI Thesaurus
+        term_id: C165593
+        term_version: 20.03e (Release date:2020-03-31)
+
+  source:
+    description: >
+      Source
+    type: string
+    termDef:
+      - term: source
+        source: NCI Thesaurus
+        term_id: C25683
+        term_version: 20.03e (Release date:2020-03-31)
+
+  sequence_available:
+    description: >
+      Sequence available
+    type: string
+
+  outcome:
+    description: >
+      Outcome
+    type: string
+    termDef:
+      - term: source
+        source: NCI Thesaurus
+        term_id: C25683
+        term_version: 20.03e (Release date:2020-03-31)
+
+  date_death_or_discharge:
+    description: >
+      Date death or discharge
+    type: string
+
+  notes_for_discussion:
+    description: >
+      Notes for discussion
+    type: string
+
+  location:
+    description: >
+      Location
+    type: string
+    termDef:
+      - term: location
+        source: NCI Thesaurus
+        term_id: C25341
+        term_version: 20.03e (Release date:2020-03-31)
+
+  admin3:
+    description: >
+      Admin3
+    type: string
+
+  admin2:
+    description: >
+      Admin2
+    type: string
+
+  admin1:
+    description: >
+      Admin1
+    type: string
+
+  country_new:
+    description: >
+      Country new
+    type: string
+
+  admin_id:
+    description: >
+      Admin id
+    type: string
+
+  data_moderator_initials:
+    description: >
+      Data moderator initials
+    type: string
+
+  case_in_country:
+    description: >
+      Case in country
+    type:
+      - integer
+      - "null"
+
+  reporting_date:
+    description: >
+      Reporting date
+    type:
+      - string
+      - "null"
+    termDef:
+      - term: reporting_date
+        source: NCI Thesaurus
+        term_id: C70857
+        term_version: 20.03e (Release date:2020-03-31)
+
+  summary:
+    description: >
+      Summary
+    type: string
+    termDef:
+      - term: summary
+        source: NCI Thesaurus
+        term_id: C79170
+        term_version: 20.03e (Release date:2020-03-31)
+
+  symptom_onset:
+    description: >
+      Symptom onset
+    type: string
+    termDef:
+      - term: symptom_onset
+        source: NCI Thesaurus
+        term_id: C124353
+        term_version: 20.03e (Release date:2020-03-31)
+
+  if_onset_approximated:
+    description: >
+      If onset approximated
+    enum:
+      - "True"
+      - "False"
+      - "NA"
+
+  hosp_visit_date:
+    description: >
+      Hospital visit date
+    type: string
+
+  exposure_start:
+    description: >
+      Exposure start
+    type:
+      - string
+    termDef:
+      - term: exposure_start
+        source: NCI Thesaurus
+        term_id: C83127
+        term_version: 20.03e (Release date:2020-03-31)
+
+  exposure_end:
+    description: >
+      Exposure end
+    type:
+      - string
+    termDef:
+      - term: exposure_end
+        source: NCI Thesaurus
+        term_id: C83138
+        term_version: 20.03e (Release date:2020-03-31)
+
+  visiting_wuhan:
+    description: >
+      Visiting Wuhan
+    enum:
+      - "True"
+      - "False"
+
+  from_wuhan:
+    description: >
+      From Wuhan
+    enum:
+      - "True"
+      - "False"
+      - "NA"
+
+  death:
+    description: >
+      Death
+    enum:
+      - "True"
+      - "False"
+    termDef:
+      - term: death
+        source: NCI Thesaurus
+        term_id: C28554
+        term_version: 20.03e (Release date:2020-03-31)
+
+  recovered:
+    description: >
+      Recovered
+    type: string
+    termDef:
+      - term: recovered
+        source: NCI Thesaurus
+        term_id: C49498
+        term_version: 20.03e (Release date:2020-03-31)
+
+  link:
+    description: >
+      Link
+    type: string
+    termDef:
+      - term: link
+        source: NCI Thesaurus
+        term_id: C47919
+        term_version: 20.03e (Release date:2020-03-31)
+
+  dob:
+    description: >
+      Date of birth (MM/DD/YYYY)
+    type: string
+    termDef:
+      - term: dob
+        source: NCI Thesaurus
+        term_id: C68615
+        term_version: 20.03e (Release date:2020-03-31)
+
+  age_decade:
+    description: >
+      the age of the patient in decades
+    type: string
+
+  isolated:
+    description: >
+      state of isolated
+    enum:
+      - "True"
+      - "False"
+
+  global_num:
+    description: >
+      the number given by KCDC (This is a deprecated value for the DS4C data set)
+    type: integer
+
+  disease:
+    description: >
+      TRUE: underlying disease / FALSE: no disease (This is a deprecated value for the DS4C data set)
+    enum:
+      - "True"
+      - "False"
+
+  infection_case:
+    description: >
+      the case of infection
+    type: string
+
+  infection_order:
+    description: >
+      the order of infection (This is a deprecated value for the DS4C data set)
+    type: integer
+
+  infected_by:
+    description: >
+      the ID of who infected the patient
+    type: array
+    items:
+      type: string
+
+  contact_number:
+    description: >
+      the number of contacts with people
+    type: integer
+
+  current_state:
+    description: >
+      current state
+    enum:
+      - "released"
+      - "isolated"
+      - "deceased"
+      - "alive"
+      - "critical"
+      - "in recovery"
+      - "in treatment"
+      - "positive"
+      - "recovered"
+      - "stable"
+      - "unstable"
+
+  released_date:
+    description: >
+      the date of discharge
+    type: string
+
+  hospital:
+    description: >
+      hospitalized location
+    type: string
+
+  underlying_conditions:
+    description: >
+      underlying conditions
+    type: array
+    items:
+      type: string
+
+  age:
+    description: >
+      Age of the subject (in years)
+    type: number
+    termDef:
+      - term: taxon_id
+        source: NCI Thesaurus
+        term_id: C25150
+        term_version: 20.03e (Release date:2020-03-31)
+
+  vital_status:
+    term:
+      $ref: "_terms.yaml#/vital_status"
+    enum:
+      - Alive
+      - Dead
+      - Lost to Follow-up
+      - Unknown
+    termDef:
+      - term: Vital Status
+        source: NCI Thesaurus
+        term_id: C25717
+        term_version: 18.11d (Release date:2018-11-26)
+
+  studies:
+    $ref: "_definitions.yaml#/to_many"
+  projects:
+    $ref: "_definitions.yaml#/to_one_project"
