@@ -23,7 +23,7 @@ systemProperties:
 
 links:
   - name: subjects
-    backref: diagnoses
+    backref: observations
     label: describes
     target_type: subject
     multiplicity: many_to_one
