@@ -39,7 +39,7 @@ links:
       target_type: subject
       multiplicity: many_to_one
       required: false
-    - name: conditions
+    - name: observations
       backref: samples
       label: related_to
       target_type: observation
