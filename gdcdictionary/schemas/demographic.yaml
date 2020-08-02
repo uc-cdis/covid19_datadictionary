@@ -235,5 +235,15 @@ properties:
         term_id: C50400
         term_version: 20.03e (Release date:2020-03-31)
 
+  res_county:
+    description: >
+      County of residence
+    type: string
+
+  res_state:
+    description: >
+      State of residence
+    type: string
+
   subjects:
     $ref: "_definitions.yaml#/to_one"
