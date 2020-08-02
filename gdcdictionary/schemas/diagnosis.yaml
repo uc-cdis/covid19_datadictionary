@@ -1,0 +1,1378 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "diagnosis"
+title: Diagnosis
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Data from the investigation, analysis and recognition of the presence and nature of disease,
+  condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: subjects
+    backref: diagnoses
+    label: describes
+    target_type: subject
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - subjects
+  - primary_diagnosis
+  - version_data
+  - visit_id
+
+preferred:
+  - year_of_diagnosis
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  # CANCER SPECIFIC VARIABLES
+  classification_of_tumor:
+    term:
+      $ref: "_terms.yaml#/classification_of_tumor"
+    enum:
+      - primary
+      - metastasis
+      - recurrence
+      - other
+      - Unknown
+      - not reported
+      - Not Allowed To Collect
+
+  lung_localization:
+    description: >
+      Pulmonary tuberculosis (PTB) and extrapulmonary TB (EPTB): PTB and EPTB diagnosed at the same time. A patient with both pulmonary and extrapulmonary TB should be classified as a case of PTB. Extrapulmonary tuberculosis (EPTB) refers to any bacteriologically confirmed or clinically diagnosed case of TB involving organs other than the lungs, e.g. pleura, lymph nodes, abdomen, genitourinary tract, skin, joints and bones, meninges. Pulmonary tuberculosis (PTB) refers to any bacteriologically confirmed or clinically diagnosed case of TB involving the lung parenchyma or the tracheobronchial tree. Miliary TB is classified as PTB because there are lesions in the lungs. Tuberculous intra-thoracic lymphadenopathy (mediastinal and/or hilar) or tuberculous pleural effusion, without radiographic abnormalities in the lungs, constitutes a case of extrapulmonary TB.
+    enum:
+      - "Pulmonary and Extrapulmonary"
+      - "Pulmonary"
+      - "Extrapulmonary"
+
+  morphology:
+    term:
+      $ref: "_terms.yaml#/morphology"
+    type: string
+
+   # GENERAL DIAGNOSIS VARIABLES
+  primary_diagnosis:
+    term:
+      $ref: "_terms.yaml#/primary_diagnosis"
+    type: string
+
+  prior_treatment:
+    term:
+      $ref: "_terms.yaml#/prior_treatment"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
+  progression_or_recurrence:
+    term:
+      $ref: "_terms.yaml#/progression_or_recurrence"
+    enum:
+      - "yes"
+      - "no"
+      - unknown
+      - not reported
+      - Not Allowed To Collect
+
+  tumor_grade:
+    term:
+      $ref: "_terms.yaml#/tumor_grade"
+    type: string
+
+  tumor_stage:
+    term:
+      $ref: "_terms.yaml#/tumor_stage"
+    type: string
+
+  tissue_or_organ_of_origin:
+    term:
+      $ref: "_terms.yaml#/tissue_or_organ_of_origin"
+    type: string
+
+  type_of_resistance:
+    description: >
+      Type of TB resistance
+    enum:
+      - MDR non XDR
+      - Mono DR
+      - Poly DR
+      - Sensitive
+      - XDR
+
+  version_data:
+    description: >
+      Version number of data
+          011= Version 01 in Visit 01
+          ..
+          993= Version 03 in Visit 99
+    type: integer
+
+  visit_id:
+    description: >
+      Visit identifier
+    type: integer
+
+  year_of_diagnosis:
+    term:
+      $ref: "_terms.yaml#/year_of_diagnosis"
+    type:
+      - number
+      - "null"
+
+  comorbidity:
+    description: >
+      The simultaneous presence of two chronic diseases or conditions in a patient
+    type: boolean
+
+  comorbidity_hiv:
+    description: >
+      Presence of HIV as comorbidity
+    type: boolean
+
+  comorbidity_hepatic_disease:
+    description: >
+      Presence of hepatic disease as comorbidity
+    type: boolean
+
+  comorbidity_renal_disease:
+    description: >
+        Presence of renal disease as comorbidity
+    type: boolean
+
+  comorbidity_anemia:
+    description: >
+        Presence of anemia as comorbidity
+    type: boolean
+
+  comorbidity_diabetes:
+    description: >
+        Presence of diabetes as comorbidity
+    type: boolean
+
+  state:
+    description: >
+      Reporting jurisdiction
+    type: string
+
+  healthdept:
+    description: >
+      Reporting health department
+    type: string
+
+  contact_id:
+    description: >
+      Contact ID
+    type: string
+
+  local_id:
+    description: >
+      Case state/local ID
+    type: string
+
+  cdc_ncov2019_id:
+    description: >
+      CDC 2019-nCoV ID
+    type: string
+
+  nndss_id:
+    description: >
+      NNDSS loc. Rec. ID/ Case ID
+    type: string
+
+  interviewer_ln:
+    description: >
+      Last name of interviewer
+    type: string
+
+  interviewer_fn:
+    description: >
+      First name of interviewer
+    type: string
+
+  interviewer_org:
+    description: >
+      Affilliation/ Organization
+    type: string
+
+  interviewer_tele:
+    description: >
+      Telephone number
+    type: string
+
+  interviewer_email:
+    description: >
+      Email
+    type: string
+
+  current_status:
+    description: >
+      What is the current status of this person?
+    enum:
+      - PUI testing pendingMDR non XDR
+      - PUI tested negative
+      - Presumptive case (positive local test), confirmatory testing pending
+      - Presumptive case (positive local test), confirmatory tested negative*
+      - Laboratory-confirmed case*
+
+  pui_cdcreport_dt:
+    description: >
+      Report date of PUI to CDC (MM/DD/YYYY)
+    type: string
+
+  case_cdcreport_dt:
+    description: >
+      Report date of case to CDC (MM/DD/YYYY)
+    type: string
+
+  res_county:
+    description: >
+      County of residence
+    type: string
+
+  res_state:
+    description: >
+      State of residence
+    type: string
+
+  pos_spec_dt:
+    description: >
+      Date of first positive specimen collection (MM/DD/YYYY)
+    type: string
+
+  pos_spec_unk:
+    description: >
+      Check if date unknown
+    type: boolean
+
+  pos_spec_na:
+    description: >
+      Check if date not applicable
+    type: boolean
+
+  pna_yn:
+    description: >
+      Did the patient develop pneumonia?
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  acuterespdistress_yn:
+    description: >
+      Did the patient have acute respiratory distress syndrome?
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  diagother:
+    description: >
+      Did the patient have another diagnosis/etiology for their illness?
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  abxchest_yn:
+    description: >
+      Did the patient have an abnormal chest X-ray?
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  sympstatus:
+    description: >
+      Symptoms present during course of illness:
+    enum:
+      - Symptomatic
+      - Asymptomatic
+      - Unknown
+
+  onset_dt:
+    description: >
+      If symptomatic, onset date (MM/DD/YYYY)
+    type: string
+
+  onset_unk:
+    description: >
+      If symptomatic, onset date - unknown
+    type: boolean
+
+  symp_res_dt:
+    description: >
+      If symptomatic, date of symptom resolution (MM/DD/YYYY)
+    type: string
+
+  symp_res_yn:
+    description: >
+      If symptomatic, state of resolution
+    enum:
+      - Still symptomatic
+      - Symptoms resolved, unknown date
+      - Unknown symptom status
+
+  hosp_yn:
+    description: >
+      Was the patient hospitalized?
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  adm1_dt:
+    description: >
+      Was the patient hospitalized? If yes, admission date 1 (MM/DD/YYYY)
+    type: string
+
+  dis1_dt:
+    description: >
+      Was the patient hospitalized? If yes, discharge date 1 (MM/DD/YYYY)
+    type: string
+
+  icu_yn:
+    description: >
+      Was the patient admitted to an intensive care unit (ICU)?
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  mechvent_yn:
+    description: >
+      Did the patient receive mechanical ventilation (MV)/intubation?
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  mechvent_dur:
+    description: >
+      Did the patient receive mechanical ventilation (MV)/intubation? If yes, total days with MV (days)
+    type: string
+
+  ecmo_yn:
+    description: >
+      Did the patient receive extracorporeal membrane oxygenation (ECMO)?
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  death_yn:
+    description: >
+      Did the patient die as a result of this illness?
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  death_dt:
+    description: >
+      Date of Death (MM/DD/YYYY)
+    type: string
+
+  death_unk:
+    description: >
+      Date of Death (MM/DD/YYYY)
+    type: boolean
+
+  hc_work_yn:
+    description: >
+      Is the patient a health care worker in the United States?
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  hc_work_china_yn:
+    description: >
+      Does the patient have a history of being in a healthcare facility (as a patient, worker or visitor) in China?
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  past_14_days:
+    description: >
+      In the 14 days prior to illness onset, did the patient have any of the following exposures (check all that apply):
+      [Travel to Wuhan]
+      [Travel to Hubei]
+      [Travel to mainland China]
+      [Travel to other non-US country]
+      [Household contact with another lab-confirmed COVID-19 case-patient]
+      [Community contact with another lab-confirmed COVID-19 case-patient]
+      [Any healthcare contact with another lab-confirmed COVID-19 case-patient]
+      [Healthcare contact with another lab-confirmed COVID-19 case-patient -- patient]
+      [Healthcare contact with another lab-confirmed COVID-19 case-patient -- visitor]
+      [Healthcare contact with another lab-confirmed COVID-19 case-patient -- healthcare worker]
+      [Animal exposure]
+      [Exposure to a cluster of patients with severe acute lower respiratory distress of unknown etiology]
+      [Other]
+      [Unknown]
+    type: array
+    items:
+      type: string
+
+  past_14_days_exp_othcountry_spec:
+    description: >
+      Travel to other non-US country.  If yes, specify
+    type: string
+
+  past_14_days_exp_other_spec:
+    description: >
+      Other.  If yes, specify
+    type: string
+
+  past_14_days_exp_health:
+    description: >
+      Any healthcare contact with another lab-confirmed COVID-19 case-patient
+    enum:
+      - Patient
+      - Visitor
+      - HCW
+
+  cont_lab_us:
+    description: >
+      If the patient had contact with another COVID-19 case, was this person a U.S. case?
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+      - "NA"
+
+  cdc_ncov2019_sourceid_2:
+    description: >
+      If the patient had contact with another COVID-19 case, was this person a U.S. case? If yes, specify nCoV ID of source case
+    type: string
+
+  process:
+    description: >
+      Under what process was the PUI or case first identified? (check all that apply):
+      [Clinical evaluation leading to PUI determination]
+      [Contact tracing of case patient]
+      [Routine surveillance]
+      [EpiX notification of travelers]
+      [Unknown]
+      [Other]
+    type: array
+    items:
+      type: string
+
+  process_process_dgmqid:
+    description: >
+      Under what process was the PUI or case first identified? EpiX notification of travelers, If checked, DGMQID
+    type: string
+
+  process_process_other_spec:
+    description: >
+      Under what process was the PUI or case first identified? EpiX notification of travelers, Other, If other, specify
+    type: string
+
+  collected_from:
+    description: >
+      Collected from (check all that apply):
+      [Patient interview]
+      [Medical record review]
+    type: array
+    items:
+      type: string
+
+  fever_yn:
+    description: >
+      During this illness, did the patient experience any of the following symptoms?
+      Fever >100.4F (38C)
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  sfever_yn:
+    description: >
+      During this illness, did the patient experience any of the following symptoms?
+      Subjective fever (felt feverish)
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  chills_yn:
+    description: >
+      During this illness, did the patient experience any of the following symptoms?
+      Chills
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  myalgia_yn:
+    description: >
+      During this illness, did the patient experience any of the following symptoms?
+      Muscle aches (myalgia)
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  runnose_yn:
+    description: >
+      During this illness, did the patient experience any of the following symptoms?
+      Runny nose (rhinorrhea)
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  sthroat_yn:
+    description: >
+      During this illness, did the patient experience any of the following symptoms?
+      Sore throat
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  cough_yn:
+    description: >
+      During this illness, did the patient experience any of the following symptoms?
+      Cough (new onset or worsening of chronic cough)
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  sob_yn:
+    description: >
+      During this illness, did the patient experience any of the following symptoms?
+      Shortness of breath (dyspnea)
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  nauseavomit_yn:
+    description: >
+      During this illness, did the patient experience any of the following symptoms?
+      Nausea or Vomiting
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  headache_yn:
+    description: >
+      During this illness, did the patient experience any of the following symptoms?
+      Headache
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  abdom_yn:
+    description: >
+      During this illness, did the patient experience any of the following symptoms?
+      Abdominal pain
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  diarrhea_yn:
+    description: >
+      During this illness, did the patient experience any of the following symptoms?
+      Diarrhea (≥3 loose/looser than normal stools/24hr period)
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  othsym1_yn:
+    description: >
+      Other symptoms - 1
+    type: boolean
+
+  othsym1_spec:
+    description: >
+     Other symptoms - 1, specify:
+    type: string
+
+  othsym2_yn:
+    description: >
+      Other symptoms - 2
+    type: boolean
+
+  othsym2_spec:
+    description: >
+     Other symptoms - 2, specify
+    type: string
+
+  othsym3_yn:
+    description: >
+      Other symptoms - 3
+    type: boolean
+
+  othsym3_spec:
+    description: >
+     Other symptoms - 3, specify:
+    type: string
+
+  medcond_yn:
+    description: >
+      Pre-existing medical conditions?
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  cld_yn:
+    description: >
+      Chronic lung disease (asthma/emphysema/COPD)
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  diabetes_yn:
+    description: >
+      Diabetes Mellitus
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  cvd_yn:
+    description: >
+      Cardiovascular disease
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  renaldis_yn:
+    description: >
+      Chronic renal disease
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  liverdis_yn:
+    description: >
+      Liver disease
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  immsupp_yn:
+    description: >
+      Immunocompromised condition
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  neuro_yn:
+    description: >
+      Neurologic/neurodevelopmental/intellectual disability
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  neuro_spec:
+    description: >
+      Neurologic/neurodevelopmental/intellectual disability, If yes, specify
+    type: string
+
+  otherdis_yn:
+    description: >
+      Other chronic diseases
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  otherdis_spec:
+    description: >
+      Other chronic diseases, If yes, specify
+    type: string
+
+  pregnant_yn:
+    description: >
+      If female, currently pregnant
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  smoke_curr_yn:
+    description: >
+      Current smoker
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  smoke_former_yn:
+    description: >
+      Former smoker
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  resp_flua_ag:
+    description: >
+      Influenza A Rapid AgFormer smoker
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_flub_ag:
+    description: >
+      Influenza B Rapid Ag
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_flua_pcr:
+    description: >
+      Influenza A PCR
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_flub_pcr:
+    description: >
+      Influenza B PCR
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_rsv:
+    description: >
+      RSV
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_hm:
+    description: >
+      H. metapneumovirus
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_pi:
+    description: >
+      Parainfluenza (1-4)
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_adv:
+    description: >
+      Adenovirus
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_rhino:
+    description: >
+      Rhinovirus/enterovirus
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_cov:
+    description: >
+      Coronavirus (OC43, 229E, HKU1, NL63)
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_mp:
+    description: >
+      M. pneumoniae
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_rcp:
+    description: >
+      C. pneumoniae
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  othrp:
+    description: >
+      Other positive pathogens
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  othrp_spec:
+    description: >
+      Other positive pathogens, If yes, specify
+    type: string
+
+  spec_npswab1id:
+    description: >
+      NP Swab: Local Specimen ID - 1
+    type: string
+
+  spec_npswab1_dt:
+    description: >
+      NP Swab: Collection date - 1
+    type: string
+
+  spec_npswab1state:
+    description: >
+      NP Swab: State Lab Tested - 1
+    type: boolean
+
+  spec_npswab1Stateresult:
+    description: >
+      NP Swab: State Result - 1
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_npswab1cdc:
+    description: >
+      NP Swab: Sent to CDC - 1
+    type: boolean
+
+  spec_npswab1CDCresult:
+    description: >
+      NP Swab: CDC Result - 1
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_npswab2id:
+    description: >
+      NP Swab: Local Specimen ID - 2
+    type: string
+
+  spec_npswab2_dt:
+    description: >
+      NP Swab: Collection date - 2
+    type: string
+
+  spec_npswab2state:
+    description: >
+      NP Swab: State Lab Tested - 2
+    type: boolean
+
+  spec_npswab2Stateresult:
+    description: >
+      NP Swab: State Result - 2
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_npswab2cdc:
+    description: >
+      NP Swab: Sent to CDC - 2
+    type: boolean
+
+  spec_npswab2CDCresult:
+    description: >
+      NP Swab: CDC Result - 2
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_npswab3id:
+    description: >
+      NP Swab: Local Specimen ID - 3
+    type: string
+
+  spec_npswab3_dt:
+    description: >
+      NP Swab: Collection date - 3
+    type: string
+
+  spec_npswab3state:
+    description: >
+     NP Swab: State Lab Tested - 3
+    type: boolean
+
+  spec_npswab3Stateresult:
+    description: >
+      NP Swab: State Result - 3
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_npswab3cdc:
+    description: >
+      NP Swab: Sent to CDC - 3
+    type: boolean
+
+  spec_npswab3CDCresult:
+    description: >
+      NP Swab: CDC Result - 3
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_opswab1id:
+    description: >
+      OP Swab: Local Specimen ID - 1
+    type: string
+
+  spec_opswab1_dt:
+    description: >
+      OP Swab: Collection date - 1
+    type: string
+
+  spec_opswab1state:
+    description: >
+      OP Swab: State Lab Tested - 1
+    type: boolean
+
+  spec_opswab1CDCresult:
+    description: >
+      OP Swab: CDC Result - 1
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_opswab2id:
+    description: >
+      OP Swab: Local Specimen ID - 2
+    type: string
+
+  spec_opswab2_dt:
+    description: >
+      OP Swab: Collection date - 2
+    type: string
+
+  spec_opswab2state:
+    description: >
+      OP Swab: State Lab Tested - 2
+    type: boolean
+
+  spec_opswab2Stateresult:
+    description: >
+      OP Swab: State Result - 2
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_opswab2cdc:
+    description: >
+      OP Swab: State Result - 2
+    type: boolean
+
+  spec_opswab2CDCresult:
+    description: >
+      OP Swab: CDC Result - 2
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_opswab3id:
+    description: >
+      OP Swab: Local Specimen ID - 3
+    type: string
+
+  spec_opswab3_dt:
+    description: >
+      OP Swab: Collection date - 3
+    type: string
+
+  spec_opswab3state:
+    description: >
+      OP Swab: State Lab Tested - 3
+    type: boolean
+
+  spec_opswab3Stateresult:
+    description: >
+      OP Swab: State Result - 3
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_opswab3cdc:
+    description: >
+      OP Swab: Sent to CDC - 3
+    type: boolean
+
+  spec_opswab3CDCresult:
+    description: >
+      OP Swab: CDC Result - 3
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_sputum1id:
+    description: >
+      Sputum: Local Specimen ID - 1
+    type: string
+
+  spec_sputum1_dt:
+    description: >
+      Sputum: Collection date - 1
+    type: string
+
+  spec_sputum1state:
+    description: >
+      Sputum: State Lab Tested - 1
+    type: boolean
+
+  spec_sputum1Stateresult:
+    description: >
+      Sputum: State Result - 1
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_sputum1cdc:
+    description: >
+      Sputum: Sent to CDC - 1
+    type: boolean
+
+  spec_sputum1CDCresult:
+    description: >
+      Sputum: CDC Result - 1
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_sputum2id:
+    description: >
+      Sputum: Local Specimen ID - 2
+    type: string
+
+  spec_sputum2_dt:
+    description: >
+      Sputum: Collection date - 2
+    type: string
+
+  spec_sputum2state:
+    description: >
+      Sputum: State Lab Tested - 2
+    type: boolean
+
+  spec_sputum2Stateresult:
+    description: >
+      Sputum: State Result - 2
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_sputum2cdc:
+    description: >
+      Sputum: Sent to CDC - 2
+    type: boolean
+
+  spec_sputum2CDCresult:
+    description: >
+      Sputum: CDC Result - 2
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_sputum3id:
+    description: >
+      Sputum: Local Specimen ID - 3
+    type: string
+
+  spec_sputum3_dt:
+    description: >
+      Sputum: Collection date - 3
+    type: string
+
+  spec_sputum3state:
+    description: >
+      Sputum: State Lab Tested - 3
+    type: boolean
+
+  spec_sputum3Stateresult:
+    description: >
+      Sputum: State Result - 3
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_sputum3cdc:
+    description: >
+      Sputum: Sent to CDC - 3
+    type: boolean
+
+  spec_sputum3CDCresult:
+    description: >
+      Sputum: CDC Result - 3
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_otherspecimen1_yn:
+    description: >
+      Other specimen type - 1
+    type: boolean
+
+  spec_otherspecimen1_spe:
+    description: >
+      If yes, specify type - 1
+    type: string
+
+  spec_otherspecimen1id:
+    description: >
+      Other: Local Specimen ID - 1
+    type: string
+
+  spec_otherspecimen1_dt:
+    description: >
+      Other: Collection date - 1
+    type: string
+
+  spec_otherspecimen1state:
+    description: >
+      Other: State Lab Tested - 1
+    type: boolean
+
+  spec_otherspecimen1Stateresult:
+    description: >
+      Other: State Result - 1
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_otherspecimen1cdc:
+    description: >
+      Other: Sent to CDC - 1
+    type: boolean
+
+  spec_otherspecimen1CDCresult:
+    description: >
+      Other: CDC Result - 1
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_otherspecimen2_yn:
+    description: >
+      Other specimen type - 2
+    type: boolean
+
+  spec_otherspecimen2_spec:
+    description: >
+      Other specimen type - 2 , If yes, specify type - 2
+    type: string
+
+  spec_otherspecimen2id:
+    description: >
+      Other: Local Specimen ID - 2
+    type: string
+
+  spec_otherspecimen2_dt:
+    description: >
+      Other: Collection date - 2
+    type: string
+
+  spec_otherspecimen2state:
+    description: >
+      OOther: State Lab Tested - 2
+    type: boolean
+
+  spec_otherspecimen2Stateresult:
+    description: >
+      Other: State Result - 2
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_otherspecimen2cdc:
+    description: >
+      Other: Sent to CDC - 2
+    type: boolean
+
+  spec_otherspecimen2CDCresult:
+    description: >
+      Other: CDC Result - 2
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_otherspecimen3_yn:
+    description: >
+      Other specimen type - 3
+    type: boolean
+
+  spec_otherspecimen3_spec:
+    description: >
+      Other specimen type - 3, If yes, specify type - 3
+    type: string
+
+  spec_otherspecimen3id:
+    description: >
+      Other: Local Specimen ID - 3
+    type: string
+
+  spec_otherspecimen3_dt:
+    description: >
+      Other: Collection date - 3
+    type: string
+
+  spec_otherspecimen3state:
+    description: >
+      Other: State Lab Tested - 3
+    type: boolean
+
+  spec_otherspecimen3Stateresult:
+    description: >
+      Other: State Result - 3
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  spec_otherspecimen3cdc :
+    description: >
+      Other: Sent to CDC - 3
+    type: boolean
+
+  spec_otherspecimen3CDCresult:
+    description: >
+      Other: CDC Result - 3
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+      - Indeterminate
+
+  lab_local_id1:
+    description: >
+      Additional State/local Specimen IDs:
+    type: string
+
+  final_notes:
+    description: >
+      Any additional comments/notes?
+    type: string
+
+  subjects:
+    $ref: "_definitions.yaml#/to_one"
