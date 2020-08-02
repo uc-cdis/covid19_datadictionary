@@ -90,16 +90,6 @@ properties:
         term_id: C25160
         term_version: 20.03e (Release date:2020-03-31)
 
-  country:
-    description: >
-      Country
-    type: string
-    termDef:
-      - term: country
-        source: NCI Thesaurus
-        term_id: C25464
-        term_version: 20.03e (Release date:2020-03-31)
-
   wuhan_not_wuhan:
     description: >
       Wuhan not Wuhan
@@ -318,22 +308,6 @@ properties:
     type: array
     items:
       type: string
-
-  current_state:
-    description: >
-      current state
-    enum:
-      - "released"
-      - "isolated"
-      - "deceased"
-      - "alive"
-      - "critical"
-      - "in recovery"
-      - "in treatment"
-      - "positive"
-      - "recovered"
-      - "stable"
-      - "unstable"
 
   released_date:
     description: >
