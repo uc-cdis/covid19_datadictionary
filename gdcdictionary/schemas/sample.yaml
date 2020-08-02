@@ -42,7 +42,7 @@ links:
     - name: diagnoses
       backref: samples
       label: related_to
-      target_type: diagnosis
+      target_type: observation
       multiplicity: many_to_one
       required: false
     - name: studies
@@ -710,7 +710,7 @@ properties:
     $ref: "_definitions.yaml#/to_one"
   studies:
     $ref: "_definitions.yaml#/to_many"
-  diagnoses:
+  observations:
     $ref: "_definitions.yaml#/to_one"
   projects:
     $ref: "_definitions.yaml#/to_one_project"
