@@ -245,5 +245,15 @@ properties:
       State of residence
     type: string
 
+  country:
+    description: >
+      Country
+    type: string
+    termDef:
+      - term: country
+        source: NCI Thesaurus
+        term_id: C25464
+        term_version: 20.03e (Release date:2020-03-31)
+
   subjects:
     $ref: "_definitions.yaml#/to_one"
