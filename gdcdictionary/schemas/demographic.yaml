@@ -65,11 +65,11 @@ properties:
     term:
       $ref: "_terms.yaml#/gender"
     enum:
-      - female
-      - male
-      - unknown
-      - unspecified
-      - not reported
+      - Female
+      - Male
+      - Unknown
+      - Unspecified
+      - Not reported
     termDef:
       - term: Gender
         source: NCI Thesaurus
@@ -245,15 +245,30 @@ properties:
       State of residence
     type: string
 
-  country:
+  city:
     description: >
-      Country
+      City
     type: string
     termDef:
-      - term: country
+      - term: city
         source: NCI Thesaurus
-        term_id: C25464
+        term_id: C25160
         term_version: 20.03e (Release date:2020-03-31)
+
+  country_region:
+    description: >
+      Country or region
+    type: string
+
+  province_state:
+    description: >
+      Province or state
+    type: string
+    
+  age_decade:
+    description: >
+      the age of the patient in decades
+    type: string
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
