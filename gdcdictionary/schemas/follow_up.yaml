@@ -52,21 +52,21 @@ properties:
 
   intubation_present:
     description: >
-      Yes (Y) or no (N) or blank if unknown.
+      Yes (True) or no (False) or blank if unknown.
     enum:
       - "True"
       - "False"
 
   in_icu:
     description: >
-      Yes (Y) if the patient is in the ICU (intensive care unit) or CCU (critical care unit) or No (N) or blank if unknown.
+      Yes (True) if the patient is in the ICU (intensive care unit) or CCU (critical care unit) or No (False) or blank if unknown.
     enum:
       - "True"
       - "False"
 
   extubated:
     description: >
-      Yes (Y) if the patient was successfully extubated or No (N) or blank if unknown.
+      Yes (True) if the patient was successfully extubated or No (False) or blank if unknown.
     enum:
       - "True"
       - "False"
