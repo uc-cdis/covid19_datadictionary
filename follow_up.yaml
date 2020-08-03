@@ -52,58 +52,58 @@ properties:
 
   intubation_present:
     description: >
-      Yes (True) or no (False) or blank if unknown.
+      Yes (Y) or no (N) or blank if unknown
     enum:
-      - "True"
-      - "False"
+      - "Y"
+      - "N"
 
   in_icu:
     description: >
-      Yes (True) if the patient is in the ICU (intensive care unit) or CCU (critical care unit) or No (False) or blank if unknown.
+      Yes (Y) if the patient is in the ICU (intensive care unit) or CCU (critical care unit) or No (N) or blank if unknown.
     enum:
-      - "True"
-      - "False"
+      - "Y"
+      - "N"
 
   extubated:
     description: >
-      Yes (True) if the patient was successfully extubated or No (False) or blank if unknown.
+      Yes (Y) if the patient was successfully extubated or No (N) or blank if unknown
     enum:
-      - "True"
-      - "False"
+      - "Y"
+      - "N"
 
   temperature:
     description: >
-      Temperature of the patient in Celsius at the time of the image.
+      Temperature of the patient in Celsius at the time of the image
     type: number
 
   pO2_saturation:
     description: >
-      Partial pressure of oxygen saturation in % at the time of the image.
+      partial pressure of oxygen saturation in % at the time of the image
     type: number
 
   leukocyte_count:
     description: >
-      white blood cell count in units of 10^3/uL at the time of the image.
+      white blood cell count in units of 10^3/uL at the time of the image
     type: number
 
   neutrophil_count:
     description: >
-      Neutrophil cell count in units of 10^3/uL at the time of the image.
+      neutrophil cell count in units of 10^3/uL at the time of the image
     type: number
 
   lymphocyte_count:
     description: >
-      Lymphocyte cell count in units of 10^3/uL at the time of the image.
+      lymphocyte cell count in units of 10^3/uL at the time of the image
     type: number
 
   view:
     description: >
-      Posteroanterior (PA), Anteroposterior (AP), AP Supine (APS), or Lateral (L) for X-rays; Axial or Coronal for CT scans.
+      Posteroanterior (PA), Anteroposterior (AP), AP Supine (APS), or Lateral (L) for X-rays; Axial or Coronal for CT scans
     type: string
 
   modality:
     description: >
-      Medical imaging modalities, for example CT Scan, X-ray, or MRI.
+      CT, X-ray, or other
     type: string
 
   subjects:

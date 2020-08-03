@@ -39,10 +39,10 @@ links:
       target_type: subject
       multiplicity: many_to_one
       required: false
-    - name: diagnoses
+    - name: observations
       backref: samples
       label: related_to
-      target_type: diagnosis
+      target_type: observation
       multiplicity: many_to_one
       required: false
     - name: studies
@@ -438,8 +438,8 @@ properties:
     term:
       $ref: "_terms.yaml#/diagnosis_pathologically_confirmed"
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - Unknown
   freezing_method:
     term:
@@ -710,7 +710,7 @@ properties:
     $ref: "_definitions.yaml#/to_one"
   studies:
     $ref: "_definitions.yaml#/to_many"
-  diagnoses:
+  observations:
     $ref: "_definitions.yaml#/to_one"
   projects:
     $ref: "_definitions.yaml#/to_one_project"

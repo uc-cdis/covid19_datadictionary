@@ -1,0 +1,740 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "observation"
+title: Observation
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Data from the investigation, analysis and recognition of the presence and nature of disease,
+  condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: subjects
+    backref: observations
+    label: describes
+    target_type: subject
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - subjects
+  - primary_diagnosis
+  - version_data
+  - visit_id
+
+preferred:
+  - year_of_diagnosis
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+   # GENERAL DIAGNOSIS VARIABLES
+  primary_diagnosis:
+    term:
+      $ref: "_terms.yaml#/primary_diagnosis"
+    type: string
+
+  prior_treatment:
+    term:
+      $ref: "_terms.yaml#/prior_treatment"
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+      - "Not Reported"
+      - "Not Allowed To Collect"
+
+  progression_or_recurrence:
+    term:
+      $ref: "_terms.yaml#/progression_or_recurrence"
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+      - "Not reported"
+      - "Not Allowed To Collect"
+
+  tumor_grade:
+    term:
+      $ref: "_terms.yaml#/tumor_grade"
+    type: string
+
+  tumor_stage:
+    term:
+      $ref: "_terms.yaml#/tumor_stage"
+    type: string
+
+  tissue_or_organ_of_origin:
+    term:
+      $ref: "_terms.yaml#/tissue_or_organ_of_origin"
+    type: string
+
+  version_data:
+    description: >
+      Version number of data
+          011= Version 01 in Visit 01
+          ..
+          993= Version 03 in Visit 99
+    type: integer
+
+  visit_id:
+    description: >
+      A unique identifier describing a visit
+    type: integer
+
+  year_of_diagnosis:
+    term:
+      $ref: "_terms.yaml#/year_of_diagnosis"
+    type:
+      - number
+      - "null"
+
+  comorbidity:
+    description: >
+      The simultaneous presence of two chronic diseases or conditions in a patient
+    type: boolean
+
+  comorbidity_hiv:
+    description: >
+      Presence of HIV as comorbidity
+    type: boolean
+
+  comorbidity_hepatic_disease:
+    description: >
+      Presence of hepatic disease as comorbidity
+    type: boolean
+
+  comorbidity_renal_disease:
+    description: >
+        Presence of renal disease as comorbidity
+    type: boolean
+
+  comorbidity_anemia:
+    description: >
+        Presence of anemia as comorbidity
+    type: boolean
+
+  comorbidity_diabetes:
+    description: >
+        Presence of diabetes as comorbidity
+    type: boolean
+
+  state:
+    description: >
+      Reporting jurisdiction
+    type: string
+
+  contact_id:
+    description: >
+      Contact ID
+    type: string
+
+  cdc_ncov2019_id:
+    description: >
+      CDC 2019-nCoV ID
+    type: string
+
+  current_status:
+    description: >
+      What is the current status of this person?
+    enum:
+      - PUI testing pendingMDR non XDR
+      - PUI tested negative
+      - Presumptive case (positive local test), confirmatory testing pending
+      - Presumptive case (positive local test), confirmatory tested negative*
+      - Laboratory-confirmed case*
+
+  case_cdcreport_dt:
+    description: >
+      Report date of case to CDC (MM/DD/YYYY)
+    type: string
+
+  pos_spec_dt:
+    description: >
+      Date of first positive specimen collection (MM/DD/YYYY)
+    type: string
+
+  pos_spec_unk:
+    description: >
+      Check if date unknown
+    type: boolean
+
+  pos_spec_na:
+    description: >
+      Check if date not applicable
+    type: boolean
+
+  pna_yn:
+    description: >
+      Did the patient develop pneumonia?
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  acuterespdistress:
+    description: >
+      Did the patient have acute respiratory distress syndrome?
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  diagother:
+    description: >
+      Did the patient have another diagnosis/etiology for their illness?
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  abxchest_yn:
+    description: >
+      Did the patient have an abnormal chest X-ray?
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  sympstatus:
+    description: >
+      Symptoms present during course of illness:
+    enum:
+      - Symptomatic
+      - Asymptomatic
+      - Unknown
+
+  symp_onset_dt:
+    description: >
+      If symptomatic, onset date (MM/DD/YYYY)
+    type: string
+
+  onset_unk:
+    description: >
+      If symptomatic, onset date - unknown
+    type: boolean
+
+  symp_res_dt:
+    description: >
+      If symptomatic, date of symptom resolution (MM/DD/YYYY)
+    type: string
+
+  symp_res:
+    description: >
+      If symptomatic, state of resolution
+    enum:
+      - Still symptomatic
+      - Symptoms resolved, unknown date
+      - Unknown symptom status
+
+  hospitalized_status:
+    description: >
+      Was the patient hospitalized?
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  icu_status:
+    description: >
+      Was the patient admitted to an intensive care unit (ICU)?
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  ventilator_status:
+    description: >
+      Did the patient receive mechanical ventilation (MV)/intubation?
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  ventilator_duration:
+    description: >
+      Did the patient receive mechanical ventilation (MV)/intubation? If yes, total days with MV (days)
+    type: string
+
+  ecmo:
+    description: >
+      Did the patient receive extracorporeal membrane oxygenation (ECMO)?
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  death_dt:
+    description: >
+      Date of Death (MM/DD/YYYY)
+    type: string
+
+  past_14_days:
+    description: >
+      In the 14 days prior to illness onset, did the patient have any of the following exposures (check all that apply):
+      [Travel to Wuhan]
+      [Travel to Hubei]
+      [Travel to mainland China]
+      [Travel to other non-US country]
+      [Household contact with another lab-confirmed COVID-19 case-patient]
+      [Community contact with another lab-confirmed COVID-19 case-patient]
+      [Any healthcare contact with another lab-confirmed COVID-19 case-patient]
+      [Healthcare contact with another lab-confirmed COVID-19 case-patient -- patient]
+      [Healthcare contact with another lab-confirmed COVID-19 case-patient -- visitor]
+      [Healthcare contact with another lab-confirmed COVID-19 case-patient -- healthcare worker]
+      [Animal exposure]
+      [Exposure to a cluster of patients with severe acute lower respiratory distress of unknown etiology]
+      [Other]
+      [Unknown]
+    type: array
+    items:
+      type: string
+
+  past_14_days_exp_othcountry_spec:
+    description: >
+      Travel to other non-US country.  If yes, specify
+    type: string
+
+  past_14_days_exp_other_spec:
+    description: >
+      Other.  If yes, specify
+    type: string
+
+  past_14_days_exp_health:
+    description: >
+      Any healthcare contact with another lab-confirmed COVID-19 case-patient
+    enum:
+      - Patient
+      - Visitor
+      - HCW
+
+  cont_lab_us:
+    description: >
+      If the patient had contact with another COVID-19 case, was this person a U.S. case?
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+      - "NA"
+
+  cdc_ncov2019_sourceid_2:
+    description: >
+      If the patient had contact with another COVID-19 case, was this person a U.S. case? If yes, specify nCoV ID of source case
+    type: string
+
+  process_process_other_spec:
+    description: >
+      Under what process was the PUI or case first identified? EpiX notification of travelers, Other, If other, specify
+    type: string
+
+  medcond_yn:
+    description: >
+      Pre-existing medical conditions?
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  cld_yn:
+    description: >
+      Chronic lung disease (asthma/emphysema/COPD)
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  diabetes:
+    description: >
+      Diabetes Mellitus
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  renaldis_yn:
+    description: >
+      Chronic renal disease
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  liverdis:
+    description: >
+      Liver disease
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  immsupp_yn:
+    description: >
+      Immunocompromised condition
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  neuro_yn:
+    description: >
+      Neurologic/neurodevelopmental/intellectual disability
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  neuro_spec:
+    description: >
+      Neurologic/neurodevelopmental/intellectual disability, If yes, specify
+    type: string
+
+  otherdis_yn:
+    description: >
+      Other chronic diseases
+    enum:
+      - "Yes"
+      - "False"
+      - "Unknown"
+
+  otherdis_spec:
+    description: >
+      Other chronic diseases, If yes, specify
+    type: string
+
+  pregnancy_status:
+    description: >
+      If female, currently pregnant
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  smoking_status:
+    description: >
+      Current smoker
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  smoke_former:
+    description: >
+      Former smoker
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  resp_flua_ag:
+    description: >
+      Influenza A Rapid AgFormer smoker
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_flub_ag:
+    description: >
+      Influenza B Rapid Ag
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_flua_pcr:
+    description: >
+      Influenza A PCR
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_flub_pcr:
+    description: >
+      Influenza B PCR
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_rsv:
+    description: >
+      RSV
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_hm:
+    description: >
+      H. metapneumovirus
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_pi:
+    description: >
+      Parainfluenza (1-4)
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_adv:
+    description: >
+      Adenovirus
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_rhino:
+    description: >
+      Rhinovirus/enterovirus
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_cov:
+    description: >
+      Coronavirus (OC43, 229E, HKU1, NL63)
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_mp:
+    description: >
+      M. pneumoniae
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  resp_rcp:
+    description: >
+      C. pneumoniae
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  othrp:
+    description: >
+      Other positive pathogens
+    enum:
+      - Positive
+      - Negative
+      - Pending
+      - Not Done
+
+  othrp_spec:
+    description: >
+      Other positive pathogens, If yes, specify
+    type: string
+
+  spec_sputum1state:
+    description: >
+      Sputum: State Lab Tested - 1
+    type: boolean
+
+  date_onset_symptoms:
+    description: >
+      Date that symptoms appeared
+    type: string
+
+  reporting_date:
+    description: >
+      Reporting date
+    type:
+      - string
+      - "null"
+    termDef:
+      - term: reporting_date
+        source: NCI Thesaurus
+        term_id: C70857
+        term_version: 20.03e (Release date:2020-03-31)
+
+  reporting_source_url:
+    description: >
+      The URL of the reporting_source of subject's information
+    type: string
+    termDef:
+      - term: source
+        source: NCI Thesaurus
+        term_id: C25683
+        term_version: 20.03e (Release date:2020-03-31)
+
+  reporting_source:
+    description: >
+      The source of the subject's information
+    type: string
+    
+  hosp_visit_date:
+    description: >
+      Hospital visit date
+    type: string
+
+  symptoms:
+    description: >
+      Symptoms
+    type: array
+    items:
+      enum:
+        - Muscle or body aches
+        - Shortness of breath
+        - Persistent pain or pressure in the chest
+        - Fever or feeling feverish/chills
+        - Cough
+        - Diarrhea
+        - Trouble breathing
+        - Fatigue (tiredness)
+        - Flu-like symptoms
+        - Headaches
+        - Sore throat
+        - Lack of appetite
+        - Myalgia
+        - Runny or stuffy nose
+        - Nausea and vomiting
+        - Pneumonia
+        - Reflux
+        - Shortness of breath
+        - Sneezing
+        - Thirst
+        - Mild to moderate
+        - Severe
+        - Abdominal pain
+    termDef:
+      - term: symptoms
+        source: NCI Thesaurus
+        term_id: C4876
+        term_version: 20.03e (Release date:2020-03-31)
+
+  exposure:
+    description: >
+      The proposed method of infection
+    type: string
+
+  isolation_status:
+    description: >
+      Isolation status
+    enum:
+      - Isolated 
+      - Not isolated
+      - Unknown
+      - Not reported
+
+  treatment_status:
+    description: >
+      Treatment status of an individual
+    enum:
+      - Released
+      - In treatment
+      - In recovery
+      - Recovered
+
+  condition:
+    description: >
+      A state of being, such as a state of health.
+    enum:
+      - Critical
+      - Stable
+      - Unstable
+      - Unknown
+
+  needed_supplemental_O2:
+    description: >
+      Yes (Y) if the patient required supplemental oxygen at any point during this illness or No (N) or blank if unknown
+    enum:
+      - "True"
+      - "False"
+
+  ventilator_status:
+    description: >
+      Yes (Y) if the patient was intubated (or ventilated) at any point during this illness or No (N) or blank if unknown.
+    enum:
+      - "True"
+      - "False"
+
+  pneumonia_type:
+    description: >
+      Type of pneumonia
+    type: array
+    items:
+      type: string
+
+  symptom_res:
+    description: >
+      If symptomatic, state of resolution
+    enum:
+      - Still symptomatic
+      - Symptoms resolved, unknown date
+      - Unknown symptom status
+  
+  released_date:
+    description: >
+      the date of discharge
+    type: string
+
+  hospital:
+    description: >
+      Name of hospital where patient is hopitalized
+    type: string
+
+  exposure_start:
+    description: >
+      Exposure start
+    type:
+      - string
+    termDef:
+      - term: exposure_start
+        source: NCI Thesaurus
+        term_id: C83127
+        term_version: 20.03e (Release date:2020-03-31)
+
+  exposure_end:
+    description: >
+      Exposure end
+    type:
+      - string
+    termDef:
+      - term: exposure_end
+        source: NCI Thesaurus
+        term_id: C83138
+        term_version: 20.03e (Release date:2020-03-31)
+    
+  subjects:
+    $ref: "_definitions.yaml#/to_one"
