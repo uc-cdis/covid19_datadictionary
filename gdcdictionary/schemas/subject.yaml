@@ -80,44 +80,12 @@ properties:
       PATRIC unique identifier for genome sequenced.
     type: string
 
-  city:
-    description: >
-      City
-    type: string
-    termDef:
-      - term: city
-        source: NCI Thesaurus
-        term_id: C25160
-        term_version: 20.03e (Release date:2020-03-31)
-
   wuhan_not_wuhan:
     description: >
       Wuhan not Wuhan
     enum:
       - "0"
       - "1"
-
-  latitude:
-    description: >
-      Latitude
-    type:
-      - string
-    termDef:
-      - term: latitude
-        source: NCI Thesaurus
-        term_id: C68642
-        term_version: 20.03e (Release date:2020-03-31)
-
-  longitude:
-    description: >
-      Longitude
-    type:
-      - string
-    termDef:
-      - term: longitude
-        source: NCI Thesaurus
-        term_id: C68643
-        term_version: 20.03e (Release date:2020-03-31)
 
   geo_resolution:
     description: >
@@ -245,21 +213,6 @@ properties:
         term_id: C83138
         term_version: 20.03e (Release date:2020-03-31)
 
-  visiting_wuhan:
-    description: >
-      Visiting Wuhan
-    enum:
-      - "True"
-      - "False"
-
-  from_wuhan:
-    description: >
-      From Wuhan
-    enum:
-      - "True"
-      - "False"
-      - "NA"
-
   link:
     description: >
       Link
@@ -280,22 +233,12 @@ properties:
         term_id: C68615
         term_version: 20.03e (Release date:2020-03-31)
 
-  age_decade:
-    description: >
-      the age of the patient in decades
-    type: string
-
   isolated:
     description: >
       state of isolated
     enum:
       - "True"
       - "False"
-
-  global_num:
-    description: >
-      the number given by KCDC (This is a deprecated value for the DS4C data set)
-    type: integer
 
   infection_order:
     description: >
@@ -309,25 +252,10 @@ properties:
     items:
       type: string
 
-  released_date:
-    description: >
-      the date of discharge
-    type: string
-
   hospital:
     description: >
       hospitalized location
     type: string
-
-  age:
-    description: >
-      Age of the subject (in years)
-    type: number
-    termDef:
-      - term: taxon_id
-        source: NCI Thesaurus
-        term_id: C25150
-        term_version: 20.03e (Release date:2020-03-31)
 
   vital_status:
     term:
@@ -351,6 +279,11 @@ properties:
       - Negative
       - Unknown
       - Not Reported    
+
+  deceased_date:
+    description: >
+      the date of discharge
+    type: string
     
   studies:
     $ref: "_definitions.yaml#/to_many"
