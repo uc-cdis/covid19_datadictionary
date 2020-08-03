@@ -350,15 +350,7 @@ properties:
       - Positive
       - Negative
       - Unknown
-      - Not Reported
-
-  cvd_yn:
-    description: >
-      Cardiovascular disease
-    enum:
-      - "Yes"
-      - "No"
-      - "Unknown"
+      - Not Reported    
     
   studies:
     $ref: "_definitions.yaml#/to_many"
