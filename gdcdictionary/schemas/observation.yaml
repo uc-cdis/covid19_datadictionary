@@ -33,9 +33,7 @@ required:
   - submitter_id
   - type
   - subjects
-  - primary_diagnosis
-  - version_data
-  - visit_id
+
 
 preferred:
   - year_of_diagnosis
