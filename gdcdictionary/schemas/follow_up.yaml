@@ -50,88 +50,60 @@ properties:
       number of days since the start of symptoms or hospitalization for each image, this is very important to have when there are multiple images for the same patient to track progression while being imaged. If a report says "after a few days" let's assume 5 days.
     type: integer
 
-  finding:
-    description: >
-      Type of pneumonia
-    type: array
-    items:
-      type: string
-
-  intubated:
-    description: >
-      Yes (Y) if the patient was intubated (or ventilated) at any point during this illness or No (N) or blank if unknown.
-    enum:
-      - "Y"
-      - "N"
-
   intubation_present:
     description: >
-      Yes (Y) or no (N) or blank if unknown
+      Yes (Y) or no (N) or blank if unknown.
     enum:
-      - "Y"
-      - "N"
-
-  went_icu:
-    description: >
-      Yes (Y) if the patient was in the ICU (intensive care unit) or CCU (critical care unit) at any point during this illness or No (N) or blank if unknown
-    enum:
-      - "Y"
-      - "N"
+      - "True"
+      - "False"
 
   in_icu:
     description: >
       Yes (Y) if the patient is in the ICU (intensive care unit) or CCU (critical care unit) or No (N) or blank if unknown.
     enum:
-      - "Y"
-      - "N"
-
-  needed_supplemental_O2:
-    description: >
-      Yes (Y) if the patient required supplemental oxygen at any point during this illness or No (N) or blank if unknown
-    enum:
-      - "Y"
-      - "N"
+      - "True"
+      - "False"
 
   extubated:
     description: >
-      Yes (Y) if the patient was successfully extubated or No (N) or blank if unknown
+      Yes (Y) if the patient was successfully extubated or No (N) or blank if unknown.
     enum:
-      - "Y"
-      - "N"
+      - "True"
+      - "False"
 
   temperature:
     description: >
-      Temperature of the patient in Celsius at the time of the image
+      Temperature of the patient in Celsius at the time of the image.
     type: number
 
   pO2_saturation:
     description: >
-      partial pressure of oxygen saturation in % at the time of the image
+      Partial pressure of oxygen saturation in % at the time of the image.
     type: number
 
   leukocyte_count:
     description: >
-      white blood cell count in units of 10^3/uL at the time of the image
+      white blood cell count in units of 10^3/uL at the time of the image.
     type: number
 
   neutrophil_count:
     description: >
-      neutrophil cell count in units of 10^3/uL at the time of the image
+      Neutrophil cell count in units of 10^3/uL at the time of the image.
     type: number
 
   lymphocyte_count:
     description: >
-      lymphocyte cell count in units of 10^3/uL at the time of the image
+      Lymphocyte cell count in units of 10^3/uL at the time of the image.
     type: number
 
   view:
     description: >
-      Posteroanterior (PA), Anteroposterior (AP), AP Supine (APS), or Lateral (L) for X-rays; Axial or Coronal for CT scans
+      Posteroanterior (PA), Anteroposterior (AP), AP Supine (APS), or Lateral (L) for X-rays; Axial or Coronal for CT scans.
     type: string
 
   modality:
     description: >
-      CT, X-ray, or something else
+      Medical imaging modalities, for example CT Scan, X-ray, or MRI.
     type: string
 
   subjects:
