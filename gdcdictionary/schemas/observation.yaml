@@ -57,9 +57,9 @@ properties:
     term:
       $ref: "_terms.yaml#/prior_treatment"
     enum:
-      - "Yes"
-      - "No"
-      - Unknown
+      - "True"
+      - "False"
+      - "Unknown"
       - Not Reported
       - Not Allowed To Collect
 
@@ -67,8 +67,8 @@ properties:
     term:
       $ref: "_terms.yaml#/progression_or_recurrence"
     enum:
-      - "yes"
-      - "no"
+      - "True"
+      - "False"
       - unknown
       - not reported
       - Not Allowed To Collect
@@ -187,32 +187,32 @@ properties:
     description: >
       Did the patient develop pneumonia?
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
-  acuterespdistress_yn:
+  acuterespdistress:
     description: >
       Did the patient have acute respiratory distress syndrome?
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
   diagother:
     description: >
       Did the patient have another diagnosis/etiology for their illness?
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
   abxchest_yn:
     description: >
       Did the patient have an abnormal chest X-ray?
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
   sympstatus:
@@ -223,7 +223,7 @@ properties:
       - Asymptomatic
       - Unknown
 
-  onset_dt:
+  symp_onset_dt:
     description: >
       If symptomatic, onset date (MM/DD/YYYY)
     type: string
@@ -238,7 +238,7 @@ properties:
       If symptomatic, date of symptom resolution (MM/DD/YYYY)
     type: string
 
-  symp_res_yn:
+  symp_res:
     description: >
       If symptomatic, state of resolution
     enum:
@@ -246,41 +246,41 @@ properties:
       - Symptoms resolved, unknown date
       - Unknown symptom status
 
-  hospital_status:
+  hospitalized_status:
     description: >
       Was the patient hospitalized?
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
-  icu_yn:
+  icu_status:
     description: >
       Was the patient admitted to an intensive care unit (ICU)?
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
-  mechvent_yn:
+  ventilator_status:
     description: >
       Did the patient receive mechanical ventilation (MV)/intubation?
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
-  mechvent_dur:
+  ventilator_duration:
     description: >
       Did the patient receive mechanical ventilation (MV)/intubation? If yes, total days with MV (days)
     type: string
 
-  ecmo_yn:
+  ecmo:
     description: >
       Did the patient receive extracorporeal membrane oxygenation (ECMO)?
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
   death_dt:
@@ -331,8 +331,8 @@ properties:
     description: >
       If the patient had contact with another COVID-19 case, was this person a U.S. case?
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
       - "NA"
 
@@ -346,69 +346,60 @@ properties:
       Under what process was the PUI or case first identified? EpiX notification of travelers, Other, If other, specify
     type: string
 
-  abdom_yn:
-    description: >
-      During this illness, did the patient experience any of the following symptoms?
-      Abdominal pain
-    enum:
-      - "Yes"
-      - "No"
-      - "Unknown"
-
   medcond_yn:
     description: >
       Pre-existing medical conditions?
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
   cld_yn:
     description: >
       Chronic lung disease (asthma/emphysema/COPD)
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
-  diabetes_yn:
+  diabetes:
     description: >
       Diabetes Mellitus
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
   renaldis_yn:
     description: >
       Chronic renal disease
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
-  liverdis_yn:
+  liverdis:
     description: >
       Liver disease
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
   immsupp_yn:
     description: >
       Immunocompromised condition
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
   neuro_yn:
     description: >
       Neurologic/neurodevelopmental/intellectual disability
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
   neuro_spec:
@@ -421,7 +412,7 @@ properties:
       Other chronic diseases
     enum:
       - "Yes"
-      - "No"
+      - "False"
       - "Unknown"
 
   otherdis_spec:
@@ -429,28 +420,28 @@ properties:
       Other chronic diseases, If yes, specify
     type: string
 
-  pregnant_yn:
+  pregnancy_status:
     description: >
       If female, currently pregnant
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
   smoking_status:
     description: >
       Current smoker
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
-  smoke_former_yn:
+  smoke_former:
     description: >
       Former smoker
     enum:
-      - "Yes"
-      - "No"
+      - "True"
+      - "False"
       - "Unknown"
 
   resp_flua_ag:
@@ -642,6 +633,7 @@ properties:
         - muscle or body aches
         - mild to moderate
         - severe
+        - abdominal pain
     termDef:
       - term: symptoms
         source: NCI Thesaurus
@@ -678,6 +670,46 @@ properties:
       - critical
       - stable
       - unstable
-      
+      - unknown
+
+  needed_supplemental_O2:
+    description: >
+      Yes (Y) if the patient required supplemental oxygen at any point during this illness or No (N) or blank if unknown
+    enum:
+      - "True"
+      - "False"
+
+  ventilator_status:
+    description: >
+      Yes (Y) if the patient was intubated (or ventilated) at any point during this illness or No (N) or blank if unknown.
+    enum:
+      - "True"
+      - "False"
+
+  pneumonia_type:
+    description: >
+      Type of pneumonia
+    type: array
+    items:
+      type: string
+
+  symptom_res:
+    description: >
+      If symptomatic, state of resolution
+    enum:
+      - Still symptomatic
+      - Symptoms resolved, unknown date
+      - Unknown symptom status
+  
+  released_date:
+    description: >
+      the date of discharge
+    type: string
+
+  hospital:
+    description: >
+      Name of hospital where patient is hopitalized
+    type: string
+    
   subjects:
     $ref: "_definitions.yaml#/to_one"
