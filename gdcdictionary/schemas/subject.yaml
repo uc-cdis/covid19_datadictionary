@@ -60,14 +60,9 @@ properties:
         term_id: C54539
         term_version: 20.03e (Release date:2020-03-31)
 
-  genome_id:
-    description: >
-      PATRIC unique identifier for genome sequenced.
-    type: string
-
   date_confirmation:
     description: >
-      Date confirmation
+      Date of confirmation
     type: string
 
   travel_history_dates:
