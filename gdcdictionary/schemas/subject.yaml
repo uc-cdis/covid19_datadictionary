@@ -146,11 +146,6 @@ properties:
         term_id: C25683
         term_version: 20.03e (Release date:2020-03-31)
 
-  date_death_or_discharge:
-    description: >
-      Date death or discharge
-    type: string
-
   notes_for_discussion:
     description: >
       Notes for discussion
@@ -190,28 +185,6 @@ properties:
       - "True"
       - "False"
       - "NA"
-
-  exposure_start:
-    description: >
-      Exposure start
-    type:
-      - string
-    termDef:
-      - term: exposure_start
-        source: NCI Thesaurus
-        term_id: C83127
-        term_version: 20.03e (Release date:2020-03-31)
-
-  exposure_end:
-    description: >
-      Exposure end
-    type:
-      - string
-    termDef:
-      - term: exposure_end
-        source: NCI Thesaurus
-        term_id: C83138
-        term_version: 20.03e (Release date:2020-03-31)
 
   link:
     description: >
