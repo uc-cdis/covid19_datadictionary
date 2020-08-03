@@ -217,9 +217,9 @@ properties:
   age:
     description: >
       Please give age in either: 
-      -years (most common) 
-      -months 
-      -days
+      - Years (most common) 
+      - Months 
+      - Days
     type: integer
 
   age_unit:
@@ -238,11 +238,6 @@ properties:
   res_county:
     description: >
       County of residence
-    type: string
-
-  res_state:
-    description: >
-      State of residence
     type: string
 
   city:
