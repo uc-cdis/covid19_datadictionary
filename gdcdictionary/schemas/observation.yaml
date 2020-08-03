@@ -246,7 +246,7 @@ properties:
       - Symptoms resolved, unknown date
       - Unknown symptom status
 
-  hosp_yn:
+  hospital_status:
     description: >
       Was the patient hospitalized?
     enum:
@@ -437,7 +437,7 @@ properties:
       - "No"
       - "Unknown"
 
-  smoke_curr_yn:
+  smoking_status:
     description: >
       Current smoker
     enum:
