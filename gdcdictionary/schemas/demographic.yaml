@@ -235,7 +235,7 @@ properties:
         term_id: C50400
         term_version: 20.03e (Release date:2020-03-31)
 
-  res_county:
+  county:
     description: >
       County of residence
     type: string
