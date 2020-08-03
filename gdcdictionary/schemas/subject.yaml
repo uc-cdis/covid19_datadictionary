@@ -101,7 +101,7 @@ properties:
 
   case_in_country:
     description: >
-      Case in country
+      The order of the cases in which they occured within each country.
     type:
       - integer
       - "null"
