@@ -80,26 +80,9 @@ properties:
       PATRIC unique identifier for genome sequenced.
     type: string
 
-  wuhan_not_wuhan:
-    description: >
-      Wuhan not Wuhan
-    enum:
-      - "0"
-      - "1"
-
-  geo_resolution:
-    description: >
-      Geo resolution
-    type: string
-
   date_confirmation:
     description: >
       Date confirmation
-    type: string
-
-  lives_in_wuhan:
-    description: >
-      Lives in Wuhan
     type: string
 
   travel_history_dates:
@@ -116,75 +99,12 @@ properties:
     items:
       type: string
 
-  reported_market_exposure:
-    description: >
-      Reported market exposure
-    type: string
-
-  additional_information:
-    description: >
-      Additional information
-    type: string
-
-  chronic_disease:
-    description: >
-      Chronic disease
-    type: string
-    termDef:
-      - term: chronic_disease
-        source: NCI Thesaurus
-        term_id: C165593
-        term_version: 20.03e (Release date:2020-03-31)
-
-  outcome:
-    description: >
-      Outcome
-    type: string
-    termDef:
-      - term: source
-        source: NCI Thesaurus
-        term_id: C25683
-        term_version: 20.03e (Release date:2020-03-31)
-
-  notes_for_discussion:
-    description: >
-      Notes for discussion
-    type: string
-
-  location:
-    description: >
-      Location
-    type: string
-    termDef:
-      - term: location
-        source: NCI Thesaurus
-        term_id: C25341
-        term_version: 20.03e (Release date:2020-03-31)
-
   case_in_country:
     description: >
       Case in country
     type:
       - integer
       - "null"
-
-  summary:
-    description: >
-      Summary
-    type: string
-    termDef:
-      - term: summary
-        source: NCI Thesaurus
-        term_id: C79170
-        term_version: 20.03e (Release date:2020-03-31)
-
-  if_onset_approximated:
-    description: >
-      If onset approximated
-    enum:
-      - "True"
-      - "False"
-      - "NA"
 
   link:
     description: >
