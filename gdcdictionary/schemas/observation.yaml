@@ -262,7 +262,7 @@ properties:
 
   ventilator_status:
     description: >
-      Did the patient receive mechanical ventilation (MV)/intubation?
+      True if the patient was intubated or ventilated at any point during this illness or False if the patient did not receive intubation or Unknown if not reported.
     enum:
       - "True"
       - "False"
@@ -676,13 +676,6 @@ properties:
   needed_supplemental_O2:
     description: >
       Yes (Y) if the patient required supplemental oxygen at any point during this illness or No (N) or blank if unknown
-    enum:
-      - "True"
-      - "False"
-
-  ventilator_status:
-    description: >
-      Yes (Y) if the patient was intubated (or ventilated) at any point during this illness or No (N) or blank if unknown.
     enum:
       - "True"
       - "False"
