@@ -68,7 +68,6 @@ properties:
       - Female
       - Male
       - Unknown
-      - Unspecified
       - Not reported
     termDef:
       - term: Gender
@@ -87,10 +86,6 @@ properties:
       - enumeration: Unknown
         source: NCI Thesaurus
         term_id: C17998
-        term_version: 18.09d (Release date:2018-09-24)
-      - enumeration: Unspecified
-        source: NCI Thesaurus
-        term_id: C38046
         term_version: 18.09d (Release date:2018-09-24)
       - enumeration: Not Reported
         source: NCI Thesaurus
