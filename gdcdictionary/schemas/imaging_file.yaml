@@ -36,6 +36,12 @@ links:
         target_type: subject
         multiplicity: many_to_one
         required: false
+      - name: follow_ups
+        backref: imaging_files
+        label: data_for
+        target_type: follow_up
+        multiplicity: many_to_one
+        required: false
 
 
 uniqueKeys:
@@ -156,6 +162,8 @@ properties:
     type: string
 
   subjects:
+    $ref: "_definitions.yaml#/to_one"
+  follow_ups:
     $ref: "_definitions.yaml#/to_one"
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
