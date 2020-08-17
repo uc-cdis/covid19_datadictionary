@@ -148,28 +148,19 @@ properties:
       National Provider Identifier.
     type: string
 
-  #The following property is marked for removal (29July2020).
-  provider_first_line_business_pr:
+  first_line_address:
     description: >
-      Provider First Line Business Practice Address.
+      First line of address.
     type: string
 
-  #The following property is marked for removal (29July2020).
-  provider_second_line_business_pr:
+  second_line_address:
     description: >
-      Provider Second Line Business Practice Address.
+      Second line of address.
     type: string
 
-  #The following property is marked for removal (29July2020).
-  provider_business_practice_city:
+  city:
     description: >
-      Provider Business Practice City.
-    type: string
-
-  #The following property is marked for removal (29July2020).
-  provider_business_practice_st:
-    description: >
-      Provider Business Practice State.
+      City
     type: string
 
   projects:
