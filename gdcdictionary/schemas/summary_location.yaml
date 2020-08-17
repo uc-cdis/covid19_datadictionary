@@ -125,6 +125,7 @@ properties:
     enum:
       - "Open"
       - "Closed"
+      - "#MULTIVALUE"
       - "Not Reported"
       - "Unknown"
 
