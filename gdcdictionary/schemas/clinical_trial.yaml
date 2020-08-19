@@ -1,0 +1,346 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "clinical_trial"
+title: Clinical Trial
+type: object
+namespace: https://niaid-clinical-trials-dictionary.org
+category: data_file
+program: '*'
+project: '*'
+description: >
+  The collection of all data related to a clinical trial.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - exclusive: false
+    required: true
+    subgroup:
+    - name: core_metadata_collections
+      backref: clinical_trials
+      label: data_from
+      target_type: core_metadata_collection
+      multiplicity: many_to_one
+      required: false
+
+required:
+  - type
+  - submitter_id
+  - file_name
+  - file_size
+  - data_format
+  - md5sum
+  - data_category
+  - data_type
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+# Case properties
+properties:
+
+  $ref: "_definitions.yaml#/data_file_properties"
+
+  type:
+    enum: [ "clinical_trial" ]
+
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    type: string
+
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    type: string
+
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    type: string
+
+  submitted_date:
+    description: >
+      First Submitted Date
+    type: string
+
+  first_posted_date:
+    description: >
+      First Posted Date
+    type: string
+
+  last_update_posted_date:
+    description: >
+      Last Update Posted Date
+    type: string
+
+  actual_study_start_date:
+    description: >
+      Actual Study Start Date
+    type: string
+
+  actual_primary_completion_date:
+    description: >
+      Actual Primary Completion Date
+    type: string
+
+  title:
+    description: >
+      Name for this study (Brief Title)
+    type: string
+
+  official_title:
+    description: >
+      Official name for this study (Official Title)
+    type: string
+
+  description:
+    description: >
+      What this is study doing (Brief Summary)
+    type: string
+
+  detailed_description:
+    description: >
+      Detailed description of what this study is doing
+    type: string
+
+  category:
+    description: >
+      Classifications for the study (Study Type)
+    enum:
+      - "Investigational"
+      - "Observational"
+
+  phase:
+    description: >
+      Study Phase
+    enum:
+      - "NA"
+      - "early-phase-1"
+      - "phase-1"
+      - "phase-1-phase-2"
+      - "phase-2"
+      - "phase-2-phase-3"
+      - "phase-3"
+      - "phase-4"
+  
+  study_design_allocation:
+    description: >
+      The type of allocation study design.
+    enum:
+      - "Randomized"
+
+  study_design_intervention:
+    description: >
+      the type of intervention model study design.
+    enum:
+      - "Parallel Assignment"
+
+  study_design_masking:
+    description: >
+      Type of masking study design
+    enum:
+      - "Double (Participant, Investigator)"
+
+  study_design_primary_purpose:
+    description: >
+      The primary purpose of the study. 
+    enum:
+      - "Treatment"
+
+  condition:
+    description: >
+      The name(s) of the disease(s) or condition(s) studied in the clinical study, or the focus of the clinical study.
+    enum:
+      - "COVID-19"
+      - "Other"
+    
+  focus:
+    description: >
+      Codes for medications, devices and other interventions. (Intervention)
+    enum:
+      - "Drug"
+      - "Other"
+
+  focus_spec:
+    description: >
+      Specify the codes for medications, devices and other interventions.
+    enum:
+      - "Placebo"
+      - "Remdesivir"
+    
+  arm_name:
+    description: >
+      Label for study arm
+    enum:
+      - "Placebo"
+      - "Remdesivir"
+
+  arm_type:
+    description: >
+      Categorization of study arm
+    enum:
+      - "Active Comparator"
+      - "Placebo Comparator"
+      - "Experimental"
+
+  arm_description:
+    description: >
+      Short explanation of study path
+    type: string
+
+  publications:
+    description: >
+      Publications
+    type: string 
+
+  recruitment_status:
+    description: >
+      Recruitment Status
+    type: string 
+
+  actual_enrollment:
+    description: >
+      Actual Enrollment
+    type: string 
+
+  original_estimated_enrollment:
+    description: >
+      Original Estimated Enrollment
+    type: string
+
+  actual_study_completion_date:
+    description: >
+      Actual Study Completion Date
+    type: string
+
+  actual_primary_completion_date:
+    description: >
+      Actual Primary Completion Date
+    type: string
+
+  eligibility_criteria:
+    description: >
+      Eligibility Criteria
+    type: string
+
+  gender:
+    description: >
+      Sex/Gender
+    type: string
+
+  ages:
+    description: >
+      Ages: 18 Years to 99 Years
+    type: string
+
+  accepts_healthy_volunteers:
+    description: >
+      Accepts Healthy Volunteers
+    enum:
+      - "True"
+      - "False"
+
+  contacts:
+    description: >
+      Contact information is only displayed when the study is recruiting subjects
+    type: string
+
+  countries:
+    description: >
+      Listed Location Countries
+    type: array
+    items:
+      type: string
+
+  countries_removed:
+    description: >
+      Removed Location Countries
+    type: string
+
+  nct_number:
+    description: >
+      NCT Number
+    type: string
+
+  other_study_id_numbers:
+    description: >
+      Other Study ID Numbers
+    type: string
+
+  has_data_monitoring_committee:
+    description: >
+      Has Data Monitoring Committee
+    enum:
+      - "True"
+      - "False"
+
+  fda_regulated_device_product:
+    description: >
+      Studies a U.S. FDA-regulated Device Product
+    enum:
+      - "True"
+      - "False"
+
+  fda_regulated_drug_product:
+    description: >
+      Studies a U.S. FDA-regulated Drug Product
+    enum:
+      - "True"
+      - "False"
+
+  from_us:
+    description: >
+      Product Manufactured in and Exported from the US
+    enum:
+      - "True"
+      - "False"
+
+  ipd_sharing_statement:
+    description: >
+      IPD Sharing Statement
+    type: string
+
+  responsible_party:
+    description: >
+      Responsible Party
+    type: string
+    
+  study_sponsor:
+    description: >
+      Study Sponsor
+    type: string
+
+  collaborators:
+    description: >
+      Collaborators
+    type: string
+
+  investigators:
+    description: >
+      Investigators
+    type: string
+
+  prs_account:
+    description: >
+      PRS Account
+    type: string
+
+  verification_date:
+    description: >
+      Verification Date
+    type: string
+    
+  projects:
+    $ref: "_definitions.yaml#/to_one_project"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_one"
