@@ -131,10 +131,14 @@ properties:
     items:
       type: string
 
-  fda_approved:
+  status:
     description: >
       The current state of the study (FDA approved).
-    type: string
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+      - "NA"
 
   completed_clinical_trials:
     description: >
