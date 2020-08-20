@@ -161,6 +161,14 @@ properties:
       - Presumptive case (positive local test), confirmatory tested negative*
       - Laboratory-confirmed case*
 
+  feeling:
+    description: >
+      Self-reported feeling from https://covidstoplight.org
+    enum:
+      - healthy
+      - not-so-good
+      - sick
+
   case_cdcreport_dt:
     description: >
       Report date of case to CDC (MM/DD/YYYY)
@@ -600,7 +608,7 @@ properties:
     description: >
       The source of the subject's information
     type: string
-    
+
   hosp_visit_date:
     description: >
       Hospital visit date
@@ -634,6 +642,8 @@ properties:
         - Mild to moderate
         - Severe
         - Abdominal pain
+        - Loss of taste
+
     termDef:
       - term: symptoms
         source: NCI Thesaurus
@@ -649,7 +659,7 @@ properties:
     description: >
       Isolation status
     enum:
-      - Isolated 
+      - Isolated
       - Not isolated
       - Unknown
       - Not reported
@@ -693,7 +703,7 @@ properties:
       - Still symptomatic
       - Symptoms resolved, unknown date
       - Unknown symptom status
-  
+
   released_date:
     description: >
       the date of discharge
@@ -725,6 +735,6 @@ properties:
         source: NCI Thesaurus
         term_id: C83138
         term_version: 20.03e (Release date:2020-03-31)
-    
+
   subjects:
     $ref: "_definitions.yaml#/to_one"
