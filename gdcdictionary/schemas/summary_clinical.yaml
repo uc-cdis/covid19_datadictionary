@@ -165,6 +165,11 @@ properties:
       The last time the data were updated.
     type: string
 
+  timestamp_created:
+    description: >
+      The time stamp the data were created.
+    type: string
+
   staffed_all_beds:
     description: >
       The number of all hospital beds typically set up and staffed for inpatient care.
@@ -621,6 +626,21 @@ properties:
       Detailed Specialty
     type: string
 
+  feeling_healthy_count:
+    description: >
+      Number of cases feeling healthy in COVID Stoplight project (https://covidstoplight.org). 
+    type: integer
+    
+  feeling_sick_count:
+    description: >
+      Number of cases feeling sick in COVID Stoplight project (https://covidstoplight.org). 
+    type: integer
+    
+  feeling_not_so_good_count:
+    description: >
+      Number of cases feeling not so good in COVID Stoplight project (https://covidstoplight.org).
+    type: integer
+    
   age_group_less_20_count:
     description: >
       Number of confirmed cases under the age of 20 years old.
