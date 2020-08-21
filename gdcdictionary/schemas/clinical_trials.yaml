@@ -27,7 +27,7 @@ links:
     - name: subjects
       backref: clinical_trials
       label: member_of
-      target_type: study
+      target_type: subject
       multiplicity: many_to_many
       required: false
     - name: projects
@@ -49,34 +49,21 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  species:
-    description: "Taxonomic species of the subject."
+  title:
+    description: >
+      A short, descriptive user-friendly label for the study (vaccine or drug candidates name).
+    type: string
+
+  focus:
+    description: >
+      The medication(s), food(s), therapy(ies), device(s) or other concerns or interventions that the study is seeking to gain more information about (Vaccine or drug candidates name).
     enum:
-     - Drosophila melanogaster
-     - Homo sapiens
-     - Mus musculus
-     - Mustela putorius furo
-     - Rattus rattus
-     - Sus scrofa
-    termDef:
-      - term: species
-        source: NCI Thesaurus
-        term_id: C45293
-        term_version: 20.03e (Release date:2020-03-31)
-
-  name:
-    description: >
-      Vaccine or drug candidates name
-    type: string
-
-  type:
-    description: >
-      Vaccine or drug candidates name
-    type: string
+      - "Treatment"
+      - "Vaccine"
 
   technology:
     description: >
-      Technology
+      The technology used for the trial.
     enum:
       - "Antibodies"
       - "Antivirals"
@@ -95,49 +82,31 @@ properties:
 
   technology_details:
     description: >
-      Technology details
+      The details regarding the technology used for the trial.
     type: string
 
-  organizations:
+  sponsor:
     description: >
-      Organization(s)
+      An organization that initiates the investigation and is legally responsible for the study. Organization(s)
     type: array
     items:
       type: string
 
-  name_id:
-    description: >
-      Name id
-    type: string
-
   development_stage:
     description: >
-      Technology
+      Development Stage
     enum:
       - "Preclinical Phase"
-      - "Phase I"
-      - "Phase I/II"
-      - "Phase II"
-      - "Phase I/II/III"
-      - "Phase III"
-      - "Phase III/IV"
-      - "Phase IV"
-      - "Phase I/III/IV"
-      - "Phase I/IV"
-      - "Phase II/IV"
-      - "Phase II/III/IV"
-      - "Phase I/II/III/IV"
-      - "Phase II/III"
-      - "Phase N/A"
+      - "Clinical"
 
   description:
     description: >
-      Description
+      A full description of how the study is being conducted.
     type: string
 
-  custom_clinical_phase:
+  phase:
     description: >
-      Custom clinical phase
+      The stage in the progression of a therapy from initial experimental use in humans in clinical trials to post-market evaluation (Custom Clinical Phase).
     enum:
       - "Preclinical Phase"
       - "Phase I"
@@ -157,27 +126,19 @@ properties:
 
   clinical_trials:
     description: >
-      Clinical Trials
+      Indication of clinical trial numbers associated with a study.
     type: array
     items:
       type: string
 
-  participants:
+  status:
     description: >
-      Participants
-    type: array
-    items:
-      type: string
-
-  template_link:
-    description: >
-      Template link
-    type: string
-
-  fda_approved:
-    description: >
-      FDA approved
-    type: string
+      The current state of the study (FDA approved).
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+      - "NA"
 
   completed_clinical_trials:
     description: >
@@ -188,33 +149,17 @@ properties:
 
   inprogress_clinical_trials:
     description: >
-      Inprogress Clinical Trials
+      In progress Clinical Trials
     type: array
     items:
       type: string
-
-  url_ldx:
-    description: >
-      URL ldx
-    type: string
-
-  phase_sort_key:
-    description: >
-      Phase sort key
-    type: string
 
   countries:
+    description: >
+      The countries where the clinical trial took place.
     type: array
     items:
       type: string
-
-  updated_or_new:
-    description: >
-      Updated or new
-    enum:
-      - "Updated"
-      - "New"
-      - "None"
 
   subjects:
     $ref: "_definitions.yaml#/to_many"
