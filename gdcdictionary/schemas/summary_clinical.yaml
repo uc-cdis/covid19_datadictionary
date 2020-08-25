@@ -1885,7 +1885,67 @@ properties:
     description: >
       Number of deaths for asian cases over the age of 80 years old.
     type: integer
-
-
+        
+  totalTestEncountersViral:
+    description: >
+      Total number of people tested per day via PCR testing as reported by the state or territory. The count for this metric is incremented up by one for each day on which an individual person is tested, no matter how many specimens are collected from that person on that day. If an individual person is tested twice a day on three different days, this count will increment up by three. If we discover that a jurisdiction is including antigen tests in this metric, we will annotate that state or territory’s data accordingly.
+    type: integer    
+    
+  totalTestsPeopleViral:
+    description: >
+      Total number of unique people tested at least once via PCR testing, as reported by the state or territory. The count for this metric is incremented up only the first time an individual person is tested and their result is reported. Future tests of the same person will not be added to this count. For states with ambiguous annotations, we have assigned their total tests to this category. In the case where the state only provides negative cases, this field is calculated as the summation of people who tested positive (“Positive Cases (People”) and the number of people who tested negative (“Negative (People or Cases)”). If we discover that a jurisdiction is including antigen tests in this metric, we will annotate that state or territory’s data accordingly.
+    type: integer 
+    
+  totalTestsAntibody:
+    description: >
+      Total number of completed antibody tests as reported by the state or territory.
+    type: integer 
+    
+  positiveTestsAntibody:
+    description: >
+      Total number of completed antibody tests that return positive as reported by the state or territory.
+    type: integer
+    
+  negativeTestsAntibody:
+    description: >
+      The total number of completed antibody tests that return negative as reported by the state or territory.
+    type: integer
+        
+  totalTestsPeopleAntibody:
+    description: >
+      The total number of unique people who have been tested at least once via antibody testing as reported by the state or territory.
+    type: integer
+    
+  positiveTestsPeopleAntibody:
+    description: >
+      The total number of unique people with completed antibody tests that return positive as reported by the state or territory.
+    type: integer    
+    
+  negativeTestsPeopleAntibody:
+    description: >
+      The total number of unique people with completed antibody tests that return negative as reported by the state or territory.
+    type: integer
+    
+  totalTestsPeopleAntigen:
+    description: >
+      Total number of unique people who have been tested at least once via antigen testing, as reported by the state or territory.
+    type: integer    
+    
+  positiveTestsPeopleAntigen:
+    description: >
+      Total number of unique people with a completed antigen test that returned positive as reported by the state or territory.
+    type: integer    
+    
+  totalTestsAntigen:
+    description: >
+      Total number of completed antigen tests, as reported by the state or territory.
+    type: integer
+    
+  positiveTestsAntigen:
+    description: >
+      Total number of completed antigen tests that return positive as reported by the state or territory.
+    type: integer    
+    
+    
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
