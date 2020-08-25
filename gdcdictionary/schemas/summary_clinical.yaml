@@ -683,12 +683,12 @@ properties:
 
   race_white_count:
     description: >
-      Number of white confirmed cases.
+      Number of White confirmed cases.
     type: integer
 
   race_black_count:
     description: >
-      Number of black confirmed cases.
+      Number of Black confirmed cases.
     type: integer
 
   race_left_blank_count:
@@ -703,7 +703,7 @@ properties:
 
   race_hispanic_count:
     description: >
-      Number of hispanic confirmed cases.
+      Number of Hispanic or Latino confirmed cases.
     type: integer
 
   race_nh_pi_count:
@@ -738,42 +738,42 @@ properties:
 
   age_group_less_20_race_white_count:
     description: >
-      Number of confirmed white cases under the age of 20 years old.
+      Number of confirmed White cases under the age of 20 years old.
     type: integer
 
   age_group_20_29_race_white_count:
     description: >
-      Number of confirmed white cases between the ages of 20 to 29 years old.
+      Number of confirmed White cases between the ages of 20 to 29 years old.
     type: integer
 
   age_group_30_39_race_white_count:
     description: >
-      Number of confirmed white cases between the ages of 30 to 39 years old.
+      Number of confirmed White cases between the ages of 30 to 39 years old.
     type: integer
 
   age_group_40_49_race_white_count:
     description: >
-      Number of confirmed white cases between the ages of 40 to 49 years old.
+      Number of confirmed White cases between the ages of 40 to 49 years old.
     type: integer
 
   age_group_50_59_race_white_count:
     description: >
-      Number of confirmed white cases between the ages of 50 to 59 years old.
+      Number of confirmed White cases between the ages of 50 to 59 years old.
     type: integer
 
   age_group_60_69_race_white_count:
     description: >
-      Number of confirmed white cases between the ages of 60 to 69 years old.
+      Number of confirmed White cases between the ages of 60 to 69 years old.
     type: integer
 
   age_group_70_79_race_white_count:
     description: >
-      Number of confirmed white cases between the ages of 70 to 79 years old.
+      Number of confirmed White cases between the ages of 70 to 79 years old.
     type: integer
 
   age_group_greater_80_race_white_count:
     description: >
-      Number of confirmed white cases over the age of 80 years old.
+      Number of confirmed White cases over the age of 80 years old.
     type: integer
 
   age_group_less_20_race_black_count:
@@ -783,37 +783,37 @@ properties:
 
   age_group_20_29_race_black_count:
     description: >
-      Number of confirmed black cases between the ages of 20 to 29 years old.
+      Number of confirmed Black cases between the ages of 20 to 29 years old.
     type: integer
 
   age_group_30_39_race_black_count:
     description: >
-      Number of confirmed black cases between the ages of 30 to 39 years old.
+      Number of confirmed Black cases between the ages of 30 to 39 years old.
     type: integer
 
   age_group_40_49_race_black_count:
     description: >
-      Number of confirmed black cases between the ages of 40 to 49 years old.
+      Number of confirmed Black cases between the ages of 40 to 49 years old.
     type: integer
 
   age_group_50_59_race_black_count:
     description: >
-      Number of confirmed black cases between the ages of 50 to 59 years old.
+      Number of confirmed Black cases between the ages of 50 to 59 years old.
     type: integer
 
   age_group_60_69_race_black_count:
     description: >
-      Number of confirmed black cases between the ages of 60 to 69 years old.
+      Number of confirmed Black cases between the ages of 60 to 69 years old.
     type: integer
 
   age_group_70_79_race_black_count:
     description: >
-      Number of confirmed black cases between the ages of 70 to 79 years old.
+      Number of confirmed Black cases between the ages of 70 to 79 years old.
     type: integer
 
   age_group_greater_80_race_black_count:
     description: >
-      Number of confirmed black cases over the age of 80 years old.
+      Number of confirmed Black cases over the age of 80 years old.
     type: integer
 
   age_group_less_20_race_left_blank_count:
@@ -898,42 +898,42 @@ properties:
 
   age_group_less_20_race_hispanic_count:
     description: >
-      Number of confirmed hispanic cases under the age of 20 years old.
+      Number of confirmed Hispanic or Latino cases under the age of 20 years old.
     type: integer
 
   age_group_20_29_race_hispanic_count:
     description: >
-      Number of confirmed hispanic cases between the ages of 20 to 29 years old.
+      Number of confirmed Hispanic or Latino cases between the ages of 20 to 29 years old.
     type: integer
 
   age_group_30_39_race_hispanic_count:
     description: >
-      Number of confirmed hispanic cases between the ages of 30 to 39 years old.
+      Number of confirmed Hispanic or Latino cases between the ages of 30 to 39 years old.
     type: integer
 
   age_group_40_49_race_hispanic_count:
     description: >
-      Number of confirmed hispanic cases between the ages of 40 to 49 years old.
+      Number of confirmed Hispanic or Latino cases between the ages of 40 to 49 years old.
     type: integer
 
   age_group_50_59_race_hispanic_count:
     description: >
-      Number of confirmed hispanic cases between the ages of 50 to 59 years old.
+      Number of confirmed Hispanic or Latino cases between the ages of 50 to 59 years old.
     type: integer
 
   age_group_60_69_race_hispanic_count:
     description: >
-      Number of confirmed hispanic cases between the ages of 60 to 69 years old.
+      Number of confirmed Hispanic or Latino cases between the ages of 60 to 69 years old.
     type: integer
 
   age_group_70_79_race_hispanic_count:
     description: >
-      Number of confirmed hispanic cases between the ages of 70 to 79 years old.
+      Number of confirmed Hispanic or Latino cases between the ages of 70 to 79 years old.
     type: integer
 
   age_group_greater_80_race_hispanic_count:
     description: >
-      Number of confirmed hispanic cases over the age of 80 years old.
+      Number of confirmed Hispanic or Latino cases over the age of 80 years old.
     type: integer
 
   age_group_less_20_race_nh_pi_count:
@@ -1018,22 +1018,22 @@ properties:
 
   age_group_less_20_race_asian_count:
     description: >
-      Number of confirmed asian cases under the age of 20 years old.
+      Number of confirmed Asian cases under the age of 20 years old.
     type: integer
 
   age_group_20_29_race_asian_count:
     description: >
-      Number of confirmed asian cases between the ages of 20 to 29 years old.
+      Number of confirmed Asian cases between the ages of 20 to 29 years old.
     type: integer
 
   age_group_30_39_race_asian_count:
     description: >
-      Number of confirmed asian cases between the ages of 30 to 39 years old.
+      Number of confirmed Asian cases between the ages of 30 to 39 years old.
     type: integer
 
   age_group_40_49_race_asian_count:
     description: >
-      Number of confirmed asian cases between the ages of 40 to 49 years old.
+      Number of confirmed Asian cases between the ages of 40 to 49 years old.
     type: integer
 
   age_group_50_59_race_asian_count:
@@ -1043,17 +1043,17 @@ properties:
 
   age_group_60_69_race_asian_count:
     description: >
-      Number of confirmed asian cases between the ages of 60 to 69 years old.
+      Number of confirmed Asian cases between the ages of 60 to 69 years old.
     type: integer
 
   age_group_70_79_race_asian_count:
     description: >
-      Number of confirmed asian cases between the ages of 70 to 79 years old.
+      Number of confirmed Asian cases between the ages of 70 to 79 years old.
     type: integer
 
   age_group_greater_80_race_asian_count:
     description: >
-      Number of confirmed asian cases over the age of 80 years old.
+      Number of confirmed Asian cases over the age of 80 years old.
     type: integer
 
   age_group_less_20_tested:
@@ -1098,12 +1098,12 @@ properties:
 
   race_white_tested:
     description: >
-      Number of white tested cases.
+      Number of White tested cases.
     type: integer
 
   race_black_tested:
     description: >
-      Number of black tested cases.
+      Number of Black tested cases.
     type: integer
 
   race_left_blank_tested:
@@ -1118,7 +1118,7 @@ properties:
 
   race_hispanic_tested:
     description: >
-      Number of hispanic tested cases.
+      Number of Hispanic or Latino tested cases.
     type: integer
 
   race_nh_pi_tested:
@@ -1153,82 +1153,82 @@ properties:
 
   age_group_less_20_race_white_tested:
     description: >
-      Number of tested white cases under the age of 20 years old.
+      Number of tested White cases under the age of 20 years old.
     type: integer
 
   age_group_20_29_race_white_tested:
     description: >
-      Number of tested white cases between the ages of 20 to 29 years old.
+      Number of tested White cases between the ages of 20 to 29 years old.
     type: integer
 
   age_group_30_39_race_white_tested:
     description: >
-      Number of tested white cases between the ages of 30 to 39 years old.
+      Number of tested White cases between the ages of 30 to 39 years old.
     type: integer
 
   age_group_40_49_race_white_tested:
     description: >
-      Number of tested white cases between the ages of 40 to 49 years old.
+      Number of tested White cases between the ages of 40 to 49 years old.
     type: integer
 
   age_group_50_59_race_white_tested:
     description: >
-      Number of tested white cases between the ages of 50 to 59 years old.
+      Number of tested White cases between the ages of 50 to 59 years old.
     type: integer
 
   age_group_60_69_race_white_tested:
     description: >
-      Number of tested white cases between the ages of 60 to 69 years old.
+      Number of tested White cases between the ages of 60 to 69 years old.
     type: integer
 
   age_group_70_79_race_white_tested:
     description: >
-      Number of tested white cases between the ages of 70 to 79 years old.
+      Number of tested White cases between the ages of 70 to 79 years old.
     type: integer
 
   age_group_greater_80_race_white_tested:
     description: >
-      Number of tested white cases over the age of 80 years old.
+      Number of tested White cases over the age of 80 years old.
     type: integer
 
   age_group_less_20_race_black_tested:
     description: >
-      Number of tested black cases under the age of 20 years old.
+      Number of tested Black cases under the age of 20 years old.
     type: integer
 
   age_group_20_29_race_black_tested:
     description: >
-      Number of tested black cases between the ages of 20 to 29 years old.
+      Number of tested Black cases between the ages of 20 to 29 years old.
     type: integer
 
   age_group_30_39_race_black_tested:
     description: >
-      Number of tested black cases between the ages of 30 to 39 years old.
+      Number of tested Black cases between the ages of 30 to 39 years old.
     type: integer
 
   age_group_40_49_race_black_tested:
     description: >
-      Number of tested black cases between the ages of 40 to 49 years old.
+      Number of tested Black cases between the ages of 40 to 49 years old.
     type: integer
 
   age_group_50_59_race_black_tested:
     description: >
-      Number of tested black cases between the ages of 50 to 59 years old.
+      Number of tested Black cases between the ages of 50 to 59 years old.
     type: integer
 
   age_group_60_69_race_black_tested:
     description: >
-      Number of tested black cases between the ages of 60 to 69 years old.
+      Number of tested Black cases between the ages of 60 to 69 years old.
     type: integer
 
   age_group_70_79_race_black_tested:
     description: >
-      Number of tested black cases between the ages of 70 to 79 years old.
+      Number of tested Black cases between the ages of 70 to 79 years old.
     type: integer
 
   age_group_greater_80_race_black_tested:
     description: >
-      Number of tested black cases over the age of 80 years old.
+      Number of tested Black cases over the age of 80 years old.
     type: integer
 
   age_group_less_20_race_left_blank_tested:
@@ -1313,42 +1313,42 @@ properties:
 
   age_group_less_20_race_hispanic_tested:
     description: >
-      Number of tested hispanic cases under the age of 20 years old.
+      Number of tested Hispanic or Latino cases under the age of 20 years old.
     type: integer
 
   age_group_20_29_race_hispanic_tested:
     description: >
-      Number of tested hispanic cases between the ages of 20 to 29 years old.
+      Number of tested Hispanic or Latino cases between the ages of 20 to 29 years old.
     type: integer
 
   age_group_30_39_race_hispanic_tested:
     description: >
-      Number of tested hispanic cases between the ages of 30 to 39 years old.
+      Number of tested Hispanic or Latino cases between the ages of 30 to 39 years old.
     type: integer
 
   age_group_40_49_race_hispanic_tested:
     description: >
-      Number of tested hispanic cases between the ages of 40 to 49 years old.
+      Number of tested Hispanic or Latino cases between the ages of 40 to 49 years old.
     type: integer
 
   age_group_50_59_race_hispanic_tested:
     description: >
-      Number of tested hispanic cases between the ages of 50 to 59 years old.
+      Number of tested Hispanic or Latino cases between the ages of 50 to 59 years old.
     type: integer
 
   age_group_60_69_race_hispanic_tested:
     description: >
-      Number of tested hispanic cases between the ages of 60 to 69 years old.
+      Number of tested Hispanic or Latino cases between the ages of 60 to 69 years old.
     type: integer
 
   age_group_70_79_race_hispanic_tested:
     description: >
-      Number of tested hispanic cases between the ages of 70 to 79 years old.
+      Number of tested Hispanic or Latino cases between the ages of 70 to 79 years old.
     type: integer
 
   age_group_greater_80_race_hispanic_tested:
     description: >
-      Number of tested hispanic cases over the age of 80 years old.
+      Number of tested Hispanic or Latino cases over the age of 80 years old.
     type: integer
 
   age_group_less_20_race_nh_pi_tested:
@@ -1433,42 +1433,42 @@ properties:
 
   age_group_less_20_race_asian_tested:
     description: >
-      Number of tested asian cases under the age of 20 years old.
+      Number of tested Asian cases under the age of 20 years old.
     type: integer
 
   age_group_20_29_race_asian_tested:
     description: >
-      Number of tested asian cases between the ages of 20 to 29 years old.
+      Number of tested Asian cases between the ages of 20 to 29 years old.
     type: integer
 
   age_group_30_39_race_asian_tested:
     description: >
-      Number of tested asian cases between the ages of 30 to 39 years old.
+      Number of tested Asian cases between the ages of 30 to 39 years old.
     type: integer
 
   age_group_40_49_race_asian_tested:
     description: >
-      Number of tested asian cases between the ages of 40 to 49 years old.
+      Number of tested Asian cases between the ages of 40 to 49 years old.
     type: integer
 
   age_group_50_59_race_asian_tested:
     description: >
-      Number of tested asian cases between the ages of 50 to 59 years old.
+      Number of tested Asian cases between the ages of 50 to 59 years old.
     type: integer
 
   age_group_60_69_race_asian_tested:
     description: >
-      Number of tested asian cases between the ages of 60 to 69 years old.
+      Number of tested Asian cases between the ages of 60 to 69 years old.
     type: integer
 
   age_group_70_79_race_asian_tested:
     description: >
-      Number of tested asian cases between the ages of 70 to 79 years old.
+      Number of tested Asian cases between the ages of 70 to 79 years old.
     type: integer
 
   age_group_greater_80_race_asian_tested:
     description: >
-      Number of tested asian cases over the age of 80 years old.
+      Number of tested Asian cases over the age of 80 years old.
     type: integer
 
   age_group_less_20_deaths:
@@ -1513,12 +1513,12 @@ properties:
 
   race_white_deaths:
     description: >
-      Number of deaths for white cases.
+      Number of deaths for White cases.
     type: integer
 
   race_black_deaths:
     description: >
-      Number of deaths for black cases.
+      Number of deaths for Black cases.
     type: integer
 
   race_left_blank_deaths:
@@ -1533,7 +1533,7 @@ properties:
 
   race_hispanic_deaths:
     description: >
-      Number of deaths for hispanic cases.
+      Number of deaths for Hispanic or Latino cases.
     type: integer
 
   race_nh_pi_deaths:
@@ -1548,7 +1548,7 @@ properties:
 
   race_asian_deaths:
     description: >
-      Number of deaths for asian cases.
+      Number of deaths for Asian cases.
     type: integer
 
   gender_male_deaths:
@@ -1568,82 +1568,82 @@ properties:
 
   age_group_less_20_race_white_deaths:
     description: >
-      Number of deaths for white cases under the age of 20 years old.
+      Number of deaths for White cases under the age of 20 years old.
     type: integer
 
   age_group_20_29_race_white_deaths:
     description: >
-      Number of deaths for white cases between the ages of 20 to 29 years old.
+      Number of deaths for White cases between the ages of 20 to 29 years old.
     type: integer
 
   age_group_30_39_race_white_deaths:
     description: >
-      Number of deaths for white cases between the ages of 30 to 39 years old.
+      Number of deaths for White cases between the ages of 30 to 39 years old.
     type: integer
 
   age_group_40_49_race_white_deaths:
     description: >
-      Number of deaths for white cases between the ages of 40 to 49 years old.
+      Number of deaths for White cases between the ages of 40 to 49 years old.
     type: integer
 
   age_group_50_59_race_white_deaths:
     description: >
-      Number of deaths for white cases between the ages of 50 to 59 years old.
+      Number of deaths for White cases between the ages of 50 to 59 years old.
     type: integer
 
   age_group_60_69_race_white_deaths:
     description: >
-      Number of deaths for white cases between the ages of 60 to 69 years old.
+      Number of deaths for White cases between the ages of 60 to 69 years old.
     type: integer
 
   age_group_70_79_race_white_deaths:
     description: >
-      Number of deaths for white cases between the ages of 70 to 79 years old.
+      Number of deaths for White cases between the ages of 70 to 79 years old.
     type: integer
 
   age_group_greater_80_race_white_deaths:
     description: >
-      Number of deaths for white cases over the age of 80 years old.
+      Number of deaths for White cases over the age of 80 years old.
     type: integer
 
   age_group_less_20_race_black_deaths:
     description: >
-      Number of deaths for black cases under the age of 20 years old.
+      Number of deaths for Black cases under the age of 20 years old.
     type: integer
 
   age_group_20_29_race_black_deaths:
     description: >
-      Number of deaths for black cases between the ages of 20 to 29 years old.
+      Number of deaths for Black cases between the ages of 20 to 29 years old.
     type: integer
 
   age_group_30_39_race_black_deaths:
     description: >
-      Number of deaths for black cases between the ages of 30 to 39 years old.
+      Number of deaths for Black cases between the ages of 30 to 39 years old.
     type: integer
 
   age_group_40_49_race_black_deaths:
     description: >
-      Number of deaths for black cases between the ages of 40 to 49 years old.
+      Number of deaths for Black cases between the ages of 40 to 49 years old.
     type: integer
 
   age_group_50_59_race_black_deaths:
     description: >
-      Number of deaths for black cases between the ages of 50 to 59 years old.
+      Number of deaths for Black cases between the ages of 50 to 59 years old.
     type: integer
 
   age_group_60_69_race_black_deaths:
     description: >
-      Number of deaths for black cases between the ages of 60 to 69 years old.
+      Number of deaths for Black cases between the ages of 60 to 69 years old.
     type: integer
 
   age_group_70_79_race_black_deaths:
     description: >
-      Number of deaths for black cases between the ages of 70 to 79 years old.
+      Number of deaths for Black cases between the ages of 70 to 79 years old.
     type: integer
 
   age_group_greater_80_race_black_deaths:
     description: >
-      Number of deaths for black cases over the age of 80 years old.
+      Number of deaths for Black cases over the age of 80 years old.
     type: integer
 
   age_group_less_20_race_left_blank_deaths:
@@ -1728,42 +1728,42 @@ properties:
 
   age_group_less_20_race_hispanic_deaths:
     description: >
-      Number of deaths for hispanic cases under the age of 20 years old.
+      Number of deaths for Hispanic or Latino cases under the age of 20 years old.
     type: integer
 
   age_group_20_29_race_hispanic_deaths:
     description: >
-      Number of deaths for hispanic cases between the ages of 20 to 29 years old.
+      Number of deaths for Hispanic or Latino cases between the ages of 20 to 29 years old.
     type: integer
 
   age_group_30_39_race_hispanic_deaths:
     description: >
-      Number of deaths for hispanic cases between the ages of 30 to 39 years old.
+      Number of deaths for Hispanic or Latino cases between the ages of 30 to 39 years old.
     type: integer
 
   age_group_40_49_race_hispanic_deaths:
     description: >
-      Number of deaths for hispanic cases between the ages of 40 to 49 years old.
+      Number of deaths for Hispanic or Latino cases between the ages of 40 to 49 years old.
     type: integer
 
   age_group_50_59_race_hispanic_deaths:
     description: >
-      Number of deaths for hispanic cases between the ages of 50 to 59 years old.
+      Number of deaths for Hispanic or Latino cases between the ages of 50 to 59 years old.
     type: integer
 
   age_group_60_69_race_hispanic_deaths:
     description: >
-      Number of deaths for hispanic cases between the ages of 60 to 69 years old.
+      Number of deaths for Hispanic or Latino cases between the ages of 60 to 69 years old.
     type: integer
 
   age_group_70_79_race_hispanic_deaths:
     description: >
-      Number of deaths for hispanic cases between the ages of 70 to 79 years old.
+      Number of deaths for Hispanic or Latino cases between the ages of 70 to 79 years old.
     type: integer
 
   age_group_greater_80_race_hispanic_deaths:
     description: >
-      Number of deaths for hispanic cases over the age of 80 years old.
+      Number of deaths for Hispanic or Latino cases over the age of 80 years old.
     type: integer
 
   age_group_less_20_race_nh_pi_deaths:
@@ -1848,42 +1848,42 @@ properties:
 
   age_group_less_20_race_asian_deaths:
     description: >
-      Number of deaths for asian cases under the age of 20 years old.
+      Number of deaths for Asian cases under the age of 20 years old.
     type: integer
 
   age_group_20_29_race_asian_deaths:
     description: >
-      Number of deaths for asian cases between the ages of 20 to 29 years old.
+      Number of deaths for Asian cases between the ages of 20 to 29 years old.
     type: integer
 
   age_group_30_39_race_asian_deaths:
     description: >
-      Number of deaths for asian cases between the ages of 30 to 39 years old.
+      Number of deaths for Asian cases between the ages of 30 to 39 years old.
     type: integer
 
   age_group_40_49_race_asian_deaths:
     description: >
-      Number of deaths for asian cases between the ages of 40 to 49 years old.
+      Number of deaths for Asian cases between the ages of 40 to 49 years old.
     type: integer
 
   age_group_50_59_race_asian_deaths:
     description: >
-      Number of deaths for asian cases between the ages of 50 to 59 years old.
+      Number of deaths for Asian cases between the ages of 50 to 59 years old.
     type: integer
 
   age_group_60_69_race_asian_deaths:
     description: >
-      Number of deaths for asian cases between the ages of 60 to 69 years old.
+      Number of deaths for Asian cases between the ages of 60 to 69 years old.
     type: integer
 
   age_group_70_79_race_asian_deaths:
     description: >
-      Number of deaths for asian cases between the ages of 70 to 79 years old.
+      Number of deaths for Asian cases between the ages of 70 to 79 years old.
     type: integer
 
   age_group_greater_80_race_asian_deaths:
     description: >
-      Number of deaths for asian cases over the age of 80 years old.
+      Number of deaths for Asian cases over the age of 80 years old.
     type: integer
         
   totalTestEncountersViral:
@@ -1946,6 +1946,46 @@ properties:
       Total number of completed antigen tests that return positive as reported by the state or territory.
     type: integer    
     
+  race_multiracial_count:
+    description: >
+      Number of multiracial confirmed cases. 
+    type: integer    
+  
+  ethnicity_hispanic_count:
+    description: >
+      Number of Hispanic confirmed cases. 
+    type: integer    
+  
+  ethnicity_nonhispanic_count:
+    description: >
+      Number of non-Hispanic confirmed cases. 
+    type: integer    
+  
+  ethnicity_unknown_count:
+    description: >
+      Number of unknown (ethnicity) confirmed cases. 
+    type: integer    
+  
+  race_multiracial_deaths:
+    description: >
+      Number of deaths for multiracial cases. 
+    type: integer    
+  
+  ethnicity_hispanic_deaths:
+    description: >
+      Number of deaths for Hispanic cases. 
+    type: integer    
+  
+  ethnicity_nonhispanic_deaths:
+    description: >
+      Number of deaths for non-Hispanic cases. 
+    type: integer    
+  
+  ethnicity_unknown_deaths:
+    description: >
+      Number of deaths for unknown (ethnicity) cases. 
+    type: integer    
+      
     
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
