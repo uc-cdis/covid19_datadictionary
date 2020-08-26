@@ -164,5 +164,17 @@ properties:
       City
     type: string
 
+  continent:
+    description: >
+      One of the large landmasses of the earth.
+    enum:
+      - "Asia"
+      - "Africa"
+      - "Antarctica"
+      - "Australia"
+      - "Europe"
+      - "North America"
+      - "South America"
+
   projects:
     $ref: "_definitions.yaml#/to_one_project"
