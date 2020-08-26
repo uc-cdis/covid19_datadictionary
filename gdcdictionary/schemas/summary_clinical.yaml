@@ -1886,6 +1886,191 @@ properties:
       Number of deaths for asian cases over the age of 80 years old.
     type: integer
 
+  total_cases: 
+    description: >
+      The total number of cases.
+    type: integer
+
+  new_cases:
+    description: >
+      The number of new cases.
+    type: integer
+
+  new_cases_smoothed:
+    description: >
+      The number of new cases with smoothed analysis.
+    type: number
+
+  total_deaths:
+    description: >
+      The total of number of deaths.
+    type: integer
+
+  new_deaths:
+    description: >
+      The number of new deaths.
+    type: integer
+    
+  new_deaths_smoothed:
+    description: >
+      The number of new deaths with smoothed analysis.
+    type: number
+
+  total_cases_per_million:
+    description: >
+      The total number of cases per million people.
+    type: number
+
+  new_cases_per_million:
+    description: >
+      The number of new cases per million people.
+    type: number
+
+  new_cases_smoothed_per_million:
+    description: >
+      The number of new cases per million people with smoothed analysis.
+    type: number
+
+  total_deaths_per_million:
+    description: >
+      The total number of deaths per million people.
+    type: number
+
+  new_deaths_per_million:
+    description: >
+      The number of new deaths per million people.
+    type: number
+
+  new_deaths_smoothed_per_million:
+    description: >
+      The number of new deaths per million people with smoothed analysis.
+    type: number
+
+  new_tests:
+    description: >
+      The number of new tests. 
+    type: integer
+    
+  total_tests:
+    description: >
+      The total number of tests.
+    type: integer
+    
+  total_tests_per_thousand:
+    description: >
+      The total number of tests per thousand people.
+    type: number
+
+  new_tests_per_thousand:
+    description: >
+      The number of new tests per thousand people.
+    type: number
+
+  new_tests_smoothed:
+    description: >
+      The number of new tests with smoothed analysis.
+    type: number
+
+  new_tests_smoothed_per_thousand:
+    description: >
+      The number of new tests with smoothed analysis per thousand people.
+    type: number
+
+  tests_per_case:
+    description: >
+      The number of tests per case.
+    type: number
+
+  positive_rate:
+    description: >
+      The positive rate.
+    type: number
+
+  tests_units:
+    description: >
+      The tests units used.
+    enum:
+      - "people tested"
+      - "people tested (incl. non-PCR)"
+      - "samples tested"
+      - "tests performed"
+      - "units unclear (incl. non-PCR)"
+    
+  stringency_index:
+    description: >
+      This is a composite measure based on nine response indicators including school closures, workplace
+closures, and travel bans, rescaled to a value from 0 to 100 (100 = strictest).
+    type: number
+    
+  population:
+    description: >
+      The population.
+    type: integer
+    
+  population_density:
+    description: >
+      The population density.
+    type: number
+
+  median_age:
+    description: >
+      The median age.
+    type: number
+
+  aged_65_older:
+    description: >
+      Participants that are aged 65 and older.
+    type: number
+    
+  aged_70_older:
+    description: >
+      Participants that are aged 70 and older.
+    type: number
+    
+  gdp_per_capita:
+    description: >
+      The gdp per capita.
+    type: number
+
+  extreme_poverty:
+    description: >
+      The number of people in extreme poverty.
+    type: number
+    
+  cardiovasc_death_rate:
+    description: >
+      The cardiovscular death rate.
+    type: number
+    
+  diabetes_prevalence:
+    description: >
+      The prevalence of diabetes.
+    type: number
+    
+  female_smokers:
+    description: >
+      The number of female smokers.
+    type: number
+
+  male_smokers:
+    description: >
+      The number of male smokers.
+    type: number
+
+  handwashing_facilities:
+    description: >
+      The number of handwashing facilities.
+    type: number
+    
+  hospital_beds_per_thousand:
+    description: >
+      The number of hospital beds per thousand people.
+    type: number
+    
+  life_expectancy:
+    description: >
+      The life expectancy.
+    type: number
 
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
