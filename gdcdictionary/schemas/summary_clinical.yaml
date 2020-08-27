@@ -1985,11 +1985,6 @@ properties:
     description: >
       Number of deaths for unknown (ethnicity) cases. 
     type: integer    
-      
-  total_cases: 
-    description: >
-      The total number of cases.
-    type: integer
 
   new_cases:
     description: >
@@ -2001,14 +1996,9 @@ properties:
       The number of new cases with smoothed analysis.
     type: number
 
-  total_deaths:
-    description: >
-      The total of number of deaths.
-    type: integer
-
   new_deaths:
     description: >
-      The number of new deaths.
+      The number of new deaths on that day.
     type: integer
     
   new_deaths_smoothed:
@@ -2051,11 +2041,6 @@ properties:
       The number of new tests. 
     type: integer
     
-  total_tests:
-    description: >
-      The total number of tests.
-    type: integer
-    
   total_tests_per_thousand:
     description: >
       The total number of tests per thousand people.
@@ -2078,17 +2063,17 @@ properties:
 
   tests_per_case:
     description: >
-      The number of tests per case.
+      The number of tests per confirmed case.
     type: number
 
   positive_rate:
     description: >
-      The positive rate.
+      A measure of how adequately countries are testing and indicates the level of testing relative to the size of the outbreak. 
     type: number
 
   tests_units:
     description: >
-      The tests units used.
+      The number of people tested or the number of tests performed.
     enum:
       - "people tested"
       - "people tested (incl. non-PCR)"
@@ -2098,22 +2083,22 @@ properties:
     
   stringency_index:
     description: >
-      This is a composite measure based on nine response indicators including school closures, workplace closures, and travel bans, rescaled to a value from 0 to 100 (100 = strictest).
+      A composite measure based on nine response indicators including school closures, workplace closures, and travel bans, rescaled to a value from 0 to 100 (100 = strictest).
     type: number
     
   population:
     description: >
-      The population.
+      The total number of persons inhabiting a country, city, or any district or area.
     type: integer
     
   population_density:
     description: >
-      The population density.
+      The measure of average population per square mile.
     type: number
 
   median_age:
     description: >
-      The median age.
+      The age that divides the population in two parts of equal size.
     type: number
 
   aged_65_older:
@@ -2128,47 +2113,47 @@ properties:
     
   gdp_per_capita:
     description: >
-      The gdp per capita.
+      A metric that breaks down a country's economic output per person and is calculated by dividing the GDP of a country by its population.
     type: number
 
   extreme_poverty:
     description: >
-      The number of people in extreme poverty.
+      The number of people in extreme poverty which indicates that a person lives on less than 1.90 international dollars (int.-$) per day.
     type: number
     
   cardiovasc_death_rate:
     description: >
-      The cardiovscular death rate.
+      The annual number of deaths from cardiovascular diseases per 100,000 people.
     type: number
     
   diabetes_prevalence:
     description: >
-      The prevalence of diabetes.
+      The percentage of people ages 20-79 who have type 1 or type 2 diabetes.
     type: number
     
   female_smokers:
     description: >
-      The number of female smokers.
+      The number of females who are tobacco smokers. 
     type: number
 
   male_smokers:
     description: >
-      The number of male smokers.
+      The number of males who are tobacco smokers.
     type: number
 
   handwashing_facilities:
     description: >
-      The number of handwashing facilities.
+      The number of basic hand-washing facilities.
     type: number
     
   hospital_beds_per_thousand:
     description: >
-      The number of hospital beds per thousand people.
+      The number of hospital beds inclusive of inpatient beds that are available in public, private, general, and specialized hospitals and rehabilitation centers. In most cases beds for both acute and chronic care are included.
     type: number
     
   life_expectancy:
     description: >
-      The life expectancy.
+      A key metric for assessing population health. It captures the mortality along the entire life course and indicates the average age of death in a population.
     type: number
     
   summary_locations:
