@@ -1993,7 +1993,7 @@ properties:
 
   new_cases_smoothed:
     description: >
-      The number of new cases with smoothed analysis.
+      The number of new cases with smoothed data.
     type: number
 
   new_deaths:
@@ -2003,7 +2003,7 @@ properties:
     
   new_deaths_smoothed:
     description: >
-      The number of new deaths with smoothed analysis.
+      The number of new deaths with smoothed data.
     type: number
 
   total_cases_per_million:
@@ -2018,7 +2018,7 @@ properties:
 
   new_cases_smoothed_per_million:
     description: >
-      The number of new cases per million people with smoothed analysis.
+      The number of new cases per million people with smoothed data.
     type: number
 
   total_deaths_per_million:
@@ -2033,7 +2033,7 @@ properties:
 
   new_deaths_smoothed_per_million:
     description: >
-      The number of new deaths per million people with smoothed analysis.
+      The number of new deaths per million people with smoothed data.
     type: number
 
   new_tests:
@@ -2053,12 +2053,12 @@ properties:
 
   new_tests_smoothed:
     description: >
-      The number of new tests with smoothed analysis.
+      The number of new tests with smoothed data.
     type: number
 
   new_tests_smoothed_per_thousand:
     description: >
-      The number of new tests with smoothed analysis per thousand people.
+      The number of new tests with smoothed data per thousand people.
     type: number
 
   tests_per_case:
