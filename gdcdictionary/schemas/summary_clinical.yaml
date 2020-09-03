@@ -2155,6 +2155,36 @@ properties:
     description: >
       A key metric for assessing population health. It captures the mortality along the entire life course and indicates the average age of death in a population.
     type: number
+
+  retail_and_recreation_percent_change_from_baseline:
+    description: >
+      Percent change from baseline for places like restaurants, cafes, shopping centers, theme parks, museums, libraries, and movie theaters.A key metric for assessing population health. 
+    type: number
+    
+  grocery_and_pharmacy_percent_change_from_baseline:
+    description: >
+      Percent change from baseline for places like grocery markets, food warehouses, farmers markets, specialty food shops, drug stores, and pharmacies.
+    type: number
+
+  parks_percent_change_from_baseline:
+    description: >
+      Percent change from baseline for places like local parks, national parks, public beaches, marinas, dog parks, plazas, and public gardens. 
+    type: number
+
+  transit_stations_percent_change_from_baseline:
+    description: >
+      Percent change from baseline for places like public transport hubs such as subway, bus, and train stations.
+    type: number
+
+  workplaces_percent_change_from_baseline:
+    description: >
+      Percent change from baseline for places of work. 
+    type: number
+
+  residential_percent_change_from_baseline:
+    description: >
+      Percent change from baseline for places of residence.
+    type: number
     
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
