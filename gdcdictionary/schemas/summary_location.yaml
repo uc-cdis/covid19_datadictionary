@@ -183,7 +183,7 @@ properties:
 
   sub_region_2:
     description: >
-      A subdivision of sub_region_2.
+      A subdivision of sub_region_1.
     type: string
 
   metro_area:
