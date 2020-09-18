@@ -52,7 +52,7 @@ properties:
 
   num_COVID_eth0:
     description: >
-      Number of patients treated during reporting period wiith confirmed COVID-19 [Hispanic/Latino]
+      Number of patients treated during reporting period with confirmed COVID-19 [Hispanic/Latino]
     type: integer
 
   num_COVID_eth1:
