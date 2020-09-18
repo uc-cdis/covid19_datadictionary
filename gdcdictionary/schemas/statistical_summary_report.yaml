@@ -57,7 +57,7 @@ properties:
 
   num_COVID_eth1:
     description: >
-      Number of patients treated during reporting period wiith confirmed COVID-19 [American Indian/Alaska Native]
+      Number of patients treated during reporting period with confirmed COVID-19 [American Indian/Alaska Native]
     type: integer
 
   num_COVID_race0:
