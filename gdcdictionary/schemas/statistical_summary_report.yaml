@@ -47,32 +47,102 @@ properties:
 
   num_COVID:
     description: >
-      Number of patients treated in past 24 hours with confirmed COVID-19
+      Number of patients treated during reporting period with confirmed COVID-19 [total]
+    type: integer
+
+  num_COVID_eth0:
+    description: >
+      Number of patients treated during reporting period with confirmed COVID-19 [Hispanic/Latino]
+    type: integer
+
+  num_COVID_eth1:
+    description: >
+      Number of patients treated during reporting period with confirmed COVID-19 [American Indian/Alaska Native]
+    type: integer
+
+  num_COVID_race0:
+    description: >
+      Number of patients treated during reporting period with confirmed COVID-19 [American Indian/Alaska Native]
+    type: integer
+
+  num_COVID_race1:
+    description: >
+      Number of patients treated during reporting period with confirmed COVID-19 [Asian]
+    type: integer
+
+  num_COVID_race2:
+    description: >
+      Number of patients treated during reporting period with confirmed COVID-19 [Black]
+    type: integer
+
+  num_COVID_race3:
+    description: >
+      Number of patients treated during reporting period with confirmed COVID-19 [Hawaii Native/Other Pacific Islander]
+    type: integer
+
+  num_COVID_race4:
+    description: >
+      Number of patients treated during reporting period with confirmed COVID-19 [White]
     type: integer
 
   num_COVID_deaths:
     description: >
-      Number of deaths of COVID-19 patients in past 24 hours
+      Number of deaths of COVID-19 patients during reporting period [total]
+    type: integer
+
+  num_COVID_deaths_eth0:
+    description: >
+      Number of deaths of COVID-19 patients during reporting period [Hispanic/Latino]
+    type: integer
+
+  num_COVID_deaths_eth1:
+    description: >
+      Number of deaths of COVID-19 patients during reporting period [Non-Hispanic/Latino]
+    type: integer
+
+  num_COVID_deaths_race0:
+    description: >
+      Number of deaths of COVID-19 patients during reporting period [American Indian/Alaska Native]
+    type: integer
+
+  num_COVID_deaths_race1:
+    description: >
+      Number of deaths of COVID-19 patients during reporting period [Asian]
+    type: integer
+
+  num_COVID_deaths_race2:
+    description: >
+      Number of deaths of COVID-19 patients during reporting period [Black]
+    type: integer
+
+  num_COVID_deaths_race3:
+    description: >
+      Number of deaths of COVID-19 patients during reporting period [Hawaii Native/Other Pacific Islander]
+    type: integer
+
+  num_COVID_deaths_race4:
+    description: >
+      Number of deaths of COVID-19 patients during reporting period [White]
     type: integer
 
   num_outpatient:
     description: >
-      Number of patients treated outpatient in previous 24 hours
+      Number of patients treated outpatient during reporting period
     type: integer
 
   num_admitted:
     description: >
-      Number of patients admitted in previous 24 hours
+      Number of patients admitted during reporting period
     type: integer
 
   num_icu:
     description: >
-      Maximum number of patients in ICU in previous 24 hours
+      Maximum number of patients in ICU during reporting period
     type: integer
 
   num_vent:
     description: >
-      Maximum number of patients on ventilators in previous 24 hours
+      Maximum number of patients on ventilators during reporting period
     type: integer
 
   num_resp:
@@ -109,7 +179,6 @@ properties:
     description: >
       Number of (inpatient) patients with congestive heart failure (I50)
     type: integer
-
 
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
