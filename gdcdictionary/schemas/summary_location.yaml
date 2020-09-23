@@ -190,10 +190,6 @@ properties:
       Name of college (or college group)
     type: string  
 
-  province_state:
-    description: >
-      State in which college is located
-    type: string  
   
   census_region:
     description: >
@@ -208,18 +204,6 @@ properties:
     description: >
       Commuting zone ID 
     type: integer
-
-  FIPS:
-    description: >
-      Combined state and county fips code  
-    type: integer
-
-  county:
-    description: >
-      County
-    type: string  
-
-
 
 
 
