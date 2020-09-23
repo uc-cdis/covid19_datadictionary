@@ -1,0 +1,499 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "summary_socio_demographic"
+title: Summary Socio Demographic
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Summary Socio Demographic Reports.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: summary_locations
+    backref: statistical_summary_reports
+    label: performed_at
+    target_type: summary_location
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - summary_locations
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  par_median:
+    description: >
+      Median parent household income (rounded to nearest $100)
+    type: integer
+
+  k_median:
+    description: >
+      Median child individual earnings in 2014 (rounded to the nearest $100)
+    type: integer
+
+  par_q1:
+    description: >
+      Fraction of parents in the Bottom 20% of the income distribution
+    type: number
+
+  par_top1pc:
+    description: >
+      Fraction of parents in the Top 1% of the income distribution
+    type: number
+
+  kq5_cond_parq1:
+    description: >
+      Percent of children who reach the Top 20% of the income distribution among children with parents in the Bottom 20% of the income distribution
+    type: number
+
+  ktop1pc_cond_parq1:
+    description: >
+      Percent of children who reach the Top 1% of the income distribution among children with parents in the Bottom 20% of the income distribution
+    type: number
+
+  mr_kq5_pq1:
+    description: >
+      Mobility Rate: Percent of students who have parents in the Bottom 20% of the income distribution and reach the Top 20% of the income distribution
+    type: number
+
+  mr_ktop1_pq1:
+    description: >
+      Upper-Tail Mobility Rate: Percent of students who have parents in the Bottom 20% of the income distribution and reach the Top 1% of the income distribution
+    type: number
+
+  trend_parq1:
+    description: >
+      Change in % of Parents from the Bottom 20% of the income distribution between the 1980 and 1991 cohorts
+    type: number
+
+  trend_bottom40:
+    description: >
+      Change in % of Parents from the Bottom 40% of the income distribution between the 1980 and 1991 cohorts
+    type: number
+
+  count:
+    description: >
+      Average number of children per cohort
+    type: number
+
+  institution_type:
+    description: >
+      Type of institution
+    enum:
+      - "Public"
+      - "Private non-profit"
+      - "For-profit"
+
+  tier:
+    description: >
+      Selectivity and type combination
+    enum:
+      - "Ivy Plus"
+      - "Other elite schools (public or private)"
+      - "Highly selective public"
+      - "Highly selective private"
+      - "Selective public"
+      - "Selective private"
+      - "Nonselective 4-year public"
+      - "Nonselective 4-year private not-for-profit"
+      - "Two-year (public and privat not-for-profit)"
+      - "Four-year for-profit"
+      - "Two-year for-profit"
+      - "Less than two year schools of any type"
+      - "Attending college with insufficient data"
+      - "Not in college between the ages of 19-22"
+
+
+  iclevel:
+    description: >
+      Selectivity and type combination
+    enum:
+      - "Four-year"
+      - "Two-year"
+      - "Less than Two-year"
+
+  multi:
+    description: >
+      Indicator that equals 1 if multiple colleges (IPEDS Unit IDs) are grouped in this Super OPEID
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  female:
+    description: >
+      Fraction female among kids
+    type: number
+
+  k_married:
+    description: >
+      Fraction of kids married in 2014
+    type: number
+
+  par_mean:
+    description: >
+      Mean parental income
+    type: number
+
+  par_rank:
+    description: >
+      Mean parental income rank
+    type: number
+
+
+  par_q2:
+    description: >
+      Fraction of parents in an income quintile [PARQUINT=2]. 1 is the bottom quintile and 5 is the top
+    type: number
+
+  par_q3:
+    description: >
+      Fraction of parents in an income quintile [PARQUINT=3]. 1 is the bottom quintile and 5 is the top
+    type: number
+
+  par_q4:
+    description: >
+      Fraction of parents in an income quintile [PARQUINT=4]. 1 is the bottom quintile and 5 is the top
+    type: number
+
+  par_q5:
+    description: >
+      Fraction of parents in an income quintile [PARQUINT=5]. 1 is the bottom quintile and 5 is the top
+    type: number
+
+
+  par_top10pc:
+    description: >
+      Fraction of parents in the top percentile [PCTILE=10]. For instance, par_toppt1pc refers to parents in the top 0.1% of the income distribution.
+    type: number
+
+  par_top5pc:
+    description: >
+      Fraction of parents in the top percentile [PCTILE=5]. For instance, par_toppt1pc refers to parents in the top 0.1% of the income distribution.
+    type: number
+
+  par_toppt1pc:
+    description: >
+      Fraction of parents in the top percentile [PCTILE=1]. For instance, par_toppt1pc refers to parents in the top 0.1% of the income distribution.
+    type: number
+
+
+  k_rank:
+    description: >
+      Mean kid earnings rank
+    type: number
+
+  k_mean:
+    description: >
+      Mean kid earnings
+    type: number
+
+  k_median_nozero:
+    description: >
+      Median child individual earnings among positive earners in 2014 (rounded to the nearest $100)
+    type: integer
+
+  k_0inc:
+    description: >
+      Fraction of kids with zero labor earnings
+    type: number
+
+
+  k_q1:
+    description: >
+      Fraction of kids in an income quintile [KIDQUINT=1]. 1 is the bottom quintile and 5 is the top.
+    type: number
+
+  k_q2:
+    description: >
+      Fraction of kids in an income quintile [KIDQUINT=2]. 1 is the bottom quintile and 5 is the top.
+    type: number
+
+  k_q3:
+    description: >
+      Fraction of kids in an income quintile [KIDQUINT=3]. 1 is the bottom quintile and 5 is the top.
+    type: number
+
+  k_q4:
+    description: >
+      Fraction of kids in an income quintile [KIDQUINT=4]. 1 is the bottom quintile and 5 is the top.
+    type: number
+
+  k_q5:
+    description: >
+      Fraction of kids in an income quintile [KIDQUINT=5]. 1 is the bottom quintile and 5 is the top.
+    type: number
+
+
+  k_top10pc:
+    description: >
+      Fraction of kids in the top percentile [PCTILE=10]. For instance, top1pc refers to children in the top 1% of the income distribution.
+    type: number
+
+  k_top5pc:
+    description: >
+      Fraction of kids in the top percentile [PCTILE=5]. For instance, top1pc refers to children in the top 1% of the income distribution.
+    type: number
+
+  k_top1pc:
+    description: >
+      Fraction of kids in the top percentile [PCTILE=1]. For instance, top1pc refers to children in the top 1% of the income distribution.
+    type: number
+
+
+  k_rank_cond_parq1:
+    description: >
+      Mean kid earnings rank conditional on parent in quintile [PARQUINT=1]
+    type: number
+
+  k_rank_cond_parq2:
+    description: >
+      Mean kid earnings rank conditional on parent in quintile [PARQUINT=2]
+    type: number
+
+  k_rank_cond_parq3:
+    description: >
+      Mean kid earnings rank conditional on parent in quintile [PARQUINT=3]
+    type: number
+
+  k_rank_cond_parq4:
+    description: >
+      Mean kid earnings rank conditional on parent in quintile [PARQUINT=4]
+    type: number
+
+  k_rank_cond_parq5:
+    description: >
+      Mean kid earnings rank conditional on parent in quintile [PARQUINT=5]
+    type: number
+
+
+
+  kq1_cond_parq1:
+    description: >
+      Probability of kid in quintile [KIDQUINT=1] conditional on parent in quintile [PARQUINT=1]
+    type: number
+
+  kq2_cond_parq1:
+    description: >
+      Probability of kid in quintile [KIDQUINT=2] conditional on parent in quintile [PARQUINT=1]
+    type: number
+
+  kq3_cond_parq1:
+    description: >
+      Probability of kid in quintile [KIDQUINT=3] conditional on parent in quintile [PARQUINT=1]
+    type: number
+
+  kq4_cond_parq1:
+    description: >
+      Probability of kid in quintile [KIDQUINT=4] conditional on parent in quintile [PARQUINT=1]
+    type: number
+
+
+  kq1_cond_parq2:
+    description: >
+      Probability of kid in quintile [KIDQUINT=1] conditional on parent in quintile [PARQUINT=2]
+    type: number
+
+  kq2_cond_parq2:
+    description: >
+      Probability of kid in quintile [KIDQUINT=2] conditional on parent in quintile [PARQUINT=2]
+    type: number
+
+  kq3_cond_parq2:
+    description: >
+      Probability of kid in quintile [KIDQUINT=3] conditional on parent in quintile [PARQUINT=2]
+    type: number
+
+  kq4_cond_parq2:
+    description: >
+      Probability of kid in quintile [KIDQUINT=4] conditional on parent in quintile [PARQUINT=2]
+    type: number
+
+  kq5_cond_parq2:
+    description: >
+      Probability of kid in quintile [KIDQUINT=5] conditional on parent in quintile [PARQUINT=2]
+    type: number
+
+
+  kq1_cond_parq3:
+    description: >
+      Probability of kid in quintile [KIDQUINT=1] conditional on parent in quintile [PARQUINT=3]
+    type: number
+
+  kq2_cond_parq3:
+    description: >
+      Probability of kid in quintile [KIDQUINT=2] conditional on parent in quintile [PARQUINT=3]
+    type: number
+
+  kq3_cond_parq3:
+    description: >
+      Probability of kid in quintile [KIDQUINT=3] conditional on parent in quintile [PARQUINT=3]
+    type: number
+
+  kq4_cond_parq3:
+    description: >
+      Probability of kid in quintile [KIDQUINT=4] conditional on parent in quintile [PARQUINT=3]
+    type: number
+
+  kq5_cond_parq3:
+    description: >
+      Probability of kid in quintile [KIDQUINT=5] conditional on parent in quintile [PARQUINT=3]
+    type: number
+
+
+  kq1_cond_parq4:
+    description: >
+      Probability of kid in quintile [KIDQUINT=1] conditional on parent in quintile [PARQUINT=4]
+    type: number
+
+  kq2_cond_parq4:
+    description: >
+      Probability of kid in quintile [KIDQUINT=2] conditional on parent in quintile [PARQUINT=4]
+    type: number
+
+  kq3_cond_parq4:
+    description: >
+      Probability of kid in quintile [KIDQUINT=3] conditional on parent in quintile [PARQUINT=4]
+    type: number
+
+  kq4_cond_parq4:
+    description: >
+      Probability of kid in quintile [KIDQUINT=4] conditional on parent in quintile [PARQUINT=4]
+    type: number
+
+  kq5_cond_parq4:
+    description: >
+      Probability of kid in quintile [KIDQUINT=5] conditional on parent in quintile [PARQUINT=4]
+    type: number
+
+
+  kq1_cond_parq5:
+    description: >
+      Probability of kid in quintile [KIDQUINT=1] conditional on parent in quintile [PARQUINT=5]
+    type: number
+
+  kq2_cond_parq5:
+    description: >
+      Probability of kid in quintile [KIDQUINT=2] conditional on parent in quintile [PARQUINT=5]
+    type: number
+
+  kq3_cond_parq5:
+    description: >
+      Probability of kid in quintile [KIDQUINT=3] conditional on parent in quintile [PARQUINT=5]
+    type: number
+
+  kq4_cond_parq5:
+    description: >
+      Probability of kid in quintile [KIDQUINT=4] conditional on parent in quintile [PARQUINT=5]
+    type: number
+
+  kq5_cond_parq5:
+    description: >
+      Probability of kid in quintile [KIDQUINT=5] conditional on parent in quintile [PARQUINT=5]
+    type: number
+
+
+
+  ktop1pc_cond_parq2:
+    description: >
+      Probability of kid in top 1% conditional on parent in quintile [PARQUINT=2]
+    type: number
+
+  ktop1pc_cond_parq3:
+    description: >
+      Probability of kid in top 1% conditional on parent in quintile [PARQUINT=3]
+    type: number
+
+  ktop1pc_cond_parq4:
+    description: >
+      Probability of kid in top 1% conditional on parent in quintile [PARQUINT=4]
+    type: number
+
+  ktop1pc_cond_parq5:
+    description: >
+      Probability of kid in top 1% conditional on parent in quintile [PARQUINT=5]
+    type: number
+
+
+
+  k_married_cond_parq1:
+    description: >
+      Fraction of kids married conditional on parent in quintile [PARQUINT=1]
+    type: number
+
+  k_married_cond_parq2:
+    description: >
+      Fraction of kids married conditional on parent in quintile [PARQUINT=2]
+    type: number
+
+  k_married_cond_parq3:
+    description: >
+      Fraction of kids married conditional on parent in quintile [PARQUINT=3]
+    type: number
+
+  k_married_cond_parq4:
+    description: >
+      Fraction of kids married conditional on parent in quintile [PARQUINT=4]
+    type: number
+
+  k_married_cond_parq5:
+    description: >
+      Fraction of kids married conditional on parent in quintile [PARQUINT=5]
+    type: number
+
+
+  shareimputed:
+    description: >
+      Share of count-weighted data that was imputed using information from the 1983-84 cohorts
+    type: number
+
+  imputed:
+    description: >
+      Indicator if any data for that super_opeid was imputed
+    enum:
+      - "True (1)"
+      - "False (0)"
+      - "Unknown (no record)"
+
+  cohort:
+    description: >
+      Cohort
+    type: integer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  summary_locations:
+    $ref: "_definitions.yaml#/to_many"
