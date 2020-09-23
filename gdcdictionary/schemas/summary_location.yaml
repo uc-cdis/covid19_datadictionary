@@ -175,6 +175,55 @@ properties:
       - "Europe"
       - "North America"
       - "South America"
+   
+  super_opeid:
+    description: >
+      Institution OPEID / Cluster ID when combining multiple OPEIDs: 
+      -99 = late goers (attended college between 23-28)
+      -9 = Never attended college up to and including 2013
+      -1 = attending a college with insufficient data
+      >0 = specific collegesThe body mass divided by the square of the body height expressed in units of kg/m^2.
+    type: number
+  
+  college_name:
+    description: >
+      Name of college (or college group)
+    type: string  
+
+  province_state:
+    description: >
+      State in which college is located
+    type: string  
+  
+  census_region:
+    description: >
+      Census region
+    enum:
+      - "Northwest"
+      - "Midwest"
+      - "South"
+      - "West"
+  
+  cz:
+    description: >
+      Commuting zone ID 
+    type: integer
+
+  FIPS:
+    description: >
+      Combined state and county fips code  
+    type: integer
+
+  county:
+    description: >
+      County
+    type: string  
+
+
+
+
+
+
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"
