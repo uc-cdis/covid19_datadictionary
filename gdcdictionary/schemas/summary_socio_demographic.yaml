@@ -22,7 +22,7 @@ systemProperties:
 
 links:
   - name: summary_locations
-    backref: statistical_summary_reports
+    backref: summary_socio_demographics
     label: performed_at
     target_type: summary_location
     multiplicity: many_to_one
@@ -476,7 +476,7 @@ properties:
 
   cohort:
     description: >
-      Cohort
+      Year of birth of children in this row
     type: integer
 
 
