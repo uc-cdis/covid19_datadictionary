@@ -49,18 +49,21 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+# HL7 FHIR definition
   title:
     description: >
-      A short, descriptive user-friendly label for the study (vaccine or drug candidates name).
+      A short, descriptive user-friendly label for the study.
     type: string
 
+# HL7 FHIR definition
   focus:
     description: >
-      The medication(s), food(s), therapy(ies), device(s) or other concerns or interventions that the study is seeking to gain more information about (Vaccine or drug candidates name).
+      The medication(s), food(s), therapy(ies), device(s) or other concerns or interventions that the study is seeking to gain more information about.
     enum:
       - "Treatment"
       - "Vaccine"
 
+# VacTracker dataset specific property
   technology:
     description: >
       The technology used for the trial.
@@ -80,11 +83,13 @@ properties:
       - "Virus Like Particle"
       - "Other"
 
+# VacTracker dataset specific property
   technology_details:
     description: >
       The details regarding the technology used for the trial.
     type: string
 
+# HL7 FHIR definition
   sponsor:
     description: >
       An organization that initiates the investigation and is legally responsible for the study. Organization(s)
@@ -92,6 +97,7 @@ properties:
     items:
       type: string
 
+# VacTracker dataset specific property
   development_stage:
     description: >
       Development Stage
@@ -99,14 +105,16 @@ properties:
       - "Preclinical Phase"
       - "Clinical"
 
+# HL7 FHIR definition
   description:
     description: >
       A full description of how the study is being conducted.
     type: string
 
+# Enums specific to VacTracker dataset. Can be mapped to HL7 FHIR enums
   phase:
     description: >
-      The stage in the progression of a therapy from initial experimental use in humans in clinical trials to post-market evaluation (Custom Clinical Phase).
+      The stage in the progression of a therapy from initial experimental use in humans in clinical trials to post-market evaluation.
     enum:
       - "Preclinical Phase"
       - "Phase I"
@@ -124,22 +132,25 @@ properties:
       - "Phase II/III"
       - "Phase N/A"
 
-  clinical_trials:
+# ICMJE property http://www.icmje.org/recommendations/browse/publishing-and-editorial-issues/clinical-trial-registration.html
+  nct_number:
     description: >
-      Indication of clinical trial numbers associated with a study.
+      The organization's unique protocol identification number assigned to the clinical study.
     type: array
     items:
       type: string
 
-  status:
+# ClinicalTrials.gov property
+  fda_regulated_drug_product:
     description: >
-      The current state of the study (FDA approved).
+      Indication that a clinical study is studying a drug product (including a biological product) subject to section 505 of the Federal Food, Drug, and Cosmetic Act or to section 351 of the Public Health Service Act.
     enum:
       - "Yes"
       - "No"
       - "Unknown"
       - "NA"
 
+# VacTracker dataset specific property
   completed_clinical_trials:
     description: >
       Completed clinical trials
@@ -147,6 +158,7 @@ properties:
     items:
       type: string
 
+# VacTracker dataset specific property
   inprogress_clinical_trials:
     description: >
       In progress Clinical Trials
@@ -154,9 +166,10 @@ properties:
     items:
       type: string
 
-  countries:
+# HL7 FHIR definition
+  location:
     description: >
-      The countries where the clinical trial took place.
+      Indicates a country, state or other region where the study is taking place.
     type: array
     items:
       type: string
