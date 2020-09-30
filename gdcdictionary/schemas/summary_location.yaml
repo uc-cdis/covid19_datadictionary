@@ -190,7 +190,6 @@ properties:
       Name of college (or college group)
     type: string  
 
-  
   census_region:
     description: >
       Census region
@@ -205,7 +204,10 @@ properties:
       Commuting zone ID 
     type: integer
 
-
+  state_abbr:
+    description: >
+      State Abbreviation 
+    type: string
 
 
 
