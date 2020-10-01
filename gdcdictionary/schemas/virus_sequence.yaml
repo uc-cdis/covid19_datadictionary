@@ -76,18 +76,21 @@ properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
     enum: [ "virus_sequence" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
       - Nucleotide
       - Protein
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Sequence
       - Multi-Fasta
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -230,4 +233,6 @@ properties:
   studies:
     $ref: "_definitions.yaml#/to_one"
   core_metadata_collections:
+    $ref: "_definitions.yaml#/to_one"
+  summary_locations:
     $ref: "_definitions.yaml#/to_one"
