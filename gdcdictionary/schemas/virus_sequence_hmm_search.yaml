@@ -48,6 +48,14 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
+  $ref: "_definitions.yaml#/workflow_properties"
+  type:
+    enum: [ "virus_sequence_hmm_search" ]
+  workflow_type:
+    term:
+      $ref: "_terms.yaml#/workflow_type"
+    enum: [ "HMMER scab of contigs" ]
+
   virus_sequence_peptides:
     $ref: "_definitions.yaml#/to_many"
 

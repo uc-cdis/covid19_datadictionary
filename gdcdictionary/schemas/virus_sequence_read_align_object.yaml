@@ -60,12 +60,17 @@ properties:
   type:
     enum: [ "virus_sequence_read_align_object" ]
 
-
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Read Align Object
+
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum:
+      - Genomic sequence
 
   data_format:
     term:
