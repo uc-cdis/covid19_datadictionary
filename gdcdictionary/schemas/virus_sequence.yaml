@@ -50,6 +50,12 @@ links:
         target_type: study
         multiplicity: many_to_one
         required: false
+      - name: summary_locations
+        backref: virus_sequences
+        label: data_from
+        target_type: summary_location
+        multiplicity: many_to_one
+        required: false
 
 required:
   - type
@@ -87,12 +93,135 @@ properties:
       $ref: "_terms.yaml#/data_format"
     enum:
       - fasta
+      - fastq
+      - sff
+      - slx
+      - slxfq
+      - qual
+      - pbi
+      - srf
+      - txt
+      - fna
+      - other
+
   data_source:
     description: >
       The source of the virus sequence.
     enum:
       - GenBank
       - NCBI
+  accession:
+    description: "SRA Run accession in the form of SRR######## (ERR or DRR for INSDC partners)."
+    type: string
+  assay_type:
+    description: "Type of library (i.e. AMPLICON, RNA-Seq, WGS, etc)."
+    type: string
+  center_name:
+    description: "Name of the sequencing center."
+    type: string
+  consent:
+    description: "Type of consent need to access the data (i.e. public is available to all, others are for dbGaP)."
+    type: string
+  experiment:
+    description: "The accession in the form of SRX######## (ERX or DRX for INSDC partners)."
+    type: string
+  instrument:
+    description: "Name of the sequencing instrument model."
+    type: string
+  librarylayout:
+    description: "Whether the data is SINGLE or PAIRED"
+    enum:
+      - Single
+      - Paired
+  libraryselection:
+    description: "Library selection methodology (i.e. PCR, RANDOM, etc)."
+    type: string
+  librarysource:
+    description: "Source of the biological data (i.e. GENOMIC, METAGENOMIC, etc)."
+    type: string
+  platform:
+    description: "Name of the sequencing platform (i.e. ILLUMINA)."
+    type: string
+  sra_study:
+    description: "SRA Study accession in the form of SRP######## (ERP or DRP for INSDC partners)."
+    type: string
+  release_date:
+    description: "The date on which the data was released."
+    type: string
+  mbytes:
+    description: "Number of mega bytes of data in the SRA Run."
+    type: integer
+  avgspotlen:
+    description: "Calculated average read length."
+    type: integer
+  mbases:
+    description: "Number of mega bases in the SRA Runs."
+    type: integer
+  library_name:
+    description: "The name of the library."
+    type: string
+  ena_first_public_run:
+    description: "Date when INSDC partner record was public."
+    type: array
+    items:
+      type: string
+  ena_last_update_run:
+    description: "Date when INSDC partner record was updated."
+    type: array
+    items:
+      type: string
+  datastore_provider:
+    description: "Locations of where the files are available to download from."
+    type: array
+    items:
+      type: string
+  datastore_region:
+    description: "Regions of where the data is located."
+    type: array
+    items:
+      type: string
+  bytes:
+    description: "Number of bytes of data in the SRA Run."
+    type: string
+  description_sam:
+    description: "Description of the sequencing sample (i.e. DZgh pooled sequence, etc)."
+    type: string
+  ena_checklist_sam:
+    description: "Sample ID from INSDC partner record."
+    type: string
+  insdc_status_sam:
+    description: "The status of sample in INSDC partner record (i.e. public)."
+    type: string
+  insdc_center_name_sam:
+    description: "The name of the INSDC center (i.e. University of Goettingen)."
+    type: string
+  insdc_last_update_sam:
+    description: "Date when the sample was updated by INSDC (International Nucleotide Sequence Database Collaboration) partner."
+    type: string
+  insdc_first_public_sam:
+    description: "Date when the sample was public by INSDC (International Nucleotide Sequence Database Collaboration) partner."
+    type: string
+  insdc_center_alias_sam:
+    description: "The alias of the INSDC partner."
+    type: string
+  investigation_type_sam:
+    description: "Investigation type for the sequencing sample."
+    type: string
+  library_source:
+    description: "Source of library (i.e. TRANSCRIPTOMIC or GENOMIC, etc)."
+    enum:
+      - Transcriptomic
+      - Genomic
+  sra_accession:
+    description: >
+      Sequence Read Archive accession number of raw data generated.
+    type: string
+  title_sam:
+    description: >
+      Title of the sample.
+    type: string
+
+
 
   virus_genomes:
     $ref: "_definitions.yaml#/to_one"

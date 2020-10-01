@@ -1,0 +1,124 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "virus_sequence_blastn"
+title: Virus Sequence Blastn
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: analysis
+program: '*'
+project: '*'
+description: >
+  Provides result details for blast hit for contigs against the nucleotide blast database using the megablast algorithm.
+additionalProperties: false
+submittable: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: virus_sequence_blastns
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
+      - name: virus_sequence_contigs
+        backref: virus_sequence_blastns
+        label: data_from
+        target_type: virus_sequence_contig
+        multiplicity: many_to_many
+        required: false
+
+
+required:
+  - type
+  - submitter_id
+
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/workflow_properties"
+  type:
+    enum: [ "alignment_cocleaning_workflow" ]
+
+  workflow_type:
+    term:
+      $ref: "_terms.yaml#/workflow_type"
+    enum: [ "BWA with Mark Duplicates and Cocleaning" ]
+
+  virus_sequences:
+    $ref: "_definitions.yaml#/to_many"
+
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_one"
+
+  run:
+    description: >
+      SRR accession.
+    type: string
+
+  contig:
+    description: >
+      Contig ID.
+    type: string
+
+  staxid:
+    description: >
+      subject taxonomic identifier.
+    type: string
+
+  sacc:
+    description: >
+      subject accession.
+    type: string
+
+  slen:
+    description: >
+      subject length.
+    type: integer
+
+  length:
+    description: >
+      hit length.
+    type: integer
+
+  bitscore:
+    description: >
+      hit bitscore.
+    type: integer
+
+  score:
+    description: >
+      hit raw score.
+    type: integer
+
+  pident:
+    description: >
+      hit percent identity.
+    type: number
+
+  sskingdom:
+    description: >
+      subject taxonomic kingdom.
+    type: string
+
+  evalue:
+    description: >
+      hit evalue.
+    type: number
+
+  ssciname:
+    description: >
+      subject taxonomic scientific name.
+    type: string

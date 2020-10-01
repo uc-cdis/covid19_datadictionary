@@ -1,0 +1,98 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "virus_sequence_contig"
+title: Virus Sequence Contig
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: analysis
+program: '*'
+project: '*'
+description: >
+  Provides details of contigs assembled from runs using SARS-CoV-2 refseq guided assembly.
+additionalProperties: false
+submittable: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: virus_sequence_contigs
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
+      - name: virus_sequences_run_taxonomies
+        backref: virus_sequence_contigs
+        label: data_from
+        target_type: virus_sequence_run_taxonomy
+        multiplicity: many_to_many
+        required: false
+
+
+required:
+  - type
+  - submitter_id
+
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/workflow_properties"
+  type:
+    enum: [ "alignment_cocleaning_workflow" ]
+  workflow_type:
+    term:
+      $ref: "_terms.yaml#/workflow_type"
+    enum: [ "BWA with Mark Duplicates and Cocleaning" ]
+
+  virus_sequences:
+    $ref: "_definitions.yaml#/to_many"
+
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_one"
+
+  name:
+    description: >
+      Contig ID.
+    type: string
+
+  run:
+    description: >
+      SRR accession.
+    type: string
+
+  coverage:
+    description: >
+      Average read coverage of contig.
+    type: number
+
+  tax_id:
+    description: >
+      Most prevalent taxanomic identifier by kmer-based taxonomic analysis.
+    type: integer
+
+  hits:
+    description: >
+      Number of hits to tax_id.
+    type: integer
+
+  length:
+    description: >
+      Contig length in bases.
+    type: integer
+
+  md5:
+    description: >
+      md5 based hash of the contig sequence.
+    type: string

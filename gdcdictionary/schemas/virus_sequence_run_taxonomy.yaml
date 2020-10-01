@@ -1,0 +1,108 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "virus_sequence_run_taxonomy"
+title: Virus Sequence Run Taxonomy
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: analysis
+program: '*'
+project: '*'
+description: >
+  Provides result details of kmer-based taxonomy analysis of raw run data.
+additionalProperties: false
+submittable: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: virus_sequence_run_taxonomies
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
+      - name: virus_sequences
+        backref: virus_sequence_run_taxonomies
+        label: data_from
+        target_type: virus_sequence
+        multiplicity: many_to_many
+        required: false
+
+
+required:
+  - type
+  - submitter_id
+
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/workflow_properties"
+  type:
+    enum: [ "alignment_cocleaning_workflow" ]
+  workflow_type:
+    term:
+      $ref: "_terms.yaml#/workflow_type"
+    enum: [ "BWA with Mark Duplicates and Cocleaning" ]
+
+  virus_sequences:
+    $ref: "_definitions.yaml#/to_many"
+
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_one"
+
+  acc:
+    description: >
+      SRR accession.
+    type: string
+
+  tax_id:
+    description: >
+      taxonomic identifier from the NCBI taxonomy database.
+    type: integer
+
+  rank:
+    description: >
+      taxonomic rank assigned to the tax_id.
+    type: string
+
+  name:
+    description: >
+      scientific name associated with the tax_id.
+    type: string
+
+  total_count:
+    description: >
+      total number of kmers found in the run that are associated with the tax_id or any child tax_ids.
+    type: integer
+
+  self_count:
+    description: >
+      total number of kmers found in the run that are associated with the tax_id.
+    type: integer
+
+  ilevel:
+    description: >
+      level index for run specific depth first enumeration of tax hierarchy.
+    type: integer
+
+  ileft:
+    description: >
+      left index for run specific depth first enumeration of tax hierarchy.
+    type: integer
+
+  iright:
+    description: >
+      right index for run specific depth first enumeration of tax hierarchy.
+    type: integer
