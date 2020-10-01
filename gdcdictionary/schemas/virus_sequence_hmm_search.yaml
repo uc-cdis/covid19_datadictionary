@@ -25,15 +25,15 @@ links:
     required: true
     subgroup:
       - name: core_metadata_collections
-        backref: virus_sequence_alignments
+        backref: virus_sequence_hmm_searches
         label: data_from
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: virus_sequences
-        backref: virus_sequence_alignments
+      - name: virus_sequence_peptides
+        backref: virus_sequence_hmm_searches
         label: data_from
-        target_type: virus_sequence
+        target_type: virus_sequence_peptide
         multiplicity: many_to_many
         required: false
 
@@ -56,7 +56,7 @@ properties:
       $ref: "_terms.yaml#/workflow_type"
     enum: [ "BWA with Mark Duplicates and Cocleaning" ]
 
-  virus_sequences:
+  virus_sequence_peptides:
     $ref: "_definitions.yaml#/to_many"
 
   core_metadata_collections:

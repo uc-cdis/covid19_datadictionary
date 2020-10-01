@@ -56,9 +56,8 @@ properties:
       $ref: "_terms.yaml#/workflow_type"
     enum: [ "BWA with Mark Duplicates and Cocleaning" ]
 
-  virus_sequences:
+  virus_sequence_contigs:
     $ref: "_definitions.yaml#/to_many"
-
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
 

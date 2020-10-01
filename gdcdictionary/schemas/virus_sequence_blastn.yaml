@@ -63,6 +63,9 @@ properties:
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
 
+  virus_sequence_contigs:
+    $ref: "_definitions.yaml#/to_many"
+
   run:
     description: >
       SRR accession.
