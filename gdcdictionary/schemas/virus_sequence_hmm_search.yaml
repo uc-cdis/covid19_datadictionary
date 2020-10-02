@@ -1,0 +1,163 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "virus_sequence_hmm_search"
+title: Virus Sequence HMM Search
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: analysis
+program: '*'
+project: '*'
+description: >
+  Provide result details for HMMER scab of contigs using a custom SARS-CoV-2 set of HMMS.
+additionalProperties: false
+submittable: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: virus_sequence_hmm_searches
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
+      - name: virus_sequence_peptides
+        backref: virus_sequence_hmm_searches
+        label: data_from
+        target_type: virus_sequence_peptide
+        multiplicity: many_to_many
+        required: false
+
+
+required:
+  - type
+  - submitter_id
+
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/workflow_properties"
+  type:
+    enum: [ "virus_sequence_hmm_search" ]
+  workflow_type:
+    term:
+      $ref: "_terms.yaml#/workflow_type"
+    enum: [ "HMMER scab of contigs" ]
+
+  virus_sequence_peptides:
+    $ref: "_definitions.yaml#/to_many"
+
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_one"
+
+  run_accession:
+    description: >
+      SRR accession.
+    type: string
+
+  target_name:
+    description: >
+      The name of the target sequence or profile.
+    type: string
+
+  target_accession:
+    description: >
+      The accession of the target sequence or profile.
+    type: string
+
+  query_name:
+    description: >
+      The name of the query sequence or profile.
+    type: string
+
+  query_accession:
+    description: >
+      The accession of the query sequence or profile.
+    type: string
+
+  full_sequence_e_value:
+    description: >
+      The expectation value (statistical significance) of the target.
+    type: number
+
+  full_sequence_e_score:
+    description: >
+      The score (in bits) for this target/query comparison.
+    type: number
+
+  full_sequence_e_bias:
+    description: >
+      The biased-composition correction: the bit score difference contributed by the null2 mode.
+    type: number
+
+  best_domain_e_value:
+    description: >
+      The E-value if only the single best-scoring domain envelope were found in the sequence, and none of the others.
+    type: number
+
+  best_domain_e_score:
+    description: >
+      The bit score if only the single best-scoring domain envelope were found in the sequence, and none of the others.
+    type: number
+
+  best_domain_e_bias:
+    description: >
+      The null2 bias correction that was applied to the bit score of the single best-scoring domain.
+    type: number
+
+  exp:
+    description: >
+      The expected number of domains according, calculated as a weighted marginal sum over all possible alignments.
+    type: number
+
+  reg:
+    description: >
+      Number of discrete regions defined, as calculated by heuristics applied to posterior decodingof begin/end state positions in the alignment ensemble.
+    type: integer
+
+  clu:
+    description: >
+      Number of regions that appeared to be multidomain, and therefore were passed to stochastic traceback clustering for further resolution down to one or more envelopes.
+    type: integer
+
+  ov:
+    description: >
+      For envelopes that were defined by stochastic traceback clustering, how many of them overlap other envelopes.
+    type: integer
+
+  env:
+    description: >
+      The total number of envelopes defined, both by single envelope regions and by stochastic traceback clustering into one or more envelopes per region.
+    type: integer
+
+  dom:
+    description: >
+      Number of domains defined.
+    type: integer
+
+  rep:
+    description: >
+      Number of domains satisfying reporting thresholds.
+    type: integer
+
+  inc:
+    description: >
+      Number of domains satisfying inclusion thresholds.
+    type: integer
+
+  description_of_target:
+    description: >
+      The target's description line.
+    type: string

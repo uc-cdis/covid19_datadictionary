@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "virus_sequence_alignment"
-title: Virus Sequence Alignment
+id: "virus_sequence_read_align_object"
+title: Virus Sequence Read Align Object
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
 category: genomic_data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing virus sequence alignment files.
+  SARS-CoV-2 Read Align Objects have been created to facilitate more rapid identification of NGS data of interest to the COVID-19 research community. This data type represents a compressed data format for more rapid data retrieval and faciliates data exploration via the pre-assembled contigs.
 additionalProperties: false
 submittable: true
 validators: null
@@ -27,15 +27,15 @@ links:
     required: true
     subgroup:
       - name: core_metadata_collections
-        backref: virus_sequence_alignments
+        backref: virus_sequence_read_align_objects
         label: data_from
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: virus_sequences
-        backref: virus_sequence_alignments
+      - name: virus_sequence_contigs
+        backref: virus_sequence_read_align_objects
         label: data_from
-        target_type: virus_sequence
+        target_type: virus_sequence_contig
         multiplicity: many_to_many
         required: false
 
@@ -58,41 +58,29 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "virus_sequence_alignment" ]
-  data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
-    enum:
-      - Nucleotide
-      - Protein
+    enum: [ "virus_sequence_read_align_object" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Sequence Alignment
+      - Read Align Object
+
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum:
+      - Genomic sequence
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - fasta
-      - aln
-      - maf
       - realign
-      - realign.md5
-      - bam
-      - cram
-
-  alignment_tool:
-    description : >
-        The alignment tool that was used to create the alignment file.
-    enum:
-      - MAFFT
-      - ClustalW
-      - muscle
-      - Clustal Omega
-
-  virus_sequences:
-    $ref: "_definitions.yaml#/to_many"
+      - md5
 
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
+
+  virus_sequence_contigs:
+    $ref: "_definitions.yaml#/to_many"

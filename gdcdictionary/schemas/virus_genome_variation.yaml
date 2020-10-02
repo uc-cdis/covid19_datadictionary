@@ -1,17 +1,18 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "virus_sequence_alignment"
-title: Virus Sequence Alignment
+id: "virus_genome_variation"
+title: Virus Genome Variation
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
-category: genomic_data_file
+category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing virus sequence alignment files.
+  Data file containing virus genome variations called from aligned reads.
 additionalProperties: false
 submittable: true
 validators: null
+
 
 systemProperties:
   - id
@@ -27,15 +28,15 @@ links:
     required: true
     subgroup:
       - name: core_metadata_collections
-        backref: virus_sequence_alignments
+        backref: virus_genome_variation
         label: data_from
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: virus_sequences
-        backref: virus_sequence_alignments
+      - name: virus_sequences_run_taxonomies
+        backref: virus_genome_variation
         label: data_from
-        target_type: virus_sequence
+        target_type: virus_sequence_run_taxonomy
         multiplicity: many_to_many
         required: false
 
@@ -45,10 +46,10 @@ required:
   - submitter_id
   - file_name
   - file_size
-  - data_format
   - md5sum
   - data_category
   - data_type
+  - data_format
 
 
 uniqueKeys:
@@ -57,42 +58,34 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "virus_sequence_alignment" ]
+
+  virus_sequences_run_taxonomies:
+    $ref: "_definitions.yaml#/to_many"
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
-    enum:
-      - Nucleotide
-      - Protein
+    enum: [ "Simple Nucleotide Variation" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum:
-      - Sequence Alignment
+    enum: [ "Virus Genome Variation" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    enum:
-      - fasta
-      - aln
-      - maf
-      - realign
-      - realign.md5
-      - bam
-      - cram
+    enum: [ "VCF" ]
 
-  alignment_tool:
-    description : >
-        The alignment tool that was used to create the alignment file.
+  experimental_strategy:
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - MAFFT
-      - ClustalW
-      - muscle
-      - Clustal Omega
+      - WGS
+      - WXS
+      - Low Pass WGS
+      - Validation
 
-  virus_sequences:
-    $ref: "_definitions.yaml#/to_many"
 
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"

@@ -706,6 +706,19 @@ properties:
       The collection date for the sample.
     type: string
 
+  sample_accession:
+    description: "SRA Sample accession in the form of SRS######## (ERS or DRS for INSDC partners)."
+    type: string
+
+  biosamplemodel_sam:
+    description: "The BioSample package/model that was picked."
+    type: string
+
+  host_associated_environmental_package_sam:
+    description: "Whether the sample is host associated."
+    enum:
+      - host-associated
+
   subjects:
     $ref: "_definitions.yaml#/to_one"
   studies:
