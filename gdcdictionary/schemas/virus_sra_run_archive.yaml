@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "virus_genome_variation"
-title: Virus Genome Variation
+id: "virus_sra_run_archive"
+title: Virus SRA Run Archive
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing virus genome variations called from aligned reads.
+  Genomic sequence reads of SARS-CoV-2 and related coronaviridae, organized by NCBI accession. Run files are in .sra format and require the [SRA Toolkit](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit).
 additionalProperties: false
 submittable: true
 validators: null
@@ -24,21 +24,21 @@ systemProperties:
   - error_type
 
 links:
-  - exclusive: false
-    required: true
-    subgroup:
-      - name: core_metadata_collections
-        backref: virus_sequence_contigs
-        label: data_from
-        target_type: core_metadata_collection
-        multiplicity: many_to_one
-        required: false
-      - name: virus_sequences_run_taxonomies
-        backref: virus_sequence_contigs
-        label: data_from
-        target_type: virus_sequence_run_taxonomy
-        multiplicity: many_to_many
-        required: false
+   - exclusive: false
+     required: true
+     subgroup:
+       - name: core_metadata_collections
+         backref: virus_genome_variation
+         label: data_from
+         target_type: core_metadata_collection
+         multiplicity: many_to_one
+         required: false
+       - name: virus_sequences
+         backref: virus_genome_variation
+         label: data_from
+         target_type: virus_sequence
+         multiplicity: many_to_many
+         required: false
 
 
 required:
@@ -59,13 +59,10 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
 
-  virus_sequences_run_taxonomies:
-    $ref: "_definitions.yaml#/to_many"
-
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
-    enum: [ "Simple Nucleotide Variation" ]
+    enum: [ "SRA-processed sequence" ]
 
   data_type:
     term:
@@ -75,17 +72,10 @@ properties:
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    enum: [ "VCF" ]
+    enum: [ "NCBI SRA file" ]
 
-  experimental_strategy:
-    term:
-      $ref: "_terms.yaml#/experimental_strategy"
-    enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
-
+  virus_sequences:
+    $ref: "_definitions.yaml#/to_one"
 
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
