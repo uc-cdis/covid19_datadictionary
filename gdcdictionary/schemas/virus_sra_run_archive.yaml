@@ -28,13 +28,13 @@ links:
      required: true
      subgroup:
        - name: core_metadata_collections
-         backref: virus_genome_variation
+         backref: virus_sra_run_archive
          label: data_from
          target_type: core_metadata_collection
          multiplicity: many_to_one
          required: false
        - name: virus_sequences
-         backref: virus_genome_variation
+         backref: virus_sra_run_archive
          label: data_from
          target_type: virus_sequence
          multiplicity: many_to_many
@@ -75,7 +75,7 @@ properties:
     enum: [ "NCBI SRA file" ]
 
   virus_sequences:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"
 
   core_metadata_collections:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"
