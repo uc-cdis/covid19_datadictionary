@@ -176,16 +176,6 @@ properties:
       - "North America"
       - "South America"
 
-  sub_region_1:
-    description: >
-      A subdivision of a region.
-    type: string
-
-  sub_region_2:
-    description: >
-      A subdivision of sub_region_1.
-    type: string
-
   metro_area:
     description: >
       A major city together with its suburbs and nearby cities, towns, and environs over which the major city exercises a commanding economic and social influence.
