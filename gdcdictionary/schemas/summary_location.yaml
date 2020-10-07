@@ -176,5 +176,10 @@ properties:
       - "North America"
       - "South America"
 
+  metro_area:
+    description: >
+      A major city together with its suburbs and nearby cities, towns, and environs over which the major city exercises a commanding economic and social influence.
+    type: string
+
   projects:
     $ref: "_definitions.yaml#/to_one_project"
