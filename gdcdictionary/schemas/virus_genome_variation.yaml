@@ -4,7 +4,7 @@ id: "virus_genome_variation"
 title: Virus Genome Variation
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
-category: data_file
+category: genomic_data_file
 program: '*'
 project: '*'
 description: >
@@ -92,9 +92,13 @@ properties:
       - Low Pass WGS
       - Validation
 
-
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
 
   virus_sequences:
     $ref: "_definitions.yaml#/to_many"
+
+  accession_number:
+    description: >
+      SRR accession.
+    type: string

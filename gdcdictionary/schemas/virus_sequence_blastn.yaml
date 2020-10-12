@@ -39,12 +39,6 @@ links:
         target_type: virus_sequence_contig
         multiplicity: many_to_many
         required: false
-      - name: virus_sequences
-        backref: virus_sequence_blastns
-        label: data_from
-        target_type: virus_sequence
-        multiplicity: many_to_many
-        required: false
 
 
 required:
@@ -71,7 +65,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Nucleotide blast
+      - Nucleotide Blast
 
   data_type:
     term:
@@ -93,10 +87,7 @@ properties:
   virus_sequence_contigs:
     $ref: "_definitions.yaml#/to_many"
 
-  run:
+  accession_number:
     description: >
       SRR accession ID.
     type: string
-
-  virus_sequences:
-    $ref: "_definitions.yaml#/to_many"
