@@ -40,7 +40,7 @@ links:
         multiplicity: many_to_many
         required: false
       - name: virus_sequences
-        backref: virus_sequence_blastns
+        backref: virus_genome_variation
         label: data_from
         target_type: virus_sequence
         multiplicity: many_to_many
