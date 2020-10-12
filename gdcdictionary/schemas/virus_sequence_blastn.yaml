@@ -4,13 +4,13 @@ id: "virus_sequence_blastn"
 title: Virus Sequence Blastn
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
-category: analysis
+category: genomic_data_file
 program: '*'
 project: '*'
 description: >
   Provides result details for blast hit for contigs against the nucleotide blast database using the megablast algorithm.
 additionalProperties: false
-submittable: false
+submittable: ture
 validators: null
 
 systemProperties:
@@ -19,6 +19,8 @@ systemProperties:
   - created_datetime
   - updated_datetime
   - state
+  - file_state
+  - error_type
 
 links:
   - exclusive: false
@@ -41,6 +43,10 @@ links:
 required:
   - type
   - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+
 
 
 uniqueKeys:
@@ -48,13 +54,9 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
+  $ref: "_definitions.yaml#/data_file_properties"
   type:
     enum: [ "virus_sequence_blastn" ]
-  workflow_type:
-    term:
-      $ref: "_terms.yaml#/workflow_type"
-    enum: [ "Blast hit for contigs against the nucleotide blast database" ]
 
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
@@ -64,60 +66,5 @@ properties:
 
   run:
     description: >
-      SRR accession.
-    type: string
-
-  contig:
-    description: >
-      Contig ID.
-    type: string
-
-  staxid:
-    description: >
-      subject taxonomic identifier.
-    type: string
-
-  sacc:
-    description: >
-      subject accession.
-    type: string
-
-  slen:
-    description: >
-      subject length.
-    type: integer
-
-  length:
-    description: >
-      hit length.
-    type: integer
-
-  bitscore:
-    description: >
-      hit bitscore.
-    type: integer
-
-  score:
-    description: >
-      hit raw score.
-    type: integer
-
-  pident:
-    description: >
-      hit percent identity.
-    type: number
-
-  sskingdom:
-    description: >
-      subject taxonomic kingdom.
-    type: string
-
-  evalue:
-    description: >
-      hit evalue.
-    type: number
-
-  ssciname:
-    description: >
-      subject taxonomic scientific name.
+      SRR accession ID.
     type: string
