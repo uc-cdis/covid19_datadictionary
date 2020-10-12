@@ -39,6 +39,12 @@ links:
         target_type: virus_sequence_run_taxonomy
         multiplicity: many_to_many
         required: false
+      - name: virus_sequences
+        backref: virus_sequence_blastns
+        label: data_from
+        target_type: virus_sequence
+        multiplicity: many_to_many
+        required: false
 
 
 required:
@@ -89,3 +95,6 @@ properties:
 
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
+
+  virus_sequences:
+    $ref: "_definitions.yaml#/to_many"
