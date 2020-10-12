@@ -104,6 +104,8 @@ properties:
     enum:
       - "Preclinical Phase"
       - "Clinical"
+      - "Withdrawn"
+      - "Other"
 
 # HL7 FHIR definition
   description:
