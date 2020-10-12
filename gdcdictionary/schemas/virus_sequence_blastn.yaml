@@ -10,7 +10,7 @@ project: '*'
 description: >
   Provides result details for blast hit for contigs against the nucleotide blast database using the megablast algorithm.
 additionalProperties: false
-submittable: ture
+submittable: true
 validators: null
 
 systemProperties:
