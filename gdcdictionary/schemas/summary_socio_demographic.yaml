@@ -160,12 +160,12 @@ properties:
 
   has_dad:
     description: >
-      Fraction of children who have a male claimer in the year they are linked to parents. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
+      Fraction of children (1978-83 birth cohorts) who have a male claimer in the year they are linked to parents. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
   has_mom:
     description: >
-      Fraction of children who have a female claimer in the year they are linked to parents. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
+      Fraction of children (1978-83 birth cohorts) who have a female claimer in the year they are linked to parents. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
   hours_weekly_worked_prior:
@@ -185,12 +185,12 @@ properties:
 
   household_income_immigrated:
     description: >
-      Mean percentile rank (relative to other children born in the same year) in the national distribution of household income (i.e. own earnings and spouse’s earnings) measured as mean earnings in 2014-2015 for the baseline sample, but restricted to children whose mothers immigrated to the United States (according to ACS or Census 2000 long form). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
+      Mean percentile rank (relative to other children born in the same year) in the national distribution of household income (i.e. own earnings and spouse’s earnings) measured as mean earnings in 2014-2015 for the baseline sample, but restricted to children (1978-83 birth cohorts) whose mothers immigrated to the United States (according to ACS or Census 2000 long form). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
   household_income_native:
     description: >
-      Mean percentile rank (relative to other children born in the same year) in the national distribution of household income (i.e. own earnings and spouse’s earnings) measured as mean earnings in 2014-2015 for the baseline sample, but restricted to children whose mothers were born in the United States (according to ACS or Census 2000 long form). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
+      Mean percentile rank (relative to other children born in the same year) in the national distribution of household income (i.e. own earnings and spouse’s earnings) measured as mean earnings in 2014-2015 for the baseline sample, but restricted to children (1978-83 birth cohorts) whose mothers were born in the United States (according to ACS or Census 2000 long form). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
   household_income:
@@ -200,7 +200,7 @@ properties:
 
   household_income_childhood_commuting_zone:
     description: >
-      Mean percentile rank (relative to other children born in the same year) in the national distribution of household income (i.e. own earnings and spouse’s earnings) measured as mean earnings in 2014-2015 for the baseline sample, but restricted to children who live in one of their childhood commuting zones in adulthood. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
+      Mean percentile rank (relative to other children born in the same year) in the national distribution of household income (i.e. own earnings and spouse’s earnings) measured as mean earnings in 2014-2015 for the baseline sample, but restricted to children (1978-83 birth cohorts) who live in one of their childhood commuting zones in adulthood. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
   household_income_probability_top01:
@@ -225,12 +225,12 @@ properties:
 
   kids_poverty_below_10p:
     description: >
-      Fraction children who grew up in a given tract and end up living in a tract with a poverty rate of less than 10% (according to tract-level Census 2000 data) in adulthood. Tracts where children live as adults are defined as the tract of the last non-missing address observed on tax returns. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
+      Fraction children (1978-83 birth cohorts) who grew up in a given tract and end up living in a tract with a poverty rate of less than 10% (according to tract-level Census 2000 data) in adulthood. Tracts where children live as adults are defined as the tract of the last non-missing address observed on tax returns. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
   married:
     description: >
-      Fraction of children who file their federal income tax return as “married filing jointly” or “married filing separate” in 2015. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
+      Fraction of children (1978-83 birth cohorts) who file their federal income tax return as “married filing jointly” or “married filing separate” in 2015. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
   hours_positive_worked_prior:
@@ -250,17 +250,17 @@ properties:
 
   spouse_income_rank:
     description: >
-      Mean individual income rank in 2014-15 for the spouses of children who grew up in the given tract. Child’s spouse refers to the person they are married to in 2015. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
+      Mean individual income rank in 2014-15 for the spouses of children (1978-83 birth cohorts) who grew up in the given tract. Child’s spouse refers to the person they are married to in 2015. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
   kids_stayed_in_commuting_zone:
     description: >
-      Fraction of children who live in one of their childhood commuting zones in adulthood. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
+      Fraction of children (1978-83 birth cohorts) who live in one of their childhood commuting zones in adulthood. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
   kids_live_with_parents:
     description: >
-      Fraction of children who live at the same address as their parents in 2015. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
+      Fraction of children (1978-83 birth cohorts) who live at the same address as their parents in 2015. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
   teenbirths:
@@ -270,7 +270,7 @@ properties:
 
   has_two_parents:
     description: >
-      Fraction of children claimed by two people in the year they are linked to parents. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
+      Fraction of children (1978-83 birth cohorts) claimed by two people in the year they are linked to parents. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
   hourly_wage_rank:
@@ -280,7 +280,7 @@ properties:
 
   working:
     description: >
-      Fraction of children with positive W-2 earnings in 2015. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
+      Fraction of children (1978-83 birth cohorts) with positive W-2 earnings in 2015. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
 
