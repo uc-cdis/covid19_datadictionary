@@ -285,13 +285,5 @@ properties:
 
 
 
-
-
-
-
-
-
-
-
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
