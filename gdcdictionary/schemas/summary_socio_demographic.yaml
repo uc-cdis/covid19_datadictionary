@@ -1,0 +1,156 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "summary_socio_demographic"
+title: Summary Socio Demographic
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Summary Socio Demographic Reports.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: summary_locations
+    backref: summary_socio_demographics
+    label: performed_at
+    target_type: summary_location
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - summary_locations
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  ann_avg_job_growth:
+    description: >
+      Average annualized job growth rate over the time period 2004 to 2013. Constructed using Local Area Unemployment Statistics (LAUS) released by the Bureau of Labor Statistics
+    type: number
+
+  employment:
+    description: >
+      The rate of employment computed as total employed population (the sum of employed females and employed males) divided by the total population 16 years and over. Obtained from 2000 Decennial Census
+    type: number
+
+  foreign_share:
+    description: >
+      Number of foreign born residents in the 2010 Census divided by the sum of native and foreign born residents. Obtained from the ACS 2006-2010
+    type: number
+
+  frac_coll_plus:
+    description: >
+      Number of people aged 25 or older who have a bachelor's degree, master's degree, professional school degree, or doctorate degree, divided by the total number of people aged 25 or older in a tract. We use the 2006-2010 ACS to obtain the estimate.
+    type: number
+
+  gsmn_math_g3:
+    description: >
+      Mean 3rd grade math test scores in 2013. Obtained from the Stanford Education Data Archive and measured at the district level. We create a crosswalk from districts to tracts by weighting by the proportion of land area that a given school district covers in a tract. We then take the population weighted mean of the variable at the county level.
+    type: number
+
+  hhinc_mean:
+    description: >
+      Mean household income. Obtained from 2000 Decennial Census
+    type: number
+
+  job_density:
+    description: >
+      Number of jobs per square mile in each county. Constructed using LODES - WAC data files provided by the Census Bureau. 
+    type: number
+
+  ln_wage_growth_hs_grad:
+    description: >
+      Wage growth for high school graduates. Constructed by dividing the average high school graduate annual earnings by the product of overall average weekly hours worked and 52. High school graduate wage growth is then computed as the difference in logarithms between high school graduate wages in 2010-2014 and school graduate wages in 2005-2009. Wages are measured in the 2005-2009 and 2010-2014 American Community Surveys.
+    type: number
+
+  mail_return_rate:
+    description: >
+      The 2010 Census return rate,measured as the number of 2010 Census mail forms completed and returned over the number of valid occupied housing units where a Census form was expected to be delivered for mail return to Census. Taken from the Census planning database.
+    type: number
+
+  mean_commutetime:
+    description: >
+      Mean commute time for workers over 16 years old in the county, as measured in the 2000 Decennial Census.
+    type: number
+
+  med_hhinc:
+    description: >
+      Median household income. The data for 2016 comes from the 2012-2016 American Community Survey.
+    type: number
+
+  poor_share:
+    description: >
+      Share of individuals in the county below the federal poverty line, measured in the 2006-2010 ACS for the 2010 estimate.
+    type: number
+
+  popdensity:
+    description: >
+      Number of residents per square mile, calculated by dividing the total county level population in the decennial Census (of the relevant year) by county land area in square miles, calculated as the sum of the land areas of the tracts in the county taken from the 2010 Census Gazetteer Files
+    type: number
+
+  rent_twobed:
+    description: >
+      The median gross rent for renter-occupied housing units with two bedrooms that pay cash rent (from the 2011-2015 ACS)
+    type: number
+
+  share_asian:
+    description: >
+      Racial Shares in the decennial Census (2010). All races (except Hispanic) exclude Hispanics and Latinos
+    type: number
+
+  share_black:
+    description: >
+      Racial Shares in the decennial Census (2010). All races (except Hispanic) exclude Hispanics and Latinos
+    type: number
+
+  share_hisp:
+    description: >
+      Racial Shares in the decennial Census (2010). All races (except Hispanic) exclude Hispanics and Latinos
+    type: number
+
+  share_white:
+    description: >
+      Racial Shares in the decennial Census (2010). All races (except Hispanic) exclude Hispanics and Latinos
+    type: number
+
+  singleparent_share:
+    description: >
+      The number of households with females heads (and no husband present) or male heads (and no wife present) with own children under 18 years old present divided by the total number of households with own children present (2010 estimate is from the 2006-2010 estimate). 
+    type: number
+
+  traveltime15:
+    description: >
+      Share of workers 16 years and over who do not work at home whose commute is shorter than 15 minutes. Measured in the 2006-2010 ACS.
+    type: number
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  summary_locations:
+    $ref: "_definitions.yaml#/to_many"
