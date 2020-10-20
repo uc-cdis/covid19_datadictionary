@@ -628,19 +628,19 @@ properties:
 
   feeling_healthy_count:
     description: >
-      Number of cases feeling healthy in COVID Stoplight project (https://covidstoplight.org). 
+      Number of cases feeling healthy in COVID Stoplight project (https://covidstoplight.org).
     type: integer
-    
+
   feeling_sick_count:
     description: >
-      Number of cases feeling sick in COVID Stoplight project (https://covidstoplight.org). 
+      Number of cases feeling sick in COVID Stoplight project (https://covidstoplight.org).
     type: integer
-    
+
   feeling_not_so_good_count:
     description: >
       Number of cases feeling not so good in COVID Stoplight project (https://covidstoplight.org).
     type: integer
-    
+
   age_group_less_20_count:
     description: >
       Number of confirmed cases under the age of 20 years old.
@@ -1885,106 +1885,106 @@ properties:
     description: >
       Number of deaths for Asian cases over the age of 80 years old.
     type: integer
-        
+
   totalTestEncountersViral:
     description: >
       Total number of people tested per day via PCR testing as reported by the state or territory. The count for this metric is incremented up by one for each day on which an individual person is tested, no matter how many specimens are collected from that person on that day. If an individual person is tested twice a day on three different days, this count will increment up by three. If we discover that a jurisdiction is including antigen tests in this metric, we will annotate that state or territory’s data accordingly.
-    type: integer    
-    
+    type: integer
+
   totalTestsPeopleViral:
     description: >
       Total number of unique people tested at least once via PCR testing, as reported by the state or territory. The count for this metric is incremented up only the first time an individual person is tested and their result is reported. Future tests of the same person will not be added to this count. For states with ambiguous annotations, we have assigned their total tests to this category. In the case where the state only provides negative cases, this field is calculated as the summation of people who tested positive (“Positive Cases (People”) and the number of people who tested negative (“Negative (People or Cases)”). If we discover that a jurisdiction is including antigen tests in this metric, we will annotate that state or territory’s data accordingly.
-    type: integer 
-    
+    type: integer
+
   totalTestsAntibody:
     description: >
       Total number of completed antibody tests as reported by the state or territory.
-    type: integer 
-    
+    type: integer
+
   positiveTestsAntibody:
     description: >
       Total number of completed antibody tests that return positive as reported by the state or territory.
     type: integer
-    
+
   negativeTestsAntibody:
     description: >
       The total number of completed antibody tests that return negative as reported by the state or territory.
     type: integer
-        
+
   totalTestsPeopleAntibody:
     description: >
       The total number of unique people who have been tested at least once via antibody testing as reported by the state or territory.
     type: integer
-    
+
   positiveTestsPeopleAntibody:
     description: >
       The total number of unique people with completed antibody tests that return positive as reported by the state or territory.
-    type: integer    
-    
+    type: integer
+
   negativeTestsPeopleAntibody:
     description: >
       The total number of unique people with completed antibody tests that return negative as reported by the state or territory.
     type: integer
-    
+
   totalTestsPeopleAntigen:
     description: >
       Total number of unique people who have been tested at least once via antigen testing, as reported by the state or territory.
-    type: integer    
-    
+    type: integer
+
   positiveTestsPeopleAntigen:
     description: >
       Total number of unique people with a completed antigen test that returned positive as reported by the state or territory.
-    type: integer    
-    
+    type: integer
+
   totalTestsAntigen:
     description: >
       Total number of completed antigen tests, as reported by the state or territory.
     type: integer
-    
+
   positiveTestsAntigen:
     description: >
       Total number of completed antigen tests that return positive as reported by the state or territory.
-    type: integer    
-    
+    type: integer
+
   race_multiracial_count:
     description: >
-      Number of multiracial confirmed cases. 
-    type: integer    
-  
+      Number of multiracial confirmed cases.
+    type: integer
+
   ethnicity_hispanic_count:
     description: >
-      Number of Hispanic confirmed cases. 
-    type: integer    
-  
+      Number of Hispanic confirmed cases.
+    type: integer
+
   ethnicity_nonhispanic_count:
     description: >
-      Number of non-Hispanic confirmed cases. 
-    type: integer    
-  
+      Number of non-Hispanic confirmed cases.
+    type: integer
+
   ethnicity_unknown_count:
     description: >
-      Number of unknown (ethnicity) confirmed cases. 
-    type: integer    
-  
+      Number of unknown (ethnicity) confirmed cases.
+    type: integer
+
   race_multiracial_deaths:
     description: >
-      Number of deaths for multiracial cases. 
-    type: integer    
-  
+      Number of deaths for multiracial cases.
+    type: integer
+
   ethnicity_hispanic_deaths:
     description: >
-      Number of deaths for Hispanic cases. 
-    type: integer    
-  
+      Number of deaths for Hispanic cases.
+    type: integer
+
   ethnicity_nonhispanic_deaths:
     description: >
-      Number of deaths for non-Hispanic cases. 
-    type: integer    
-  
+      Number of deaths for non-Hispanic cases.
+    type: integer
+
   ethnicity_unknown_deaths:
     description: >
-      Number of deaths for unknown (ethnicity) cases. 
-    type: integer    
+      Number of deaths for unknown (ethnicity) cases.
+    type: integer
 
   new_cases:
     description: >
@@ -2000,7 +2000,7 @@ properties:
     description: >
       The number of new deaths on that day.
     type: integer
-    
+
   new_deaths_smoothed:
     description: >
       The number of new deaths with smoothed data.
@@ -2038,9 +2038,9 @@ properties:
 
   new_tests:
     description: >
-      The number of new tests. 
+      The number of new tests.
     type: integer
-    
+
   total_tests_per_thousand:
     description: >
       The total number of tests per thousand people.
@@ -2068,7 +2068,7 @@ properties:
 
   positive_rate:
     description: >
-      A measure of how adequately countries are testing and indicates the level of testing relative to the size of the outbreak. 
+      A measure of how adequately countries are testing and indicates the level of testing relative to the size of the outbreak.
     type: number
 
   tests_units:
@@ -2080,17 +2080,17 @@ properties:
       - "samples tested"
       - "tests performed"
       - "units unclear (incl. non-PCR)"
-    
+
   stringency_index:
     description: >
       A composite measure based on nine response indicators including school closures, workplace closures, and travel bans, rescaled to a value from 0 to 100 (100 = strictest).
     type: number
-    
+
   population:
     description: >
       The total number of persons inhabiting a country, city, or any district or area.
     type: integer
-    
+
   population_density:
     description: >
       The measure of average population per square mile.
@@ -2105,12 +2105,12 @@ properties:
     description: >
       Participants that are aged 65 and older.
     type: number
-    
+
   aged_70_older:
     description: >
       Participants that are aged 70 and older.
     type: number
-    
+
   gdp_per_capita:
     description: >
       A metric that breaks down a country's economic output per person and is calculated by dividing the GDP of a country by its population.
@@ -2120,20 +2120,20 @@ properties:
     description: >
       The number of people in extreme poverty which indicates that a person lives on less than 1.90 international dollars (int.-$) per day.
     type: number
-    
+
   cardiovasc_death_rate:
     description: >
       The annual number of deaths from cardiovascular diseases per 100,000 people.
     type: number
-    
+
   diabetes_prevalence:
     description: >
       The percentage of people ages 20-79 who have type 1 or type 2 diabetes.
     type: number
-    
+
   female_smokers:
     description: >
-      The number of females who are tobacco smokers. 
+      The number of females who are tobacco smokers.
     type: number
 
   male_smokers:
@@ -2145,46 +2145,16 @@ properties:
     description: >
       The number of basic hand-washing facilities.
     type: number
-    
+
   hospital_beds_per_thousand:
     description: >
       The number of hospital beds inclusive of inpatient beds that are available in public, private, general, and specialized hospitals and rehabilitation centers. In most cases beds for both acute and chronic care are included.
     type: number
-    
+
   life_expectancy:
     description: >
       A key metric for assessing population health. It captures the mortality along the entire life course and indicates the average age of death in a population.
     type: number
 
-  retail_and_recreation_percent_change_from_baseline:
-    description: >
-      Percent change from baseline for places like restaurants, cafes, shopping centers, theme parks, museums, libraries, and movie theaters.A key metric for assessing population health. 
-    type: number
-    
-  grocery_and_pharmacy_percent_change_from_baseline:
-    description: >
-      Percent change from baseline for places like grocery markets, food warehouses, farmers markets, specialty food shops, drug stores, and pharmacies.
-    type: number
-
-  parks_percent_change_from_baseline:
-    description: >
-      Percent change from baseline for places like local parks, national parks, public beaches, marinas, dog parks, plazas, and public gardens. 
-    type: number
-
-  transit_stations_percent_change_from_baseline:
-    description: >
-      Percent change from baseline for places like public transport hubs such as subway, bus, and train stations.
-    type: number
-
-  workplaces_percent_change_from_baseline:
-    description: >
-      Percent change from baseline for places of work. 
-    type: number
-
-  residential_percent_change_from_baseline:
-    description: >
-      Percent change from baseline for places of residence.
-    type: number
-    
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
