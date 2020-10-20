@@ -39,245 +39,289 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
-
+#This prop originated from the ATLAS project
   ann_avg_job_growth:
     description: >
       Average annualized job growth rate over the time period 2004 to 2013. Constructed using Local Area Unemployment Statistics (LAUS) released by the Bureau of Labor Statistics.
     type: number
 
+#This prop originated from the ATLAS project
   employment:
     description: >
       The rate of employment computed as total employed population (the sum of employed females and employed males) divided by the total population 16 years and over. Obtained from 2000 Decennial Census.
     type: number
 
+#This prop originated from the ATLAS project
   foreign_share:
     description: >
       Number of foreign born residents in the 2010 Census divided by the sum of native and foreign born residents. Obtained from the ACS 2006-2010.
     type: number
 
+#This prop originated from the ATLAS project
   frac_coll_plus:
     description: >
       Number of people aged 25 or older who have a bachelor's degree, master's degree, professional school degree, or doctorate degree, divided by the total number of people aged 25 or older in a tract. We use the 2006-2010 ACS to obtain the estimate.
     type: number
 
+#This prop originated from the ATLAS project
   gsmn_math_g3:
     description: >
       Mean 3rd grade math test scores in 2013. Obtained from the Stanford Education Data Archive and measured at the district level. We create a crosswalk from districts to tracts by weighting by the proportion of land area that a given school district covers in a tract. We then take the population weighted mean of the variable at the county level.
     type: number
 
+#This prop originated from the ATLAS project
   hhinc_mean:
     description: >
       Mean household income. Obtained from 2000 Decennial Census.
     type: number
 
+#This prop originated from the ATLAS project
   job_density:
     description: >
       Number of jobs per square mile in each county. Constructed using LODES - WAC data files provided by the Census Bureau.
     type: number
 
+#This prop originated from the ATLAS project
   ln_wage_growth_hs_grad:
     description: >
       Wage growth for high school graduates. Constructed by dividing the average high school graduate annual earnings by the product of overall average weekly hours worked and 52. High school graduate wage growth is then computed as the difference in logarithms between high school graduate wages in 2010-2014 and school graduate wages in 2005-2009. Wages are measured in the 2005-2009 and 2010-2014 American Community Surveys.
     type: number
 
+#This prop originated from the ATLAS project
   mail_return_rate:
     description: >
       The 2010 Census return rate,measured as the number of 2010 Census mail forms completed and returned over the number of valid occupied housing units where a Census form was expected to be delivered for mail return to Census. Taken from the Census planning database.
     type: number
 
+#This prop originated from the ATLAS project
   mean_commutetime:
     description: >
       Mean commute time for workers over 16 years old in the county, as measured in the 2000 Decennial Census.
     type: number
 
+#This prop originated from the ATLAS project
   med_hhinc:
     description: >
       Median household income. The data for 2016 comes from the 2012-2016 American Community Survey.
     type: number
 
+#This prop originated from the ATLAS project
   poor_share:
     description: >
       Share of individuals in the county below the federal poverty line, measured in the 2006-2010 ACS for the 2010 estimate.
     type: number
 
+#This prop originated from the ATLAS project
   popdensity:
     description: >
-      Number of residents per square mile, calculated by dividing the total county level population in the decennial Census (of the relevant year) by county land area in square miles, calculated as the sum of the land areas of the tracts in the county taken from the 2010 Census Gazetteer Files.
+      Number of residents per unit area.
     type: number
 
+#This prop originated from the ATLAS project
   rent_twobed:
     description: >
       The median gross rent for renter-occupied housing units with two bedrooms that pay cash rent (from the 2011-2015 ACS).
     type: number
 
+#This prop originated from the ATLAS project
   share_asian:
     description: >
       Racial Shares in the decennial Census (2010). All races (except Hispanic) exclude Hispanics and Latinos.
     type: number
 
+#This prop originated from the ATLAS project
   share_black:
     description: >
       Racial Shares in the decennial Census (2010). All races (except Hispanic) exclude Hispanics and Latinos.
     type: number
 
+#This prop originated from the ATLAS project
   share_hisp:
     description: >
       Racial Shares in the decennial Census (2010). All races (except Hispanic) exclude Hispanics and Latinos.
     type: number
 
+#This prop originated from the ATLAS project
   share_white:
     description: >
       Racial Shares in the decennial Census (2010). All races (except Hispanic) exclude Hispanics and Latinos.
     type: number
 
+#This prop originated from the ATLAS project
   singleparent_share:
     description: >
       The number of households with females heads (and no husband present) or male heads (and no wife present) with own children under 18 years old present divided by the total number of households with own children present (2010 estimate is from the 2006-2010 estimate).
     type: number
 
+#This prop originated from the ATLAS project
   traveltime15:
     description: >
       Share of workers 16 years and over who do not work at home whose commute is shorter than 15 minutes. Measured in the 2006-2010 ACS.
     type: number
 
-
-
-
+#This prop originated from the ATLAS project
   college_degree:
     description: >
       Fraction of children who have a four year college degree (among children who received ACS or 2000 Census long form at age 25+). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   community_college_degree:
     description: >
       Fraction of children who have at least a community college degree (among children who received the ACS or the 2000 Census long form at age 25+). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   graduate_degree:
     description: >
       Fraction of children who have a graduate degree (among children who received the ACS or the 2000 long form at age 30+). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   has_dad:
     description: >
       Fraction of children (1978-83 birth cohorts) who have a male claimer in the year they are linked to parents. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   has_mom:
     description: >
       Fraction of children (1978-83 birth cohorts) who have a female claimer in the year they are linked to parents. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   hours_weekly_worked_prior:
     description: >
       Mean weekly hours child worked in the 12 months before they were surveyed (among children who received ACS at age 30+) = hours worked per week * weeks worked in [year] / 51, where 51 is the maximum “weeks” worked in the ACS (since top bin is 50-52). = 0 (for those who do not work). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   completed_high_school:
     description: >
       Fraction of children who completed high school or obtained a GED (among children who the ACS or 2000 long form at age 19+). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   jail:
     description: >
       Fraction incarcerated on April 1st, 2010 (where incarceration is defined as residing in a federal detention center, federal prison, state prison, local jail, residential correctional facility, military jail, or juvenile correctional facility). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   household_income_immigrated:
     description: >
       Mean percentile rank (relative to other children born in the same year) in the national distribution of household income (i.e. own earnings and spouse’s earnings) measured as mean earnings in 2014-2015 for the baseline sample, but restricted to children (1978-83 birth cohorts) whose mothers immigrated to the United States (according to ACS or Census 2000 long form). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   household_income_native:
     description: >
       Mean percentile rank (relative to other children born in the same year) in the national distribution of household income (i.e. own earnings and spouse’s earnings) measured as mean earnings in 2014-2015 for the baseline sample, but restricted to children (1978-83 birth cohorts) whose mothers were born in the United States (according to ACS or Census 2000 long form). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   household_income:
     description: >
       Mean percentile rank (relative to other children born in the same year) in the national distribution of household income (i.e. own earnings and spouse’s earnings) measured as mean earnings in 2014-2015 for the baseline sample. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   household_income_childhood_commuting_zone:
     description: >
       Mean percentile rank (relative to other children born in the same year) in the national distribution of household income (i.e. own earnings and spouse’s earnings) measured as mean earnings in 2014-2015 for the baseline sample, but restricted to children (1978-83 birth cohorts) who live in one of their childhood commuting zones in adulthood. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   household_income_probability_top01:
     description: >
       Probability of reaching the top 1% of the national household income. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   household_income_probability_top20:
     description: >
       Probability of reaching the top quintile of the national household income distribution (among children born in the same year) in 2014-15. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   kids_household_income_below_median:
     description: >
       Number of children under 18 living in the given county with parents whose household income was below the national median. This is computed by multiplying the number of children living in the county according to the 2000 Decennial Census by the fraction of children living in households in which the parents earn less than the national median in the relevant analysis sample. We use this variable as our preferred population weighting variable when analyzing these outcomes across places. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, white).
     type: number
 
+#This prop originated from the ATLAS project
   kids_count:
     description: >
       Count of children under 18 of race (asian, black, hispanic, native, other, white) and gender (female, male, other, unknown) in the county in 2000 (from publicly available 2000 Decennial Census data). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, white).
     type: number
 
+#This prop originated from the ATLAS project
   kids_poverty_below_10p:
     description: >
       Fraction children (1978-83 birth cohorts) who grew up in a given tract and end up living in a tract with a poverty rate of less than 10% (according to tract-level Census 2000 data) in adulthood. Tracts where children live as adults are defined as the tract of the last non-missing address observed on tax returns. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   married:
     description: >
       Fraction of children (1978-83 birth cohorts) who file their federal income tax return as “married filing jointly” or “married filing separate” in 2015. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   hours_positive_worked_prior:
     description: >
       Fraction of children with positive hours worked in the 12 months before being surveyed (among children who received the ACS at age 30+). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   received_public_assistance_income:
     description: >
       Fraction of children who receive public assistance income (among children who received the ACS at age 30+). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   some_college_experience:
     description: >
       Fraction of children having at least some college experience (among children who received the ACS or 2000 long form at age 25+). Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   spouse_income_rank:
     description: >
       Mean individual income rank in 2014-15 for the spouses of children (1978-83 birth cohorts) who grew up in the given tract. Child’s spouse refers to the person they are married to in 2015. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   kids_stayed_in_commuting_zone:
     description: >
       Fraction of children (1978-83 birth cohorts) who live in one of their childhood commuting zones in adulthood. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   kids_live_with_parents:
     description: >
       Fraction of children (1978-83 birth cohorts) who live at the same address as their parents in 2015. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   teenbirths:
     description: >
       Fraction of women who grew up in the given tract who ever claimed a child who was born when they were between the ages of 13 and 19 as a dependent at any point. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   has_two_parents:
     description: >
       Fraction of children (1978-83 birth cohorts) claimed by two people in the year they are linked to parents. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   hourly_wage_rank:
     description: >
       Hourly wage rank, computed within child birth year and year of ACS receipt (among children who received the ACS at age 30+) = annual labor income / (weekly hours worked * weeks worked per year) = missing for those who do not work. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
     type: number
 
+#This prop originated from the ATLAS project
   working:
     description: >
       Fraction of children (1978-83 birth cohorts) with positive W-2 earnings in 2015. Includes all surveyed genders (female, male) and races (asian, black, hispanic, native american, other, white).
