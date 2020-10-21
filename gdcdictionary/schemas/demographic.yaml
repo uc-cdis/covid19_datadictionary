@@ -211,9 +211,9 @@ properties:
 
   age:
     description: >
-      Please give age in either: 
-      - Years (most common) 
-      - Months 
+      Please give age in either:
+      - Years (most common)
+      - Months
       - Days
     type: integer
 
@@ -254,7 +254,8 @@ properties:
     description: >
       Province or state
     type: string
-    
+
+# This prop originated from the DS4C dataset
   age_decade:
     description: >
       the age of the patient in decades

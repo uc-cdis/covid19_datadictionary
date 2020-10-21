@@ -151,6 +151,7 @@ properties:
       CDC 2019-nCoV ID
     type: string
 
+# This prop originated from the DS4C dataset
   current_status:
     description: >
       What is the current status of this person?
@@ -161,6 +162,7 @@ properties:
       - Presumptive case (positive local test), confirmatory tested negative*
       - Laboratory-confirmed case*
 
+# This prop originated from the covidstoplight dataset
   feeling:
     description: >
       Self-reported feeling from https://covidstoplight.org
@@ -260,6 +262,7 @@ properties:
       - "False"
       - "Unknown"
 
+# This prop originated from the coxray dataset
   icu_status:
     description: >
       Was the patient admitted to an intensive care unit (ICU)?
@@ -268,6 +271,7 @@ properties:
       - "False"
       - "Unknown"
 
+# This prop originated from the coxray dataset
   ventilator_status:
     description: >
       True if the patient was intubated or ventilated at any point during this illness or False if the patient did not receive intubation or Unknown if not reported.
@@ -582,6 +586,7 @@ properties:
       Date that symptoms appeared
     type: string
 
+# This prop originated from the nCoV2019 dataset
   reporting_date:
     description: >
       Reporting date
@@ -594,6 +599,7 @@ properties:
         term_id: C70857
         term_version: 20.03e (Release date:2020-03-31)
 
+# This prop originated from the DSFSI dataset
   reporting_source_url:
     description: >
       The URL of the reporting_source of subject's information
@@ -609,11 +615,13 @@ properties:
       The source of the subject's information
     type: string
 
+# This prop originated from the nCoV2019 dataset
   hosp_visit_date:
     description: >
       Hospital visit date
     type: string
 
+# This prop originated from the nCoV2019 dataset
   symptoms:
     description: >
       Symptoms
@@ -650,11 +658,13 @@ properties:
         term_id: C4876
         term_version: 20.03e (Release date:2020-03-31)
 
+# This prop originated from the DS4C dataset
   exposure:
     description: >
       The proposed method of infection
     type: string
 
+# This prop originated from the DS4C dataset
   isolation_status:
     description: >
       Isolation status
@@ -664,6 +674,7 @@ properties:
       - Unknown
       - Not reported
 
+# This prop originated from the nCoV2019 dataset
   treatment_status:
     description: >
       Treatment status of an individual
@@ -673,6 +684,7 @@ properties:
       - In recovery
       - Recovered
 
+# This prop originated from the nCoDSFSI dataset
   condition:
     description: >
       A state of being, such as a state of health.
@@ -682,6 +694,7 @@ properties:
       - Unstable
       - Unknown
 
+# This prop originated from the COXRAY dataset
   needed_supplemental_O2:
     description: >
       Yes (Y) if the patient required supplemental oxygen at any point during this illness or No (N) or blank if unknown
@@ -689,6 +702,7 @@ properties:
       - "True"
       - "False"
 
+# This prop originated from the COXRAY dataset
   pneumonia_type:
     description: >
       Type of pneumonia
@@ -704,16 +718,19 @@ properties:
       - Symptoms resolved, unknown date
       - Unknown symptom status
 
+# This prop originated from the DS4C dataset
   released_date:
     description: >
       the date of discharge
     type: string
 
+# This prop originated from the DSCI dataset
   hospital:
     description: >
       Name of hospital where patient is hopitalized
     type: string
 
+# This prop originated from the nCoV2019 dataset
   exposure_start:
     description: >
       Exposure start
@@ -725,6 +742,7 @@ properties:
         term_id: C83127
         term_version: 20.03e (Release date:2020-03-31)
 
+# This prop originated from the nCoV2019 dataset
   exposure_end:
     description: >
       Exposure end
