@@ -112,12 +112,6 @@ properties:
     type: number
 
 #This prop originated from the ATLAS project
-  popdensity:
-    description: >
-      Number of residents per unit area.
-    type: number
-
-#This prop originated from the ATLAS project
   rent_twobed:
     description: >
       The median gross rent for renter-occupied housing units with two bedrooms that pay cash rent (from the 2011-2015 ACS).
@@ -361,6 +355,90 @@ properties:
   residential_percent_change_from_baseline:
     description: >
       Percent change in visits from baseline for places of residence. Changes for each day are compared to a baseline value for that day of the week. The baseline is the median value, for the corresponding day of the week, during the 5-week period Jan 3–Feb 6, 2020.
+    type: number
+
+#Prop originated from OWID project
+  stringency_index:
+    description: >
+      A composite measure based on nine response indicators including school closures, workplace closures, and travel bans, rescaled to a value from 0 to 100 (100 = strictest).
+    type: number
+
+#Prop originated from CCMap project
+  population:
+    description: >
+      The total number of persons inhabiting a country, city, or any district or area.
+    type: integer
+
+#Prop originated from CCMap project
+  population_density:
+    description: >
+      The number of residents per unit area.
+    type: number
+
+#Prop originated from CCMap project
+  population_gtr_20:
+    description: >
+      The population of the designated geographic location greater than 20 years old.
+    type: integer
+
+#Prop originated from CCMap project
+  population_gtr_65:
+    description: >
+      The population of the designated geographic location greater than 65 years old.
+    type: integer
+
+#Prop originated from OWID project
+  median_age:
+    description: >
+      The age that divides the population in two parts of equal size.
+    type: number
+
+#Prop originated from OWID project
+  aged_65_older:
+    description: >
+      Share of the population that is 65 years and older, most recent year available.
+    type: number
+
+#Prop originated from OWID project
+  aged_70_older:
+    description: >
+      Share of the population that is 70 years and older.
+    type: number
+
+#Prop originated from OWID project
+  gdp_per_capita:
+    description: >
+      A metric that breaks down a country's economic output per person and is calculated by dividing the GDP of a country by its population.
+    type: number
+
+#Prop originated from OWID project
+  extreme_poverty:
+    description: >
+      The number of people in extreme poverty which indicates that a person lives on less than 1.90 international dollars (int.-$) per day.
+    type: number
+
+#Prop originated from OWID project
+  female_smokers:
+    description: >
+      The number of females who are tobacco smokers.
+    type: number
+
+#Prop originated from OWID project
+  male_smokers:
+    description: >
+      The number of males who are tobacco smokers.
+    type: number
+
+#Prop originated from OWID project
+  handwashing_facilities:
+    description: >
+      The number of basic hand-washing facilities.
+    type: number
+
+#Prop originated from OWID project
+  life_expectancy:
+    description: >
+      A key metric for assessing population health. It captures the mortality along the entire life course and indicates the average age of death in a population.
     type: number
 
   summary_locations:
