@@ -113,118 +113,179 @@ properties:
     enum:
       - GenBank
       - NCBI
+
+  # Prop originated from ncbi-covid-19 project
   accession:
     description: "SRA Run accession in the form of SRR######## (ERR or DRR for INSDC partners)."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   assay_type:
     description: "Type of library (i.e. AMPLICON, RNA-Seq, WGS, etc)."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   center_name:
     description: "Name of the sequencing center."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   consent:
     description: "Type of consent need to access the data (i.e. public is available to all, others are for dbGaP)."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   experiment:
     description: "The accession in the form of SRX######## (ERX or DRX for INSDC partners)."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   instrument:
     description: "Name of the sequencing instrument model."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   librarylayout:
     description: "Whether the data is SINGLE or PAIRED"
     enum:
       - Single
       - Paired
+
+  # Prop originated from ncbi-covid-19 project
   libraryselection:
     description: "Library selection methodology (i.e. PCR, RANDOM, etc)."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   librarysource:
     description: "Source of the biological data (i.e. GENOMIC, METAGENOMIC, etc)."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   platform:
     description: "Name of the sequencing platform (i.e. ILLUMINA)."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   sra_study:
     description: "SRA Study accession in the form of SRP######## (ERP or DRP for INSDC partners)."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   release_date:
     description: "The date on which the data was released."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   mbytes:
     description: "Number of mega bytes of data in the SRA Run."
     type: integer
+
+  # Prop originated from ncbi-covid-19 project
   avgspotlen:
     description: "Calculated average read length."
     type: integer
+
+  # Prop originated from ncbi-covid-19 project
   mbases:
     description: "Number of mega bases in the SRA Runs."
     type: integer
+
+  # Prop originated from ncbi-covid-19 project
   library_name:
     description: "The name of the library."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   ena_first_public_run:
     description: "Date when INSDC partner record was public."
     type: array
     items:
       type: string
+
+  # Prop originated from ncbi-covid-19 project
   ena_last_update_run:
     description: "Date when INSDC partner record was updated."
     type: array
     items:
       type: string
+
+  # Prop originated from ncbi-covid-19 project
   datastore_provider:
     description: "Locations of where the files are available to download from."
     type: array
     items:
       type: string
+
+  # Prop originated from ncbi-covid-19 project
   datastore_region:
     description: "Regions of where the data is located."
     type: array
     items:
       type: string
+
   bytes:
     description: "Number of bytes of data in the SRA Run."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   description_sam:
     description: "Description of the sequencing sample (i.e. DZgh pooled sequence, etc)."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   ena_checklist_sam:
     description: "Sample ID from INSDC partner record."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   insdc_status_sam:
     description: "The status of sample in INSDC partner record (i.e. public)."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   insdc_center_name_sam:
     description: "The name of the INSDC center (i.e. University of Goettingen)."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   insdc_last_update_sam:
     description: "Date when the sample was updated by INSDC (International Nucleotide Sequence Database Collaboration) partner."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   insdc_first_public_sam:
     description: "Date when the sample was public by INSDC (International Nucleotide Sequence Database Collaboration) partner."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   insdc_center_alias_sam:
     description: "The alias of the INSDC partner."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   investigation_type_sam:
     description: "Investigation type for the sequencing sample."
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   library_source:
     description: "Source of library (i.e. TRANSCRIPTOMIC or GENOMIC, etc)."
     enum:
       - Transcriptomic
       - Genomic
+
+  # Prop originated from ncbi-covid-19 project
   sra_accession:
     description: >
       Sequence Read Archive accession number of raw data generated.
     type: string
+
+  # Prop originated from ncbi-covid-19 project
   title_sam:
     description: >
       Title of the sample.
     type: string
-
-
 
   virus_genomes:
     $ref: "_definitions.yaml#/to_one"
