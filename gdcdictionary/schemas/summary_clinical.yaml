@@ -626,16 +626,19 @@ properties:
       Detailed Specialty
     type: string
 
+#Prop originated from covidstoplight project
   feeling_healthy_count:
     description: >
       Number of cases feeling healthy in COVID Stoplight project (https://covidstoplight.org).
     type: integer
 
+#Prop originated from covidstoplight project
   feeling_sick_count:
     description: >
       Number of cases feeling sick in COVID Stoplight project (https://covidstoplight.org).
     type: integer
 
+#Prop originated from covidstoplight project
   feeling_not_so_good_count:
     description: >
       Number of cases feeling not so good in COVID Stoplight project (https://covidstoplight.org).
