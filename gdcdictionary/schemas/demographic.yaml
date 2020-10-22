@@ -255,7 +255,7 @@ properties:
       Province or state
     type: string
 
-# This prop originated from the DS4C dataset
+# Prop originated from DS4C project
   age_decade:
     description: >
       the age of the patient in decades
