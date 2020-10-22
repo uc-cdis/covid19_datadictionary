@@ -40,141 +40,169 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+# Prop originated from SSR project
   report_date:
     description: >
       Date of report
     type: string
 
+# Prop originated from SSR project
   num_COVID:
     description: >
       Number of patients treated during reporting period with confirmed COVID-19 [total]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_eth0:
     description: >
       Number of patients treated during reporting period with confirmed COVID-19 [Hispanic/Latino]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_eth1:
     description: >
       Number of patients treated during reporting period with confirmed COVID-19 [American Indian/Alaska Native]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_race0:
     description: >
       Number of patients treated during reporting period with confirmed COVID-19 [American Indian/Alaska Native]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_race1:
     description: >
       Number of patients treated during reporting period with confirmed COVID-19 [Asian]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_race2:
     description: >
       Number of patients treated during reporting period with confirmed COVID-19 [Black]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_race3:
     description: >
       Number of patients treated during reporting period with confirmed COVID-19 [Hawaii Native/Other Pacific Islander]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_race4:
     description: >
       Number of patients treated during reporting period with confirmed COVID-19 [White]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_deaths:
     description: >
       Number of deaths of COVID-19 patients during reporting period [total]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_deaths_eth0:
     description: >
       Number of deaths of COVID-19 patients during reporting period [Hispanic/Latino]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_deaths_eth1:
     description: >
       Number of deaths of COVID-19 patients during reporting period [Non-Hispanic/Latino]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_deaths_race0:
     description: >
       Number of deaths of COVID-19 patients during reporting period [American Indian/Alaska Native]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_deaths_race1:
     description: >
       Number of deaths of COVID-19 patients during reporting period [Asian]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_deaths_race2:
     description: >
       Number of deaths of COVID-19 patients during reporting period [Black]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_deaths_race3:
     description: >
       Number of deaths of COVID-19 patients during reporting period [Hawaii Native/Other Pacific Islander]
     type: integer
 
+# Prop originated from SSR project
   num_COVID_deaths_race4:
     description: >
       Number of deaths of COVID-19 patients during reporting period [White]
     type: integer
 
+# Prop originated from SSR project
   num_outpatient:
     description: >
       Number of patients treated outpatient during reporting period
     type: integer
 
+# Prop originated from SSR project
   num_admitted:
     description: >
       Number of patients admitted during reporting period
     type: integer
 
+# Prop originated from SSR project
   num_icu:
     description: >
       Maximum number of patients in ICU during reporting period
     type: integer
 
+# Prop originated from SSR project
   num_vent:
     description: >
       Maximum number of patients on ventilators during reporting period
     type: integer
 
+# Prop originated from SSR project
   num_resp:
     description: >
       Number of patients (inpatient) with respiratory conditions (J00-J99)
     type: integer
 
+# Prop originated from SSR project
   num_pneu:
     description: >
       Number of patients (inpatient) with pneumonia (J09-J18)
     type: integer
 
+# Prop originated from SSR project
   num_diab:
     description: >
       Number of patients (inpatient) with diabetes (E10-E11)
     type: integer
 
+# Prop originated from SSR project
   num_asth:
     description: >
       Number of (inpatient) patients with asthma  (J45)
     type: integer
 
+# Prop originated from SSR project
   num_obes:
     description: >
       Number of (inpatient) patients with obesity (E66)
     type: integer
 
+# Prop originated from SSR project
   num_card:
     description: >
       Number of (inpatient) patients with cardiovascular disease (I20-I25)
     type: integer
 
+# Prop originated from SSR project
   num_chf:
     description: >
       Number of (inpatient) patients with congestive heart failure (I50)

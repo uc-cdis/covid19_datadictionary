@@ -60,6 +60,7 @@ properties:
         term_id: C54539
         term_version: 20.03e (Release date:2020-03-31)
 
+# Prop originated from nCoV2019 project
   date_confirmation:
     description: >
       Date of confirmation
@@ -79,6 +80,7 @@ properties:
     items:
       type: string
 
+# Prop originated from nCoV2019 project
   case_in_country:
     description: >
       The order of the cases in which they occured within each country.
@@ -106,6 +108,7 @@ properties:
         term_id: C68615
         term_version: 20.03e (Release date:2020-03-31)
 
+# Prop originated from DS4C project
   infected_by:
     description: >
       the ID of who infected the patient
@@ -113,6 +116,7 @@ properties:
     items:
       type: string
 
+# Prop originated from nCoV2019 project
   vital_status:
     term:
       $ref: "_terms.yaml#/vital_status"
@@ -127,6 +131,7 @@ properties:
         term_id: C25717
         term_version: 18.11d (Release date:2018-11-26)
 
+# Prop originated from DS4C project
   covid_19_status:
     description: >
       a confirmed positive or negative covid-19 case
@@ -134,13 +139,14 @@ properties:
       - Positive
       - Negative
       - Unknown
-      - Not Reported    
+      - Not Reported
+
 
   deceased_date:
     description: >
       the date of discharge
     type: string
-    
+
   studies:
     $ref: "_definitions.yaml#/to_many"
   projects:

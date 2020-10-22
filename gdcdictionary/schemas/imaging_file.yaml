@@ -121,26 +121,31 @@ properties:
       - "Left lung"
       - "Right lung"
 
+# Prop originated from COXRAY project
   folder:
     description: >
       Name of folder containing the scan
     type: string
 
+# Prop originated from COXRAY project
   image_url:
     description: >
       URL of the paper or website where the image came from
     type: string
 
+# Prop originated from COXRAY project
   license:
     description: >
       License of the image such as CC BY-NC-SA. Blank if unknown
     type: string
 
+# Prop originated from COXRAY project
   clinical_notes:
     description: >
       Clinical notes about the image and/or the patient
     type: string
 
+# Prop originated from COXRAY project
   other_notes:
     description: >
       e.g. credit

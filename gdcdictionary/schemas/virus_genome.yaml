@@ -87,11 +87,14 @@ properties:
     enum:
       - GenBank
       - NCBI
+
+  # Prop originated from Sars-cov2 project
   accession:
     description: >
       The accession id of the virus genome.
     type: string
 
+# Prop originated from Sars-cov2 project
   accession_date:
     description: >
       The accession date for the record.
