@@ -63,7 +63,7 @@ properties:
       - "Treatment"
       - "Vaccine"
 
-# VacTracker dataset specific property
+# Prop originated from VacTracker project
   technology:
     description: >
       The technology used for the trial.
@@ -83,7 +83,7 @@ properties:
       - "Virus Like Particle"
       - "Other"
 
-# VacTracker dataset specific property
+# Prop originated from VacTracker project
   technology_details:
     description: >
       The details regarding the technology used for the trial.
@@ -97,7 +97,7 @@ properties:
     items:
       type: string
 
-# VacTracker dataset specific property
+# Prop originated from VacTracker project
   development_stage:
     description: >
       Development Stage
@@ -113,7 +113,7 @@ properties:
       A full description of how the study is being conducted.
     type: string
 
-# Enums specific to VacTracker dataset. Can be mapped to HL7 FHIR enums
+# Prop enums originated from VacTracker project. Can be mapped to HL7 FHIR enums
   phase:
     description: >
       The stage in the progression of a therapy from initial experimental use in humans in clinical trials to post-market evaluation.
@@ -152,7 +152,7 @@ properties:
       - "Unknown"
       - "NA"
 
-# VacTracker dataset specific property
+# Prop originated from VacTracker project
   completed_clinical_trials:
     description: >
       Completed clinical trials
@@ -160,7 +160,7 @@ properties:
     items:
       type: string
 
-# VacTracker dataset specific property
+# Prop originated from VacTracker project
   inprogress_clinical_trials:
     description: >
       In progress Clinical Trials
