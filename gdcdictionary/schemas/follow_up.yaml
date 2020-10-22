@@ -45,11 +45,13 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+# Prop originated from COXRAY project
   offset:
     description: >
       number of days since the start of symptoms or hospitalization for each image, this is very important to have when there are multiple images for the same patient to track progression while being imaged. If a report says "after a few days" let's assume 5 days.
     type: integer
 
+# Prop originated from COXRAY project
   intubation_present:
     description: >
       Yes (True) or no (False) or blank if unknown.
@@ -57,6 +59,7 @@ properties:
       - "True"
       - "False"
 
+# Prop originated from COXRAY project
   in_icu:
     description: >
       Yes (True) if the patient is in the ICU (intensive care unit) or CCU (critical care unit) or No (False) or blank if unknown.
@@ -64,6 +67,7 @@ properties:
       - "True"
       - "False"
 
+# Prop originated from COXRAY project
   extubated:
     description: >
       Yes (True) if the patient was successfully extubated or No (False) or blank if unknown.
@@ -71,36 +75,43 @@ properties:
       - "True"
       - "False"
 
+# Prop originated from COXRAY project
   temperature:
     description: >
       Temperature of the patient in Celsius at the time of the image.
     type: number
 
+# Prop originated from COXRAY project
   pO2_saturation:
     description: >
       Partial pressure of oxygen saturation in % at the time of the image.
     type: number
 
+# Prop originated from COXRAY project
   leukocyte_count:
     description: >
       white blood cell count in units of 10^3/uL at the time of the image.
     type: number
 
+# Prop originated from COXRAY project
   neutrophil_count:
     description: >
       Neutrophil cell count in units of 10^3/uL at the time of the image.
     type: number
 
+# Prop originated from COXRAY project
   lymphocyte_count:
     description: >
       Lymphocyte cell count in units of 10^3/uL at the time of the image.
     type: number
 
+# Prop originated from COXRAY project
   view:
     description: >
       Posteroanterior (PA), Anteroposterior (AP), AP Supine (APS), or Lateral (L) for X-rays; Axial or Coronal for CT scans.
     type: string
 
+# Prop originated from COXRAY project
   modality:
     description: >
       Medical imaging modalities, for example CT Scan, X-ray, or MRI.
