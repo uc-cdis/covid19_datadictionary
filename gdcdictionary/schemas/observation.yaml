@@ -262,7 +262,7 @@ properties:
       - "False"
       - "Unknown"
 
-# Prop originated from coxray project
+# Prop originated from COXRAY project
   icu_status:
     description: >
       Was the patient admitted to an intensive care unit (ICU)?
@@ -271,7 +271,7 @@ properties:
       - "False"
       - "Unknown"
 
-# Prop originated from coxray project
+# Prop originated from COXRAY project
   ventilator_status:
     description: >
       True if the patient was intubated or ventilated at any point during this illness or False if the patient did not receive intubation or Unknown if not reported.
@@ -684,7 +684,7 @@ properties:
       - In recovery
       - Recovered
 
-# Prop originated from nCoDSFSI project
+# Prop originated from DSFSI project
   condition:
     description: >
       A state of being, such as a state of health.
