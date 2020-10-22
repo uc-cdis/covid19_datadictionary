@@ -129,21 +129,25 @@ properties:
       - "Not Reported"
       - "Unknown"
 
+# Prop originated from CHI-NBHD project
   community_area:
     description: >
       Community Area or Neighborhood.
     type: string
 
+# Prop originated from IDPH-Hospital project
   state_hospital_region:
     description: >
       State hospital region.
     type: string
 
+# Prop originated from IDPH-Hospital project
   state_region_description:
     description: >
       State hospital region desciption.
     type: string
 
+# Prop originated from NPI-PRO project
   npi:
     description: >
       National Provider Identifier.
@@ -164,6 +168,7 @@ properties:
       City
     type: string
 
+# Prop originated from OWID project
   continent:
     description: >
       One of the large landmasses of the earth.
@@ -176,6 +181,7 @@ properties:
       - "North America"
       - "South America"
 
+# Prop originated from Com-Mobility project
   metro_area:
     description: >
       A major city together with its suburbs and nearby cities, towns, and environs over which the major city exercises a commanding economic and social influence.
