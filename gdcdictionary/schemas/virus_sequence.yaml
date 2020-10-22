@@ -224,10 +224,6 @@ properties:
     items:
       type: string
 
-  bytes:
-    description: "Number of bytes of data in the SRA Run."
-    type: string
-
   # Prop originated from ncbi-covid-19 project
   description_sam:
     description: "Description of the sequencing sample (i.e. DZgh pooled sequence, etc)."
