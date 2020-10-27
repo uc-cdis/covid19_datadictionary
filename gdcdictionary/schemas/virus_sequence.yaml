@@ -94,18 +94,7 @@ properties:
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    enum:
-      - fasta
-      - fastq
-      - sff
-      - slx
-      - slxfq
-      - qual
-      - pbi
-      - srf
-      - txt
-      - fna
-      - other
+    type: string
 
   data_source:
     description: >
