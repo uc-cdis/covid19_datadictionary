@@ -50,7 +50,10 @@ properties:
   num_COVID:
     description: >
       Number of patients treated during reporting period with confirmed COVID-19 [total]
-    type: integer
+    oneOf:
+      - type: integer
+      - enum:
+          - "<5"
 
 # Prop originated from SSR project
   num_COVID_eth0:
