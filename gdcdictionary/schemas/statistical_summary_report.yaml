@@ -50,6 +50,9 @@ properties:
   num_COVID:
     description: >
       Number of patients treated during reporting period with confirmed COVID-19 [total]
+    type:
+      - integer
+      - string
     oneOf:
       - type: integer
       - enum:
