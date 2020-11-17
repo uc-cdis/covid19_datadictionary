@@ -195,21 +195,6 @@ properties:
       The percent of ICU beds typically occupied by patients.
     type: number
 
-  population:
-    description: >
-      The population of the designated geographic location.
-    type: integer
-
-  population_gtr_20:
-    description: >
-      The population of the designated geographic location greater than 20 years old.
-    type: integer
-
-  population_gtr_65:
-    description: >
-      The population of the designated geographic location greater than 65 years old.
-    type: integer
-
   staffed_all_beds_per_1000:
     description: >
       The number of staffed beds per 1000 people.
@@ -2084,46 +2069,6 @@ properties:
       - "tests performed"
       - "units unclear (incl. non-PCR)"
 
-  stringency_index:
-    description: >
-      A composite measure based on nine response indicators including school closures, workplace closures, and travel bans, rescaled to a value from 0 to 100 (100 = strictest).
-    type: number
-
-  population:
-    description: >
-      The total number of persons inhabiting a country, city, or any district or area.
-    type: integer
-
-  population_density:
-    description: >
-      The measure of average population per square mile.
-    type: number
-
-  median_age:
-    description: >
-      The age that divides the population in two parts of equal size.
-    type: number
-
-  aged_65_older:
-    description: >
-      Participants that are aged 65 and older.
-    type: number
-
-  aged_70_older:
-    description: >
-      Participants that are aged 70 and older.
-    type: number
-
-  gdp_per_capita:
-    description: >
-      A metric that breaks down a country's economic output per person and is calculated by dividing the GDP of a country by its population.
-    type: number
-
-  extreme_poverty:
-    description: >
-      The number of people in extreme poverty which indicates that a person lives on less than 1.90 international dollars (int.-$) per day.
-    type: number
-
   cardiovasc_death_rate:
     description: >
       The annual number of deaths from cardiovascular diseases per 100,000 people.
@@ -2132,31 +2077,6 @@ properties:
   diabetes_prevalence:
     description: >
       The percentage of people ages 20-79 who have type 1 or type 2 diabetes.
-    type: number
-
-  female_smokers:
-    description: >
-      The number of females who are tobacco smokers.
-    type: number
-
-  male_smokers:
-    description: >
-      The number of males who are tobacco smokers.
-    type: number
-
-  handwashing_facilities:
-    description: >
-      The number of basic hand-washing facilities.
-    type: number
-
-  hospital_beds_per_thousand:
-    description: >
-      The number of hospital beds inclusive of inpatient beds that are available in public, private, general, and specialized hospitals and rehabilitation centers. In most cases beds for both acute and chronic care are included.
-    type: number
-
-  life_expectancy:
-    description: >
-      A key metric for assessing population health. It captures the mortality along the entire life course and indicates the average age of death in a population.
     type: number
 
   summary_locations:
