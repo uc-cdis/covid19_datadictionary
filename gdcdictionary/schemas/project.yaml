@@ -158,5 +158,4 @@ properties:
 
   last_submission_identifier:
     type: string
-    format: date-time
     description: Project-specific identifier for internal use, to track the last submission for this project
