@@ -155,3 +155,8 @@ properties:
   dbgap_accession_number:
     type: string
     description: "The dbgap accession number provided for the project."
+
+  last_manifest_indexing_release:
+    type: string
+    format: date-time
+    description: Track the last release date of the NCBI manifests
