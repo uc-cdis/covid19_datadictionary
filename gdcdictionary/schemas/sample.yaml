@@ -427,14 +427,19 @@ properties:
     description: "Name of the country or region where the sample was collected."
     type: string
 
-# Prop originated from ncbi-covid-19 project
-  city_province:
-    description: "Name of the city or province where the sample was collected."
+# Prop for genomic sample except ncbi-covid-19 project (ncbi data includes country_region and continent only)
+  province_state:
+    description: "Name of the province or state where the sample was collected."
     type: string
 
-# Prop originated from ncbi-covid-19 project
+# Prop for genomic sample except ncbi-covid-19 project (ncbi data includes country_region and continent only)
   county:
     description: "Name of the county where the sample was collected."
+    type: string
+    
+# Prop for genomic sample except ncbi-covid-19 project (ncbi data includes country_region and continent only)
+  city:
+    description: "Name of the city where the sample was collected."
     type: string
 
 # Prop originated from ncbi-covid-19 project
