@@ -330,7 +330,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-
   cell_line:
     description: >
       A cell culture developed from a single cell and therefore consisting of cells with a uniform genetic makeup.
