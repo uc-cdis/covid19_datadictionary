@@ -202,7 +202,8 @@ properties:
 
 # Prop originated from SARS-CoV2 project
   sequence_length:
-    description: "Length of genomic sequence."
+    description: "Length of genomic sequence in base pairs."
+    type: integer
 
 # Prop originated from ncbi-covid-19 project
   mbases:
