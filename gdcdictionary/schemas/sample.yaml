@@ -81,6 +81,22 @@ properties:
       Date range in which samples were collected.
     type: string
 
+  sample_type:
+    description: "Characterization of the sample as either clinical or contrived."
+    enum:
+      - Cell Line
+      - DNA
+      - Lipid
+      - Protein
+      - RNA
+      - Slides
+      - Solid Tissue Normal
+      - ssRNA
+      - Total RNA
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
   sample_volume:
     description: "The volume of the sample in mL."
     type: number
