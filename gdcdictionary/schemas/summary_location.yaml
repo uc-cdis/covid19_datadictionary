@@ -91,12 +91,12 @@ properties:
 
   iso2:
     description: >
-      The two-letter code (alpha-2) from the International Organization for Standardization.
+      A two-letter code that represents a country name, (alpha-2) from the International Organization for Standardization.
     type: string
 
   iso3:
     description: >
-      The three-letter code (alpha-3) from the International Organization for Standardization.
+      A three-letter code that represents a country name, which is usually more closely related to the country name (alpha-3) from the International Organization for Standardization.
     type: string
 
   code3:
@@ -185,6 +185,12 @@ properties:
   metro_area:
     description: >
       A major city together with its suburbs and nearby cities, towns, and environs over which the major city exercises a commanding economic and social influence.
+    type: string
+
+# Prop originated from Com-Mobility project
+  iso_3166_2:
+    description: >
+      A code that represents the name of a principal subdivision (e.g province or state) of countries coded in ISO 3166-1 from the International Organization for Standardization . This code is based on the two-letter code element from ISO 3166-1 followed by a separator and up to three alphanumeric characters. The characters after the separator cannot be used on their own to denote a subdivision, they must be preceded by the alpha-2 country code..
     type: string
 
   projects:
