@@ -190,7 +190,7 @@ properties:
 # Prop originated from Com-Mobility project
   iso_3166_2:
     description: >
-      A code that represents the name of a principal subdivision (e.g province or state) of countries coded in ISO 3166-1 from the International Organization for Standardization . This code is based on the two-letter code element from ISO 3166-1 followed by a separator and up to three alphanumeric characters. The characters after the separator cannot be used on their own to denote a subdivision, they must be preceded by the alpha-2 country code..
+      A code that represents the name of a principal subdivision (e.g province or state) of countries coded in ISO 3166-1 from the International Organization for Standardization. This code is based on the two-letter code element from ISO 3166-1 followed by a separator and up to three alphanumeric characters. The characters after the separator cannot be used on their own to denote a subdivision, they must be preceded by the alpha-2 country code.
     type: string
 
   projects:
