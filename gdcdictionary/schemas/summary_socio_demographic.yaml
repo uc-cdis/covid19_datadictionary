@@ -322,10 +322,10 @@ properties:
     type: number
 
 #Prop originated from Com-Mobility project
-    report_date:
-      description: >
-        The date of the record or report.
-      type: string
+  report_date:
+    description: >
+      The date of the record or report.
+    type: string
 
 #Prop originated from Com-Mobility project
   retail_and_recreation_percent_change_from_baseline:
