@@ -322,6 +322,12 @@ properties:
     type: number
 
 #Prop originated from Com-Mobility project
+    report_date:
+      description: >
+        The date of the record or report.
+      type: string
+
+#Prop originated from Com-Mobility project
   retail_and_recreation_percent_change_from_baseline:
     description: >
       Percent change in visits from baseline for places like restaurants, cafes, shopping centers, theme parks, museums, libraries, and movie theaters. A key metric for assessing population health. Changes for each day are compared to a baseline value for that day of the week. The baseline is the median value, for the corresponding day of the week, during the 5-week period Jan 3–Feb 6, 2020.
