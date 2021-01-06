@@ -2336,5 +2336,63 @@ properties:
       The percentage of people ages 20-79 who have type 1 or type 2 diabetes.
     type: number
 
+  race:
+    description: >
+      
+    enum:
+      - "American Indian or Alaska Native"
+      - "Asian"
+      - "Black"
+      - "Hispanic"
+      - "Left Blank"
+      - "Other"
+      - "Native Hawaiian or Other Pacific Islander"
+      - "White"
+
+  gender:
+    description: >
+    
+    enum:
+      - "Female"
+      - "Male"
+      - "Unknown or Left Blank"
+      
+  age_group:
+    description: >
+    
+    enum:
+      - "less than 20"
+      - "20 to 29"
+      - "30 to 39"
+      - "40 to 49"
+      - "50 to 59"
+      - "60 to 69"
+      - "70 to 79"
+      - "greater than 80"
+
+  ethnicity:
+    description: >
+    
+    enum:
+      - "Multiracial"
+      - "Hispanic"
+      - "Nonhispanic"
+      - "Unknown"
+      
+  count:
+    description: >
+    
+    type: integer
+
+  tested:
+    description: >
+    
+    type: integer
+    
+  deaths:
+    description: >
+    
+    type: integer
+
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
