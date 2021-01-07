@@ -2338,7 +2338,7 @@ properties:
 
   race:
     description: >
-      
+      An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
     enum:
       - "American Indian or Alaska Native"
       - "Asian"
@@ -2351,7 +2351,7 @@ properties:
 
   gender:
     description: >
-    
+      Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles. [Explanatory Comment 1: Identification of gender is based upon self-report and may come from a form, questionnaire, interview, etc.].
     enum:
       - "Female"
       - "Male"
@@ -2359,7 +2359,7 @@ properties:
       
   age_group:
     description: >
-    
+      The age range that describes the group of subjects.
     enum:
       - "less than 20"
       - "20 to 29"
@@ -2372,7 +2372,7 @@ properties:
 
   ethnicity:
     description: >
-    
+      An individual's self-described social and cultural grouping, specifically whether an individual describes themselves as Hispanic or Latino. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
     enum:
       - "Multiracial"
       - "Hispanic"
@@ -2381,17 +2381,17 @@ properties:
       
   count:
     description: >
-    
+      The number of confirmed cases for the specified group.
     type: integer
 
   tested:
     description: >
-    
+      The number of tested cases for the specified group.
     type: integer
     
   deaths:
     description: >
-    
+      The number of confirmed deaths for the specified group.
     type: integer
 
   summary_locations:
