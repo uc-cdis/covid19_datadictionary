@@ -134,18 +134,24 @@ properties:
 # Prop originated from DS4C project
   covid_19_status:
     description: >
-      a confirmed positive or negative covid-19 case
+      A confirmed positive or negative covid-19 case
     enum:
       - Positive
       - Negative
       - Unknown
       - Not Reported
 
-
+#This is a DS4C property and will likely need to be migrated into the death_dt property in the observation node.
   deceased_date:
     description: >
-      the date of discharge
+      The date of death for the subject.
     type: string
+
+  res_zip:
+    description: >
+      First three digits of the resident's zipcode.
+    type: string
+
 
   studies:
     $ref: "_definitions.yaml#/to_many"
