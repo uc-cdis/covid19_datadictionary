@@ -238,7 +238,7 @@ properties:
 
   onset_unk:
     description: >
-      If symptomatic, onset date - unknown
+      If symptomatic, but onset date is unknown
     type: boolean
 
   symp_res_dt:
@@ -367,6 +367,14 @@ properties:
   cld_yn:
     description: >
       Chronic lung disease (asthma/emphysema/COPD)
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  cvd_yn:
+    description: >
+      Cardiovascular disease
     enum:
       - "True"
       - "False"
