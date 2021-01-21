@@ -184,12 +184,18 @@ properties:
   pos_spec_unk:
     description: >
       Check if date unknown
-    type: boolean
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
 
   pos_spec_na:
     description: >
       Check if date not applicable
-    type: boolean
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
 
   pna_yn:
     description: >
@@ -239,7 +245,10 @@ properties:
   onset_unk:
     description: >
       If symptomatic, but onset date is unknown
-    type: boolean
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
 
   symp_res_dt:
     description: >
