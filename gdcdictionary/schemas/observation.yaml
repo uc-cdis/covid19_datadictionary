@@ -183,19 +183,15 @@ properties:
 
   pos_spec_unk:
     description: >
-      Date of first positive test is unknown
+      Check "Unknown", if date of first positive test is unknown.
     enum:
-      - "True"
-      - "False"
       - "Unknown"
 
   pos_spec_na:
     description: >
-      Date of first positive test is not applicable
+      Check "Not Applicable", if date of first positive test is not applicable.
     enum:
-      - "True"
-      - "False"
-      - "Unknown"
+      - "Not Applicable"
 
   pna_yn:
     description: >
@@ -244,12 +240,10 @@ properties:
 
   onset_unk:
     description: >
-      If symptomatic, but onset date is unknown
+      Check "Unknown", if symptomatic but onset date is unknown.
     enum:
-      - "True"
-      - "False"
       - "Unknown"
-
+      
   symp_res_dt:
     description: >
       If symptomatic, date of symptom resolution (MM/DD/YYYY)
