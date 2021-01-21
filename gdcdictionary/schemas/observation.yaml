@@ -183,7 +183,7 @@ properties:
 
   pos_spec_unk:
     description: >
-      Check if date unknown
+      Date of first positive test is unknown
     enum:
       - "True"
       - "False"
@@ -191,7 +191,7 @@ properties:
 
   pos_spec_na:
     description: >
-      Check if date not applicable
+      Date of first positive test is not applicable
     enum:
       - "True"
       - "False"
