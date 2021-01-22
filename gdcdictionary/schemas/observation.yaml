@@ -183,13 +183,15 @@ properties:
 
   pos_spec_unk:
     description: >
-      Check if date unknown
-    type: boolean
+      Check "Unknown" if date of first positive test is unknown.
+    enum:
+      - "Unknown"
 
   pos_spec_na:
     description: >
-      Check if date not applicable
-    type: boolean
+      Check "Not Applicable" if date of first positive test is not applicable.
+    enum:
+      - "Not Applicable"
 
   pna_yn:
     description: >
@@ -238,9 +240,10 @@ properties:
 
   onset_unk:
     description: >
-      If symptomatic, onset date - unknown
-    type: boolean
-
+      Check "Unknown" if symptomatic but onset date is unknown.
+    enum:
+      - "Unknown"
+      
   symp_res_dt:
     description: >
       If symptomatic, date of symptom resolution (MM/DD/YYYY)
@@ -367,6 +370,14 @@ properties:
   cld_yn:
     description: >
       Chronic lung disease (asthma/emphysema/COPD)
+    enum:
+      - "True"
+      - "False"
+      - "Unknown"
+
+  cvd_yn:
+    description: >
+      Cardiovascular disease
     enum:
       - "True"
       - "False"
