@@ -2356,7 +2356,7 @@ properties:
       - "Female"
       - "Male"
       - "Unknown or Left Blank"
-      
+
   age_group:
     description: >
       The age range that describes the group of subjects.
@@ -2378,7 +2378,7 @@ properties:
       - "Hispanic"
       - "Nonhispanic"
       - "Unknown"
-      
+
   count:
     description: >
       The number of confirmed cases for the specified group.
@@ -2388,11 +2388,48 @@ properties:
     description: >
       The number of tested cases for the specified group.
     type: integer
-    
+
   deaths:
     description: >
       The number of confirmed deaths for the specified group.
     type: integer
+
+  #This prop originated from the IDPH Vaccination dataset
+  administered_count:
+    description: >
+      The number of total administered vaccine doses in Illinois or an Illinois county.
+    type: integer
+
+  #This prop originated from the IDPH Vaccination dataset
+  administered_count_change:
+    description: >
+      The daily number of total administered vaccine doses in Illinois or an Illinois county.
+    type: integer
+
+  #This prop originated from the IDPH Vaccination dataset
+  administered_count_roll_avg:
+    description: >
+      The 7 rolling day average of administered vaccine doses in Illinois or an Illinois county.
+    type: integer
+
+  #This prop originated from the IDPH Vaccination dataset
+  persons_fully_vaccinated:
+    description: >
+      The number of persons from Illinois or an Illinois county fully vaccinated.
+    type: integer
+
+  #This prop originated from the IDPH Vaccination dataset
+  report_date:
+    description: >
+      The day the summary vaccination data is reported by the IDPH.
+    type: string
+
+  #This prop originated from the IDPH Vaccination dataset
+  pct_vaccinated_population:
+    description: >
+      The percentage of population of Illinois or an Illinois county that is fully vaccinated.
+    type: number
+
 
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
