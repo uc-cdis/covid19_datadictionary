@@ -629,1246 +629,1495 @@ properties:
       Number of cases feeling not so good in COVID Stoplight project (https://covidstoplight.org).
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_count:
     description: >
       Number of confirmed cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_count:
     description: >
       Number of confirmed cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_count:
     description: >
       Number of confirmed cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_count:
     description: >
       Number of confirmed cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_count:
     description: >
       Number of confirmed cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_count:
     description: >
       Number of confirmed cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_count:
     description: >
       Number of confirmed cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_count:
     description: >
       Number of confirmed cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_white_count:
     description: >
       Number of White confirmed cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_black_count:
     description: >
       Number of Black confirmed cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_left_blank_count:
     description: >
       Number of confirmed cases that were left blank for the race field.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_other_count:
     description: >
       Number of other (race) confirmed cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_hispanic_count:
     description: >
       Number of Hispanic or Latino confirmed cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_nh_pi_count:
     description: >
       Number of NH/PI (Native Hawaiian or Other Pacific Islander) confirmed cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_ai_an_count:
     description: >
       Number of AI/AN (American Indian or Alaska Native) confirmed cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_asian_count:
     description: >
       Number of Asian confirmed cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   gender_male_count:
     description: >
       Number of male confirmed cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   gender_female_count:
     description: >
       Number of female confirmed cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   gender_unknown_left_blank_count:
     description: >
       Number of confirmed cases that are unknown or were left blank.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_white_count:
     description: >
       Number of confirmed White cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_white_count:
     description: >
       Number of confirmed White cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_white_count:
     description: >
       Number of confirmed White cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_white_count:
     description: >
       Number of confirmed White cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_white_count:
     description: >
       Number of confirmed White cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_white_count:
     description: >
       Number of confirmed White cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_white_count:
     description: >
       Number of confirmed White cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_white_count:
     description: >
       Number of confirmed White cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_black_count:
     description: >
       Number of confirmed black cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_black_count:
     description: >
       Number of confirmed Black cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_black_count:
     description: >
       Number of confirmed Black cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_black_count:
     description: >
       Number of confirmed Black cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_black_count:
     description: >
       Number of confirmed Black cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_black_count:
     description: >
       Number of confirmed Black cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_black_count:
     description: >
       Number of confirmed Black cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_black_count:
     description: >
       Number of confirmed Black cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_left_blank_count:
     description: >
       Number of confirmed race left blank cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_left_blank_count:
     description: >
       Number of confirmed race left blank cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_left_blank_count:
     description: >
       Number of confirmed race left blank cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_left_blank_count:
     description: >
       Number of confirmed race left blank cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_left_blank_count:
     description: >
       Number of confirmed race left blank cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_left_blank_count:
     description: >
       Number of confirmed race left blank cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_left_blank_count:
     description: >
       Number of confirmed race left blank cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_left_blank_count:
     description: >
       Number of confirmed race left blank cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_other_count:
     description: >
       Number of confirmed race other cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_other_count:
     description: >
       Number of confirmed race other cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_other_count:
     description: >
       Number of confirmed race other cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_other_count:
     description: >
       Number of confirmed race other cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_other_count:
     description: >
       Number of confirmed race other cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_other_count:
     description: >
       Number of confirmed race other cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_other_count:
     description: >
       Number of confirmed race other cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_other_count:
     description: >
       Number of confirmed race other cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_hispanic_count:
     description: >
       Number of confirmed Hispanic or Latino cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_hispanic_count:
     description: >
       Number of confirmed Hispanic or Latino cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_hispanic_count:
     description: >
       Number of confirmed Hispanic or Latino cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_hispanic_count:
     description: >
       Number of confirmed Hispanic or Latino cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_hispanic_count:
     description: >
       Number of confirmed Hispanic or Latino cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_hispanic_count:
     description: >
       Number of confirmed Hispanic or Latino cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_hispanic_count:
     description: >
       Number of confirmed Hispanic or Latino cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_hispanic_count:
     description: >
       Number of confirmed Hispanic or Latino cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_nh_pi_count:
     description: >
       Number of confirmed NH/PI (Native Hawaiian or Other Pacific Islander) cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_nh_pi_count:
     description: >
       Number of confirmed NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_nh_pi_count:
     description: >
       Number of confirmed NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_nh_pi_count:
     description: >
       Number of confirmed NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_nh_pi_count:
     description: >
       Number of confirmed NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_nh_pi_count:
     description: >
       Number of confirmed NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_nh_pi_count:
     description: >
       Number of confirmed NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_nh_pi_count:
     description: >
       Number of confirmed NH/PI (Native Hawaiian or Other Pacific Islander) cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_ai_an_count:
     description: >
       Number of confirmed AI/AN (American Indian or Alaska Native) cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_ai_an_count:
     description: >
       Number of confirmed AI/AN (American Indian or Alaska Native) cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_ai_an_count:
     description: >
       Number of confirmed AI/AN (American Indian or Alaska Native) cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_ai_an_count:
     description: >
       Number of confirmed AI/AN (American Indian or Alaska Native) cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_ai_an_count:
     description: >
       Number of confirmed AI/AN (American Indian or Alaska Native) cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_ai_an_count:
     description: >
       Number of confirmed AI/AN (American Indian or Alaska Native) cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_ai_an_count:
     description: >
       Number of confirmed AI/AN (American Indian or Alaska Native) cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_ai_an_count:
     description: >
       Number of confirmed AI/AN (American Indian or Alaska Native) cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_asian_count:
     description: >
       Number of confirmed Asian cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_asian_count:
     description: >
       Number of confirmed Asian cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_asian_count:
     description: >
       Number of confirmed Asian cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_asian_count:
     description: >
       Number of confirmed Asian cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_asian_count:
     description: >
       Number of confirmed asian cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_asian_count:
     description: >
       Number of confirmed Asian cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_asian_count:
     description: >
       Number of confirmed Asian cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_asian_count:
     description: >
       Number of confirmed Asian cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_tested:
     description: >
       Number of tested cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_tested:
     description: >
       Number of tested cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_tested:
     description: >
       Number of tested cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_tested:
     description: >
       Number of tested cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_tested:
     description: >
       Number of tested cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_tested:
     description: >
       Number of tested cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_tested:
     description: >
       Number of tested cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_tested:
     description: >
       Number of tested cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_white_tested:
     description: >
       Number of White tested cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_black_tested:
     description: >
       Number of Black tested cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_left_blank_tested:
     description: >
       Number of tested cases that were left blank for the race field.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_other_tested:
     description: >
       Number of other (race) tested cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_hispanic_tested:
     description: >
       Number of Hispanic or Latino tested cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_nh_pi_tested:
     description: >
       Number of NH/PI (Native Hawaiian or Other Pacific Islander) tested cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_ai_an_tested:
     description: >
       Number of AI/AN (American Indian or Alaska Native) tested cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_asian_tested:
     description: >
       Number of Asian tested cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   gender_male_tested:
     description: >
       Number of male tested cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   gender_female_tested:
     description: >
       Number of female tested cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   gender_unknown_left_blank_tested:
     description: >
       Number of tested cases that are unknown or were left blank.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_white_tested:
     description: >
       Number of tested White cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_white_tested:
     description: >
       Number of tested White cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_white_tested:
     description: >
       Number of tested White cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_white_tested:
     description: >
       Number of tested White cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_white_tested:
     description: >
       Number of tested White cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_white_tested:
     description: >
       Number of tested White cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_white_tested:
     description: >
       Number of tested White cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_white_tested:
     description: >
       Number of tested White cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_black_tested:
     description: >
       Number of tested Black cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_black_tested:
     description: >
       Number of tested Black cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_black_tested:
     description: >
       Number of tested Black cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_black_tested:
     description: >
       Number of tested Black cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_black_tested:
     description: >
       Number of tested Black cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_black_tested:
     description: >
       Number of tested Black cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_black_tested:
     description: >
       Number of tested Black cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_black_tested:
     description: >
       Number of tested Black cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_left_blank_tested:
     description: >
       Number of tested race left blank cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_left_blank_tested:
     description: >
       Number of tested race left blank cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_left_blank_tested:
     description: >
       Number of tested race left blank cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_left_blank_tested:
     description: >
       Number of tested race left blank cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_left_blank_tested:
     description: >
       Number of tested race left blank cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_left_blank_tested:
     description: >
       Number of tested race left blank cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_left_blank_tested:
     description: >
       Number of tested race left blank cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_left_blank_tested:
     description: >
       Number of tested race left blank cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_other_tested:
     description: >
       Number of tested race other cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_other_tested:
     description: >
       Number of tested race other cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_other_tested:
     description: >
       Number of tested race other cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_other_tested:
     description: >
       Number of tested race other cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_other_tested:
     description: >
       Number of tested race other cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_other_tested:
     description: >
       Number of tested race other cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_other_tested:
     description: >
       Number of tested race other cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_other_tested:
     description: >
       Number of tested race other cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_hispanic_tested:
     description: >
       Number of tested Hispanic or Latino cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_hispanic_tested:
     description: >
       Number of tested Hispanic or Latino cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_hispanic_tested:
     description: >
       Number of tested Hispanic or Latino cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_hispanic_tested:
     description: >
       Number of tested Hispanic or Latino cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_hispanic_tested:
     description: >
       Number of tested Hispanic or Latino cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_hispanic_tested:
     description: >
       Number of tested Hispanic or Latino cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_hispanic_tested:
     description: >
       Number of tested Hispanic or Latino cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_hispanic_tested:
     description: >
       Number of tested Hispanic or Latino cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_nh_pi_tested:
     description: >
       Number of tested NH/PI (Native Hawaiian or Other Pacific Islander) cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_nh_pi_tested:
     description: >
       Number of tested NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_nh_pi_tested:
     description: >
       Number of tested NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_nh_pi_tested:
     description: >
       Number of tested NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_nh_pi_tested:
     description: >
       Number of tested NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_nh_pi_tested:
     description: >
       Number of tested NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_nh_pi_tested:
     description: >
       Number of tested NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_nh_pi_tested:
     description: >
       Number of tested NH/PI (Native Hawaiian or Other Pacific Islander) cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_ai_an_tested:
     description: >
       Number of tested AI/AN (American Indian or Alaska Native) cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_ai_an_tested:
     description: >
       Number of tested AI/AN (American Indian or Alaska Native) cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_ai_an_tested:
     description: >
       Number of tested AI/AN (American Indian or Alaska Native) cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_ai_an_tested:
     description: >
       Number of tested AI/AN (American Indian or Alaska Native) cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_ai_an_tested:
     description: >
       Number of tested AI/AN (American Indian or Alaska Native) cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_ai_an_tested:
     description: >
       Number of tested AI/AN (American Indian or Alaska Native) cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_ai_an_tested:
     description: >
       Number of tested AI/AN (American Indian or Alaska Native) cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_ai_an_tested:
     description: >
       Number of tested AI/AN (American Indian or Alaska Native) cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_asian_tested:
     description: >
       Number of tested Asian cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_asian_tested:
     description: >
       Number of tested Asian cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_asian_tested:
     description: >
       Number of tested Asian cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_asian_tested:
     description: >
       Number of tested Asian cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_asian_tested:
     description: >
       Number of tested Asian cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_asian_tested:
     description: >
       Number of tested Asian cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_asian_tested:
     description: >
       Number of tested Asian cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_asian_tested:
     description: >
       Number of tested Asian cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_deaths:
     description: >
       Number of deaths for cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_deaths:
     description: >
       Number of deaths for cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_deaths:
     description: >
       Number of deaths for cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_deaths:
     description: >
       Number of deaths for cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_deaths:
     description: >
       Number of deaths for cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_deaths:
     description: >
       Number of deaths for cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_deaths:
     description: >
       Number of deaths for cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_deaths:
     description: >
       Number of deaths for cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_white_deaths:
     description: >
       Number of deaths for White cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_black_deaths:
     description: >
       Number of deaths for Black cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_left_blank_deaths:
     description: >
       Number of deaths for cases that were left blank for the race field.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_other_deaths:
     description: >
       Number of deaths for other (race) cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_hispanic_deaths:
     description: >
       Number of deaths for Hispanic or Latino cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_nh_pi_deaths:
     description: >
       Number of deaths for NH/PI (Native Hawaiian or Other Pacific Islander) cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_ai_an_deaths:
     description: >
       Number of deaths for AI/AN (American Indian or Alaska Native) cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_asian_deaths:
     description: >
       Number of deaths for Asian cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   gender_male_deaths:
     description: >
       Number of deaths for male cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   gender_female_deaths:
     description: >
       Number of deaths for female cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   gender_unknown_left_blank_deaths:
     description: >
       Number of deaths for cases that are unknown or were left blank.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_white_deaths:
     description: >
       Number of deaths for White cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_white_deaths:
     description: >
       Number of deaths for White cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_white_deaths:
     description: >
       Number of deaths for White cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_white_deaths:
     description: >
       Number of deaths for White cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_white_deaths:
     description: >
       Number of deaths for White cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_white_deaths:
     description: >
       Number of deaths for White cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_white_deaths:
     description: >
       Number of deaths for White cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_white_deaths:
     description: >
       Number of deaths for White cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_black_deaths:
     description: >
       Number of deaths for Black cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_black_deaths:
     description: >
       Number of deaths for Black cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_black_deaths:
     description: >
       Number of deaths for Black cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_black_deaths:
     description: >
       Number of deaths for Black cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_black_deaths:
     description: >
       Number of deaths for Black cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_black_deaths:
     description: >
       Number of deaths for Black cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_black_deaths:
     description: >
       Number of deaths for Black cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_black_deaths:
     description: >
       Number of deaths for Black cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_left_blank_deaths:
     description: >
       Number of deaths for race left blank cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_left_blank_deaths:
     description: >
       Number of deaths for race left blank cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_left_blank_deaths:
     description: >
       Number of deaths for race left blank cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_left_blank_deaths:
     description: >
       Number of deaths for race left blank cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_left_blank_deaths:
     description: >
       Number of deaths for race left blank cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_left_blank_deaths:
     description: >
       Number of deaths for race left blank cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_left_blank_deaths:
     description: >
       Number of deaths for race left blank cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_left_blank_deaths:
     description: >
       Number of deaths for race left blank cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_other_deaths:
     description: >
       Number of deaths for race other cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_other_deaths:
     description: >
       Number of deaths for race other cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_other_deaths:
     description: >
       Number of deaths for race other cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_other_deaths:
     description: >
       Number of deaths for race other cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_other_deaths:
     description: >
       Number of deaths for race other cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_other_deaths:
     description: >
       Number of deaths for race other cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_other_deaths:
     description: >
       Number of deaths for race other cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_other_deaths:
     description: >
       Number of deaths for race other cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_hispanic_deaths:
     description: >
       Number of deaths for Hispanic or Latino cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_hispanic_deaths:
     description: >
       Number of deaths for Hispanic or Latino cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_hispanic_deaths:
     description: >
       Number of deaths for Hispanic or Latino cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_hispanic_deaths:
     description: >
       Number of deaths for Hispanic or Latino cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_hispanic_deaths:
     description: >
       Number of deaths for Hispanic or Latino cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_hispanic_deaths:
     description: >
       Number of deaths for Hispanic or Latino cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_hispanic_deaths:
     description: >
       Number of deaths for Hispanic or Latino cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_hispanic_deaths:
     description: >
       Number of deaths for Hispanic or Latino cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_nh_pi_deaths:
     description: >
       Number of deaths for NH/PI (Native Hawaiian or Other Pacific Islander) cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_nh_pi_deaths:
     description: >
       Number of deaths for NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_nh_pi_deaths:
     description: >
       Number of deaths for NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_nh_pi_deaths:
     description: >
       Number of deaths for NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_nh_pi_deaths:
     description: >
       Number of deaths for NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_nh_pi_deaths:
     description: >
       Number of deaths for NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_nh_pi_deaths:
     description: >
       Number of deaths for NH/PI (Native Hawaiian or Other Pacific Islander) cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_nh_pi_deaths:
     description: >
       Number of deaths for NH/PI (Native Hawaiian or Other Pacific Islander) cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_ai_an_deaths:
     description: >
       Number of deaths for AI/AN (American Indian or Alaska Native) cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_ai_an_deaths:
     description: >
       Number of deaths for AI/AN (American Indian or Alaska Native) cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_ai_an_deaths:
     description: >
       Number of deaths for AI/AN (American Indian or Alaska Native) cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_ai_an_deaths:
     description: >
       Number of deaths for AI/AN (American Indian or Alaska Native) cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_ai_an_deaths:
     description: >
       Number of deaths for AI/AN (American Indian or Alaska Native) cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_ai_an_deaths:
     description: >
       Number of deaths for AI/AN (American Indian or Alaska Native) cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_ai_an_deaths:
     description: >
       Number of deaths for AI/AN (American Indian or Alaska Native) cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_ai_an_deaths:
     description: >
       Number of deaths for AI/AN (American Indian or Alaska Native) cases over the age of 80 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_less_20_race_asian_deaths:
     description: >
       Number of deaths for Asian cases under the age of 20 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_20_29_race_asian_deaths:
     description: >
       Number of deaths for Asian cases between the ages of 20 to 29 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_30_39_race_asian_deaths:
     description: >
       Number of deaths for Asian cases between the ages of 30 to 39 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_40_49_race_asian_deaths:
     description: >
       Number of deaths for Asian cases between the ages of 40 to 49 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_50_59_race_asian_deaths:
     description: >
       Number of deaths for Asian cases between the ages of 50 to 59 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_60_69_race_asian_deaths:
     description: >
       Number of deaths for Asian cases between the ages of 60 to 69 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_70_79_race_asian_deaths:
     description: >
       Number of deaths for Asian cases between the ages of 70 to 79 years old.
     type: integer
 
+#The following property is marked for removal (07January2021).
   age_group_greater_80_race_asian_deaths:
     description: >
       Number of deaths for Asian cases over the age of 80 years old.
@@ -1934,41 +2183,49 @@ properties:
       Total number of completed antigen tests that return positive as reported by the state or territory.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_multiracial_count:
     description: >
       Number of multiracial confirmed cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   ethnicity_hispanic_count:
     description: >
       Number of Hispanic confirmed cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   ethnicity_nonhispanic_count:
     description: >
       Number of non-Hispanic confirmed cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   ethnicity_unknown_count:
     description: >
       Number of unknown (ethnicity) confirmed cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   race_multiracial_deaths:
     description: >
       Number of deaths for multiracial cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   ethnicity_hispanic_deaths:
     description: >
       Number of deaths for Hispanic cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   ethnicity_nonhispanic_deaths:
     description: >
       Number of deaths for non-Hispanic cases.
     type: integer
 
+#The following property is marked for removal (07January2021).
   ethnicity_unknown_deaths:
     description: >
       Number of deaths for unknown (ethnicity) cases.
@@ -2078,6 +2335,64 @@ properties:
     description: >
       The percentage of people ages 20-79 who have type 1 or type 2 diabetes.
     type: number
+
+  race:
+    description: >
+      An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
+    enum:
+      - "American Indian or Alaska Native"
+      - "Asian"
+      - "Black"
+      - "Hispanic"
+      - "Left Blank"
+      - "Other"
+      - "Native Hawaiian or Other Pacific Islander"
+      - "White"
+
+  gender:
+    description: >
+      Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles. [Explanatory Comment 1: Identification of gender is based upon self-report and may come from a form, questionnaire, interview, etc.].
+    enum:
+      - "Female"
+      - "Male"
+      - "Unknown or Left Blank"
+      
+  age_group:
+    description: >
+      The age range that describes the group of subjects.
+    enum:
+      - "less than 20"
+      - "20 to 29"
+      - "30 to 39"
+      - "40 to 49"
+      - "50 to 59"
+      - "60 to 69"
+      - "70 to 79"
+      - "greater than 80"
+
+  ethnicity:
+    description: >
+      An individual's self-described social and cultural grouping, specifically whether an individual describes themselves as Hispanic or Latino. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
+    enum:
+      - "Multiracial"
+      - "Hispanic"
+      - "Nonhispanic"
+      - "Unknown"
+      
+  count:
+    description: >
+      The number of confirmed cases for the specified group.
+    type: integer
+
+  tested:
+    description: >
+      The number of tested cases for the specified group.
+    type: integer
+    
+  deaths:
+    description: >
+      The number of confirmed deaths for the specified group.
+    type: integer
 
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
