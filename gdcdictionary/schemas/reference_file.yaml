@@ -76,6 +76,7 @@ properties:
       - Script
       - Sequencing Reference
       - Unharmonized Clinical Data
+      - Harmonized Clinical Data
       - Variant Annotation
       - Variant Call
       - Other
@@ -130,10 +131,6 @@ properties:
       - XML
       
     
-  study_version:
-    description: >
-      The version of the study that was released by data source (e.g., dbGaP)
-    type: number
     
   source_file:
     description: >
