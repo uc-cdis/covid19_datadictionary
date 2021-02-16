@@ -2348,6 +2348,7 @@ properties:
       - "Other"
       - "Native Hawaiian or Other Pacific Islander"
       - "White"
+      - "Unknown" # IDPH Vaccination dataset
 
   gender:
     description: >
@@ -2369,6 +2370,8 @@ properties:
       - "60 to 69"
       - "70 to 79"
       - "greater than 80"
+      - "16-64" # IDPH Vaccination dataset
+      - "+65" # IDPH Vaccination dataset
 
   ethnicity:
     description: >
@@ -2395,41 +2398,52 @@ properties:
     type: integer
 
   #This prop originated from the IDPH Vaccination dataset
-  administered_count:
+  vaccine_administered_count:
     description: >
       The number of total administered vaccine doses in Illinois or an Illinois county.
     type: integer
 
   #This prop originated from the IDPH Vaccination dataset
-  administered_count_change:
+  vaccine_administered_count_change:
     description: >
       The daily number of total administered vaccine doses in Illinois or an Illinois county.
     type: integer
 
   #This prop originated from the IDPH Vaccination dataset
-  administered_count_roll_avg:
+  vaccine_administered_count_roll_avg:
     description: >
       The 7 rolling day average of administered vaccine doses in Illinois or an Illinois county.
     type: integer
 
   #This prop originated from the IDPH Vaccination dataset
-  persons_fully_vaccinated:
+  vaccine_persons_fully_vaccinated:
     description: >
-      The number of persons from Illinois or an Illinois county fully vaccinated.
+      The number of persons from Illinois or an Illinois county that is fully vaccinated.
     type: integer
 
   #This prop originated from the IDPH Vaccination dataset
-  report_date:
+  vaccine_persons_fully_vaccinated_pct:
     description: >
-      The day the summary vaccination data is reported by the IDPH.
-    type: string
+      The percentage of the population of Illinois or an Illinois county that is fully vaccinated.
+    type: integer
 
   #This prop originated from the IDPH Vaccination dataset
-  pct_vaccinated_population:
+  vaccine_long_time_care_allocated:
     description: >
-      The percentage of population of Illinois or an Illinois county that is fully vaccinated.
-    type: number
+      The number of allocated vaccine doses for persons in long-term care. Long-term care vaccinations are being administered through a federal government Pharmacy Partnership Program. Data are reported to Illinois bi-weekly and will be updated as the IDPH receives it.
+    type: integer
 
+  #This prop originated from the IDPH Vaccination dataset
+  vaccine_long_time_care_administered:
+    description: >
+      The number of administered vaccine doses to persons in long-term care.  Long-term care vaccinations are being administered through a federal government Pharmacy Partnership Program. Data are reported to Illinois bi-weekly and will be updated as the IDPH receives it.
+    type: integer
+
+  #This prop originated from the IDPH Vaccination dataset
+  vaccine_total_delivered_vaccine_doses:
+    description: >
+      The total number of vaccine doses delivered to Illinois.
+    type: integer
 
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
