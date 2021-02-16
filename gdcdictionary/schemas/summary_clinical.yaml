@@ -2445,5 +2445,23 @@ properties:
       The total number of vaccine doses delivered to Illinois.
     type: integer
 
+ #This prop originated from the IDPH Vaccination dataset
+  vaccine_LHDR_reported_inventory:
+    description: >
+      Reported Vaccine Doses Inventory at Local Health Department.
+    type: integer
+
+ #This prop originated from the IDPH Vaccination dataset
+  vaccine_community_reported_inventory:
+    description: >
+      Reported Vaccine Doses Inventory at Community Partners.
+    type: integer
+
+ #This prop originated from the IDPH Vaccination dataset
+  vaccine_reported_inventory:
+    description: >
+      Total Reported Vaccine Doses Inventory.
+    type: integer
+
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
