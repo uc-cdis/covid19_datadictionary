@@ -130,7 +130,10 @@ properties:
       - XLSX
       - XML
       
-    
+  version:
+    description: >
+      The version of the study or data that was released by a data source.
+    type: number    
     
   source_file:
     description: >
