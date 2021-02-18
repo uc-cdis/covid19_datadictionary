@@ -2463,5 +2463,18 @@ properties:
       Total Reported Vaccine Doses Inventory.
     type: integer
 
+ #This prop originated from the IDPH Vaccination dataset. Maybe delete again.
+  vaccine_IL_total_administered_vaccine_doses:
+    description: >
+      The total number of administered vaccine doses in Illinois.
+    type: integer
+
+ #This prop originated from the IDPH Vaccination dataset. Maybe delete again.
+  vaccine_IL_total_persons_fully_vaccinated:
+    description: >
+      The number of persons fully vaccinated of Illinois.
+    type: integer
+
+
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
