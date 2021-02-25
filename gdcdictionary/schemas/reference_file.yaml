@@ -133,7 +133,7 @@ properties:
   version:
     description: >
       The version of the study or data that was released by a data source.
-    type: number    
+    type: string    
     
   source_file:
     description: >
