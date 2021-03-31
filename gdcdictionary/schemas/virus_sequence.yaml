@@ -295,6 +295,7 @@ properties:
     description: "Source of library (i.e. TRANSCRIPTOMIC or GENOMIC, etc)."
     enum:
       - Transcriptomic
+      - Genomic
 
 # Prop originated from ncbi-covid-19 project
 # To be removed in favor of using the accession property with the data_source property
