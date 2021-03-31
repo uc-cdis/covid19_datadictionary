@@ -276,6 +276,22 @@ properties:
     description: "The PI of lab that sequenced the sample."
     type: string
 
+# Prop originated from SRA/GenBank Project
+  family:
+    description: "The taxonomic level Family."
+    type: string
+    
+# Prop originated from SRA/GenBank Project
+  genus:
+    description: "The taxonomic level Genus."
+    type: string
+        
+# Prop originated from SRA/GenBank Project
+  species:
+    description: "The taxonomic level Species."
+    type: string
+
+
   subjects:
     $ref: "_definitions.yaml#/to_one"
   studies:
