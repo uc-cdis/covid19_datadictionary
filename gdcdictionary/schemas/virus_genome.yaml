@@ -100,6 +100,34 @@ properties:
       The accession date for the record.
     type: string
 
+# Prop originated from SRA/GenBank Project
+  accession:
+    description: "SRA Run accession in the form of SRR######## (ERR or DRR for INSDC partners)."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  experiment:
+    description: "The accession in the form of SRX######## (ERX or DRX for INSDC partners)."
+    type: string
+    
+# Prop originated from SRA/GenBank Project
+  sra_study:
+    description: "SRA Study accession in the form of SRP######## (ERP or DRP for INSDC partners)."
+    type: string
+    
+# Prop originated from SRA/GenBank Project
+  mbytes:
+    description: "Number of mega bytes of data in the SRA Run."
+    type: integer
+
+# Prop originated from SRA/GenBank Project
+  completeness:
+    description: "The completeness of the genetic sequence."
+    enum:
+      - complete
+      - partial
+
+
   samples:
     $ref: "_definitions.yaml#/to_one"
   studies:
