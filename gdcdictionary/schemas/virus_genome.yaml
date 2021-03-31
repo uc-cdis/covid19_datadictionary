@@ -85,8 +85,8 @@ properties:
     description: >
       The source of the virus genome.
     enum:
-      - GenBank
       - NCBI
+      - SRA
 
   # Prop originated from Sars-cov2 project
   accession:
