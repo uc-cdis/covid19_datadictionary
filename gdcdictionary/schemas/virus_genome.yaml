@@ -88,7 +88,7 @@ properties:
       - NCBI
       - SRA
 
-  # Prop originated from Sars-cov2 project
+# Prop originated from Sars-cov2 project
   accession:
     description: >
       The accession id of the virus genome.
@@ -121,11 +121,150 @@ properties:
     type: integer
 
 # Prop originated from SRA/GenBank Project
-  completeness:
-    description: "The completeness of the genetic sequence."
+  assay_type:
+    description: "Type of library (i.e. AMPLICON, RNA-Seq, WGS, etc)."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  avgspotlen:
+    description: "Calculated average read length in base pairs."
+    type: integer
+
+# Prop originated from SRA/GenBank Project
+  insdc_center_name_sam:
+    description: "The name of the INSDC center (i.e. University of Goettingen)."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  insdc_last_update_sam:
+    description: "Date when the sample was updated by INSDC (International Nucleotide Sequence Database Collaboration) partner."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  insdc_first_public_sam:
+    description: "Date when the sample was public by INSDC (International Nucleotide Sequence Database Collaboration) partner."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  insdc_center_alias_sam:
+    description: "The alias of the INSDC partner."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  investigation_type_sam:
+    description: "Investigation type for the sequencing sample."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  center_name:
+    description: "Name of the sequencing center."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  consent:
+    description: "Type of consent need to access the data (i.e. public is available to all, others are for dbGaP)."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  instrument:
+    description: "Name of the sequencing instrument model."
+    type: string
+    
+# Prop originated from SRA/GenBank Project
+  librarylayout:
+    description: "Whether the sequence data generate is single or paired-end."
     enum:
-      - complete
-      - partial
+      - Single
+      - Paired
+
+# Prop originated from SRA/GenBank Project
+  libraryselection:
+    description: "Library selection methodology (i.e. PCR, RANDOM, etc)."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  librarysource:
+    description: "Source of the biological data (i.e. genomic, metagenomic, etc)."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  platform:
+    description: "Name of the sequencing platform (i.e. ILLUMINA)."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  release_date:
+    description: "The date on which the data was released."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  mbases:
+    description: "Number of mega bases in the SRA Runs."
+    type: integer
+
+# Prop originated from SRA/GenBank Project
+  library_name:
+    description: "The name of the library."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  ena_first_public_run:
+    description: "Date when INSDC partner record was public."
+    type: array
+    items:
+      type: string
+
+# Prop originated from SRA/GenBank Project
+  ena_last_update_run:
+    description: "Date when INSDC partner record was updated."
+    type: array
+    items:
+      type: string
+
+# Prop originated from SRA/GenBank Project
+  datastore_provider:
+    description: "Locations of where the files are available to download from."
+    type: array
+    items:
+      type: string
+
+# Prop originated from SRA/GenBank Project
+  datastore_region:
+    description: "Regions of where the data is located."
+    type: array
+    items:
+      type: string
+
+# Prop originated from SRA/GenBank Project
+  description_sam:
+    description: "Description of the sequencing sample (i.e. DZgh pooled sequence, etc)."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  ena_checklist_sam:
+    description: "Sample ID from INSDC partner record."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  insdc_status_sam:
+    description: "The status of sample in INSDC partner record (i.e. public)."
+    type: string
+
+# Prop originated from SRA/GenBank Project
+  library_source:
+    description: "Source of library (i.e. TRANSCRIPTOMIC or GENOMIC, etc)."
+    enum:
+      - Transcriptomic
+      - Genomic
+
+# Prop originated from SRA/GenBank Project
+  title_sam:
+    description: >
+      "Title of the sample.""
+    type: string
+
+
+
 
 
   samples:
