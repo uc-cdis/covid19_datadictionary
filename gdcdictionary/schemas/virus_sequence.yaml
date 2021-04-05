@@ -102,18 +102,22 @@ properties:
     enum:
       - GenBank
       - NCBI
+      - GISAID
 
 # Prop originated from ncbi-covid-19 project
+# Description to be changed in favor of using the accession property with the data_source property
   accession:
     description: "SRA Run accession in the form of SRR######## (ERR or DRR for INSDC partners)."
     type: string
 
 # Prop originated from SIU-SARS-CoV2 project
+# To be removed in favor of using the accession property with the data_source property
   genbank_accession:
     description: "The accession number assigned by GenBank to a genetic sequence in the NIH genetic sequence database."
     type: string
 
 # Prop originated from SIU-SARS-CoV2 project
+# To be removed in favor of using the accession property with the data_source property
   gisaid_accession_number:
     description: "Accession numbers assigned to sequences by GISAID that are used as unique and permanent identifiers for each virus beginning with the letters EPI and followed by numbers, to identify viruses and/or segments"
     type: string
@@ -134,31 +138,37 @@ properties:
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   assay_type:
     description: "Type of library (i.e. AMPLICON, RNA-Seq, WGS, etc)."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   center_name:
     description: "Name of the sequencing center."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   consent:
     description: "Type of consent need to access the data (i.e. public is available to all, others are for dbGaP)."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   experiment:
     description: "The accession in the form of SRX######## (ERX or DRX for INSDC partners)."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   instrument:
     description: "Name of the sequencing instrument model."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   librarylayout:
     description: "Whether the sequence data generate is single or paired-end."
     enum:
@@ -166,21 +176,25 @@ properties:
       - Paired
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   libraryselection:
     description: "Library selection methodology (i.e. PCR, RANDOM, etc)."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   librarysource:
     description: "Source of the biological data (i.e. genomic, metagenomic, etc)."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   platform:
     description: "Name of the sequencing platform (i.e. ILLUMINA)."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   sra_study:
     description: "SRA Study accession in the form of SRP######## (ERP or DRP for INSDC partners)."
     type: string
@@ -191,11 +205,13 @@ properties:
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   mbytes:
     description: "Number of mega bytes of data in the SRA Run."
     type: integer
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   avgspotlen:
     description: "Calculated average read length in base pairs."
     type: integer
@@ -206,16 +222,19 @@ properties:
     type: integer
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   mbases:
     description: "Number of mega bases in the SRA Runs."
     type: integer
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   library_name:
     description: "The name of the library."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   ena_first_public_run:
     description: "Date when INSDC partner record was public."
     type: array
@@ -223,6 +242,7 @@ properties:
       type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   ena_last_update_run:
     description: "Date when INSDC partner record was updated."
     type: array
@@ -230,6 +250,7 @@ properties:
       type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   datastore_provider:
     description: "Locations of where the files are available to download from."
     type: array
@@ -237,6 +258,7 @@ properties:
       type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   datastore_region:
     description: "Regions of where the data is located."
     type: array
@@ -244,46 +266,55 @@ properties:
       type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   description_sam:
     description: "Description of the sequencing sample (i.e. DZgh pooled sequence, etc)."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   ena_checklist_sam:
     description: "Sample ID from INSDC partner record."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   insdc_status_sam:
     description: "The status of sample in INSDC partner record (i.e. public)."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   insdc_center_name_sam:
     description: "The name of the INSDC center (i.e. University of Goettingen)."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   insdc_last_update_sam:
     description: "Date when the sample was updated by INSDC (International Nucleotide Sequence Database Collaboration) partner."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   insdc_first_public_sam:
     description: "Date when the sample was public by INSDC (International Nucleotide Sequence Database Collaboration) partner."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   insdc_center_alias_sam:
     description: "The alias of the INSDC partner."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   investigation_type_sam:
     description: "Investigation type for the sequencing sample."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   library_source:
     description: "Source of library (i.e. TRANSCRIPTOMIC or GENOMIC, etc)."
     enum:
@@ -291,16 +322,32 @@ properties:
       - Genomic
 
 # Prop originated from ncbi-covid-19 project
+# To be removed in favor of using the accession property with the data_source property
   sra_accession:
     description: >
       "Sequence Read Archive accession number of raw data generated."
     type: string
 
 # Prop originated from ncbi-covid-19 project
+# SRA properties are to be moved to the Virus Genome node
   title_sam:
     description: >
       "Title of the sample.""
     type: string
+
+# Prop originated from SRA/GenBank Project
+  completeness:
+    description: "The completeness of the genetic sequence."
+    enum:
+      - complete
+      - partial
+
+# Prop originated from SRA/GenBank Project
+  genbank_title:
+    description: "The title of the GenBank accession."
+    type: string
+    
+
 
   virus_genomes:
     $ref: "_definitions.yaml#/to_one"
