@@ -31,7 +31,7 @@ links:
 required:
   - submitter_id
   - type
-  - summary_locations
+  - summary_clinicals
 
 uniqueKeys:
   - [ id ]
