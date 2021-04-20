@@ -76,6 +76,7 @@ properties:
       - "greater than 80"
       - "16 to 64" # IDPH Vaccination dataset
       - "greater than 65" # IDPH Vaccination dataset
+      - "Unknown"
 
   ethnicity:
     description: >
