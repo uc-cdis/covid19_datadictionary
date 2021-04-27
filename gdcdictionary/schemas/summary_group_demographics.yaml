@@ -60,6 +60,7 @@ properties:
     enum:
       - "Female"
       - "Male"
+      - "Other"
       - "Unknown or Left Blank"
 
   age_group:
