@@ -118,7 +118,7 @@ properties:
   vaccine_administered_count_roll_avg:
     description: >
       The 7 rolling day average of administered vaccine doses in Illinois, in an Illinois county, or in a subgroup.
-    type: integer
+    type: number
 
   #This prop originated from the IDPH Vaccination dataset
   vaccine_persons_fully_vaccinated:
