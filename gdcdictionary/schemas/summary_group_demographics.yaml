@@ -118,7 +118,7 @@ properties:
   vaccine_administered_count_roll_avg:
     description: >
       The 7 rolling day average of administered vaccine doses in Illinois, in an Illinois county, or in a subgroup.
-    type: integer
+    type: number
 
   #This prop originated from the IDPH Vaccination dataset
   vaccine_persons_fully_vaccinated:
@@ -139,13 +139,13 @@ properties:
     type: integer
 
   #This prop originated from the IDPH Vaccination dataset
-  vaccine_long_time_care_allocated:
+  vaccine_long_term_care_allocated:
     description: >
       The number of allocated vaccine doses for persons in long-term care. Long-term care vaccinations are being administered through a federal government Pharmacy Partnership Program. Data are reported to Illinois bi-weekly and will be updated as the IDPH receives it.
     type: integer
 
   #This prop originated from the IDPH Vaccination dataset
-  vaccine_long_time_care_administered:
+  vaccine_long_term_care_administered:
     description: >
       The number of administered vaccine doses to persons in long-term care.  Long-term care vaccinations are being administered through a federal government Pharmacy Partnership Program. Data are reported to Illinois bi-weekly and will be updated as the IDPH receives it.
     type: integer
