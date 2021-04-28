@@ -87,6 +87,7 @@ properties:
     enum:
       - NCBI
       - SRA
+      - GenBank
 
 # Prop originated from Sars-cov2 project
   accession:
