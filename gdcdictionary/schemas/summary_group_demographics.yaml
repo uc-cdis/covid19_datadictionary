@@ -75,10 +75,10 @@ properties:
       - "60 to 69"
       - "70 to 79"
       - "greater than 80"
+      - "12 to 15" # IDPH Vaccination dataset 
       - "16 to 64" # IDPH Vaccination dataset
       - "greater than 65" # IDPH Vaccination dataset
       - "Unknown"
-      - "12 to 15" # IDPH Vaccination dataset
 
   ethnicity:
     description: >
