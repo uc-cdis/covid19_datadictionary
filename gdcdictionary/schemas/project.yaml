@@ -70,6 +70,9 @@ properties:
   availability_mechanism:
     description: "Mechanism by which the project will be made available."
     type: string
+  source_updated:
+    description: "The most recent calendar date in which the source of the data was updated."
+    type: string
   support_source:
     description: "The name of source providing support/grant resources."
     type: string
