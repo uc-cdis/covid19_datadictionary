@@ -288,3 +288,45 @@ race:
   - "Other"
   - "Left Blank"
   - "Middle Eastern or North African" # IDPH Vaccination dataset
+  termDef:
+  - term: Race
+    source: NCI Thesaurus
+    term_id: C17049
+    term_version: 18.11d (Release date:2018-11-26)
+  enumDef:
+  - enumeration: Asian
+    source: NCI Thesaurus
+    term_id: C41260
+    term_version: 18.11d (Release date:2018-11-26)
+  - enumeration: White
+    source: NCI Thesaurus
+    term_id: C41261
+    term_version: 18.11d (Release date:2018-11-26)
+  - enumeration: Black
+    source: NCI Thesaurus
+    term_id: C128938
+    term_version: 18.11d (Release date:2018-11-26)
+  - enumeration: Multi-racial
+    source: NCI Thesaurus
+    term_id: C104495
+    term_version: 18.11d (Release date:2018-11-26)
+  - enumeration: Native Hawaiian or Other Pacific Islander
+    source: NCI Thesaurus
+    term_id: C41219
+    term_version: 18.11d (Release date:2018-11-26)
+  - enumeration: American Indian or Alaskan Native
+    source: NCI Thesaurus
+    term_id: C41259
+    term_version: 18.11d (Release date:2018-11-26)
+  - enumeration: Unspecified
+    source: NCI Thesaurus
+    term_id: C38046
+    term_version: 18.09d (Release date:2018-09-24)
+  - enumeration: Unknown
+    source: NCI Thesaurus
+    term_id: C17998
+    term_version: 18.09d (Release date:2018-09-24)
+  - enumeration: Other
+    source: NCI Thesaurus
+    term_id: C17649
+    term_version: 18.09d (Release date:2018-09-24)
