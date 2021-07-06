@@ -105,6 +105,7 @@ properties:
       - "Unspecified"
       - "Unknown"
       - "Other"
+      - "Middle Eastern or North African"
     termDef:
       - term: Race
         source: NCI Thesaurus
