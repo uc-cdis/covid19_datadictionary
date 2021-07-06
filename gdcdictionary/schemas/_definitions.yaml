@@ -272,3 +272,19 @@ ubiquitous_properties:
     $ref: "#/datetime"
   updated_datetime:
     $ref: "#/datetime"
+
+race:
+  term:
+    $ref: "_terms.yaml#/race"
+  enum:
+  - "Asian"
+  - "White"
+  - "Black"
+  - "Multi-racial"
+  - "Native Hawaiian or Other Pacific Islander"
+  - "American Indian or Alaskan Native"
+  - "Unspecified"
+  - "Unknown" # IDPH Vaccination dataset
+  - "Other"
+  - "Left Blank"
+  - "Middle Eastern or North African" # IDPH Vaccination dataset
