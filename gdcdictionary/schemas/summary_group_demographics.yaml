@@ -53,6 +53,7 @@ properties:
       - "Native Hawaiian or Other Pacific Islander"
       - "White"
       - "Unknown" # IDPH Vaccination dataset
+      - "Middle Eastern or North African" # IDPH Vaccination dataset
 
   gender:
     description: >
