@@ -45,6 +45,7 @@ properties:
       An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
     enum:
       - "American Indian or Alaska Native"
+      - "American Indian or Alaskan Native"
       - "Asian"
       - "Black"
       - "Hispanic"
