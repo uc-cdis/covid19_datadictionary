@@ -18,3 +18,9 @@ deploy:
   on:
     repo: uc-cdis/covid19_datadictionary
     all_branches: true
+after_deploy:
+- pip install gen3git
+- gen3git release
+env:
+  global:
+    secure: b8v56eCNoGARhFdTdx7VDw6HWgRyqg2+aPJpW88Yf9g8kg9X6q7n0ux3fFpce79cxBYEpdAc0LC6lLBeSjqOWVhcbVzK7WCNNrOGnl/eKJUCno4enCxTl8lm1b0iJSIAPIt3Tt3ytrIXHLnXoZnn1rccNeyAzhUxOOxn3jcbAMj1099g5gR6uW7RqAc42wvmLyixKuE2MpBLOFaO3AUIV6n5AkGEecCj/YT2OJ+xn+lKCv6CrQzPv/7mGLta4ex4Xt6I+x5FfuwQ9uHxrzgfkAX+zA4kUNZTIdAmnJ2dc7nQPdRmIfC4cBaiZn5LeMuWAsJTfJonSBcqjrc6aX4Ve1jjDah4qPehD3iHsThE4s9hhqtZtAOI3dTs7qbQzhanYbx7Pg/yIM6GK0QCu0otRtuMP44L0jIeYVjFce+V+JQHFdRj7a3c3D0NgdREG04sLsKSzOXIe+V7Xi1cUsVr3Fr5I5/Y3Nrbl1DZdenB+BBAcVZc+jIl6E3cmXbBVZHozGafW/JFjuT8sk0c3QGHGQiqFx+qIh34JHCMCHyNWiwYlTCwp8cGtiFvk2hDxh7EIU43UhcvCklap2CgERk0Q/cU0w+1oDS9LtK/9x1bKmSiSBPylG1PXMNEmvr76ZJd9V0cHMQfcEFc8OETXSVRE+raL9rKd2FFfSaZvqK3HM4=
