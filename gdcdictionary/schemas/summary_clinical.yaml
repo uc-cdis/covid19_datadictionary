@@ -2336,9 +2336,6 @@ properties:
       The percentage of people ages 20-79 who have type 1 or type 2 diabetes.
     type: number
 
-  race:
-    $ref: "_definitions.yaml#/race"
-
   gender:
     description: >
       Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles. [Explanatory Comment 1: Identification of gender is based upon self-report and may come from a form, questionnaire, interview, etc.].
