@@ -280,6 +280,7 @@ race:
   - "Asian"
   - "White"
   - "Black"
+  - "Hispanic" # IDPH Vaccination dataset
   - "Multi-racial"
   - "Native Hawaiian or Other Pacific Islander"
   - "American Indian or Alaskan Native"
