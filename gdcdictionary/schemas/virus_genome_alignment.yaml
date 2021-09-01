@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "virus_sequence_alignment"
-title: Virus Sequence Alignment
+id: "virus_genome_alignment"
+title: Virus Genome Alignment
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
 category: genomic_data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing virus sequence alignment files.
+  Data file containing virus genome alignment files.
 additionalProperties: false
 submittable: true
 validators: null
@@ -27,15 +27,15 @@ links:
     required: true
     subgroup:
       - name: core_metadata_collections
-        backref: virus_sequence_alignments
+        backref: virus_genome_alignments
         label: data_from
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: virus_sequences
-        backref: virus_sequence_alignments
+      - name: virus_genomes
+        backref: virus_genome_alignments
         label: data_from
-        target_type: virus_sequence
+        target_type: virus_genome
         multiplicity: many_to_many
         required: false
 
@@ -58,7 +58,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "virus_sequence_alignment" ]
+    enum: [ "virus_genome_alignment" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -91,7 +91,7 @@ properties:
       - muscle
       - Clustal Omega
 
-  virus_sequences:
+  virus_genomes:
     $ref: "_definitions.yaml#/to_many"
 
   core_metadata_collections:

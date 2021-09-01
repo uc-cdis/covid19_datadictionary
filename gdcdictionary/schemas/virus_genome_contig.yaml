@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "virus_sequence_contig"
-title: Virus Sequence Contig
+id: "virus_genome_contig"
+title: Virus Genome Contig
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
 category: genomic_data_file
@@ -27,15 +27,15 @@ links:
     required: true
     subgroup:
       - name: core_metadata_collections
-        backref: virus_sequence_contigs
+        backref: virus_genome_contigs
         label: data_from
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: virus_sequences_run_taxonomies
-        backref: virus_sequence_contigs
+      - name: virus_genomes_run_taxonomies
+        backref: virus_genome_contigs
         label: data_from
-        target_type: virus_sequence_run_taxonomy
+        target_type: virus_genome_run_taxonomy
         multiplicity: many_to_many
         required: false
 
@@ -58,7 +58,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "virus_sequence_contig" ]
+    enum: [ "virus_genome_contig" ]
 
   data_category:
     term:
@@ -70,7 +70,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Virus Sequence Contig
+      - Virus Genome Contig
 
   data_format:
     term:
@@ -80,7 +80,7 @@ properties:
       - txt
       - tsv
 
-  virus_sequences_run_taxonomies:
+  virus_genomes_run_taxonomies:
     $ref: "_definitions.yaml#/to_many"
 
   core_metadata_collections:

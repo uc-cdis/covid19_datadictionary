@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "virus_sequence_run_taxonomy"
-title: Virus Sequence Run Taxonomy
+id: "virus_genome_run_taxonomy"
+title: Virus Genome Run Taxonomy
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
 category: genomic_data_file
@@ -27,15 +27,15 @@ links:
     required: true
     subgroup:
       - name: core_metadata_collections
-        backref: virus_sequence_run_taxonomies
+        backref: virus_genome_run_taxonomies
         label: data_from
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: virus_sequences
-        backref: virus_sequence_run_taxonomies
+      - name: virus_genomes
+        backref: virus_genome_run_taxonomies
         label: data_from
-        target_type: virus_sequence
+        target_type: virus_genome
         multiplicity: many_to_many
         required: false
 
@@ -57,7 +57,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "virus_sequence_run_taxonomy" ]
+    enum: [ "virus_genome_run_taxonomy" ]
 
 
   data_category:
@@ -70,7 +70,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Virus Sequence Run Taxonomy Analysis
+      - Virus Genome Run Taxonomy Analysis
 
   data_format:
     term:
@@ -80,7 +80,7 @@ properties:
       - txt
       - tsv
 
-  virus_sequences:
+  virus_genomes:
     $ref: "_definitions.yaml#/to_many"
 
   core_metadata_collections:

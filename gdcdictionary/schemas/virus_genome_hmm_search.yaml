@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "virus_sequence_hmm_search"
-title: Virus Sequence HMM Search
+id: "virus_genome_hmm_search"
+title: Virus Genome HMM Search
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
 category: genomic_data_file
@@ -27,15 +27,15 @@ links:
     required: true
     subgroup:
       - name: core_metadata_collections
-        backref: virus_sequence_hmm_searches
+        backref: virus_genome_hmm_searches
         label: data_from
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: virus_sequence_peptides
-        backref: virus_sequence_hmm_searches
+      - name: virus_genome_peptides
+        backref: virus_genome_hmm_searches
         label: data_from
-        target_type: virus_sequence_peptide
+        target_type: virus_genome_peptide
         multiplicity: many_to_many
         required: false
 
@@ -57,7 +57,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "virus_sequence_hmm_search" ]
+    enum: [ "virus_genome_hmm_search" ]
 
   data_category:
     term:
@@ -69,7 +69,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Virus Sequence HMM Search
+      - Virus Genome HMM Search
 
   data_format:
     term:
@@ -79,7 +79,7 @@ properties:
       - txt
       - tsv
 
-  virus_sequence_peptides:
+  virus_genome_peptides:
     $ref: "_definitions.yaml#/to_many"
 
   core_metadata_collections:

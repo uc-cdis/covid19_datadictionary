@@ -33,16 +33,16 @@ links:
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: virus_sequences_run_taxonomies
+      - name: virus_genomes_run_taxonomies
         backref: virus_genome_variation
         label: data_from
-        target_type: virus_sequence_run_taxonomy
+        target_type: virus_genome_run_taxonomy
         multiplicity: many_to_many
         required: false
-      - name: virus_sequences
+      - name: virus_genomes
         backref: virus_genome_variation
         label: data_from
-        target_type: virus_sequence
+        target_type: virus_genome
         multiplicity: many_to_many
         required: false
 
@@ -65,7 +65,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
 
-  virus_sequences_run_taxonomies:
+  virus_genomes_run_taxonomies:
     $ref: "_definitions.yaml#/to_many"
 
   data_category:
@@ -101,5 +101,5 @@ properties:
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
 
-  virus_sequences:
+  virus_genomes:
     $ref: "_definitions.yaml#/to_many"

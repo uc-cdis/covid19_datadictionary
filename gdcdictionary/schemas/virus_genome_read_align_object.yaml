@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "virus_sequence_read_align_object"
-title: Virus Sequence Read Align Object
+id: "virus_genome_read_align_object"
+title: Virus Genome Read Align Object
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
 category: genomic_data_file
@@ -27,15 +27,15 @@ links:
     required: true
     subgroup:
       - name: core_metadata_collections
-        backref: virus_sequence_read_align_objects
+        backref: virus_genome_read_align_objects
         label: data_from
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: virus_sequence_contigs
-        backref: virus_sequence_read_align_objects
+      - name: virus_genome_contigs
+        backref: virus_genome_read_align_objects
         label: data_from
-        target_type: virus_sequence_contig
+        target_type: virus_genome_contig
         multiplicity: many_to_many
         required: false
 
@@ -58,7 +58,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "virus_sequence_read_align_object" ]
+    enum: [ "virus_genome_read_align_object" ]
 
   data_type:
     term:
@@ -82,5 +82,5 @@ properties:
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
 
-  virus_sequence_contigs:
+  virus_genome_contigs:
     $ref: "_definitions.yaml#/to_many"
