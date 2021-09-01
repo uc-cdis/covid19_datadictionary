@@ -166,20 +166,20 @@ properties:
       The collection date for the sample.
     type: string
 
-# Prop originated from ncbi-covid-19 project. To be removed after new ETL of NCBI/SRA datasets
+# Prop originated from ncbi-covid-19 project. TODO: To be removed after new ETL of NCBI/SRA datasets
   sample_accession:
     description: "SRA Sample accession in the form of SRS######## (ERS or DRS for INSDC partners)."
     type: string
-    
+
  # Prop originated from new ETL of NCBI/SRA datasets
   sra_accession:
     description: "SRA Sample accession in the form of SRS######## (ERS or DRS for INSDC partners)."
-    type: string  
-   
+    type: string
+
  # Prop originated from new ETL of NCBI/SRA datasets
   genbank_accession:
     description: "GenBank Sample accession."
-    type: string 
+    type: string
 
 # Prop originated from ncbi-covid-19 project
   biosamplemodel_sam:
@@ -290,12 +290,12 @@ properties:
   family:
     description: "The taxonomic level Family."
     type: string
-    
+
 # Prop originated from SRA/GenBank Project
   genus:
     description: "The taxonomic level Genus."
     type: string
-        
+
 # Prop originated from SRA/GenBank Project
   species:
     description: "The taxonomic level Species."
