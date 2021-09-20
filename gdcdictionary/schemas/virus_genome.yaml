@@ -68,19 +68,21 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Annotated Sequence
-      - Sequence
+      - Nucleotide Sequence
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Complete Genomic Sequence
-      - Complete Genome
+      - Raw reads
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - gb
+      - fastq
+      - fasta
+      - bam
+      - cram
+      - sam
   data_source:
     description: >
       The source of the virus genome.
