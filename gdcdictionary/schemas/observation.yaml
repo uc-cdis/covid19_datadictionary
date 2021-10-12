@@ -765,5 +765,11 @@ properties:
         term_id: C83138
         term_version: 20.03e (Release date:2020-03-31)
 
+# Prop originated from SSR project
+  version:
+    description: >
+      The data version as determined by the data submitter.
+    type: string
+
   subjects:
     $ref: "_definitions.yaml#/to_one"
