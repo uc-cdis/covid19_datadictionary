@@ -204,5 +204,11 @@ properties:
       the age of the patient in decades
     type: string
 
+# Prop originated from SSR project
+  version:
+    description: >
+      The data version as determined by the data submitter.
+    type: string
+
   subjects:
     $ref: "_definitions.yaml#/to_one"

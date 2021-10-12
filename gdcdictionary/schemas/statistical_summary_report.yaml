@@ -207,6 +207,12 @@ properties:
     description: >
       Number of (inpatient) patients with congestive heart failure (I50)
     type: integer
+    
+# Prop originated from SSR project
+  version:
+    description: >
+      The data version as determined by the data submitter.
+    type: string
 
   summary_locations:
     $ref: "_definitions.yaml#/to_many"
