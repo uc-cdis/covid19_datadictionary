@@ -151,6 +151,12 @@ properties:
     description: >
       First three digits of the resident's zipcode.
     type: string
+    
+ # Prop originated from SSR project
+  version:
+    description: >
+      The data version as determined by the data submitter.
+    type: string   
 
 
   studies:
