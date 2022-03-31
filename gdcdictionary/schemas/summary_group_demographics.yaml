@@ -92,6 +92,11 @@ properties:
     description: >
       The number of confirmed deaths for the specified group.
     type: integer
+    
+  hospitalizations:
+    description: >
+      The number of confirmed hospitalizations for the specified group.
+    type: integer    
 
   #This prop originated from the IDPH Vaccination dataset
   vaccine_administered_count:
