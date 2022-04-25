@@ -79,6 +79,9 @@ properties:
   support_id:
     description: "The ID of the source providing support/grant resources."
     type: string
+  disclaimer:
+    description: "The disclaimers that are needed to use the following dataset outside of its source location."
+    type: string  
   programs:
     $ref: "_definitions.yaml#/to_one"
     description: >
