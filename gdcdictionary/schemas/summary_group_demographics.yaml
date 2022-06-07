@@ -56,6 +56,8 @@ properties:
     description: >
       The age range that describes the group of subjects.
     enum:
+      - "less than 18" # city of chicago dataset
+      - "18 to 29" # city of chicago dataset
       - "less than 20"
       - "20 to 29"
       - "30 to 39"
