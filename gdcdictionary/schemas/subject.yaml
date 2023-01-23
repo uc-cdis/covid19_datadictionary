@@ -41,6 +41,7 @@ links:
 required:
   - submitter_id
   - type
+  - unique_de-id_identifier
 
 uniqueKeys:
   - [id]
@@ -151,15 +152,22 @@ properties:
     description: >
       First three digits of the resident's zipcode.
     type: string
-    
+
  # Prop originated from SSR project
   version:
     description: >
       The data version as determined by the data submitter.
-    type: string   
+    type: string
 
 
   studies:
     $ref: "_definitions.yaml#/to_many"
   projects:
     $ref: "_definitions.yaml#/to_one_project"
+
+# Prop originated for Longcovid and Monkeypox data
+
+  unique_de-id_identifier:
+    description: >
+        "Unique and continuous identifier for subject"
+    type: string
