@@ -41,7 +41,6 @@ links:
 required:
   - submitter_id
   - type
-  - unique_de-id_identifier
 
 uniqueKeys:
   - [id]
@@ -169,5 +168,5 @@ properties:
 
   unique_de-id_identifier:
     description: >
-        "Unique and continuous identifier for subject"
+        "Unique and continuous identifier for subject (Required for Long Covid and MonkeyPox Data)"
     type: string
