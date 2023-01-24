@@ -785,7 +785,7 @@ properties:
 
   observations_cpt:
       description: >
-        zero, one or more CPT codes for encounter, separated by commas
+        zero, one or more CPT codes for encounter
       type: array
         items:
           type: string
