@@ -778,7 +778,7 @@ properties:
 
   observations_icd10:
     description: >
-      zero, one or more ICD-10 codes for encounter, separated by commas
+      zero, one or more ICD-10 codes for encounter
     type: array
       items:
         type: string
