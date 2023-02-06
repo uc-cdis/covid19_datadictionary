@@ -780,12 +780,12 @@ properties:
     description: >
       zero, one or more ICD-10 codes for encounter
     type: array
-      items:
+    items:
         type: string
 
   observations_cpt:
       description: >
         zero, one or more CPT codes for encounter
       type: array
-        items:
+      items:
           type: string
