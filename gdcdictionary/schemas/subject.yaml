@@ -166,7 +166,7 @@ properties:
 
 # Prop originated for Longcovid and Monkeypox data
 
-  unique_de-id_identifier:
+  unique_de_id_identifier:
     description: >
         "Unique and continuous identifier for subject (Required for Long Covid and MonkeyPox Data)"
     type: string
