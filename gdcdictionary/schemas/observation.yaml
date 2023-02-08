@@ -243,7 +243,7 @@ properties:
       Check "Unknown" if symptomatic but onset date is unknown.
     enum:
       - "Unknown"
-      
+
   symp_res_dt:
     description: >
       If symptomatic, date of symptom resolution (MM/DD/YYYY)
@@ -773,3 +773,19 @@ properties:
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
+
+# Prop originated for Longcovid and Monkeypox data
+
+  observations_icd10:
+    description: >
+      zero, one or more ICD-10 codes for encounter
+    type: array
+    items:
+        type: string
+
+  observations_cpt:
+      description: >
+        zero, one or more CPT codes for encounter
+      type: array
+      items:
+          type: string
