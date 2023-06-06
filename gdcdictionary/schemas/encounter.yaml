@@ -34,6 +34,7 @@ required:
   - encoutner_type
   - start_dt
   - end_dt
+  - encounter_id
 
 uniqueKeys:
   - [id]
