@@ -1,0 +1,71 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "encounter"
+title: Encounter
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Data for each enocunter for a patient
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+    - name: observations
+      backref: samples
+      label: related_to
+      target_type: observation
+      multiplicity: many_to_one
+      required: false
+
+required:
+  - submitter_id
+  - type
+  - encoutner_type
+  - start_dt
+  - end_dt
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+# Prop originated for Longcovid and Monkeypox data
+
+  encoutner_type:
+    description: "Type of Encounter which patient have had"
+    enum:
+      - hospital
+      - ambulatory
+      - office
+      - telemedicine
+      - emergency
+
+  start_dt:
+    description: >
+      Start Date of the encounter.
+    type: string
+
+  end_dt:
+    description: >
+      End Date of the encounter.
+    type: string
+
+  encounter_id:
+    type:
+      - string
+      - "null"
+    description: >
+      unique string to identify the encounter, but it is not required if the observation node  has an observation_dt
