@@ -22,7 +22,7 @@ systemProperties:
 
 links:
     - name: observations
-      backref: samples
+      backref: encounters
       label: related_to
       target_type: observation
       multiplicity: many_to_one
