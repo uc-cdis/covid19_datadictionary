@@ -35,6 +35,7 @@ required:
   - start_dt
   - end_dt
   - encounter_id
+  - observations
 
 uniqueKeys:
   - [id]
@@ -70,3 +71,6 @@ properties:
       - "null"
     description: >
       unique string to identify the encounter, but it is not required if the observation node  has an observation_dt
+
+  observations:
+    $ref: "_definitions.yaml#/to_one"
