@@ -26,7 +26,7 @@ links:
       label: related_to
       target_type: observation
       multiplicity: many_to_one
-      required: false
+      required: true
 
 required:
   - submitter_id
