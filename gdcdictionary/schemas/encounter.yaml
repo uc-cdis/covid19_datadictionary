@@ -74,3 +74,6 @@ properties:
 
   encounters:
     $ref: "_definitions.yaml#/to_one"
+
+  observations:
+    $ref: "_definitions.yaml#/to_one"
