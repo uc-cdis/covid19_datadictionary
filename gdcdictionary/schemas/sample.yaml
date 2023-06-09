@@ -57,6 +57,12 @@ links:
       target_type: project
       multiplicity: many_to_one
       required: false
+    - name: encounters
+      backref: samples
+      label: related_to
+      target_type: project
+      multiplicity: many_to_one
+      required: false
 
 # Sample properties: keep TCGA-specific fields
 properties:
@@ -316,5 +322,5 @@ properties:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
     $ref: "_definitions.yaml#/datetime"
-  encounter:
+  encounters:
     $ref: "_definitions.yaml#/to_many"

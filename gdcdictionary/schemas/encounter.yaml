@@ -31,7 +31,7 @@ links:
 required:
   - submitter_id
   - type
-  - encoutner_type
+  - encounter_type
   - start_dt
   - end_dt
   - encounter_id
@@ -46,7 +46,7 @@ properties:
 
 # Prop originated for Longcovid and Monkeypox data
 
-  encoutner_type:
+  encounter_type:
     description: "Type of Encounter which patient have had"
     enum:
       - hospital
@@ -72,5 +72,5 @@ properties:
     description: >
       unique string to identify the encounter, but it is not required if the observation node  has an observation_dt
 
-  observations:
+  encounters:
     $ref: "_definitions.yaml#/to_one"
