@@ -60,7 +60,7 @@ links:
     - name: encounters
       backref: samples
       label: related_to
-      target_type: project
+      target_type: encounter
       multiplicity: many_to_one
       required: false
 
