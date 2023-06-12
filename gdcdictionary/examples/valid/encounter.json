@@ -1,0 +1,11 @@
+{
+    "type": "encounter",
+    "submitter_id": "encounter_1",
+    "encounter_type": "hospital",
+    "start_dt": "04/20/2023",
+    "end_dt": "05/01/2023",
+    "encounter_id" : "2345645",
+    "observations": {
+        "id": "cdg208a7-f87a-562c-a04a-7a7c77531s98"
+    }
+}
