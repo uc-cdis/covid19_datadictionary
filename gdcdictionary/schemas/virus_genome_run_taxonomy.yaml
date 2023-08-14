@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "virus_sequence_contig"
-title: Virus Sequence Contig
+id: "virus_genome_run_taxonomy"
+title: Virus Genome Run Taxonomy
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
 category: genomic_data_file
 program: '*'
 project: '*'
 description: >
-  Provides details of contigs assembled from runs using SARS-CoV-2 refseq guided assembly.
+  Provides result details of kmer-based taxonomy analysis of raw run data.
 additionalProperties: false
 submittable: true
 validators: null
@@ -27,15 +27,15 @@ links:
     required: true
     subgroup:
       - name: core_metadata_collections
-        backref: virus_sequence_contigs
+        backref: virus_genome_run_taxonomies
         label: data_from
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: virus_sequences_run_taxonomies
-        backref: virus_sequence_contigs
+      - name: virus_genomes
+        backref: virus_genome_run_taxonomies
         label: data_from
-        target_type: virus_sequence_run_taxonomy
+        target_type: virus_genome
         multiplicity: many_to_many
         required: false
 
@@ -50,7 +50,6 @@ required:
   - data_category
   - data_type
 
-
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
@@ -58,19 +57,20 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "virus_sequence_contig" ]
+    enum: [ "virus_genome_run_taxonomy" ]
+
 
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Nucleotide Contig
+      - Kmer-based Taxonomy Analysis
 
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Virus Sequence Contig
+      - Virus Genome Run Taxonomy Analysis
 
   data_format:
     term:
@@ -80,7 +80,7 @@ properties:
       - txt
       - tsv
 
-  virus_sequences_run_taxonomies:
+  virus_genomes:
     $ref: "_definitions.yaml#/to_many"
 
   core_metadata_collections:

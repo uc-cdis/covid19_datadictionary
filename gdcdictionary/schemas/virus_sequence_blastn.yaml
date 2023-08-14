@@ -33,10 +33,10 @@ links:
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: virus_sequence_contigs
+      - name: virus_genome_contigs
         backref: virus_sequence_blastns
         label: data_from
-        target_type: virus_sequence_contig
+        target_type: virus_genome_contig
         multiplicity: many_to_many
         required: false
 
@@ -84,7 +84,7 @@ properties:
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
 
-  virus_sequence_contigs:
+  virus_genome_contigs:
     $ref: "_definitions.yaml#/to_many"
 
   accession_number:
